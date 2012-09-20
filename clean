@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -rf *.aux
+rm -f Book.toc
+rm -f Book.log
+rm -f Book.pdf
