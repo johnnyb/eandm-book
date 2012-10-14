@@ -1,4 +1,7 @@
 #!/bin/sh
 
 pdflatex Book.tex
+bibtex Ewert
+bibtex Sich
+pdflatex Book.tex
 pdflatex Book.tex
