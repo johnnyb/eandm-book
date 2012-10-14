@@ -14,9 +14,17 @@
 
 \renewcommand*\thesection{\arabic{section}}
 
+%% These are for Sich's article, in case we want to standardize these
+\newcommand\sbf[1]{\textbf{#1}}
+\newcommand\semph[1]{\emph{#1}}
+\newcommand\sunder[1]{\underline{#1}}
+
 %% \newcommand{\myvec}[1]{\vec{#1}} %% how to define a new command
 
 \setcounter{tocdepth}{1}
+
+%% This keeps us from having overlong lines
+\sloppy
 
 \begin{document}
 \title{Engineering and the Ultimate}
