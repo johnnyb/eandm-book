@@ -1,6 +1,9 @@
 #!/bin/sh
 
 rm -rf *.aux
+rm -rf *.bbl
+rm -rf *.blg
+rm -f texput.log
 rm -f Book.toc
 rm -f Book.log
 rm -f Book.pdf
