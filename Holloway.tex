@@ -1,36 +1,34 @@
-\documentclass[cmfonts]{witpress}
-\usepackage{algorithmic}
-\usepackage{algorithmextra}
-\usepackage{lscape}
-\usepackage{graphicx}
-\usepackage{psfrag}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{cite}
-\usepackage{makeidx}
-\usepackage{longtable}
-\usepackage{amssymb}
-\usepackage{balance}
-\usepackage[lastname]{authorindex}
-\usepackage{subfigure}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{rotating}
+%% \documentclass[cmfonts]{witpress}
+%% \usepackage{algorithmic}
+%% \usepackage{algorithmextra}
+%% \usepackage{lscape}
+%% \usepackage{graphicx}
+%% \usepackage{psfrag}
+%% \usepackage{amsmath}
+%% \usepackage{amsfonts}
+%% \usepackage{amsthm}
+%% \usepackage{cite}
+%% \usepackage{makeidx}
+%% \usepackage{longtable}
+%% \usepackage{amssymb}
+%% \usepackage{balance}
+%% \usepackage[lastname]{authorindex}
+%% \usepackage{subfigure}
+%% \usepackage{listings}
+%% \usepackage{color}
+%% \usepackage{rotating}
 % declare the path(s) where your graphic files are
-\graphicspath{{./}}
+%% \graphicspath{{./}}
+%% \DeclareGraphicsExtensions{.eps,.png}
 
-\title{Complex Specified Information (CSI) Collecting}
+\chapter{Complex Specified Information (CSI) Collecting}
 \author{Eric Holloway}
-\DeclareGraphicsExtensions{.eps,.png}
-\begin{document}
 
-\maketitle
-
-\abstract
+\begin{abstract}
 Research whether human cognitive capabilities are comparable to computer algorithms suggest humans possess supra-computational cognition.  Humans are capable of finding good solutions to computationally intractable problems, and this capability scales with larger problems faster than the best known algorithms \cite{dry06:_human_perfor_visual_presen_travel}.  Many popular games are algorithmically intractable to solve \cite{viglietta11:_gamin_is_hard_job_but}.  Programmers appear capable of solving halting problems \cite{bartlett11:_calcul_softw_compl_using_haltin_probl}.  People can solve insight problems, for which there is currently no known computational method \cite{bartlett11:_using_turin_oracl_in_cognit_model}.  Observers can pick out targets in a picture relevant to their goal independently of the target's features \cite{gue12:_featur_indep_neural_codin_of}.  Such capabilities either have never been algorithmically emulated, or violate well known and well substantiated computational constraints, such as the computational complexity of the problem \cite{cormen01:_introd_to_algor}, the No Free Lunch Theorem (NFLT) \cite{wolpert96:_no_free_lunch_theor_for_optim,wolpert95:_no_free_lunch_theor_for_searc} and the halting problem \cite{cover06:_elemen_of_infor_theor}.  
 
 Intelligent design provides a theoretical basis for observations of supra-computational cognition.  According to intelligent design, intelligent agents, such as humans, are capable of creating a new form of information called complex specified information (CSI) \cite{dembski:_specif}.  As implied by Dembski's work on search algorithms \cite{dembski06:_conser_of_infor_in_searc} if human interaction can be incorporated into a search and optimization algorithm, then humans may improve these algorithms over a wide variety of hard problems through creation of CSI.  Additionally, the user neither needs specialized interfaces nor training for each type of problem.  The possibility of such a generalized interface is suggested by research demonstrating context independent problem solving by humans \cite{sperber95:_relev_theor_explain_selec_task}.  
+\end{abstract}
 
 \section{Problem Description}
 
@@ -107,7 +105,7 @@ The two processes are combined because for real world use they work well togethe
 
 \begin{figure}[!t]
   \centering
-  \includegraphics[width=4.5in]{data_flow}
+  \includegraphics[width=4.5in]{HollowayDataFlow}
   \caption{CSIC data flow between user and algorithm.}
   \label{fig:data_flow}
 \end{figure}
@@ -122,7 +120,7 @@ The types of operators have different credit costs, since some operators discove
 
 \begin{figure}[!t]
   \centering
-  \includegraphics[width=4.5in]{CSIC_UI_2}
+  \includegraphics[width=4.5in]{HollowayCSICUI2}
   \caption{User inteface concept for CSIC.}
   \label{fig:CSIC_UI}
 \end{figure}
@@ -133,7 +131,7 @@ Otherwise, the basic idea is the same between the actual and conceptual interfac
 
 \begin{figure}[!t]
   \centering
-  \includegraphics[width=4.5in]{website_UI}
+  \includegraphics[width=4.5in]{HollowayWebsiteUI}
   \caption{Actual user inteface website.}
   \label{fig:website_UI}
 \end{figure}
@@ -155,7 +153,7 @@ The guided genetic algorithm was controlled by 500 humans using the Amazon Mecha
 
 \begin{figure}[!t]
   \centering
-  \includegraphics[width=4.5in]{results}
+  \includegraphics[width=4.5in]{HollowayResults}
   \caption{Best solutions found from Amazon Turk experiment.\\The objectives are described in Section \ref{sec:problem}.}
   \label{fig:results}
 \end{figure}
@@ -213,6 +211,5 @@ The algorithm and problem used in the experiment can be improved in numerous way
 
 Different forms of motivation should be explored.  The Amazon Turk interface relies on a financial motivation, which motivates users to cut corners and perform the task in the fastest way possible.  Such motivation does not encourage users to find extremely good solutions.  If the interface is in the form of an entertaining game users are better encouraged to find good solutions.  Furthermore, a simplified explanation of the cutting edge relevance of their work provides an intrinsic motivation, and encourages innovation as demonstrated by significant user innovation in Foldit \cite{moore12:_foldit_game_leads_to_aids_resear_break}.
 
-\bibliography{bibliography}
-\bibliographystyle{abbrv}
-\end{document}
+\bibliographystyle{plain}
+\bibliography{HollowayLibrary}

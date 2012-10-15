@@ -3,5 +3,6 @@
 pdflatex Book.tex
 bibtex Ewert
 bibtex Sich
+bibtex Holloway
 pdflatex Book.tex
 pdflatex Book.tex
