@@ -1,8 +1,14 @@
 #!/bin/sh
 
+echo "BUILD 1"
 pdflatex Book.tex
+echo "Ewert Bib"
 bibtex Ewert
+echo "Sich Bib"
 bibtex Sich
+echo "Holloway Bib"
 bibtex Holloway
+echo "BUILD 2"
 pdflatex Book.tex
+echo "BUILD 3"
 pdflatex Book.tex
