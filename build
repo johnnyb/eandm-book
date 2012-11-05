@@ -8,6 +8,8 @@ echo "Sich Bib"
 bibtex Sich
 echo "Holloway Bib"
 bibtex Holloway
+echo "Bartlett2 Bib"
+bibtex Bartlett2
 echo "BUILD 2"
 pdflatex Book.tex
 echo "BUILD 3"
