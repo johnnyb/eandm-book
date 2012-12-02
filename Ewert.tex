@@ -21,11 +21,11 @@ Information is what distinguishes an empty hard disk from a full one.
 Information is the difference between random scribbling and carefully printed prose.
 Information is the difference between car parts strewn over a lawn, and a working truck.
 
-While humans operate using the mental concept of information, attempts to develop a theory of information has thus far fallen short of the intuitive concept.
+While humans operate using an intuitive concept of information, attempts to develop a theory of information has thus far fallen short of the intuitive concept.
 Claude Shannon developed what its today known as Shannon information theory \citep{Shannon1948}.
 Shannon's concern was studying the problem of communication, that of sending information from one point to another.
 However, Shannon explicitly avoided the question of the meaningfulness of the information being transmitted, thus not quite capturing the concept of information as we are defining it.
-In fact, under Shannon's model a random signal has the highest amount of information, the precise opposite of conceptual information.
+In fact, under Shannon's model a random signal has the highest amount of information, the precise opposite of the intuitive concept.
 
 Another model of information is that of algorithmic information theory \citep{Chaitin1966, Solomonoff1960, Kolmogorov1968a}.
 Techniques such as Kolmogorov complexity measure the complexity of an object as the minimum length computer program required to recreate the object; Chaitin refers to such minimum length programs as \textit{elegant} \cite{Chaitin2002}.
@@ -35,19 +35,20 @@ But neither simple patterns or random noise are what we think of as information.
 As with Shannon information, there is a disconnect between Kolmogorov complexity and conceptual information.
 
 Other models are based on algorithmic information theory, but also take in account the computational resources required for the programs being run.
-Levin complexity adds the log of the execution time the complexity of the problem \citep{Levin1976}.
-\textit{Logical depth}, on the other hand, is concerned with the execution time of shortest program \citep{Bennett1988}.
+Levin complexity adds the log of the execution time to the complexity of the problem \citep{Levin1976}.
+\textit{Logical depth}, on the other hand, is concerned with the execution time of the shortest program \citep{Bennett1988}.
 There is a class of objects which are easy to describe but expensive to actually produce.
-It is argued that objects in this class must have been produced over a long history.
-Such objects are interesting, but do not seem to capture all of what we consider to be perceptual information.
+It is argued \citep{Bennett1998} that objects in this class must have been produced over a long history.
+Such objects are interesting, but do not seem to capture all of what we consider to be the intuitive concept of information.
 English text or Mount Rushmore correspond to what we think of as information, but its not clear that they can be most efficiently described as long running programs.
 
 One approach to information is the \textit{specified complexity} as expressed by Dembski \citep{Dembski1998}.
 Dembski's concern is that of detecting design, the separation of that which can be explained by chance or necessity from that which is the product of intelligence. 
 In order to infer design, and object must be both complex and specified.
 Complexity refers essentially to improbability.
-Improbability is a necessary but not sufficient condition for detecting design.
-We can clearly not infer design for events which have a high probability.
+The probability of any given object depends on the chance hypothesis proposed to explain it.
+Improbability is a necessary but not sufficient condition for rejecting a chance hypothesis.
+Events which have a high probability under a given chance hypothesis do not give us reason to reject that hypothesis.
 
 Specification is defined as conforming to an independently given pattern.
 The requirement for the pattern to be independent of the object being investigated is fundamental.
@@ -59,7 +60,8 @@ Investigators are often not in the position of being able to choose the target p
 Consider the example of life.
 Life is a self-replicating process, and it would seem that an appropriate specification would be self-replication.
 Self-replication is what makes life such a fascinating area of investigation as compared to rocks.
-However, the specification of self-replication is not independent of life.
+We know about self-replication \emph{because of} our knowledge of life, not as an independent fact.
+Therefore it does not qualify as an independent specification.
 If we did not already have examples of self-replicating entities, we would not have picked as the specification.
 
 The same is true of almost any specification in biology.
@@ -67,11 +69,11 @@ It is tempting to consider flight a specification, but we would only be defining
 As with life in general, specific features in biology cannot be specified independently of the objects themselves.
 
 The concept of specification has been criticized for being imprecisely defined and unquantifiable.
-It is also charged the maintaining the independence of the patterns is difficult.
+It is also charged that the maintaining the independence of the patterns is difficult.
 But specification has been defined in a mathematically rigorous manner in several different ways \cite{Dembski1998, Dembski2002, Dembski2005a}.
 Kolmogorov complexity, or a similar concept, is a persistent method used in this definitions.
 Our goal is to present and defend a simple measure of specification that clearly alleviates these concerns.
-Towards this end, we propose to use conditional Kolmogorov complexity to quantify the degree of specification in an object.
+Towards this end, we propose to use \textit{conditional Kolmogorov complexity} to quantify the degree of specification in an object.
 Combining this with the complexity, we can quantify the specified complexity as \textit{algorithmic specified complexity}.
 
 As noted, Kolmogorov complexity has been suggested as a method for measuring specification.
@@ -145,8 +147,11 @@ To combine the measurement of specification and complexity, we use the following
     \item $X$ is the bitstring being investigated
     \item $C$ is the context as a bitstring
     \item $p$ is the probability distribution which we suppose X to have been selected from
-    \item $p(X)$ is the probability of X occurring
+    \item $p(X)$ is the probability of X occurring according to the chance hypothesis under consideration
 \end{itemize}
+Since high compressibility corresponds to specification, we subtract the compressed length of the string.
+Thus high improbability counts for specified complexity, but incompressible strings count against it.
+
 For this number to become large requires X to be both complex, (i.e. improbable), and specified, (i.e. compressible).
 Failing on either of these counts will produce a low or negative value.
 Since Kolmogorov complexity can, at best, be upper bounded, the ASC can, at best, be lower bounded.
@@ -154,6 +159,7 @@ Since Kolmogorov complexity can, at best, be upper bounded, the ASC can, at best
 At best this measure can reject a given probability distribution.
 It makes no attempt to rule out chance based hypothesis in general.
 However, it can conclude that a given probability distribution does a poor job in explaining a particular item.
+The value of ASC gives a measure of the confidence we can have in rejecting a chance hypothesis.
 
 \subsection{Functionality}
 
@@ -264,7 +270,7 @@ We can thus encode this message:
     \label{kc.dict}
     K(X|C) \leq 9 \log_2  615,100 + 2 \log_2 9 + c \approx 179.41 + c \mbox{.}
 \end{equation}
-Access to the context of the English dictionary allows much better compression then simply the English as comparing equations~\ref{kc.alpha} and ~\ref{kc.dict} shows.
+Access to the context of the English dictionary allows much better compression than simply the English alphabet as comparing equations~\ref{kc.alpha} and ~\ref{kc.dict} shows.
 
 Using equation~\ref{ASC}, we determine
 \begin{equation}
@@ -480,11 +486,11 @@ The number of all possible proteins folding has been estimated.
 \end{quotation}
 We can create a program which outputs a particular protein, given the laws of physics.
 \begin{verbatim}
-for all protiens of length L
-    run protien in a physics simulator
-    if protien folds
-        add to list of folding protiens
-output the Xth protien from the list
+for all proteins of length L
+    run protein in a physics simulator
+    if protein folds
+        add to list of folding proteins
+output the Xth protein from the list
 \end{verbatim}
 
 This program given different choices of $L$ and $N$ will output any folding protein that we choose.
@@ -611,7 +617,7 @@ The problem is that algorithms are very versatile and allow the description of m
 As has been shown by the various examples in this paper, many objects which do not exhibit what humans typically identify as redundant order and patterns are in fact compressible.
 Significantly, we have argued that functionality actually allows compressibility.
 Contrary to what Abel states, functional sequences are compressible by virtue of the functionality they exhibit.
-All of the sequences that Abel holds to be mostly compressible are actually compressible.
+All of the sequences that Abel holds to be mostly incompressible are actually compressible.
 
 But are compressible objects amenable to explanation by simple processes?
 Do all compressible objects lack complexity?
@@ -655,8 +661,9 @@ Dembski argued that information can be detected by looking for specified complex
 We propose that all or most forms of specification can be represented as algorithms, using Kolmogorov complexity.
 The shorter the algorithm, the more specified the object is.
 In order to measure a broader range of specification, we include the context and thus make use of conditional Kolmogorov complexity.
+We have defined the concept of Algorithmic Specified Complexity which takes into account the probabilistic complexity as well as the Kolmogorov complexity. 
 We have presented a number of examples showing how this can represent the specification in a variety of cases.
-We hope that this paper introduces discussion on the use of conditional Kolmogorov complexity as a method for measuring specification.
+We hope that this paper introduces discussion on the use of conditional Kolmogorov complexity as a method for measuring specification as well as the use of Algorithmic Specified Complexity.
 
 \section*{Acknowledgements}
 
