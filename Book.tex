@@ -11,6 +11,7 @@
 \usepackage{graphicx} 
 \usepackage[numbers]{natbib} 
 \usepackage{todonotes} 
+\usepackage[stable]{footmisc}
 
 %% From Holloway
 \usepackage{algorithmic}
@@ -44,8 +45,8 @@
 
 \DeclareGraphicsExtensions{.eps,.png,.pdf}
 \newenvironment{abstract}{\section*{Abstract}}{}
-\newenvironment{introquote}{}{}
-\newenvironment{introquoteref}{}{}
+\newenvironment{introquote}{\hfill}{\vspace{2pc}}
+\newenvironment{introquoteref}{\hfill}{\vspace{2pc}}
 
 \renewcommand*\thesection{\arabic{section}}
 
