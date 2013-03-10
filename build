@@ -2,6 +2,7 @@
 
 echo "BUILD 1"
 pdflatex Book.tex
+makeindex Book
 echo "Ewert Bib"
 bibtex Ewert
 echo "Sich Bib"
@@ -14,5 +15,7 @@ echo "Bartlett2 Bib"
 bibtex Bartlett2
 echo "BUILD 2"
 pdflatex Book.tex
+makeindex Book
 echo "BUILD 3"
 pdflatex Book.tex
+makeindex Book
