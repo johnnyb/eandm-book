@@ -6,6 +6,9 @@
 
 \usepackage[sectionbib]{chapterbib} 
 
+%% For Bio photos
+\usepackage{floatflt}
+
 %% From Ewert
 \usepackage{fullpage} 
 \usepackage{graphicx} 
@@ -58,6 +61,9 @@
 \newcommand\fword[1]{\emph{#1}}
 \newcommand\sundertitle[1]{\underline{#1}}
 \newcommand\foreign[1]{\emph{#1}}
+
+\newcommand\biophoto[1]{\begin{floatingfigure}[p]{2.25in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
+\newcommand\biosection[2]{\newpage \section*{#1} \biophoto{#2}}
 
 %% \newcommand{\myvec}[1]{\vec{#1}} %% how to define a new command
 
