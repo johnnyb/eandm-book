@@ -360,12 +360,14 @@ We assume a probability model of a fair coin
     -\log_2(p) = X_h + X_t \mbox{bits.}
 \end{equation}
 This gives us:
-\begin{equation}
-    A(X,C,p) = X_h + X_t - 2 \log X_h -  2 \log X_t - \log {X_t + X_h \choose X_h} - c
-    = X_h + X_t - \log \left( X_h^2 X_t^2 {X_t + X_h \choose X_h} \right) - c \mbox{.}
-\end{equation}
+\begin{align}
+    A(X,C,p) &= X_h + X_t - 2 \log X_h -  2 \log X_t - \log {X_t + X_h \choose X_h} - c \nonumber \\
+    &= X_h + X_t - \log \left( X_h^2 X_t^2 {X_t + X_h \choose X_h} \right) - c \mbox{.}
+\end{align}
 \begin{figure}
-    \includegraphics[width=.5\textwidth]{EwertCoin}
+    \begin{center}
+        \includegraphics[width=.5\textwidth]{EwertCoin}
+    \end{center}
     \caption{ASC for varyingly biased coin sequences and 20 coin tosses}
     \label{fig_coins}
 \end{figure}
@@ -381,6 +383,7 @@ In playing cards if the distribution is not uniform; somebody is likely cheating
 For the purpose of investigating card hands, we can simply assume a uniform random distribution over all five-card poker hands.
 
 \begin{table}
+    \begin{center}
     \begin{tabular}{ll}
         Name & Frequency \\
         \hline
@@ -395,6 +398,7 @@ For the purpose of investigating card hands, we can simply assume a uniform rand
             One Pair & 1098240 \\
             None & 1302540 \\
     \end{tabular}
+    \end{center}
     \caption{Poker hand frequency}
     \label{poker}
 \end{table}
@@ -435,10 +439,12 @@ Accordingly, we must take the minimum of the two methods
 \end{equation}
 
 \begin{table}
+    \begin{center}
     \begin{tabular}{lllll}
         Name & Frequency & Complexity & Compressed Length & ASC \\
         \input{EwertCards.tex}
     \end{tabular}
+    \end{center}
     \caption{The ASC of the various poker card hands}
     \label{asc.hands}
 \end{table}
@@ -522,10 +528,10 @@ Caution should be used in apply this formula.
 It assumes that proportion of functional proteins is applicable for all lengths, and implies that a fractional number of proteins fold.
 
 Finally calculating the ASC,
-\begin{equation}
-    ASC(X,p) = L \log 4 - 2 \log_2 L + 77 \log_2 10 - L \log_2 4 - c
-    = - 2 \log_2 L + 77 \log_2 10 - c \mbox{.}
-\end{equation}
+\begin{align}
+    ASC(X,p) &= L \log 4 - 2 \log_2 L + 77 \log_2 10 - L \log_2 4 - c \nonumber \\
+    &= - 2 \log_2 L + 77 \log_2 10 - c \mbox{.}
+\end{align}
 The final bound for ASC depends little on the length of the protein sequence which only comes to play in the logarithmic term.
 The significant term is the $77 \log_2 10 \approx 255.79 \mbox{ bits}$.
 This means that we have good reason to believe that folding sequences were not generated randomly from a uniform distribution.
@@ -547,12 +553,12 @@ Both $F$ and $f(x)$ can be produced by a simple algorithm using a functionality 
 Consequently, $F$ and $f(x)$ can be described using a constant program length.
 
 Consider the average for ASC over all elements in $F$.
-\begin{equation}
+\begin{align}
     \label{ASC.FSC.1}
     \sum_{x \in F} f(x) A(x,C,p) 
-    = \sum_{x \in F} f(x) (-\log p(x) - K(x|C))
-    = \sum_{x \in F} -f(x)\log p(x) - \sum_{x in F} f(x) K(x|C))
-\end{equation}
+    &= \sum_{x \in F} f(x) (-\log p(x) - K(x|C))  \nonumber \\
+    &= \sum_{x \in F} -f(x)\log p(x) - \sum_{x in F} f(x) K(x|C))
+\end{align}
 
 We can describe any element $x$ given the probability distribution and $\log f(x) \mbox{ bits}$.
 Given that we can calculate $f(x)$ and $F$ with a constant program gives:
