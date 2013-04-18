@@ -1,0 +1,10 @@
+*.bbl
+*.swp
+*.aux
+*.idx
+*.log
+*.blg
+*.toc
+*.ilg
+*.ind
+Book.pdf

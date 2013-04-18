@@ -1,6 +1,7 @@
 \documentclass{book}
 
 \usepackage[margin=1in, paperwidth=7.5in, paperheight=9.25in]{geometry}
+\usepackage{etoolbox}
 
 %% bibliographies for each chapter, as a section in the chapter
 
@@ -10,10 +11,8 @@
 \usepackage{floatflt}
 
 %% From Ewert
-\usepackage{fullpage} 
 \usepackage{graphicx} 
 \usepackage[numbers]{natbib} 
-\usepackage{todonotes} 
 \usepackage[stable]{footmisc}
 
 %% From Holloway
@@ -62,7 +61,7 @@
 \newcommand\sundertitle[1]{\underline{#1}}
 \newcommand\foreign[1]{\emph{#1}}
 
-\newcommand\biophoto[1]{\begin{floatingfigure}[p]{2.25in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
+\newcommand\biophoto[1]{\begin{floatingfigure}[p]{1in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
 \newcommand\biosection[2]{\newpage \section*{#1} \biophoto{#2}}
 
 %% \newcommand{\myvec}[1]{\vec{#1}} %% how to define a new command
