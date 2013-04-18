@@ -8,7 +8,7 @@ We hope this model launches further dialog on use of conditional Kolmogorov comp
 \end{abstract}
 
 \section{Introduction}
-
+\index{Mount Rushmore}
 Intuitively, humans identify objects such as the carved faces at Mount Rushmore as qualitatively different from that of a random mountainside.
 However, quantifying this concept is an objective manner has proved difficult.
 Both mountainsides are made up of the same material components.
@@ -22,12 +22,15 @@ Information is the difference between random scribbling and carefully printed pr
 Information is the difference between car parts strewn over a lawn, and a working truck.
 
 While humans operate using an intuitive concept of information, attempts to develop a theory of information has thus far fallen short of the intuitive concept.
+\index{Shannon information}
 Claude Shannon developed what its today known as Shannon information theory \citep{Shannon1948}.
 Shannon's concern was studying the problem of communication, that of sending information from one point to another.
 However, Shannon explicitly avoided the question of the meaningfulness of the information being transmitted, thus not quite capturing the concept of information as we are defining it.
 In fact, under Shannon's model a random signal has the highest amount of information, the precise opposite of the intuitive concept.
 
+\index{algorithmic information theory}
 Another model of information is that of algorithmic information theory \citep{Chaitin1966, Solomonoff1960, Kolmogorov1968a}.
+\index{Kolmogorov complexity}
 Techniques such as Kolmogorov complexity measure the complexity of an object as the minimum length computer program required to recreate the object; Chaitin refers to such minimum length programs as \textit{elegant} \cite{Chaitin2002}.
 As with Shannon information, random noise is the most complex because it requires a long computer program to describe.
 In contrast, simple patterns are not complex because a short computer program can describe the pattern.
@@ -35,13 +38,16 @@ But neither simple patterns or random noise are what we think of as information.
 As with Shannon information, there is a disconnect between Kolmogorov complexity and conceptual information.
 
 Other models are based on algorithmic information theory, but also take in account the computational resources required for the programs being run.
+\index{Levin complexity}
 Levin complexity adds the log of the execution time to the complexity of the problem \citep{Levin1976}.
+\index{logical depth}
 \textit{Logical depth}, on the other hand, is concerned with the execution time of the shortest program \citep{Bennett1988}.
 There is a class of objects which are easy to describe but expensive to actually produce.
 It is argued \citep{Bennett1998} that objects in this class must have been produced over a long history.
 Such objects are interesting, but do not seem to capture all of what we consider to be the intuitive concept of information.
 English text or Mount Rushmore correspond to what we think of as information, but its not clear that they can be most efficiently described as long running programs.
 
+\index{specified complexity}
 One approach to information is the \textit{specified complexity} as expressed by Dembski \citep{Dembski1998}.
 Dembski's concern is that of detecting design, the separation of that which can be explained by chance or necessity from that which is the product of intelligence. 
 In order to infer design, and object must be both complex and specified.
@@ -84,6 +90,7 @@ However, this paper also elucidates a number of examples of algorithmic compress
 
 \subsection{Kolmogorov}
 
+\index{Kolmogorov complexity}
 Kolmogorov complexity is a method of measuring information.
 It is defined as the minimum length computer program, in bits, required to produce a binary string.
 \begin{equation}
@@ -100,6 +107,7 @@ Kolmogorov complexity measures the degree to which a given bitstring follows a p
 The more a bitstring follows a pattern, the shorter the program required to reproduce it.
 In contrast, if a bitstring exhibits no patterns, it is simply random, and a much longer program will be required to produce it.
 
+\index{bitstrings}
 Consider the example of a random binary string, {\tt 100100000010100000001010}.
 It can be produced by the following Python program:
 \begin{verbatim}
@@ -123,6 +131,7 @@ The design of an electronic circuit should also be specified, but it is not redu
 In fact, the cases of specification that Kolmogorov complexity seems able to capture are limited to objects which exhibit some very simple pattern.
 But these are not the objects of most interest in terms of specification.
 
+\index{conditional Kolmogorov complexity}
 We use an extension of Kolmogorov complexity known as {\it conditional Kolmogorov complexity} \cite{Kolmogorov1968}.
 The program now has access to additional data as its input.
 \begin{equation}
@@ -130,6 +139,7 @@ The program now has access to additional data as its input.
 \end{equation} where $U(p,Y)$ is the output of running program $p$ with input $Y$.
 The input provides additional data to the program.
 As a result, the program is no longer restricted to exploiting pattern in the desired output, but can take advantage of the information provided by the input.
+\index{context}
 Henceforth, we will refer to this input as the {\it context}.
 
 The use of context allows the measure to capture a broader range of specifications.
@@ -138,6 +148,7 @@ A useful range of specifications can be captured using this technique.
 
 \subsection{Algorithmic Specified Complexity}
 
+\index{algorithmic specified complexity}
 To combine the measurement of specification and complexity, we use the following formula for algorithmic specified complexity (ASC).
 \begin{equation}
     \label{ASC}
@@ -163,6 +174,7 @@ The value of ASC gives a measure of the confidence we can have in rejecting a ch
 
 \subsection{Functionality}
 
+\index{functionality}
 Perhaps the most interesting form of specification is that of functionality.
 It is clear that machines, biological structures, and buildings all have functionality.
 But quantifying that in an objective manner has proven difficult.
@@ -196,6 +208,7 @@ As a result functional objects are compressible.
 
 \section{Examples}
 \subsection{Natural Language}
+\index{English text}
 As the first example, consider the sentence: ``the quick brown fox jumps over the lazy dog.''
 We can encode this sentence as UTF-32, a system for encoding that allows the encoding of symbols from almost any alphabet.
 Since each character takes 32 bits, the message will be encoded as a total of 1376 bits.
@@ -261,6 +274,7 @@ Since the only provided context is that of English letters, this is not a surpri
 We did not identify any sort of pattern beyond that explained by the probability model.
 
 We can also expand the context.
+\index{dictionary}
 Instead of providing the English alphabet as our context, we provide the word list of the Oxford English Dictionary \citep{Oxford2012}.
 In the second edition of that dictionary there were 615,100 word forms defined or illustrated.
 For the purpose of the alphabet context, we encode each letter as a number corresponding to that character.
@@ -303,7 +317,7 @@ Only bounds of the ASC can be computed.
 It is always possible a better compression exists; i.e.\ the object could be more specified than we realize.
 
 \subsection{Random Noise}
-
+\index{randomness}
 While natural language is an example of something that should be specified, random noise is an example of something which should not.
 We will calculate the ASC of a random bitstring.
 This bitstring will contain 1000 bits, where each bit is assigned with equal probability 1 or 0.
@@ -348,6 +362,7 @@ and the resulting ASC:
 \end{equation}
 The bound of ASC gives us reason to reject a uniform noise explanation for this data, but not the biased coin distribution.
 
+\index{ballot rigging}
 Dembski \citep{Dembski1998} has considered the example of ballot rigging where a political party is almost always given the top billing on the ballot listing candidates.
 Since the selection is supposed to be chosen on the basis of a fair coin toss, this is suspicious.
 ASC can quantify this situation.
@@ -378,6 +393,7 @@ However, for an instance which looks like a random sequence, the ASC is minimize
 
 \subsection{Playing Cards}
 
+\index{poker}\index{cards}
 Another interesting case is that of playing cards for poker.
 In playing cards if the distribution is not uniform; somebody is likely cheating.
 For the purpose of investigating card hands, we can simply assume a uniform random distribution over all five-card poker hands.
@@ -414,6 +430,7 @@ This gives us
     -\log_2{p(X)} = -\log_2(\frac{1}{2,598,960}) \approx 21.3 \mbox{ bits.}
 \end{equation}
 While the probability of every poker hand is the same, the Kolmogorov complexity is not.
+\index{royal flush}
 To describe a royal flush requires specifying that is a royal flush, and which suit it is in.
 However, describing a pair requires specifying which the paired value as well as both suit in addition to the three cards not involved in the pair.
 In general, describing hand requires specifying the type of hand, which of all the hands with that type.
@@ -452,6 +469,7 @@ Table~\ref{asc.hands} shows the ASC for the various poker hands.
 Rare hands have large ASC, but command hands have low ASC.
 This parallels what we would expect, because a rare hand might cause us to expect cheating, but a common hand will not.
 
+\index{trump}
 In other card games, a card is turned over after hands have been dealt to determine trump.
 The suit of the card is taken to trump for that round of the game.
 If the same suit is repeatedly chosen as trump, someone may ask what the odds are.
@@ -485,6 +503,7 @@ Given the same trump for many rounds becomes less and less probable.
 \subsection{Folding Proteins}
 \label{sec_folding}
 
+\index{proteins}\index{folding}
 In biology, an important prerequisite to a protein being functional is that it folds.
 The number of all possible proteins folding has been estimated.
 \begin{quotation}
@@ -537,7 +556,7 @@ The significant term is the $77 \log_2 10 \approx 255.79 \mbox{ bits}$.
 This means that we have good reason to believe that folding sequences were not generated randomly from a uniform distribution.
 
 \subsection{Functional Sequence Complexity}
-
+\index{functional sequence complexity}
 Kirk Durston {\it et. al.} have defined the idea of {\it functional sequence complexity} \citep{Durston2007}.
 Functional sequence complexity is related to a special case of algorithmic specified complexity.
 
@@ -602,7 +621,7 @@ This is the same constant as elsewhere: the length of the program required to de
 \section{Objections}
 
 \subsection{Natural Law}
-
+\index{natural law}
 We have argued that compressibility in the presence of context is a necessary condition for information.
 This is in contrast to other who have argued that lack of compressibility is a necessary condition for information \cite{Abel2005}.
 But compressible objects lack complexity.
@@ -643,7 +662,7 @@ These objects are compressible, but that compression does not give an practical 
 But if there is no practical way to reproduce the object, we have no reason to suggest law-like processes as a plausible explanation.
 
 \subsection{Context is Subjective}
-
+\index{context}
 The ASC of any object will depend on the context chosen.
 Any object can be made to have high ASC by using a specifically chosen context.
 But this appears to be the way that information works.
@@ -655,7 +674,7 @@ As with specification, it is important the context be chosen independent of obje
 While a specification will rarely be independent of the object under investigation, we believe it is much easier to maintain this independence in the case of a context.
 
 \subsection{Incalculability}
-
+\index{incomputability}
 It is not possible to calculate the Kolmogorov complexity of an object.
 However, it is possible to upper bound the Kolmogorov complexity and thus lower-bound the algorithmic specified complexity.
 This means that we can say that something is at least this specified, although we cannot rule out the possibility that it is even more specified.
