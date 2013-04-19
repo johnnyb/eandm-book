@@ -25,14 +25,14 @@
 \author{Eric Holloway}
 
 \begin{abstract}
-Research whether human cognitive capabilities are comparable to computer algorithms suggest humans possess supra-computational cognition.  Humans are capable of finding good solutions to computationally intractable problems, and this capability scales with larger problems faster than the best known algorithms \cite{dry06:_human_perfor_visual_presen_travel}.  Many popular games are algorithmically intractable to solve \cite{viglietta11:_gamin_is_hard_job_but}.  Programmers appear capable of solving halting problems \cite{bartlett11:_calcul_softw_compl_using_haltin_probl}.  People can solve insight problems, for which there is currently no known computational method \cite{bartlett11:_using_turin_oracl_in_cognit_model}.  Observers can pick out targets in a picture relevant to their goal independently of the target's features \cite{gue12:_featur_indep_neural_codin_of}.  Such capabilities either have never been algorithmically emulated, or violate well known and well substantiated computational constraints, such as the computational complexity of the problem \cite{cormen01:_introd_to_algor}, the No Free Lunch Theorem (NFLT) \cite{wolpert96:_no_free_lunch_theor_for_optim,wolpert95:_no_free_lunch_theor_for_searc} and the halting problem \cite{cover06:_elemen_of_infor_theor}.  
+Research comparing human cognitive capabilities to computer algorithms suggest humans possess supra-computational cognition.  Humans are capable of finding good solutions to computationally intractable problems, and this capability scales at a faster rate with larger problems than the best known algorithms \cite{dry06:_human_perfor_visual_presen_travel}.  Many popular games are algorithmically intractable to solve \cite{viglietta11:_gamin_is_hard_job_but}.  Programmers appear capable of solving halting problems \cite{bartlett11:_calcul_softw_compl_using_haltin_probl}.  People can solve insight problems, for which there is currently no known computational method \cite{bartlett11:_using_turin_oracl_in_cognit_model}.  Observers can pick out targets in a picture relevant to their goal independently of the target's features \cite{gue12:_featur_indep_neural_codin_of}.  Such capabilities either have never been algorithmically emulated, or violate well known and well substantiated computational constraints, such as the computational complexity of the problem \cite{cormen01:_introd_to_algor}, the No Free Lunch Theorem (NFLT) \cite{wolpert96:_no_free_lunch_theor_for_optim,wolpert95:_no_free_lunch_theor_for_searc} and the halting problem \cite{cover06:_elemen_of_infor_theor}. 
 
-Intelligent design provides a theoretical basis for observations of supra-computational cognition.  According to intelligent design, intelligent agents, such as humans, are capable of creating a new form of information called complex specified information (CSI) \cite{dembski:_specif}.  As implied by Dembski's work on search algorithms \cite{dembski06:_conser_of_infor_in_searc} if human interaction can be incorporated into a search and optimization algorithm, then humans may improve these algorithms over a wide variety of hard problems through creation of CSI.  Additionally, the user neither needs specialized interfaces nor training for each type of problem.  The possibility of such a generalized interface is suggested by research demonstrating context independent problem solving by humans \cite{sperber95:_relev_theor_explain_selec_task}.  
+Intelligent Design Theory (IDT) provides a formal language to account for observations of supra-computational cognition.  According to IDT, intelligent agents, such as humans, are capable of creating a new form of information called complex specified information (CSI) \cite{dembski:_specif}. Dembski's work on search algorithms \cite{dembski06:_conser_of_infor_in_searc} implies that if human interaction can be incorporated into a search and optimization algorithm, these algorithms can surpass the limitations of the NFLT  over a wide variety of hard problems.  This is possible due to the unique ability of intelligent agents, such as humans, to create CSI.  A further implication is the user does not need specialized interfaces or training for each type of problem.  The possibility of such a generalized interface is suggested by research demonstrating context independent problem solving by humans \cite{sperber95:_relev_theor_explain_selec_task}, and suggested by IDT's implications.
 \end{abstract}
 
 \section{Problem Description}
 
-In the computational domain, it is problematic to identify whether human interactions can be defined by an algorithm.  Since all the interactions with the computer are defined by a series of 1s and 0s, i.e. a bit string, the interaction can be codified by an algorithm that outputs the same bit string.  Consequently, on first analysis, trying to computationally distinguish human interaction from algorithm output seems impossible.  Such is the basic problem addressed by this paper, how is it possible to distinguish human interaction from algorithm output?
+In the computational domain, it is problematic to identify whether human interactions can be defined by an algorithm.  Since all the interactions with the computer are defined by a series of 1s and 0s, i.e. a bit string, the interaction can be codified by an algorithm that outputs the same bit string.  Consequently, on first analysis, trying to computationally distinguish human interaction from algorithm output seems impossible.  If human interaction is indistinguishable from algorithmic output, then it is not plausible human interaction can surpass the NFLT.  Such is the basic problem addressed by this paper, how is it possible to distinguish human interaction from algorithm output?
 
 Even though it is always possible to codify a series of events in a finite domain after the fact, the question is whether such codification is possible prior to the event's occurrence.  A prior codification is not possible in all cases, otherwise it violates the halting problem \cite{cover06:_elemen_of_infor_theor}.  This means the possibility of codifying a human's interaction after the interaction has occurred does not necessarily entail it can be codified before the interaction.  Consequently, it is possible that with the right experimental design a human's interaction can be distinguished from an algorithm output.
 
@@ -50,7 +50,7 @@ According to Dembski's research on search algorithms \cite{dembski10:_searc_for_
 
 Active information can be inserted into the algorithm from an existing source of external information, or may be created.  In the case of the ANFLT, if the search algorithm exhibits significant amounts of active information (i.e. finds a target much faster than statistically expected), this information must be created since the conditions of the ANFLT prohibit the information from being merely transferred from an external source.  
 
-Since the information is created, it can come from neither chance nor necessity, since each can only degrade or transfer already existing information.  Additionally, the information is specified by the degree it reduces the number of search queries to find the target solution.  As the information is neither the product of chance nor necessity, and it is specified, it is complex specified information (CSI) \cite{dembski:_specif} as defined by Intelligent Design Theory (IDT).  Furthermore, IDT claims CSI can come from intelligent agents.
+Since the information is created, it cannot come from either chance or necessity, as these sources can only degrade or transfer already existing information.  Additionally, the information is specified by the degree it reduces the number of search queries to find the target solution.  As the information is neither the product of chance nor necessity, and it is specified, it is complex specified information (CSI) \cite{dembski:_specif} as defined by Intelligent Design Theory (IDT).  Furthermore, IDT claims CSI can come from intelligent agents.
 
 \section{Approach}\label{sec:solution-approach}
 
@@ -138,7 +138,7 @@ Otherwise, the basic idea is the same between the actual and conceptual interfac
 
 \subsection{Problem}\label{sec:problem}
 
-CSIC is used to find the primes that generate keys for an asymmetric cryptosystem.  There is no known correlation between finding primes and multi-objective genetic algorithms, nor with human input during the selection phase.  This means the problem and algorithm together meet the criteria for the ANFLT to apply.  
+CSIC is used to find the prime factors that generate keys for an asymmetric cryptosystem.  There is no known correlation between finding prime factors and multi-objective genetic algorithms, nor with human input during the selection phase.  This means the problem and algorithm together meet the criteria for the ANFLT to apply. 
 
 Breaking asymmetric encryption is also an extremely hard problem, which is why it forms the basis of much information technology security.  The asymmetric cryptosystem is RSA \cite{cormen01:_introd_to_algor}.  The genetic algorithm uses a multi-objective fitness function to measure how close a solution is to the correct set of primes.  To find the primes, the fitness function is given access to a true plaintext and true cyphertext. The two objectives are:
 
@@ -149,16 +149,16 @@ Breaking asymmetric encryption is also an extremely hard problem, which is why i
 \end{enumerate}
 
 \section{Results and Conclusion}
-The guided genetic algorithm was controlled by 500 humans using the Amazon Mechanical Turk service.  The humans possibly\footnote{see Section \ref{sec:future-work}} contributed 1 out of 18 superior solutions found (Figure \ref{fig:website_UI}).  The one solution found by a human was also found by the algorithm.
+The guided genetic algorithm received 500 humans inputs from the Amazon Mechanical Turk service.  The human input contributed 1 out of 18 superior solutions found (Figure \ref{fig:website_UI}).  The one solution found by a human was also found by the algorithm.  However, the logs show all human input consisted of selecting every single solution, which can be replicated by an algorithm.
 
 \begin{figure}[!t]
   \centering
   \includegraphics[width=4.5in]{HollowayResults}
-  \caption{Best solutions found from Amazon Turk experiment.  The objectives are described in Section~\ref{sec:problem}.}
+  \caption{Best solutions found from Amazon Turk experiment.\\The objectives are described in Section~\ref{sec:problem}.}
   \label{fig:results}
 \end{figure}
 
-This result did not validate the hypothesis, though the failure may be due to methodological factors, as will be discussed in Section \ref{sec:future-work}.  Since both the human and algorithm discovered the same solution it is not clear the solution was originally found by the human.  Thus, in terms of the FI metric in Section \ref{sec:solution-approach}, it is not possible to say whether the human outperformed the algorithm.  Further analysis of the data is required to see whether the human or algorithm discovered the solution first.
+This result did not validate the hypothesis, though the failure is  due to methodological factors, as will be discussed in Section \ref{sec:future-work}.  Since both the human and algorithm discovered the same solution it is not clear the solution was originally found by the human.  Thus, in terms of the FI metric in Section \ref{sec:solution-approach}, it is not possible to say whether the human outperformed the algorithm.
 
 \section{Theoretical Objections}\label{sec:objections}
 
@@ -170,7 +170,7 @@ While the methodology for CSIC is still in its infancy, and its efficacy has yet
 
  Such an objection is valid.  The CSIC experiment cannot categorically rule out the possibility that human intelligence is a kind of algorithm.  However, CSIC can provide an inference to the best explanation between two competing hypotheses.  The first hypothesis is the proximate cause, human intelligence, created the information.  The second hypothesis is a more remote intelligent agent created the information.
 
- To determine which hypothesis is better supported by a positive result in the CSIC experiment, I propose the principle of minimal CSI creation.  This principle states in the case where creation of CSI is presupposed, the explanation relying on the least amount of CSI creation is prefered.
+To determine which hypothesis is better supported by a positive result in the CSIC experiment, I propose the principle of minimal CSI creation.  The principle is analogous to Ockham's Razor.  This principle states in the case where creation of CSI is presupposed, the explanation relying on the least amount of CSI creation is prefered.
 
  Hypothesis one relies on less CSI creation, since the human only creates CSI for a particular problem instance.  Hypothesis two requires the creation of enormous amounts of CSI covering all possible problem instances the human might encounter.
 
@@ -203,7 +203,7 @@ I chose to try RSA cracking mostly because the applicability of solving this pro
 
 While the essential methodology and implementation of CSIC have now been created and tested, many areas of improvement remain.  Additionally CSIC must be compared to alternatives to see if CSIC is truly effective and beneficial.
 
-The main improvement is verification whether the Amazon Turk input is truly human generated.  Users have been known to script Amazon Turk jobs, and without such verification in this case it is not possible to know with certainty whether the input is human generated.
+The main improvement is verification whether the Amazon Turk input is truly human generated, and whether the users are actually trying to find patterns.  Users have been known to script Amazon Turk jobs, and without such verification in this case it is not possible to know with certainty whether the input is human generated.  When the logs from this experiment were analyzed, it turns out the Amazon Turk users were just selecting all the solutions, and not trying to find patterns in the solutions.
 
 To provide a cleaner environment for experimentation, the guided and unguided algorithms should be seperated.  Additionally, the data logging needs to be timestamped.
 
