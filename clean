@@ -7,3 +7,7 @@ rm -f texput.log
 rm -f Book.toc
 rm -f Book.log
 rm -f Book.pdf
+rm -f Book.ind
+rm -f Book.idx
+rm -f Book.ilg
+rm -f Book.out
