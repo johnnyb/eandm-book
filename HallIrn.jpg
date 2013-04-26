@@ -1,0 +1,6 @@
+#!/bin/sh
+
+FNAME=`echo $1|cut -d. -f1|cut -di -f2`
+FNAME="HallI$FNAME.jpg"
+
+mv $1 $FNAME
