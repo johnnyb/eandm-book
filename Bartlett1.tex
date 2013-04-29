@@ -1,4 +1,4 @@
-\chapter{Using Turing Oracles in Cognitive Models of Problem--Solving}
+\chapter[Using Turing Oracles]{Using Turing Oracles in Cognitive Models of Problem--Solving}
 
 \begin{abstract}
 At the core of engineering is human problem--solving.  Creating a cognitive model of the task of problem--solving is helpful for planning and organizing engineering tasks.  One possibility rarely considered in modeling cognitive processes is the use of Turing Oracles.  \citet{copeland1998} put forth the possibility of that the mind could be though of as an oracle machine, but never applied that idea practically.  Oracles enable the modeling of processes in the mind which are not computationally--based.  Using oracles resolves many of the surprising results of computational problem--solving which arise as a result of the Tractable Cognition Thesis and similar mechanistic models of the mind.  However, as research into the use of Turing Oracles in problem--solving is new, there are many methodological issues.
@@ -139,7 +139,7 @@ This function starts by evaluating the halting problem of its input, p.  If the 
 
 It may seem like we are equivocating on the nature of the functions we are describing, since all of the programs so far have a single input while H() has two inputs.  However, any number of inputs can be encoded onto a single input using delimiters.  Therefore, specifying multiple inputs is just an easier way to write out the function than the required steps for encapsulating the inputs together into a single value.
 
-\section{Turing Oracles as Solutions for Incomputable Problems}
+\section[Turing Oracles as Solutions]{Turing Oracles as Solutions for Incomputable Problems}
 
 Turing recognized that although the value of H() was not computable, it was in fact a true function of its variables --- that is, for every input set, it yielded a single output.  Thus, the halting problem was a hard problem --- it had a solution, but not one that was easy to determine.  Might there be other problems which are harder?  Might there be problems which require the solution to the halting problem to figure out?  If so, how does one go about reasoning about the computational difficulty of an unsolvable problem?  The answer is in Turing Oracles.  
 
@@ -155,7 +155,7 @@ Even though we cannot compute the values of functions based on oracle machines (
 
 As we talked about earlier, if dualism is true, then at least some aspects of human cognition that are not computable.  However, given the discussion above, even incomputable functions may be representable if we include oracles in our descriptions of cognition.  Several researchers have previously discussed the possibility that the human mind may be an oracle machine (i.e. \citet{copeland1998}).  However, none of them have suggested including oracles as a standard part of cognitive modeling, or how one might apply oracles to cognitive modeling.  The goal of this paper is to present both the concept of modeling cognition via oracle machines as well as applying the concept in a model of human problem--solving on insight problems.
 
-\section{Partial Solutions to Incomputable Functions Using Additional Axioms}
+\section[Partial Solutions to Incomputable Functions]{Partial Solutions to Incomputable Functions Using Additional Axioms}
 
 Incomputable functions are unpredictably sensitive to initial conditions.  In other words, there is no way to computably predict the difference in behavior of the function from the differences in changes to the initial conditions ahead--of--time.  If you could, they would by definition not be incomputable!  However, one can make partial solutions to these functions by incorporating additional axioms.
 
