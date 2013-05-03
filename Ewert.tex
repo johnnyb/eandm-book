@@ -2,6 +2,8 @@
 \author{Winston Ewert, William A. Dembski, and Robert J. Marks II}
 
 \begin{abstract}
+\index{complexity!metrics!Kolmogorov complexity}
+\index{complexity!metrics!conditional Kolmogorov complexity}
 As engineers we would like to think that we produce something different from that of a chaotic system. The Eiffel tower is  fundamentally different from the same components lying in a heap on the ground. Mt. Rushmore is fundamentally  different from a random mountainside. But we lack a good method for quantifying this idea. This has led some to reject the idea that we can detect engineered or designed systems. Various methods have been proposed each of which has
 various faults. Some have trouble distinguishing noise from data, some are subjective, etc. We propose to use conditional Kolmogorov complexity to measure the degree of specification of an object. The Kolmogorov complexity of an object, is the length of the shortest computer program required to describe that object. Conditional Kolmogorov complexity is Kolmogorov complexity, with access to a  context. The program can extract information from the context in a variety of ways allowing more compression. The more compressible an object is the more we may deem the object specified. Random noise is  incompressible, and so compression indicates that the object is not simply random noise. 
 We hope this model launches further dialog on use of conditional Kolmogorov complexity in the measurement of specified complexity.
@@ -22,7 +24,8 @@ Information is the difference between random scribbling and carefully printed pr
 Information is the difference between car parts strewn over a lawn, and a working truck.
 
 While humans operate using an intuitive concept of information, attempts to develop a theory of information has thus far fallen short of the intuitive concept.
-\index{Shannon information}
+\index{Shannon information|see{complexity!metrics!Shannon information}}
+\index{complexity!metrics!Shannon information}
 Claude Shannon developed what its today known as Shannon information theory \citep{Shannon1948}.
 Shannon's concern was studying the problem of communication, that of sending information from one point to another.
 However, Shannon explicitly avoided the question of the meaningfulness of the information being transmitted, thus not quite capturing the concept of information as we are defining it.
@@ -30,7 +33,8 @@ In fact, under Shannon's model a random signal has the highest amount of informa
 
 \index{algorithmic information theory}
 Another model of information is that of algorithmic information theory \citep{Chaitin1966, Solomonoff1960, Kolmogorov1968a}.
-\index{Kolmogorov complexity}
+\index{Kolmogorov complexity|see{complexity!metrics!Kolmogorov complexity}}
+\index{complexity!metrics!Kolmogorov complexity}
 Techniques such as Kolmogorov complexity measure the complexity of an object as the minimum length computer program required to recreate the object; Chaitin refers to such minimum length programs as \textit{elegant} \cite{Chaitin2002}.
 As with Shannon information, random noise is the most complex because it requires a long computer program to describe.
 In contrast, simple patterns are not complex because a short computer program can describe the pattern.
@@ -38,16 +42,22 @@ But neither simple patterns or random noise are what we think of as information.
 As with Shannon information, there is a disconnect between Kolmogorov complexity and conceptual information.
 
 Other models are based on algorithmic information theory, but also take in account the computational resources required for the programs being run.
-\index{Levin complexity}
+\index{complexity!metrics!Levin complexity}
 Levin complexity adds the log of the execution time to the complexity of the problem \citep{Levin1976}.
-\index{logical depth}
+\index{complexity!metrics!logical depth}
+\index{logical depth|see{complexity!metrics!logical depth}}
 \textit{Logical depth}, on the other hand, is concerned with the execution time of the shortest program \citep{Bennett1988}.
 There is a class of objects which are easy to describe but expensive to actually produce.
-It is argued \citep{Bennett1998} that objects in this class must have been produced over a long history.
+It is argued \citep{Bennett1988} that objects in this class must have been produced over a long history.
 Such objects are interesting, but do not seem to capture all of what we consider to be the intuitive concept of information.
 English text or Mount Rushmore correspond to what we think of as information, but its not clear that they can be most efficiently described as long running programs.
 
-\index{specified complexity}
+\index{complexity!metrics!specified complexity}
+\index{specified complexity|see{complexity!metrics!specified complexity}}
+\index{chance}
+\index{necessity}
+\index{agency}
+\index{intelligence}
 One approach to information is the \textit{specified complexity} as expressed by Dembski \citep{Dembski1998}.
 Dembski's concern is that of detecting design, the separation of that which can be explained by chance or necessity from that which is the product of intelligence. 
 In order to infer design, and object must be both complex and specified.
@@ -56,12 +66,14 @@ The probability of any given object depends on the chance hypothesis proposed to
 Improbability is a necessary but not sufficient condition for rejecting a chance hypothesis.
 Events which have a high probability under a given chance hypothesis do not give us reason to reject that hypothesis.
 
+\index{specification}
 Specification is defined as conforming to an independently given pattern.
 The requirement for the pattern to be independent of the object being investigated is fundamental.
 Given absolute freedom of pattern selection, any object can be made specified by selecting that object as the pattern.
 It is not impressive to hit a bullseye if the bullseye is painted on after the arrow has hit the wall.
 It is impressive to hit the bullseye if the bullseye was painted before the arrow was fired.
 
+\index{self-replication}
 Investigators are often not in the position of being able to choose the target prior to investigating the object.
 Consider the example of life.
 Life is a self-replicating process, and it would seem that an appropriate specification would be self-replication.
@@ -74,6 +86,10 @@ The same is true of almost any specification in biology.
 It is tempting to consider flight a specification, but we would only be defining the pattern of flight because we have seen flying animals.
 As with life in general, specific features in biology cannot be specified independently of the objects themselves.
 
+\index{specification|(}
+\index{complexity!metrics!conditional Kolmogorov complexity}
+\index{complexity!metrics!algorithmic specified complexity}
+\index{algorithmic specified complexity|see{complexity!metrics!algorithmic specified complexity}}
 The concept of specification has been criticized for being imprecisely defined and unquantifiable.
 It is also charged that the maintaining the independence of the patterns is difficult.
 But specification has been defined in a mathematically rigorous manner in several different ways \cite{Dembski1998, Dembski2002, Dembski2005a}.
@@ -90,7 +106,7 @@ However, this paper also elucidates a number of examples of algorithmic compress
 
 \subsection{Kolmogorov}
 
-\index{Kolmogorov complexity}
+\index{complexity!metrics!Kolmogorov complexity|(}
 Kolmogorov complexity is a method of measuring information.
 It is defined as the minimum length computer program, in bits, required to produce a binary string.
 \begin{equation}
@@ -130,8 +146,9 @@ Natural language text is not reducible to a simple pattern; however, it is an ex
 The design of an electronic circuit should also be specified, but it is not reducible to a simple pattern.
 In fact, the cases of specification that Kolmogorov complexity seems able to capture are limited to objects which exhibit some very simple pattern.
 But these are not the objects of most interest in terms of specification.
+\index{complexity!metrics!Kolmogorov complexity|)}
 
-\index{conditional Kolmogorov complexity}
+\index{complexity!metrics!conditional Kolmogorov complexity}
 We use an extension of Kolmogorov complexity known as {\it conditional Kolmogorov complexity} \cite{Kolmogorov1968}.
 The program now has access to additional data as its input.
 \begin{equation}
@@ -145,10 +162,11 @@ Henceforth, we will refer to this input as the {\it context}.
 The use of context allows the measure to capture a broader range of specifications.
 It is possible to describe many bitstrings by combining a short program along with the contextual information.
 A useful range of specifications can be captured using this technique.
+\index{specification|)}
 
 \subsection{Algorithmic Specified Complexity}
 
-\index{algorithmic specified complexity}
+\index{complexity!metrics!algorithmic specified complexity|(}
 To combine the measurement of specification and complexity, we use the following formula for algorithmic specified complexity (ASC).
 \begin{equation}
     \label{ASC}
@@ -499,11 +517,12 @@ A pattern repeating once is no pattern at all, and doesn't provide specification
 Figure~\ref{suit.plot} shows the ASC for increasing numbers of hands.
 The more times the same suit is chosen as trump, the larger the number of bits of ASC.
 Given the same trump for many rounds becomes less and less probable.
+\index{complexity!metrics!algorithmic specified complexity|)}
 
 \subsection{Folding Proteins}
 \label{sec_folding}
 
-\index{proteins}\index{folding}
+\index{proteins!folding}
 In biology, an important prerequisite to a protein being functional is that it folds.
 The number of all possible proteins folding has been estimated.
 \begin{quotation}
@@ -536,6 +555,7 @@ so
     K(X|C) = 2 \log_2 L + \log_2 F_L + c = 2 \log_2 L + -77 \log 10  + L \log 4 \mbox{.}
 \end{equation}
 
+\index{DNA}\index{protein}
 For our probability model, we will suppose that each base along the DNA chain is uniformly chosen.
 It should be emphasized that according to the Darwinian model of evolution, the bases are not uniformly chosen.
 This supposition only serves to test a simplistic chance model of protein origin.
@@ -546,6 +566,7 @@ We can calculate the probability as
 Caution should be used in apply this formula.
 It assumes that proportion of functional proteins is applicable for all lengths, and implies that a fractional number of proteins fold.
 
+\index{complexity!metrics!algorithmic specified complexity}
 Finally calculating the ASC,
 \begin{align}
     ASC(X,p) &= L \log 4 - 2 \log_2 L + 77 \log_2 10 - L \log_2 4 - c \nonumber \\
@@ -556,7 +577,9 @@ The significant term is the $77 \log_2 10 \approx 255.79 \mbox{ bits}$.
 This means that we have good reason to believe that folding sequences were not generated randomly from a uniform distribution.
 
 \subsection{Functional Sequence Complexity}
-\index{functional sequence complexity}
+\index{functional sequence complexity|see{complexity!metrics!functional sequence complexity}}
+\index{complexity!metrics!functional sequence complexity|(}
+\index{complexity!metrics!algorithmic specified complexity|(}
 Kirk Durston {\it et. al.} have defined the idea of {\it functional sequence complexity} \citep{Durston2007}.
 Functional sequence complexity is related to a special case of algorithmic specified complexity.
 
@@ -617,11 +640,15 @@ Thus, for the uniform probability distribution case,
 This establishes the relationship between ASC and FSC.
 The difference is that the ASC is a lower bound, and includes a constant.
 This is the same constant as elsewhere: the length of the program required to describe the specification.
+\index{complexity!metrics!functional sequence complexity|)}
+\index{complexity!metrics!algorithmic specified complexity|)}
 
 \section{Objections}
 
 \subsection{Natural Law}
 \index{natural law}
+\index{compressibility}
+\index{information}
 We have argued that compressibility in the presence of context is a necessary condition for information.
 This is in contrast to other who have argued that lack of compressibility is a necessary condition for information \cite{Abel2005}.
 But compressible objects lack complexity.
@@ -633,6 +660,10 @@ Sparks fly upwards.
 But these patterns are the result of the operation of simple law-like processes.
 Even if the explanations for these patterns were unknown, we would suppose due to the simplicity of the pattern shown that some simple explanation existed.
 
+\index{redundancy}
+\index{patterns}
+\index{algorithms}
+\index{compressibility}
 The premise behind this use of compressibility is that it identifies what human would see as simple patterns.
 Abel writes:
 \begin{quotation}
@@ -654,6 +685,7 @@ This does not somehow make it probable that English text will appear on a beach 
 Ninety degree angles are very compressible; yet, they are not typically found in nature.
 The existence of an explanation from the laws of nature does not appear to follow from compressibility.
 
+\index{complexity!metrics!Kolmogorov complexity}
 Kolmogorov complexity deliberately ignores how long a program takes to run.
 It is only concerned with the length of the program's description.
 A program may be short but take an astronomical amount of time to run.
@@ -662,7 +694,7 @@ These objects are compressible, but that compression does not give an practical 
 But if there is no practical way to reproduce the object, we have no reason to suggest law-like processes as a plausible explanation.
 
 \subsection{Context is Subjective}
-\index{context}
+\index{context}\index{subjectivity}
 The ASC of any object will depend on the context chosen.
 Any object can be made to have high ASC by using a specifically chosen context.
 But this appears to be the way that information works.
@@ -670,6 +702,7 @@ If the authors, who do not understand Arabic, look at Arabic text, it appears to
 The problem is not that Arabic lacks information content, but that we are unable to identify it without the necessary context.
 As a result, this subjectivity appears to capture something about the way information works in the human experience.
 
+\index{specification}
 As with specification, it is important the context be chosen independent of object under investigation.
 While a specification will rarely be independent of the object under investigation, we believe it is much easier to maintain this independence in the case of a context.
 
@@ -682,6 +715,8 @@ This means that we cannot mechanically detect that something has specification, 
 
 \section{Conclusions}
 
+\index{complexity!metrics!specified complexity}
+\index{complexity!metrics!algorithmic specified complexity}
 Dembski argued that information can be detected by looking for specified complexity.
 We propose that all or most forms of specification can be represented as algorithms, using Kolmogorov complexity.
 The shorter the algorithm, the more specified the object is.
