@@ -1,5 +1,6 @@
 \documentclass{book}
 
+\usepackage[titles]{tocloft}
 \usepackage[margin=1in, paperwidth=7.5in, paperheight=9.25in]{geometry}
 \usepackage{etoolbox}
 
@@ -64,7 +65,35 @@
 \newenvironment{introquote}{\hfill}{\vspace{2pc}}
 \newenvironment{introquoteref}{\hfill}{\vspace{2pc}}
 
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}}
+
 \renewcommand*\thesection{\arabic{section}}
+
+
+%%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft
+\renewcommand\cftpartpresnum{\partname~}
+\renewcommand\cftchappresnum{\chaptername~}
+\renewcommand\cftchapaftersnum{.}
+\newlength\mylenprt
+\newlength\mylenchp
+\newlength\mylenapp
+\settowidth\mylenprt{\cftpartfont\cftpartpresnum\cftpartaftersnum}
+\settowidth\mylenchp{\cftchapfont\cftchappresnum\cftchapaftersnum}
+\settowidth\mylenapp{\cftchapfont\appendixname~\cftchapaftersnum}
+\addtolength\mylenprt{\cftpartnumwidth}
+\addtolength\mylenchp{\cftchapnumwidth}
+\addtolength\mylenapp{\cftchapnumwidth}
+\setlength\cftpartnumwidth{\mylenprt}
+\setlength\cftchapnumwidth{\mylenchp}
 
 %% These are for Sich's article, in case we want to standardize these
 \newcommand\sbf[1]{\textbf{#1}}
@@ -88,33 +117,31 @@
 \makeindex
 
 \begin{document}
-\title{Engineering and the Ultimate}
-% \subtitle{An Interdisciplinary Investigation of Order and Design in Nature and Craft}
-\author{Jonathan Bartlett, Dominic Halsmer, and Mark Hall}
-\date{April 2013}
-\maketitle
+%% \title{Engineering and the Ultimate}
+
+\include{TitlePages}
 
 \tableofcontents
 
 \include{Introduction}
 
+\part{Engineering, Philosophy, and Worldview}
+\include{Halsmer}
+\include{Sich}
+
+\part{Architecture and the Ultimate}
+\include{Hall}
+
+\part{Software Engineering and Human Agency}
+\include{Ewert}
+\include{Bartlett1}
+\include{Bartlett2}
+\include{Holloway}
+
+\part{The Engineering of Life}
 \include{Mignea1}
 \include{Mignea2}
 \include{Mignea3}
-
-
-\include{Hall}
-
-\include{Ewert}
-
-\include{Bartlett1}
-\include{Bartlett2}
-
-\include{Holloway}
-
-\include{Sich}
-\include{Halsmer}
-\include{SSRExport}
 
 \include{AboutAuthors}
 
