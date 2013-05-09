@@ -1,7 +1,8 @@
 \documentclass[12pt]{book}
 
 \usepackage[titles]{tocloft}
-\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
+%\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
+\usepackage[margin=1in, paperwidth=7.5in, paperheight=9.25in]{geometry}
 \usepackage{etoolbox}
 %\renewcommand\baselinestretch{3}
 
@@ -33,8 +34,7 @@
 \usepackage{anyfontsize}
 
 \definecolor{gray75}{gray}{0.75}
-\newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\textcolor{gray75}{\thechapter}\hsp}{0pt}{\Huge\bfseries}[]
+\titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray75}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
 
 
 
@@ -128,7 +128,7 @@
 
 \newcommand\chapterauthor[1]{
 	\begin{center}
-		{\LARGE \textsc{#1}} 
+		{\Large \textsc{#1}} 
 	\end{center}
 }
 \newcommand\chapteraffiliation[1]{
