@@ -1,8 +1,9 @@
-\documentclass{book}
+\documentclass[12pt]{book}
 
 \usepackage[titles]{tocloft}
-\usepackage[margin=1in, paperwidth=7.5in, paperheight=9.25in]{geometry}
+\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
 \usepackage{etoolbox}
+%\renewcommand\baselinestretch{3}
 
 %% bibliographies for each chapter, as a section in the chapter
 
@@ -27,11 +28,19 @@
 \usepackage{amsthm}
 % \usepackage{cite}
 \usepackage{makeidx}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{anyfontsize}
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\textcolor{gray75}{\thechapter}\hsp}{0pt}{\Huge\bfseries}[]
+
 
 
 %%% If using showidx, turn off hyperref! and redefine its commands
 %% also add an inch to page margins, and modify width/height by 2 inches
-% \usepackage{showidx}
+%\usepackage{showidx}
 %\newcommand\hypertarget[2]{}
 %\newcommand\url[1]{}
 %\newcommand\href[1]{}
@@ -55,7 +64,6 @@
 
 %% For OpenOffice exports
 \usepackage{textcomp}
-\usepackage{color}
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{fixltx2e}
@@ -117,6 +125,17 @@
 
 \newcommand\biophoto[1]{\begin{floatingfigure}[p]{1in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
 \newcommand\biosection[2]{\newpage \section*{#1} \biophoto{#2}}
+
+\newcommand\chapterauthor[1]{
+	\begin{center}
+		{\LARGE \textsc{#1}} 
+	\end{center}
+}
+\newcommand\chapteraffiliation[1]{
+	\begin{center}
+		#1
+	\end{center}
+}
 
 %% \newcommand{\myvec}[1]{\vec{#1}} %% how to define a new command
 
