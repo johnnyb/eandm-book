@@ -27,6 +27,18 @@
 \usepackage{amsthm}
 % \usepackage{cite}
 \usepackage{makeidx}
+
+
+%%% If using showidx, turn off hyperref! and redefine its commands
+%% also add an inch to page margins, and modify width/height by 2 inches
+% \usepackage{showidx}
+%\newcommand\hypertarget[2]{}
+%\newcommand\url[1]{}
+%\newcommand\href[1]{}
+
+\usepackage{hyperref}
+
+
 \usepackage{longtable}
 \usepackage{amssymb}
 \usepackage{balance}
@@ -44,7 +56,6 @@
 %% For OpenOffice exports
 \usepackage{textcomp}
 \usepackage{color}
-\usepackage{hyperref}
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{fixltx2e}
@@ -150,6 +161,8 @@
 
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Index}
+
+\raggedright
 \printindex
 
 
