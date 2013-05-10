@@ -1,5 +1,14 @@
 %% FIXME - note which part has the bibliography
 
+\newcommand\migneafigure[3]{
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{#1}
+		\caption{{#2}}
+		\label{#3}
+	\end{figure}
+}
+
 \chapter[The Simplest Self-Replicator, Part 1]{Developing Insights into the Design of the Simplest Self-Replicator and its Complexity: Part 1---Developing a Functional Model for the Simplest Self-Replicator}
 
 \chapterauthor{Arminius Mignea}
@@ -118,11 +127,7 @@ At the highest level the SSR has the following composition as
 illustrated in Figure \ref{fig:ssr_structure}.
 
 
-\begin{figure}
-	%% FIXME - include graphics
-	\caption{The SSR Structure}
-	\label{fig:ssr_structure}
-\end{figure}
+\migneafigure{MigneaSsrStructure}{The SSR Structure}{fig:ssr_structure}
 
 The SSR replication has two main phases:
 
@@ -133,18 +138,9 @@ replication
 replication
 \end{enumerate}
 
+\migneafigure{MigneaSsrCloningPhase}{The Cloning Phase in SSR Replication}{ref:cloning_phase}
 
-\begin{figure}
-	% FIXME - need image
-	\caption{The Cloning Phase in SSR Replication}
-	\label{ref:cloning_phase}
-\end{figure}
-
-\begin{figure}
-	% FIXME - need image
-	\caption{The Division Phase in SSR Replication}
-	\label{ref:division_phase}
-\end{figure}
+\migneafigure{MigneaSsrDivisionPhase}{The Division Phase in SSR Replication}{ref:division_phase}
 
 The behavior of the SSR can be described succinctly as follows:
 
@@ -295,59 +291,54 @@ specified. For example, for a “power supply enclosure” part with
 identifier:  “ID-50712294”, its entry in the bill of materials catalog
 may look like the table below:
 
-%% FIXME - fix table
-{\bfseries
-Table  Example Entry in the Bill of Material Catalog for the
-``Power Supply Enclosure'' part}
 
-The flags: Q=quantity, C=count, D=dimensions specify what properties are
-specified for each part name
-
-
-\bigskip
-
-\begin{flushleft}
-\tablehead{}
-\begin{supertabular}{|m{1.3094599in}m{1.3573599in}m{0.9837598in}m{0.6705598in}m{0.82335985in}m{1.0323598in}|}
+%\begin{supertabular}{|m{1.3094599in}m{1.3573599in}m{0.9837598in}m{0.6705598in}m{0.82335985in}m{1.0323598in}|}
+\begin{table}[h]
+\caption{Example Entries in the Bill of Materials Catalog for the ``Power Supply Enclosure'' part}
+\begin{center}
+\begin{tabular}{| l l l l l l |}
 \hline
 \textbf{Part name} &
-\textbf{Part Identifier} &
+\textbf{Part ID} &
 \textbf{Flags} &
 \textbf{Count} &
-\textbf{Quantity} &
-\textbf{Dimensions(“)}\\
-Sheet metal  1/16 &
-~
+\textbf{Qty} &
+\textbf{Dimensions}\\
+Sheet metal $\frac{1}{16}$ &
+ID-02409
  &
-~
+$Q + D$
  &
-{}- &
-~
+- &
+1.2
  &
-~
+16x24
 \\
-Screws 1/8*2 &
-~
+Screws $\frac{1}{8}*2$ &
+ID-01670
  &
-~
+$C$
  &
 8 &
-~
+-
  &
-~
+-
 \\
-Washers  ¼*2 &
-~
+Washers $\frac{1}{4}*2$ &
+ID-05629
  &
-~
+$C$
  &
 8 &
-~
+-
  &
-~
+-
 \\\hline
-\end{supertabular}
-\end{flushleft}
+%\end{supertabular}
+\end{tabular}
+\end{center}
+\caption*{The \textit{flags} field tells what properties are specified for the part.  Q=quantity, C=count, D=dimensions}
+\end{table}
 
 The \textbf{bill of materials} is an \textbf{informational function} of
 the SSR. Like all SSR informational functions it has two components:
@@ -864,11 +855,7 @@ example the Transport function depends on Energy Generation and
 Transport function although this dependency is not depicted in the
 diagram.
 
-\begin{figure}
-	%% FIXME - need actual figure
-	\label{fig:functions_and_dependencies}
-	\caption{SSR Functions and their Dependencies}
-\end{figure}
+\migneafigure{MigneaSsrFunctionsAndDependencies}{SSR Functions and their Dependencies}{fig:functions_and_dependencies}
 
 \section{The Type and Nature of SSR Components}
 
