@@ -102,7 +102,7 @@
 %%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft
 \renewcommand\cftpartpresnum{\partname~}
 \renewcommand\cftchappresnum{\chaptername~}
-\renewcommand\cftchapaftersnum{.}
+\renewcommand\cftchapaftersnum{.~~}
 \newlength\mylenprt
 \newlength\mylenchp
 \newlength\mylenapp
@@ -161,7 +161,7 @@
 \include{Sich}
 
 %% Possibly premature, but was causing problems
-\addtocontents{toc}{\protect\newpage}
+%% \addtocontents{toc}{\protect\newpage}
 
 \part{Architecture and the Ultimate}
 \include{Hall}
