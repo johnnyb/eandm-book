@@ -17,8 +17,8 @@ echo "Bartlett1 Bib"
 bibtex Bartlett1
 echo "Bartlett2 Bib"
 bibtex Bartlett2
-echo "Mignea3 Bib"
-bibtex Mignea3
+echo "Mignea Bib"
+bibtex Mignea2
 echo "BUILD 2"
 pdflatex Book.tex
 makeindex Book
