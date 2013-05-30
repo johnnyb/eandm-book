@@ -1,7 +1,10 @@
-\documentclass{book}
+\documentclass[12pt]{book}
 
+\usepackage[titles]{tocloft}
+%\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
 \usepackage[margin=1in, paperwidth=7.5in, paperheight=9.25in]{geometry}
 \usepackage{etoolbox}
+%\renewcommand\baselinestretch{3}
 
 %% bibliographies for each chapter, as a section in the chapter
 
@@ -26,6 +29,26 @@
 \usepackage{amsthm}
 % \usepackage{cite}
 \usepackage{makeidx}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{anyfontsize}
+\usepackage{caption}
+
+\definecolor{gray75}{gray}{0.75}
+\titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray75}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
+
+
+
+%%% If using showidx, turn off hyperref! and redefine its commands
+%% also add an inch to page margins, and modify width/height by 2 inches
+%\usepackage{showidx}
+%\newcommand\hypertarget[2]{}
+%\newcommand\url[1]{}
+%\newcommand\href[1]{}
+
+\usepackage{hyperref}
+
+
 \usepackage{longtable}
 \usepackage{amssymb}
 \usepackage{balance}
@@ -42,19 +65,55 @@
 
 %% For OpenOffice exports
 \usepackage{textcomp}
-\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{fixltx2e}
+\newcommand\textstyleBookTitle[1]{\textbf{\textsc{#1}}}
+\newcommand\textstyleTitleChar[1]{\textbf{#1}}
+\newcommand\textstyleauthori[1]{#1}
+\newcommand\textstylecitation[1]{#1}
+\newcommand\textstylepagenumber[1]{#1}
+
 
 %% For Sich
-\usepackage[T2A,T1,OT1]{fontenc}
+\usepackage[T2A,LGR,T1,OT1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[russian,english]{babel}
+\usepackage[russian,greek,english]{babel}
 
 \DeclareGraphicsExtensions{.eps,.png,.pdf}
 \newenvironment{abstract}{\section*{Abstract}}{}
 \newenvironment{introquote}{\hfill}{\vspace{2pc}}
 \newenvironment{introquoteref}{\hfill}{\vspace{2pc}}
 
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}}
+
 \renewcommand*\thesection{\arabic{section}}
+
+
+%%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft
+\renewcommand\cftpartpresnum{\partname~}
+\renewcommand\cftchappresnum{\chaptername~}
+\renewcommand\cftchapaftersnum{.~~}
+\newlength\mylenprt
+\newlength\mylenchp
+\newlength\mylenapp
+\settowidth\mylenprt{\cftpartfont\cftpartpresnum\cftpartaftersnum}
+\settowidth\mylenchp{\cftchapfont\cftchappresnum\cftchapaftersnum}
+\settowidth\mylenapp{\cftchapfont\appendixname~\cftchapaftersnum}
+\addtolength\mylenprt{\cftpartnumwidth}
+\addtolength\mylenchp{\cftchapnumwidth}
+\addtolength\mylenapp{\cftchapnumwidth}
+\setlength\cftpartnumwidth{\mylenprt}
+\setlength\cftchapnumwidth{\mylenchp}
 
 %% These are for Sich's article, in case we want to standardize these
 \newcommand\sbf[1]{\textbf{#1}}
@@ -68,6 +127,17 @@
 \newcommand\biophoto[1]{\begin{floatingfigure}[p]{1in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
 \newcommand\biosection[2]{\newpage \section*{#1} \biophoto{#2}}
 
+\newcommand\chapterauthor[1]{
+	\begin{center}
+		{\Large \textsc{#1}} 
+	\end{center}
+}
+\newcommand\chapteraffiliation[1]{
+	\begin{center}
+		#1
+	\end{center}
+}
+
 %% \newcommand{\myvec}[1]{\vec{#1}} %% how to define a new command
 
 \setcounter{tocdepth}{1}
@@ -78,37 +148,41 @@
 \makeindex
 
 \begin{document}
-\title{Engineering and the Ultimate}
-% \subtitle{An Interdisciplinary Investigation of Order and Design in Nature and Craft}
-\author{Jonathan Bartlett, Dominic Halsmer, and Mark Hall}
-\date{April 2013}
-\maketitle
+%% \title{Engineering and the Ultimate}
+
+\include{TitlePages}
 
 \tableofcontents
 
 \include{Introduction}
 
+\part{Engineering, Philosophy, and Worldview}
+\include{Halsmer}
+\include{Sich}
+
+%% Possibly premature, but was causing problems
+%% \addtocontents{toc}{\protect\newpage}
+
+\part{Architecture and the Ultimate}
+\include{Hall}
+
+\part{Software Engineering and Human Agency}
+\include{Ewert}
+\include{Bartlett1}
+\include{Bartlett2}
+\include{Holloway}
+
+\part{The Engineering of Life}
 \include{Mignea1}
 \include{Mignea2}
 \include{Mignea3}
-
-
-\include{Hall}
-
-\include{Ewert}
-
-\include{Bartlett1}
-\include{Bartlett2}
-
-\include{Holloway}
-
-\include{Sich}
-\include{Halsmer}
 
 \include{AboutAuthors}
 
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Index}
+
+\raggedright
 \printindex
 
 
