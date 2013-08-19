@@ -8,14 +8,14 @@
 
 %% bibliographies for each chapter, as a section in the chapter
 
-\usepackage[sectionbib]{chapterbib} 
+\usepackage{chapterbib} 
 
 %% For Bio photos
 \usepackage{floatflt}
 
 %% From Ewert
 \usepackage{graphicx} 
-\usepackage[numbers]{natbib} 
+\usepackage[sectionbib,round,colon,authoryear]{natbib} 
 \usepackage[stable]{footmisc}
 
 %% From Holloway
@@ -97,6 +97,9 @@
   \item[]}{\end{list}}
 
 \renewcommand*\thesection{\arabic{section}}
+
+
+\newcommand\eandmbibliography[1]{\bibliographystyle{apalike}\bibliography{#1}}
 
 
 %%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft
