@@ -40,7 +40,7 @@ In fact, under Shannon's model a random signal has the highest amount of informa
 Another model of information is that of algorithmic information theory \citep{Chaitin1966, Solomonoff1960, Kolmogorov1968a}.
 \index{Kolmogorov complexity|see{complexity, metrics, Kolmogorov complexity}}
 \index{complexity!metrics!Kolmogorov complexity}
-Techniques such as Kolmogorov complexity measure the complexity of an object as the minimum length computer program required to recreate the object; Chaitin refers to such minimum length programs as \textit{elegant} \cite{Chaitin2002}.
+Techniques such as Kolmogorov complexity measure the complexity of an object as the minimum length computer program required to recreate the object; Chaitin refers to such minimum length programs as \textit{elegant} \citep{Chaitin2002}.
 As with Shannon information, random noise is the most complex because it requires a long computer program to describe.
 In contrast, simple patterns are not complex because a short computer program can describe the pattern.
 But neither simple patterns or random noise are what we think of as information.
@@ -97,7 +97,7 @@ As with life in general, specific features in biology cannot be specified indepe
 \index{algorithmic specified complexity|see{complexity, metrics, algorithmic specified complexity}}
 The concept of specification has been criticized for being imprecisely defined and unquantifiable.
 It is also charged that the maintaining the independence of the patterns is difficult.
-But specification has been defined in a mathematically rigorous manner in several different ways \cite{Dembski1998, Dembski2002, Dembski2005a}.
+But specification has been defined in a mathematically rigorous manner in several different ways \citep{Dembski1998, Dembski2002, Dembski2005a}.
 Kolmogorov complexity, or a similar concept, is a persistent method used in this definitions.
 Our goal is to present and defend a simple measure of specification that clearly alleviates these concerns.
 Towards this end, we propose to use \textit{conditional Kolmogorov complexity} to quantify the degree of specification in an object.
@@ -154,7 +154,7 @@ But these are not the objects of most interest in terms of specification.
 \index{complexity!metrics!Kolmogorov complexity|)}
 
 \index{complexity!metrics!conditional Kolmogorov complexity}
-We use an extension of Kolmogorov complexity known as {\it conditional Kolmogorov complexity} \cite{Kolmogorov1968}.
+We use an extension of Kolmogorov complexity known as {\it conditional Kolmogorov complexity} \citep{Kolmogorov1968}.
 The program now has access to additional data as its input.
 \begin{equation}
     K(X|Y) = \min_{U(p,Y) = X \mid p \in P} |p|
@@ -241,7 +241,7 @@ This is a minimal level of information about the English language.
 To specify one of the 27 characters, will require $\log_2 27$ bits. 
 To specify the 43 character in the sentence will thus take $43 \log_2 27$ bits.
 We also need to record the number of characters at $2 \log_2 43 \approx 10.85$ bits. 
-\footnote{A more compact representation for numbers is available. See the $log^*$ method in Cover and Thomas \cite{Cover2006}.}
+\footnote{A more compact representation for numbers is available. See the $log^*$ method in \cite{Cover2006}.}
 Altogether, the bits required to specify the message requires $43 \log_2 27 + 2 \log_2 43 \approx 215.32$ bits. 
 
 
@@ -253,7 +253,7 @@ Here is an example computer program in Python which could interpret the message
 This assumes that the alphabet and encoded message are readily available and in form amenable to processing within the language.
 It may be that the input has to be preprocessed, which would make the program longer.
 Additionally, the length of the program will vary heavily depending on which programming language is used.
-However, the distances between different computers and languages only differs by a constant \cite{Cover2006}.
+However, the distances between different computers and languages only differs by a constant \citep{Cover2006}.
 As a result, it is common practice in algorithmic information theory, to discount any actual program length and merely include that length 
 as a constant, $c$. 
 Consequently, we can express the conditional Kolmogorov complexity as 
@@ -531,7 +531,7 @@ Given the same trump for many rounds becomes less and less probable.
 In biology, an important prerequisite to a protein being functional is that it folds.
 The number of all possible proteins folding has been estimated.
 \begin{quotation}
-    the overall prevalence of sequences performing a specific function by any domain-sized fold may be as low as 1 in $10^{77}$ \cite{axe2004}
+    the overall prevalence of sequences performing a specific function by any domain-sized fold may be as low as 1 in $10^{77}$ \citep{axe2004}
 \end{quotation}
 We can create a program which outputs a particular protein, given the laws of physics.
 \begin{verbatim}
@@ -548,7 +548,7 @@ This means that we can describe the protein by providing those two numbers.
     K(X|C) = 2 \log_2 L + \log_2 F_L + c
 \end{equation} where $C$ is the context, in this case the law of physics.
 $F_L$ is the number of folding proteins of length $L$.
-Taking Axe's estimate \cite{axe2004}, an assuming simplistically, that it applies for all lengths of proteins:
+Taking Axe's estimate \citep{axe2004}, an assuming simplistically, that it applies for all lengths of proteins:
 \begin{equation}
     F_L = 10^{-77} 4^L 
 \end{equation}
@@ -655,7 +655,7 @@ This is the same constant as elsewhere: the length of the program required to de
 \index{compressibility}
 \index{information}
 We have argued that compressibility in the presence of context is a necessary condition for information.
-This is in contrast to other who have argued that lack of compressibility is a necessary condition for information \cite{Abel2005}.
+This is in contrast to other who have argued that lack of compressibility is a necessary condition for information \citep{Abel2005}.
 But compressible objects lack complexity.
 Because a compressible object is describable as some simple pattern, it is amenable to being produced by a simple process.
 Many objects in the real world follow simple patterns.
@@ -672,7 +672,7 @@ Even if the explanations for these patterns were unknown, we would suppose due t
 The premise behind this use of compressibility is that it identifies what human would see as simple patterns.
 Abel writes:
 \begin{quotation}
-    A sequence is compressible because it contains redundant order and patterns \cite{Abel2005}.
+    A sequence is compressible because it contains redundant order and patterns \citep{Abel2005}.
 \end{quotation}
 The problem is that algorithms are very versatile and allow the description of many patterns beyond that which humans would see as patterns.
 As has been shown by the various examples in this paper, many objects which do not exhibit what humans typically identify as redundant order and patterns are in fact compressible.
