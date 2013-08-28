@@ -15,8 +15,8 @@
 
 %% From Ewert
 \usepackage{graphicx} 
-\usepackage[natbibapa,sectionbib]{apacite}
-% \usepackage[sectionbib,round,colon,authoryear]{natbib} 
+% \usepackage[natbibapa,sectionbib]{apacite}
+\usepackage[sectionbib,round,colon,authoryear]{natbib} 
 \usepackage[stable]{footmisc}
 
 %% From Holloway
@@ -101,7 +101,8 @@
 \renewcommand*\thesection{\arabic{section}}
 
 
-\newcommand\eandmbibliography[1]{\bibliographystyle{apacite}\bibliography{#1}}
+% \newcommand\eandmbibliography[1]{\bibliographystyle{apacite}\bibliography{#1}}
+\newcommand\eandmbibliography[1]{\bibliographystyle{eandm_url}\bibliography{#1}}
 
 
 %%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft

@@ -100,7 +100,7 @@ FUNCTION {init.urlbst.variables}
   #0 'inlinelinks :=        % 0=URLs explicit; 1=URLs attached to titles
 
   % String constants, which you _might_ want to tweak.
-  "Available from: " 'urlintro := % prefix before URL; typically "Available from:" or "URL":
+  "Available from " 'urlintro := % prefix before URL; typically "Available from:" or "URL":
   "online" 'onlinestring := % indication that resource is online; typically "online"
   "cited " 'citedstring := % indicator of citation date; typically "cited "
   "[link]" 'linktextstring := % dummy link text; typically "[link]"
@@ -379,7 +379,8 @@ FUNCTION {output.bibitem.original} % urlbst (renamed from output.bibitem, so it 
 }
 
 FUNCTION {fin.entry.original} % urlbst (renamed from fin.entry, so it can be wrapped below)
-{ add.period$
+{ 
+  %add.period$
   write$
   newline$
 }
@@ -911,7 +912,9 @@ FUNCTION {output.bibitem}
 
 % Wrapper for fin.entry.original
 FUNCTION {fin.entry}
-{ output.web.refs  % urlbst
+{ 
+  add.period$ % from fin.entry.original
+  output.web.refs  % urlbst
   makeinlinelink       % ooops, it appears we didn't have a title for inlinelink
     { possibly.setup.inlinelink % add some artificial link text here, as a fallback
       linktextstring output.nonnull }
