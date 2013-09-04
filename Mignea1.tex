@@ -17,6 +17,8 @@
 \chapteraffiliation{The Lone Pine Software}
 
 \begin{abstract}
+\index{self-replication}
+\index{biology!cell}
 This paper is the first in a three-part series investigating the internals 
 of the simplest possible self replicator (SSR). 
 The SSR is defined as having an enclosure with input
@@ -36,6 +38,7 @@ from the simplest, single-celled organisms through a wide range of
 living forms up to the most complex organisms including humans and
 other mammals.
 
+\index{origin of life}
 One of the most intriguing questions that ordinary people, engineers,
 scientists and philosophers obsessed over for centuries was how life
 originated and how this ability of living organisms to create
@@ -49,6 +52,7 @@ reproduce a lucky set of events and circumstances that somehow put
 together the basic elements and parts of the simplest entity that began
 to manifest the ability to replicate and thus become a living organism.
 
+\index{self-replication!design}
 The goal of this study was to use an engineering approach in developing
 insights into the internal design of a simplest possible self
 replicator (SSR). The SSR is defined for the purpose of this study as
@@ -62,6 +66,7 @@ accurately the characteristic behavior of many single cellular
 organisms---at least from the point of view of their ability to
 self-reproduce. In particular they are autonomous in regards to:
 
+\index{cellular metabolism}
 \begin{itemize}
 \item their ability to ingest materials from their environment
 \item their ability to use the ingested materials for growth and
@@ -93,11 +98,15 @@ existing, top technology, human-made artifacts.
 
 \section{The Two Phases of the Self Replication}
 
+\index{self-replication!phases}
 At the highest level the SSR has the following composition as
 illustrated in figure \ref{fig:ssr_structure}.
 
 \migneafigure{MigneaSsrStructure}{The SSR Structure}{fig:ssr_structure}
 
+\index{cloning phase|see{self-replication, cloning phase}}
+\index{self-replication!cloning phase}
+\index{division phase|see{self-replication, division phase}}
 The SSR replication has two main phases---the cloning phase (illustrated in figure \ref{fig:cloning_phase}) and the division phase (illustrated in figure \ref{fig:division_phase}).
 
 \migneafigure{MigneaSsrCloningPhase}{The Cloning Phase in SSR Replication}{fig:cloning_phase}
@@ -106,6 +115,14 @@ The SSR replication has two main phases---the cloning phase (illustrated in figu
 
 The behavior of the SSR, including basic support functions and the two replication phases, can be outlined succinctly as follows:
 
+\index{self-replication!inputs}
+\index{self-replication!material extraction}
+\index{self-replication!fabrication}
+\index{fabrication|see{self-replication, fabrication}}
+\index{materials fabrication|see{self-replication, fabrication}}
+\index{energy generation|see{self-replication, energy}}
+\index{energy distribution|see{self-replication, energy}}
+\index{self-replication!energy}
 \begin{itemize}
 \item Input raw materials and raw parts are accepted by input enclosure
 gates
@@ -115,6 +132,7 @@ good materials for fabrication of parts or for energy generation
 \item Processed materials are passed to the fabrication function which fabricate parts, components and
 assemblies for: 
 
+\index{self-replication!functions}
 \begin{itemize}
 \item Cloning (creating copies) of all SSR internal elements
 \item Creating scaffolding elements for the growing SSR interior
@@ -123,6 +141,7 @@ assemblies for:
 \item When the cloning of all original SSR internal parts is completed,
 the SSR division starts:
 
+\index{self-replication!replication process}
 \begin{itemize}
 \item The original SSR contents are now at (for example) the “north pole”
 of the SSR enclosure
@@ -144,6 +163,7 @@ the periphery of the SSR so that its growth and replication will occur.
 \subsection[The SSR enclosure and its input gateways and output
 gateways]{The SSR enclosure and its input gateways and output gateways}
 
+\index{self-replication!inputs}
 We will assume that the SSR is
 made by an enclosure that has the role of separating the SSR from its
 environment. We will assume that on this enclosure there are some
@@ -157,6 +177,8 @@ inside the SSR. We will name these openings \mterm{output gateways}.
 \subsection[The input flow control function]{The input flow control
 function}
 
+\index{self-replication!flow control}
+\index{flow control|see{self-replication, flow control}}
 There is one primary question
 for the input gateways: are all the raw materials and raw parts that
 exist or touch the outside of the enclosure good for the SSR processes?
@@ -168,6 +190,7 @@ identify this needed feature of the SSR as its \mterm{input flow control functio
 \subsection[The raw materials and parts catalog]{The raw materials and
 parts catalog}
 
+\index{self-replication!material extraction}
 The next question to be answered
 is how the SSR “knows” which are “good” raw materials and “good” parts
 versus “bad” materials and parts? The answer is that the SSR must
@@ -178,6 +201,7 @@ closed. Let’s name this catalog the \mterm{raw materials and parts catalog}.
 \subsection[The materials and parts identification function]{The
 materials and parts identification function}
 
+\index{self-replication!parts identification|(}
 The next question is how the SSR
 will recognize and accurately identify a material or part at an input
 gateway as a good or bad one? That is not a trivial ability, but the
@@ -224,10 +248,12 @@ only raw materials and parts accepted inside SSR but also all
 fabricated parts, components, and assemblies. This allows us to affirm
 that all elements present inside the SSR and all SSR parts should bear
 a permanent identification/tag.
+\index{self-replication!parts identification|)}
 
 \subsection[The catalog of fabricated parts, components and
 assemblies]{The catalog of fabricated parts, components and assemblies}
 
+\index{self-replication!fabrication|(}
 This raises also another
 important aspect for the SSR design. The SSR must possess not only an
 exhaustive catalog of all raw materials and raw parts, but also a
@@ -322,9 +348,11 @@ materials are registered in the \mterm{catalog of fabrication materials}
 while every procedure and technological process that is used
 to extract fabrication materials from raw materials and parts is
 documented in a \mterm{fabrication material extraction process catalog}.
+\index{self-replication!fabrication|)}
 
 \subsection[The supply chain function]{The supply chain function}
 
+\index{self-replication!supply chain}
 Let’s now assume that during
 cloning phase the SSR must fabricate a component of type A.  The bill
 of materials entry for a component of type A specifies that its
@@ -345,6 +373,7 @@ those elements inside the SSR.
 \subsection[The energy generation and distribution function]{The energy
 generation and distribution function}
 
+\index{self-replication!energy distribution}
 All the machines inside SSR need
 a source of energy to perform their work. Thus we must have inside the
 SSR a capability to produce energy from raw materials and raw parts
@@ -364,6 +393,7 @@ generation and transport.
 
 \subsection[The transport function]{The transport function}
 
+\index{self-replication!material transport|(}
 The functioning SSR features
 multiple “sites”, i.e. places where specific actions happen. These
 sites will be distributed spatially inside the SSR on its enclosure
@@ -398,9 +428,11 @@ on a fabrication bench or machinery. Manipulation examples abound,
 since no matter what elements are processed, transported, fabricated,
 assembled or pushed out of an output gateway there is a need to
 adequately handle those elements.
+\index{self-replication!material transport|)}
 
 \subsection[The fabrication function]{The fabrication function}
 
+\index{self-replication!fabrication|(}
 Since the SSR must be able to
 clone its core elements, its enclosure and its scaffolding elements,
 there is an absolute need for the SSR to have a \mterm{fabrication function}. 
@@ -430,11 +462,13 @@ parts and components. The assemblage function may be needed for example
 to erect and expand the scaffolding and the enclosure during the SSR
 growth besides being used to create assemblies of smaller components
 and parts.
+\index{self-replication!fabrication|)}
 
 \section{Additional SSR Functions}
 
 \subsection[The recycling function]{The recycling function}
 
+\index{self-replication!recycling}
 The SSR functions discussed so
 far provide specific assistance for the “ingestion” of new raw
 materials and parts into the SSR and the SSR growth during the phase of
@@ -465,6 +499,7 @@ Most of the above responsibilities pertain to the \mterm{recycling function}.
 \subsection[The output flow control function]{The output flow control
 function}
 
+\index{self-replication!flow control}
 The recycling function controls
 the \mterm{output flow control function} which is the ability to
 control the enclosure \memph{output gateways} for forcing out the SSR
@@ -474,6 +509,7 @@ by the recycling function.
 \subsection[The construction plan function]{The construction plan
 function}
 
+\index{self-replication!fabrication|(}
 We already saw that the bill of
 materials function provides for each fabricated part, component or
 assembly of the SSR a list of raw materials, parts and sub-components
@@ -585,9 +621,11 @@ In a similar manner each fabrication step of an entry has a current
 construction status field that is also used to mark and keep track of
 the fabrication/construction status for that element at the fabrication
 step level.
+\index{self-replication!fabrication|)}
 
 \subsection[The SSR variable geometry]{The SSR variable geometry}
 
+\index{self-replication!growth and development|(}
 Another issue in developing the artificial SSR is that the SSR has variable
 geometry.  The SSR has variable geometry because, first, the mature SSR must 
 grow in volume and enclosure surface during the cloning phase to make space 
@@ -642,10 +680,12 @@ elements of the SSR enclosure, scaffolding and interior. These spatial
 trajectories need to be harmoniously and coherently coordinated with
 all fabrication and assemblage steps of the cloning and division
 phases.
+\index{self-replication!growth and development|)}
 
 \subsection[The Communication and Notification Function]{The
 Communication and Notification Function}
 
+\index{self-replication!signalling and communication}
 This function is responsible to
 provide and manage the information communication and notification
 machinery and mechanisms between the command centers and execution
@@ -679,6 +719,7 @@ lower level functions described in the previous sections.
 \subsection[The scaffolding growth function]{The scaffolding growth
 function}
 
+\index{self-replication!growth and development|(}
 The \mterm{scaffolding growth function} 
 is responsible to manage the construction, growth and
 position change of the SSR scaffolding elements during the cloning and
@@ -699,10 +740,12 @@ function needs to manage the variable geometry of the enclosure, the
 dynamic shifting of the gateways on the enclosure surface, and the
 radical shape changes of the enclosure around the division of the SSR
 into the mother and daughter descendants.
+\index{self-replication!growth and development|)}
 
 \subsection[The fabrication control function]{The fabrication control
 function}
 
+\index{self-replication!fabrication}
 The \mterm{fabrication control function} is responsible for the construction, assemblage and variable
 geometry management of all interior elements---in particular those
 related to the cloning part of the SSR during the cloning and the
@@ -713,6 +756,8 @@ function, and other lower level functions.
 
 \subsection[The cloning control function]{The cloning control function}
 
+\index{self-replication!cloning phase}
+\index{self-replication!process control|(}
 The \mterm{cloning control function} is responsible to coordinate the whole cloning phase of the
 growing SSR. It basically does that by coordinating the cloning and the
 growth of all involved SSR compartments through a tight control,
@@ -733,6 +778,7 @@ machinery of the clone part.
 \subsection[The division control function]{The division control
 function}
 
+\index{self-replication!division phase}
 The \mterm{division control function} has full control of the division phase of the SSR replication
 process. It manages the SSR division through specific commands sent to
 the scaffolding growth, enclosure growth and fabrication control
@@ -765,10 +811,12 @@ two significant \memph{SSR designer commandments}:
 \item \memph{Grow} and
 \item \memph{Multiply}
 \end{itemize}
+\index{self-replication!process control|)}
 
 \subsection[The SSR Function Dependencies Diagram]{The SSR Function
 Dependencies Diagram}
 
+\index{self-replication!dependencies|(}
 An overall diagram illustrating
 the identified set of functions present in the SSR and some of the
 dependencies between these functions is presented in figure \ref{fig:functions_and_dependencies}.
@@ -790,9 +838,11 @@ Transport function although this dependency is not depicted in the
 diagram.
 
 \migneafigure{MigneaSsrFunctionsAndDependencies}{SSR Functions and their Dependencies}{fig:functions_and_dependencies}
+\index{self-replication!dependencies|)}
 
 \section{The Type and Nature of SSR Components}
 
+\index{self-replication!design!components|(}
 At this point it makes sense to break down the previous discussions
 into the general conceptual categories of the artificial SSR's components
 to provide an overview of what needs to be accomplished for its creation.
@@ -838,9 +888,11 @@ themselves are grouped by functional area.
 \item SSR construction status representation
 \item SSR parts inventory representation
 \end{itemize}
+\index{self-replication!design!components|)}
 
 \section{The SSR and Its Information Catalogs}
 
+\index{self-replication!design!information catalogs|(}
 We already encountered various types of information catalogs (databases
 or repositories) that together make up the information base of the SSR.
 This section contains a list of all types of information catalogs
@@ -890,6 +942,7 @@ processes
 \item The catalog of recycling elements and procedures
 \item The catalog of construction status
 \end{itemize}
+\index{self-replication!design!information catalogs|)}
 
 \section{Conclusion}
 
