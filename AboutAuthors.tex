@@ -4,23 +4,23 @@
 
 % environment to standardize the bios
 \newenvironment{authorbio}[2]{
-    \newpage
-    \subsection*{#1}
-    \begin{tabular}{ll}
-    \begin{minipage}{1in}
-        \ifstrequal{#2}{}{}  % skip the image if one wasn't provided
-        {
-            \includegraphics[width=1in]{#2}
-        }
-    \end{minipage}
-        &
-    \begin{minipage}{\textwidth-1.2in}
-    }{ % the actual content inserted between here
-    \end{minipage}
-    \end{tabular}
+	\subsection*{#1}
+
+	\ifstrequal{#2}{}{}  % skip the image if one wasn't provided
+	{
+		\begin{wrapfigure}{l}{1in}
+		 	%\begin{minipage}{1in}
+				\includegraphics[width=1in]{#2}
+			%\end{minipage}
+		\end{wrapfigure}
+	}
+
+	}{ % the actual content inserted between here
+	
+		\mbox{}
 }
 
-\section{Editors}
+\section*{Editors and Organizers}
 
 \begin{authorbio}{Jonathan Bartlett}{bartlett_photo.jpg}
 Jonathan Bartlett is the Director of The Blyth Institute in Tulsa, Oklahoma.  Jonathan's research focuses on the origin of novelty---both the origin of biological novelty in adaptation as well as the origin of insight in the human creative process.  Jonathan's other roles include managing a team of developers as the Director of Technology at New Medio, tutoring homeschool students in chemistry and calculus at Classical Conversations, and being part of the Classical Conversations Writer's Circle, where he has a monthly column discussing issues of science, faith, and education.  Jonathan received an M.T.S. from Phillips Theological Seminary, and is the author of the book \textit{Programming from the Ground Up}, which has been used in Universities from Princeton University to Oklahoma State for teaching undergraduate assembly language.
@@ -55,7 +55,7 @@ An ordained minister and a former church pastor, he has been married for over 22
 Dr. Hall says, “I teach to make a difference in the lives of my students so that they can make an impact for Christ in their world.”
 \end{authorbio}
 
-\section{Conference Presenters}
+\section*{Primary Authors}
 
 \begin{authorbio}{Alexander Sich}{}
 Alexander Sich is Associate Professor of Physics at Franciscan University of Steubenville. He holds a B.S. in Nuclear Engineering from Rensselaer Polytechnic Institute (with a minor in physics), an M.A. in Soviet Studies from Harvard University, an M.A. in Philosophy from Holy Apostles College \& Seminary, and a Ph.D. in Nuclear Engineering from MIT. Professor Sich conducted his Ph.D. research in Ukraine at the Chernobyl site, and worked in the former Soviet Union in nuclear safety and nonproliferation effort regarding weapons of mass destruction for over thirteen years. In addition to technical articles, Professor Sich has published opinion pieces on nuclear safety (including the Iranian Bushehr issue) in \emph{The Bulletin of the Atomic Scientists}, \emph{The Boston Globe}, The \emph{Wall Street Journal}, \emph{The Diplomat}, and \emph{Newsday}. Professor Sich is married with seven children, speaks near native fluent Ukrainian and fluent Russian. His current research interests lie primarily in the philosophy of nature, and in teaching.
@@ -82,7 +82,7 @@ Winston Ewert hails from Canada where he earned a Bachelor's degree in Computer 
 \end{authorbio}
 
 
-\section{Additional Authors}
+\section*{Additional Authors}
 
 
 
@@ -90,7 +90,7 @@ Winston Ewert hails from Canada where he earned a Bachelor's degree in Computer 
 Michael grew up in Saint Cloud, MN, where he attended a small private Christian school from kindergarten through high school.   Michael was born and later baptized in the Pentecostal church although his family later moved into a non-denominational church.   Since high school, Michael has been actively involved in church leadership and has volunteered within church media and technology.  During his senior year of high school, Michael directed a full length feature film that was shown over multiple days in the movie theater in Saint Cloud.  That same year, Michael graduated valedictorian of his class and was accepted as an honors fellow at Oral Roberts University.  While studying theology and church history Michael met his future wife, Rachelle, became Presbyterian, and actively participated in the life and ministry of First Presbyterian Church in Tulsa, OK.  Upon graduating from Oral Roberts University with honors, Michael attended Princeton Theological Seminary where he has ministered in two local congregations and a state psychiatric hospital while also serving as CEO of a company that serves churches by helping them establish an effective online presence for their ministries.  
 \end{authorbio}
 
-\begin{authorbio}Rachelle Gewecke}{rgewecke_photo.jpg}
+\begin{authorbio}{Rachelle Gewecke}{rgewecke_photo.jpg}
 Rachelle grew up in rural Iowa where she was baptized in the Reformed Church of America.  Rachelle begged her mother (a music professor) to teach her to play the piano when she was four years old, and she has been playing ever since.  Within her twenty plus years with the instrument, Rachelle has performed in a broad range of venues, including state youth symphonies, university orchestras, faculty studios, and, most recently, as accompanist and choir director at Community Presbyterian Church of the Sand Hills, NJ.  When Rachelle is not playing piano (or viola) she is often at home with Emily, where she has taken on the task of redirecting her toddler’s seemingly boundless energy.
 \end{authorbio}
 
