@@ -77,6 +77,12 @@
 \newcommand\textstylecitation[1]{#1}
 \newcommand\textstylepagenumber[1]{#1}
 
+\newcommand\unnumberedsection[2]{\setcounter{secnumdepth}{0} \section[#1]{#2}\setcounter{secnumdepth}{2}}
+\newcommand\unnumberednotocsection[2]{
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}\ignorespaces}
+\unnumberedsection{#1}{#2}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}\ignorespaces}
+}
 
 %% For Sich
 \usepackage[T2A,LGR,T1,OT1]{fontenc}
@@ -103,7 +109,9 @@
 
 
 % \newcommand\eandmbibliography[1]{\bibliographystyle{apacite}\bibliography{#1}}
-\newcommand\eandmbibliography[1]{\bibliographystyle{eandm_url}\bibliography{#1}}
+
+\renewcommand{\bibsection}{}
+\newcommand\eandmbibliography[1]{\unnumberednotocsection{Bibliography}{Bibliography} \bibliographystyle{eandm_url}\bibliography{#1}}
 
 
 %%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft
@@ -153,6 +161,11 @@
 \sloppy
 
 \makeindex
+
+\newpagestyle{main}{
+	\sethead[\thepage][][\textit{\chaptertitle}]{\sectiontitle}{}{\thepage}
+}
+\pagestyle{main}
 
 \begin{document}
 %% \title{Engineering and the Ultimate}
