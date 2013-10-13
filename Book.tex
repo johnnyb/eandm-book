@@ -16,7 +16,7 @@
 %% From Ewert
 \usepackage{graphicx} 
 % \usepackage[natbibapa,sectionbib]{apacite}
-\usepackage[sectionbib,round,colon,authoryear]{natbib} 
+\usepackage[sectionbib,round,colon,authoryear,longnamesfirst]{natbib} 
 \usepackage[stable,bottom]{footmisc}
 
 %% From Holloway
@@ -39,7 +39,7 @@
 \definecolor{gray75}{gray}{0.75}
 \titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray75}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
 
-
+\setlength{\bibhang}{0.5in}
 
 %%% If using showidx, turn off hyperref! and redefine its commands
 %% also add an inch to page margins, and modify width/height by 2 inches
@@ -111,7 +111,7 @@
 % \newcommand\eandmbibliography[1]{\bibliographystyle{apacite}\bibliography{#1}}
 
 \renewcommand{\bibsection}{}
-\newcommand\eandmbibliography[1]{\unnumberednotocsection{Bibliography}{Bibliography} \bibliographystyle{eandm_url}\bibliography{#1}}
+\newcommand\eandmbibliography[1]{\newpage\unnumberednotocsection{References}{References} \bibliographystyle{eandm_url}\bibliography{#1}}
 
 
 %%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft
