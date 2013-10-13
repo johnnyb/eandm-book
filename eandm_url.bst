@@ -718,12 +718,19 @@ FUNCTION {format.chapter.pages}
   if$
 }
 
+FUNCTION {format.booktitlerealcase}
+{ booktitle empty$
+    { "" }
+    { booktitle "t" change.case$ }
+  if$
+}
+
 FUNCTION {format.in.ed.booktitle}
 { booktitle empty$
     { "" }
     { editor empty$
-	{ "In " booktitle emphasize * }
-	{ "In " format.editors * ", " * booktitle emphasize * }
+	{ "In " format.booktitlerealcase emphasize * }
+	{ "In " format.editors * ", " * format.booktitlerealcase emphasize * }
       if$
     }
   if$
@@ -736,8 +743,8 @@ FUNCTION {eho.format.in.ed.booktitle}
 { booktitle empty$
     { "" }
     { editor empty$
-	{ "In " booktitle emphasize * }
-	{ "In " eho.format.editors * ", " * booktitle emphasize * }
+	{ "In " format.booktitlerealcase emphasize * }
+	{ "In " eho.format.editors * ", " * format.booktitlerealcase emphasize * }
       if$
     }
   if$
