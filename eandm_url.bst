@@ -583,7 +583,7 @@ FUNCTION {n.dashify}
 }
 
 FUNCTION {format.btitle}
-{ title emphasize
+{ title "t" change.case$ emphasize
 }
 
 FUNCTION {tie.or.space.connect}
