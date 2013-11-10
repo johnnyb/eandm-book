@@ -98,6 +98,8 @@ So, as you can see, the definition of physicalism, so far that it is defined suf
 \index{programming languages!JavaScript}
 One of the classic unsolvable problems in computability is the ``halting problem.''  In universal computation systems, there are ways to cause computations to repeat themselves.  However, this leads to a possible problem---if a function is poorly written, the function may get caught in a repetitive portion, and not be able to leave.  This computation would be a non-halter, and therefore, left to itself, would never complete.  Most familiar computations are halting computations.  So, take the following computer program (all programming examples are given in Javascript for readability):
 
+\begin{figure}[H]
+\begin{mdframed}
 \begin{verbatim}
 function double(x) {
 	var y;
@@ -105,12 +107,17 @@ function double(x) {
 	return y;
 }
 \end{verbatim}
+\end{mdframed}
+\caption{A function to double a value}
+\end{figure}
 
 This program defines a function called ``double'' which doubles its input.  It creates a temporary variable called ``y'' to hold the result of the computation, and then returns y as the final value for the function.  So, after defining it, I can then use the function by saying double(4) which would give 8, or double(z) which would take the value currently denoted by z and return whatever is double of z.
 
 \index{factorial function}
 Now let's look at a program with a loop in it.  This program computes the factorial of a number.  The factorial of a number is the result of multiplying a number by all of the numbers below it down to 1.  For instance, factorial(5) is 5 * 4 * 3 * 2 * 1.  factorial(3) is 3 * 2 * 1.  So, as you can see, the number of computations performed, while always finite for a finite number, varies with the value given.  Here is a typical way to program a factorial function:
 
+\begin{figure}[H]
+\begin{mdframed}
 \begin{verbatim}
 function factorial(x) {
 	var val;
@@ -127,6 +134,9 @@ function factorial(x) {
 	return val;
 }
 \end{verbatim}
+\end{mdframed}
+\caption{A function to compute the factorial of a number}
+\end{figure}
 
 This function defines two temporary variables---val, which holds the present state of the computation, and multiplier, which holds the next number that needs to be multiplied.  Note that unlike algebraic systems, in most computer programming languages, variables do not have static values, but can change over the course of the program.  The ``='' is not an algebraic relationship, but rather it means assignment.  val = 1 means that we are assigning the value 1 to the variable val.  
 
@@ -136,6 +146,8 @@ The next statement tells us to return the value in val as the result of the enti
 
 Now, let's say that the person writing this function forgot a step.  Let's say that they forgot to write the instruction that decreases the multiplier.  So, instead of the previous program, they wrote the following:
 
+\begin{figure}[H]
+\begin{mdframed}
 \begin{verbatim}
 function factorial(x) {
 	var val;
@@ -150,6 +162,10 @@ function factorial(x) {
 	return val;
 }
 \end{verbatim}
+\end{mdframed}
+\caption{An incorrect function to compute the factorial of a number}
+\end{figure}
+
 
 \index{infinite loops}
 Since multiplier is never decreased, for any input greater than 1, this function will never stop computing!  Therefore, in terms of the halting problem, it doesn't halt.
@@ -165,6 +181,8 @@ Now, some functions halt on certain inputs, but do not halt on other inputs.  So
 
 Let's first assume that H(p, i) is a program that can be implemented with a universal computation system.  If H(p, i) can be implemented, then it can also be used by a longer program.  So, therefore, let's create a program called N(p).  This program looks like the following:
 
+\begin{figure}[H]
+\begin{mdframed}
 \begin{verbatim}
 function N(p) {
 	if(H(p, p) == 1) {
@@ -175,6 +193,9 @@ function N(p) {
 	return 1;
 }
 \end{verbatim}
+\end{mdframed}
+\caption{A theoretical function using the halting function which demonstrates its impossibility}
+\end{figure}
 
 This function starts by evaluating the halting problem of its input, p.  If the halting problem of a program p with itself as the input says ``Yes it halts'' (i.e. it gives a value of 1), then perform an infinite loop (i.e. don't halt).  Otherwise, finish the computation returning a value of 1 (i.e. do halt).  Now, let's ask the question, does N(N) halt?  If it does, then this program will loop forever, but it can't, because we have already determined that it does not halt!  Hence a contradiction.  Likewise the reverse.  If N(N) does not halt, then N(N) will halt. Therefore, H(p, i) cannot be solved using a universal computation system.
 
@@ -254,6 +275,8 @@ The main caveat is that there do exist programs (even very short programs) for w
 
 As an example, a perfect number is a number which is equal to the sum of its divisors excluding itself.  For instance, 6 is a perfect number because 1, 2, and 3 are all divisors, and they add up to 6.  It is not known if there are any odd perfect numbers.  A program could be written to search and find an odd perfect number, and halt if it finds one.  Such a program can be fairly simply expressed as:
 
+\begin{figure}[H]
+\begin{mdframed}
 \begin{verbatim}
 function odd_perfect_divisor_exists() {
 	var i = 3;
@@ -269,6 +292,9 @@ function odd_perfect_divisor_exists() {
 	}
 }
 \end{verbatim}
+\end{mdframed}
+\caption{A function which returns upon finding an odd perfect number}
+\end{figure}
 
 Therefore, if the above program halts then there is an odd perfect number.  If it does not halt then there isn't one.  However, no human currently knows the answer to this question.  Therefore, whatever it is that humans are doing, it isn't directly knowing the answer to the halting problem.
 
