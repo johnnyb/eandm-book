@@ -102,9 +102,9 @@ One of the classic unsolvable problems in computability is the ``halting problem
 \begin{mdframed}
 \begin{verbatim}
 function double(x) {
-	var y;
-	y = x * 2;
-	return y;
+  var y;
+  y = x * 2;
+  return y;
 }
 \end{verbatim}
 \end{mdframed}
@@ -120,18 +120,18 @@ Now let's look at a program with a loop in it.  This program computes the factor
 \begin{mdframed}
 \begin{verbatim}
 function factorial(x) {
-	var val;
-	var multiplier;
+  var val;
+  var multiplier;
 
-	val = 1;
-	multiplier = x;
+  val = 1;
+  multiplier = x;
 
-	while(multiplier > 1) {
-		val = val * multiplier;
-		multiplier = multiplier - 1;
-	}
+  while(multiplier > 1) {
+    val = val * multiplier;
+    multiplier = multiplier - 1;
+  }
 
-	return val;
+  return val;
 }
 \end{verbatim}
 \end{mdframed}
@@ -150,16 +150,16 @@ Now, let's say that the person writing this function forgot a step.  Let's say t
 \begin{mdframed}
 \begin{verbatim}
 function factorial(x) {
-	var val;
-	var multiplier;
+  var val;
+  var multiplier;
 
-	val = 1;
-	multiplier = x;
-	while(multiplier > 1) {
-		val = val * multiplier;
-	}
+  val = 1;
+  multiplier = x;
+  while(multiplier > 1) {
+    val = val * multiplier;
+  }
 
-	return val;
+  return val;
 }
 \end{verbatim}
 \end{mdframed}
@@ -185,12 +185,12 @@ Let's first assume that H(p, i) is a program that can be implemented with a univ
 \begin{mdframed}
 \begin{verbatim}
 function N(p) {
-	if(H(p, p) == 1) {
-		while(1 == 1) {
-		}
-	}
+  if(H(p, p) == 1) {
+    while(1 == 1) {
+    }
+  }
 
-	return 1;
+  return 1;
 }
 \end{verbatim}
 \end{mdframed}
@@ -279,17 +279,17 @@ As an example, a perfect number is a number which is equal to the sum of its div
 \begin{mdframed}
 \begin{verbatim}
 function odd_perfect_divisor_exists() {
-	var i = 3;
+  var i = 3;
 
-	while(true) { // This means to loop forever unless terminated within the loop
-		var divisors = all_divisors_of(i);
-		var divisor_sum = sum(divisors);
-		if(divisor_sum == i) {
-			return i; // i.e. Halt
-		} else {
-			i = i + 2; // Go to the next odd number
-		}
-	}
+  while(true) { // This means to loop forever unless terminated within the loop
+    var divisors = all_divisors_of(i);
+    var divisor_sum = sum(divisors);
+    if(divisor_sum == i) {
+      return i; // i.e. Halt
+    } else {
+      i = i + 2; // Go to the next odd number
+    }
+  }
 }
 \end{verbatim}
 \end{mdframed}
@@ -333,7 +333,9 @@ a set of axioms such that the size of the set of the intersection of A and B is 
 
 Therefore, I am proposing that human insight is describable by an oracle I such that:
 
-$$ A = I(Q, p, i, B) $$
+\begin{equation}
+A = I(Q, p, i, B)
+\end{equation}
 
 \index{axioms}
 In other words, if a human is given a decision problem over a certain input, and they know all of the axioms needed to solve the problem except one, human insight will reveal the remaining axiom.  If true, this would explains why insight is both incremental and non-computational.  It goes beyond what is available to computation, but still has prerequisites (in this proposal, I am proposing the prerequisite of having all axioms known except one).  Thus, in the case of finding odd perfect numbers, the problem of finding the solution to the problem is that we do not yet have enough pre-existing axioms yet in order to infer the final axiom.

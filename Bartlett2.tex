@@ -24,7 +24,9 @@ Early complexity metrics were based almost entirely on the amount of code produc
 \index{complexity!metrics!cyclomatic complexity}
 Lines of code and related metrics are still often used for software effort estimation, but its use in analyzing code complexity has fallen away.  It quickly became clear that not all code is the same, and some operators are inherently more complex than others.  Specifically, the decision structure of the program was inherently more complex than the computations.  Cyclomatic complexity was created to measure the size of the decision structure of the program \citep{mccabe}.  This is done by creating a graph of all basic code blocks as nodes, and then edges which show how control can move between them.  The formula for calculating the complexity is:
 
-$$E - N + T$$
+\begin{equation}
+E - N + T
+\end{equation}
 
 $E$ is the number of edges, $N$ is the number of nodes, and $T$ is the number of terminating nodes (entry and exit points - usually 2).   
 
@@ -87,7 +89,9 @@ For open-ended loops, consider the following two programs that each print out th
 \begin{figure}[H]
 \begin{mdframed}
 \begin{verbatim}
-ary.each{|x| puts x * x}
+ary.each{|x| 
+  puts x * x
+}
 \end{verbatim}
 \end{mdframed}
 \caption{A program with an implicitly-terminating loop}
@@ -99,8 +103,8 @@ ary.each{|x| puts x * x}
 \begin{verbatim}
 i = 0
 while(i < a.length) {
-	puts x * x
-	i = i + 1
+  puts x * x
+  i = i + 1
 }
 \end{verbatim}
 \end{mdframed}
