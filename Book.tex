@@ -37,6 +37,7 @@
 \usepackage{wrapfig}
 \usepackage{mdframed}
 
+
 \definecolor{gray75}{gray}{0.75}
 \titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray75}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
 
@@ -72,6 +73,9 @@
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{fixltx2e}
+
+\newcommand\citecustom[2]{(#2, \citeyear{#1})}
+\newcommand\citecustompg[3]{(#2, \citeyear{#1}, #3)}
 \newcommand\textstyleBookTitle[1]{\textbf{\textsc{#1}}}
 \newcommand\textstyleTitleChar[1]{\textbf{#1}}
 \newcommand\textstyleauthori[1]{#1}
