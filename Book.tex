@@ -148,6 +148,16 @@
 \newcommand\biophoto[1]{\begin{floatingfigure}[p]{1in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
 \newcommand\biosection[2]{\newpage \section*{#1} \biophoto{#2}}
 
+\newcommand\eandmchapter[4]{
+	\chapter[#2\\\textnormal{\textit{#3}}]{#2}
+	%\addcontentsline{toc}{chapter}{{#1}\\{#2}}
+	\chaptermark{#1}
+
+	\chapterauthor{#3}
+	\chapteraffiliation{#4}
+}
+
+
 \newcommand\chapterauthor[1]{
 	\begin{center}
 		{\Large \textsc{#1}} 
