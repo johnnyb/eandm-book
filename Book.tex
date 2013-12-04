@@ -1,5 +1,7 @@
 \documentclass[12pt]{book}
 
+\usepackage{xcolor}
+\usepackage{color}
 \usepackage[titles]{tocloft}
 %\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
 \usepackage[top=1in,bottom=0.5in,left=0.5in,right=0.5in, paperwidth=7in, paperheight=10in]{geometry}
@@ -148,6 +150,26 @@
 \newcommand\biophoto[1]{\begin{floatingfigure}[p]{1in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
 \newcommand\biosection[2]{\newpage \section*{#1} \biophoto{#2}}
 
+\def\eandmpart#1{%
+  \par\newpage\cleardoublepage % Page break
+  \chaptermark{~}
+  \sectionmark{~}
+  \vspace*{1in} % Vertical shift
+  \refstepcounter{part}% Next part
+  {\centering\textbf{\Huge Part \thepart}\par}% 
+  \addcontentsline{toc}{part}{{\thepart}~~~~~#1}
+  \vspace{1cm}% Vertical shift
+  {\centering \textbf{\Huge #1}\par}%
+  \vspace{2cm}% Vertical shift
+  % Some text
+}
+\newenvironment{eandmpartintro}{\begin{mdframed}[backgroundcolor=gray!10,skipabove=\baselineskip,skipbelow=\baselineskip]%
+~\\ 
+}{%
+~\\
+\end{mdframed}
+}
+
 \newcommand\eandmchapter[4]{
 	\chapter[#2\\\textnormal{\textit{#3}}]{#2}
 	%\addcontentsline{toc}{chapter}{{#1}\\{#2}}
@@ -196,23 +218,41 @@
 
 \include{Introduction}
 
-\part{Engineering, Philosophy, and Worldview}
+\eandmpart{Engineering, Philosophy, and Worldview}
+\begin{eandmpartintro}
+This volume begins with two papers discussing the relationship between engineering and knowledge.  In the first paper, Dominic Halsmer et al. argue that engineering is foundational to the search for truth as truth.  It looks specifically at reverse-engineering and design recovery as a model for seeking truths about the natural world.  These methodologies have been developed and used within engineering to recover a design when the specifications aren't readily available, and Halsmer argues that they can be applied to the scientific endeavor to uncover the original design within nature.  
+
+In the second paper, Alexander Sich argues that engineering cannot be foundational in the search for truth because the engineering disciplines depend fundamentally on highly-focused natural scientific knowledge applied to the production of artifacts while the particular natural sciences depend foundationally upon metaphysics for their first principles. Moreover, Sich contends that a failure to draw proper ontological distinctions between the objects studied by the natural sciences and philosophy leads to confusion over the character of inferences to the existence of the objects studied.
+\end{eandmpartintro}
+
 \include{Halsmer}
 \include{Sich}
 
 %% Possibly premature, but was causing problems
 %% \addtocontents{toc}{\protect\newpage}
 
-\part{Architecture and the Ultimate}
+\eandmpart{Architecture and the Ultimate}
+\begin{eandmpartintro}
+Architecture is one of the few engineering disciplines which has had a deep and explicit connection with philosophy and theology, largely because of the religious significance of many important structures.  Modern architecture has lost many of its roots, tending almost entirely towards a functionalist view of architecture.  Mark Hall's paper presented here calls us to look back at the previous generations to restore an outlook to architecture which builds structures that are not just utilitarian, but also true and beautiful.
+\end{eandmpartintro}
+
 \include{Hall}
 
-\part{Software Engineering and Human Agency}
-\include{Ewert}
+\eandmpart{Software Engineering and Human Agency}
+\begin{eandmpartintro}
+Software engineering is rarely considered in connection to philosophy.  However, the entire enterprise was conceived by G\"{o}del, Turing, Church, and others in order to answer deep questions about the limitations of computation.  This part begins with two papers by Jonathan Bartlett. The first paper discusses how computation can be used as a guidepost to separate out material from non-material causation. The second paper utilizes this concept to outline an improved software complexity metric.  The next paper by Winston Ewert et al. refines previous attempts to quantify information by showing how contextual data can affect information measurements, and defines a new information metric to take this into account.  Finally, a paper by Eric Holloway describes an attempt to directly observe and measure the informational contribution of intelligent beings to search algorithms.  While Holloway's attempt was unsuccessful, the experimental setup is unique and promising and will hopefully inspire future researchers to build on his approach.
+\end{eandmpartintro}
+
 \include{Bartlett1}
 \include{Bartlett2}
+\include{Ewert}
 \include{Holloway}
 
-\part{The Engineering of Life}
+\eandmpart{The Engineering of Life}
+\begin{eandmpartintro}
+Over the past several decades, engineering and biology have become more and more integrated with each other.  Engineering often supplies conceptual frameworks to understand biological systems (sometimes termed ``systems biology''), as well as an understanding of engineering problems being solved by living organisms.  Likewise, in the emerging field of biomimetics, biology serves as an inspiration to engineers, who are increasingly incorporating designs and technical solutions inspired by biological organisms into their work.  In this part, Arminius Mignea examines the biological process of self-replication from an engineer's perspective in three papers.  The first paper takes a systems biology approach and looks at the large-scale design requirements of any successful physical self-replicator.  The second paper then considers a more biomimetic question of how such a physical replicator might be implemented using current technology.  The final paper reflects upon the potential implications of the existence of biological self-replication to origin-of-life scenarios.
+\end{eandmpartintro}
+
 \include{Mignea1}
 \include{Mignea2}
 \include{Mignea3}
