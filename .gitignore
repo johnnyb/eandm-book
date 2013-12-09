@@ -9,3 +9,5 @@
 *.ind
 Book.pdf
 Book.out
+otherfiles
+.DS_Store
