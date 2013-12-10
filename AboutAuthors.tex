@@ -3,15 +3,19 @@
 \chaptermark{About the Authors}
 \sectionmark{}
 
+\setlength{\intextsep}{0pt}%
 % environment to standardize the bios
-\newenvironment{authorbio}[2]{
+\newenvironment{authorbio}[3]{
 	\subsection*{#1}
 
 	\ifstrequal{#2}{}{}  % skip the image if one wasn't provided
 	{
-		\begin{wrapfigure}{l}{1in}
+		\begin{wrapfigure}{l}{2in}
 		 	%\begin{minipage}{1in}
-			\includegraphics[width=1in]{#2}
+			\includegraphics[width=2in]{#2} %
+			\ifstrequal{#3}{}{%
+			}{\vspace{#3}%
+			}%
 			%\end{minipage}
 		\end{wrapfigure}
 	}
@@ -25,7 +29,7 @@
 \sectionmark{Editors and Organizers}
 
 % Adapted from - http://www.oru.edu/academics/college_of_science_and_engineering/dominic_halsmer.php
-\begin{authorbio}{Dominic Halsmer}{halsmer_photo.jpg}
+\begin{authorbio}{Dominic Halsmer}{halsmer_photo.jpg}{}
 Dominic Halsmer's love for physics began from the time he was a child playing at the small airport his father and uncle owned.  He and his siblings would work on projects to defy gravity, once even successfully building a kite large enough to lift a person off the ground using an old parachute and rope.  This natural curiosity eventually blossomed into the work he does today.  
 
 Dominic went on to earn his B.S. and M.S. degrees in Aeronautical and Astronautical Engineering from Purdue University, and his Ph.D. in Mechanical Engineering from UCLA in 1992.  College was a time of spiritual searching, but ultimately he returned to his faith.  ``The love and Christ-like example of my parents made the difference,'' he said.  He also notes that the evidence from science for the truth of the Christian worldview also helped draw him back to his faith.  Today, he has a heart for reaching out with the gospel to skeptical scientists and engineers.
@@ -51,7 +55,7 @@ Dominic joined the Engineering and Physics Department at Oral Roberts University
 
 % Adapted from http://webapps.oru.edu/new_php/academics/faculty_profile.php?id=99&k=
 \newpage
-\begin{authorbio}{Mark R. Hall}{hall_photo.jpg}
+\begin{authorbio}{Mark R. Hall}{hall_photo.jpg}{}
 Mark Hall is the Dean of the College of Arts and Cultural Studies at Oral Roberts University, where he currently teaches courses on the intersection of science and the humanities, including \textit{Science and the Imagination} and \textit{C. S. Lewis and the Inklings}, as well as other courses in literature.  He was recently co-organizer of the "When Worlds Collide" conference on science and science fiction featuring plenary speakers Paul Davies and Joan Slonczewski.
 
 Mark Hall’s extensive list of degrees include a B.S.E. in English Education, an M.S.E. in English, and a Specialist degree in Higher Education with an emphasis in English, all from the University of Central Missouri.  He has also completed three Masters' degrees from Oral Roberts University including an M.A. in Biblical Literature, an M.A. in Theological and Historical Studies, and an M.A. in  Biblical Literature (Advanced Languages concentration).  Mark received his Ph.D. in English from the University of Tulsa.  
@@ -59,8 +63,8 @@ Mark Hall’s extensive list of degrees include a B.S.E. in English Education, a
 Mark is an ordained minister and a former church pastor.  He has been married for over 22 years to his wife, Rachel, who is the Music Director at Jenks United Methodist Church. Dr. Hall and his wife have two children, Jonathan and Kathryne.   Mark is active in his community through politics and the theater and is an avid reader, with one of his favorite authors being C. S. Lewis.
 \end{authorbio}
 
-\begin{authorbio}{Jonathan Bartlett}{bartlett_photo.jpg}
-Jonathan Bartlett is the Director of The Blyth Institute in Tulsa, Oklahoma.  The Blyth Institute is a non-profit research and education organization focusing on pioneering non-reductionistic approaches to biology.  Jonathan's research focuses on the origin of novelty---both the origin of biological novelty in adaptation as well as the origin of insight in the human creative process. 
+\begin{authorbio}{Jonathan Bartlett}{bartlett_photo2.jpg}{}
+Jonathan Bartlett is the Director of The \mbox{Blyth} \mbox{Institute} in Tulsa, Oklahoma.  The \mbox{Blyth} \mbox{Institute} is a non-profit research and education organization focusing on pioneering non-reductionistic approaches to biology.  Jonathan's research focuses on the origin of novelty---both the origin of biological novelty in adaptation as well as the origin of insight in the human creative process. 
 
 Jonathan's other roles include managing a team of software developers as the Director of Technology at New Medio, tutoring homeschool students in chemistry and calculus at Classical Conversations, and being part of the Classical Conversations Writer's Circle, where he has a monthly column discussing issues of science, faith, and education.  Jonathan is the author of the book \textit{Programming from the Ground Up}, which has been used in Universities from Princeton University to Oklahoma State for teaching undergraduate assembly language.
 
@@ -70,16 +74,16 @@ Jonathan received a B.S. in computer science and a B.A. in religion from Oklahom
 \unnumberedsection{Primary Authors}{Primary Authors}
 \sectionmark{Primary Authors}
 
-\begin{authorbio}{Alexander Sich}{SichPhoto.jpg}
+\begin{authorbio}{Alexander Sich}{SichPhoto.jpg}{}
 Alexander Sich is Associate Professor of Physics at Franciscan University of Steubenville. He holds a B.S. in Nuclear Engineering from Rensselaer Polytechnic Institute (with a minor in physics), an M.A. in Soviet Studies from Harvard University, an M.A. in Philosophy from Holy Apostles College \& Seminary, and a Ph.D. in Nuclear Engineering from MIT.  Professor Sich conducted his Ph.D. research in Ukraine at the Chernobyl site, and worked in the former Soviet Union in nuclear safety and nonproliferation effort regarding weapons of mass destruction for over thirteen years. In addition to technical articles, Professor Sich has published opinion pieces on nuclear safety (including the Iranian Bushehr issue) in \emph{The Bulletin of the Atomic Scientists}, \emph{The Boston Globe}, The \emph{Wall Street Journal}, \emph{The Diplomat}, and \emph{Newsday}. Professor Sich is married with seven children, speaks near native fluent Ukrainian and fluent Russian. His current research interests lie primarily in the philosophy of nature, and in teaching.
 \end{authorbio}
 
 %% Received via email
-\begin{authorbio}{Arminius Mignea}{}
+\begin{authorbio}{Arminius Mignea}{}{}
 Arminius Mignea received his Engineer Diploma from the Polytechnic University of Bucharest, School of Computers. He worked as a software engineer and researcher at the Institute for Computing Technique for 14 years. Employed in the operating systems laboratory he wrote system software in macro assembly language, Pascal, and C, and published some 12 research papers alone or as part of the team. After immigrating to the United States and settling in California's Silicon Valley he worked for numerous technology startups developing both server and front-end software for network, enterprise, and security management products. More recently he was involved in the specification, architecture design, and development of software systems for enterprise network traffic monitoring, software build, and TV server systems. About ten years ago Arminius started being interested in the designs, architectures, and machinery of the biological systems. Arminius is fascinated with the beauty, intricacies, coordination, and incredible levels of organization in living things, and marvels at the skills of their architect.
 \end{authorbio}
 
-\begin{authorbio}{Eric Holloway}{holloway_photo.jpg}
+\begin{authorbio}{Eric Holloway}{holloway_photo.jpg}{}
 Mr. Holloway is currently an officer in the Air Force and has been on
 active duty for eight years (including a deployment to Afghanistan in
 2010). He has a BSc from Biola and an MSc from the Air Force Institute
@@ -89,7 +93,7 @@ grant from the Air Force Research Lab. The work was was published in
 two conference proceedings, IEEE and ACM.
 \end{authorbio}
 
-\begin{authorbio}{Winston Ewert}{ewert_photo.jpg}
+\begin{authorbio}{Winston Ewert}{ewert_photo.jpg}{}
 Winston Ewert hails from Canada where he earned a Bachelor's degree in Computer Science from Trinity Western University. He continued his graduate career at Baylor University where he earned a master's degree and is currently a Ph.D. candidate. While at Baylor he is working for the Evolutionary Informatics Lab, with Robert J. Marks II and William Dembski, dedicated to understanding the role of information in evolution. He has a number of publications in the areas of search, conservation of information, artificial life, swarm intelligence, and evolutionary modelling. 
 \end{authorbio}
 
@@ -98,17 +102,17 @@ Winston Ewert hails from Canada where he earned a Bachelor's degree in Computer 
 % Facebook page - https://www.facebook.com/tyler.todd.315/about
 % dynomite212005@oru.edu
 % todd.tyler.n@gmail.com
-\begin{authorbio}{Tyler Todd}{}
+\begin{authorbio}{Tyler Todd}{}{}
 Tyler Todd graduated from Oral Roberts University in 2009 with a degree in Engineering Physics.  He currently works for Valmont Industries as a Manufacturing Engineer.
 \end{authorbio}
 
 % LI - http://www.linkedin.com/profile/view?id=23238440&authType=NAME_SEARCH&authToken=SbS5&locale=en_US&srchid=200467151381097959048&srchindex=5&srchtotal=15&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A200467151381097959048%2CVSRPtargetId%3A23238440%2CVSRPcmpt%3Aprimary
 % nathaniel.p.roman@boeing.com
-\begin{authorbio}{Nate Roman}{}
+\begin{authorbio}{Nate Roman}{}{}
 Nate Roman graduated from Oral Roberts University in 2009 with a B.S. in Engineering Physics.  He currently works for Boeing as an Electrophysicist.
 \end{authorbio}
 
-\begin{authorbio}{Robert J. Marks II}{marks_photo.jpg}
+\begin{authorbio}{Robert J. Marks II}{marks_photo.jpg}{1pt}
 Robert J. Marks II is currently the Distinguished Professor of Electrical and Computer Engineering 
 at Baylor University, Waco, TX. He is a Fellow of both IEEE and the Optical Society
 of America. He served for 17 years as the Faculty Advisor with the Campus Crusade for Christ,
@@ -139,25 +143,29 @@ number is five.
 
 % Taken from http://geweckespot.com
 % rachelle.gewecke@gmail.com
-\begin{authorbio}{Rachelle Gewecke}{rgewecke_photo.jpg}
+\newpage
+\begin{authorbio}{Rachelle Gewecke}{rgewecke_photo.jpg}{}
 Rachelle grew up in rural Iowa where she was baptized in the Reformed Church of America.  Rachelle begged her mother (a music professor) to teach her to play the piano when she was four years old, and she has been playing ever since.  Within her twenty plus years with the instrument, Rachelle has performed in a broad range of venues, including state youth symphonies, university orchestras, faculty studios, and, most recently, as accompanist and choir director at Community Presbyterian Church of the Sand Hills, NJ.  When Rachelle is not playing piano (or viola) she is often at home with Emily, where she has taken on the task of redirecting her toddler’s seemingly boundless energy.
 \end{authorbio}
 
 
 % Taken from http://geweckespot.com
 % michaelgwke@gmail.com
-\begin{authorbio}{Michael Gewecke}{mgewecke_photo.jpg}
+\begin{authorbio}{Michael Gewecke}{mgewecke_photo.jpg}{}
 Michael Gewecke earned a Bachelor of Arts at Oral Roberts University, a private liberal arts college in Tulsa, OK where he studied Theological Historical Studies.  Most recently he received a Master of Divinity degree from Princeton Theological Seminary in Princeton, NJ.  In addition to his academic theological study, Michael has been a technology consultant and online website designer for the last five years.  Most recently, Michael served as the CEO of Worship Times, a website design and hosting company that is dedicated to serving small non-profit religious organizations across the United States.  These integrative experiences of theology and technology lend towards Michael's interest in the cross section between science and religion with particular emphasis upon their mutuality.   
 \end{authorbio}
 
 % Facebook page - https://www.facebook.com/jessica.fitzgerald.58
 % Adapted from - http://www.linkedin.com/pub/jessica-fitzgerald/61/39/ab8
 % concita1092@oru.edu
-\begin{authorbio}{Jessica Fitzgerald}{fitzgerald_photo.jpg}
+\newpage
+\begin{authorbio}{Jessica Fitzgerald}{fitzgerald_photo.jpg}{}
 Jessica Fitzgerald is a student at Oral Roberts University studying Engineering Physics.  She is pursuing a Bachelor of Science Degree in Engineering Physics with a minor in Mathematics. She plans to attend graduate school for physics or engineering, with a particular interest in nanoscience. Her strengths include data analysis, computation, and attention to detail.
 \end{authorbio}
 
-\begin{authorbio}{William A. Dembski}{dembski_photo.jpg}
+~ \\ ~ \\ ~ \\
+
+\begin{authorbio}{William A. Dembski}{dembski_photo.jpg}{1pt}
 William A. Dembski received the B.A. degree in psychology, the M.S. degree in statistics, the
 Ph.D. degree in philosophy, and the Ph.D. degree in mathematics in 1988 from the University of
 Chicago, Chicago, IL, and the M.Div. degree from Princeton Theological Seminary, Princeton,
