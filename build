@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#echo "Extract BB"
+#extractbb -m *.jpg *.png *.pdf
+
 echo "BUILD 1"
 pdflatex Book.tex
 makeindex Book

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -rf *.bb
+rm -rf *.xbb
 rm -rf *.aux
 rm -rf *.bbl
 rm -rf *.blg
