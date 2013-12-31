@@ -30,3 +30,6 @@ makeindex Book
 echo "BUILD 3"
 pdflatex Book.tex
 makeindex Book
+pdflatex Book.tex
+pdflatex Book.tex
+pdflatex Book.tex
