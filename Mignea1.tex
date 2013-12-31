@@ -25,86 +25,76 @@
 \index{self-replication}
 \index{biology!cell}
 This paper is the first in a three-part series investigating the internals 
-of the simplest possible self replicator (SSR). 
+of the simplest possible self-replicator (SSR). 
 The SSR is defined as having an enclosure with input
 and output gateways and having the ability to create an exact replica
-of itself by just ingesting and processing materials from its
-environment. This first paper takes an analytical approach and identifies one
-by one the internal capabilities or functions that must operate inside
-the SSR to provide its fully autonomous replication behavior. 
+of itself by ingesting and processing materials from its
+environment. This first paper takes an analytical approach and identifies, one
+by one, the internal functions that must operate inside
+the SSR to be a fully autonomous replicator.
 \end{abstract}
 
 \section{Introduction}
 
-One of the most remarkable characteristics of the living organisms is
+One of the most remarkable characteristics of living organisms is
 their ability to self-replicate. There are many forms and
-manifestations of the self-replication capability, and these forms vary
-from the simplest, single-celled organisms through a wide range of
-living forms up to the most complex organisms including humans and
+manifestations of self-replication. These forms vary
+from the simplest, single-celled organisms to a wide range of
+living forms to the most complex organisms, including humans and
 other mammals.
 
 \index{origin of life}
 One of the most intriguing questions that ordinary people, engineers,
-scientists and philosophers obsessed over for centuries was how life
-originated and how this ability of living organisms to create
-descendants that look like their parents appeared on planet Earth. 
+scientists, and philosophers have obsessed over for centuries is how life on Earth
+originated and is able
+to create
+descendants that look like their parents.
 
 Many researchers and scientists
-are investing tremendous resources, in trying to identify any plausible
+have invested tremendous resources in trying to identify a plausible
 natural means by which the simplest forms of life may have been created
-from inanimate matter. They are trying to identify and hopefully
-reproduce a lucky set of events and circumstances that somehow put
-together the basic elements and parts of the simplest entity that began
+from inanimate matter. They have tried to identify, and hopefully
+reproduce, a lucky set of events and circumstances that somehow puts
+together the basic elements of the simplest entity that began
 to manifest the ability to replicate and thus become a living organism.
 
 \index{self-replication!design}
-The goal of this study was to use an engineering approach in developing
-insights into the internal design of a simplest possible self
-replicator (SSR). The SSR is defined for the purpose of this study as
-an autonomous artifact that has the ability to get material input from
-its environment, grow and create an exact replica of itself. The
-replica should ``inherit'' the ability from its ``mother'' SSR to create in
-its turn an exact copy of itself.
-
-It is important to observe that this simple definition of the SSR mimics
-accurately the characteristic behavior of many single cellular
-organisms---at least from the point of view of their ability to
-self-reproduce. In particular they are autonomous in regards to:
+The goal of this study is to use an engineering approach in developing
+insights into the internal design of a simplest possible self-replicator (SSR). 
+The SSR is defined for the purpose of this study as
+an autonomous artifact that has the ability to obtain material input from
+its environment, grow, and create an exact replica of itself. The
+replica should ``inherit'' the ability from its ``mother'' SSR to create,
+in its turn, an exact copy of itself.
 
 \index{cellular metabolism}
-\begin{itemize}
-\item their ability to ingest materials from their environment
-\item their ability to use the ingested materials for growth and
-production of internal energy
-\item their ability to produce an identical copy of themselves usually
-through a two-step process of cloning and division.
-\end{itemize}
+It is important to observe that this simple definition of the SSR accurately mimics the characteristic behavior of many single-celled organisms, at least from the perspective of their ability to self-reproduce. In particular, they are autonomous in regards to their ability to ingest materials from their environment, to use the ingested materials for growth and production of internal enegy, and to produce an identical copy of themselves, usually through a two-step process of cloning and division. 
 
-This paper will analyze the process of self-replication as if it were 
-a preliminary study for a research lab tasked to design and build an
-artificial SSR from scratch.  Therefore, the objectives of this study 
-are as follows:
+This paper will analyze the process of self-replication as though it is a preliminary study for a research lab tasked to design and build an artificial SSR from scratch. The objectives of this study are as follows:
 
 \begin{enumerate}
 \item  Create a top level design of the SSR that identifies all its
 functional components with specific characterization of the role of
 each functional component, its responsibilities and its interactions
 with the other functional components within the SSR framework.
-\item  Identify the candidate engineering technologies to be employed in
-the concrete implementation of the SSR and of all its functional
+\item  Identify the candidate engineering technologies that could be employed in
+the concrete implementation of the SSR and of its functional
 components.
 \item  Identify the most difficult tasks in constructing the
-concrete artificial SSR
-\item  Conclude with an overall estimate of the complexity of the
-project to construct the artificial SSR. For a pragmatic estimation of
+concrete artificial SSR.
+\item  Conclude with an overall estimate of the complexity 
+in constructing
+the artificial SSR. For a pragmatic estimation of
 SSR construction complexity, it may be compared with 
-existing, top technology, human-made artifacts.
+existing, high technology, human-made artifacts.
 \end{enumerate}
 
-\section{The Two Phases of the Self Replication}
+Because this paper is a thought experiment on what elements would be required to construct a simple self-replciator and makes use of general knowledge in the field of engineering, references have not been included at the end of part one.
+
+\section{The Two Phases of Self-Replication}
 
 \index{self-replication!phases}
-At the highest level the SSR has the following composition as
+At the highest level the SSR has the composition 
 illustrated in figure \ref{fig:ssr_structure}.
 
 \migneafigure{MigneaSsrStructure}{The SSR Structure}{fig:ssr_structure}
@@ -112,13 +102,13 @@ illustrated in figure \ref{fig:ssr_structure}.
 \index{cloning phase|see{self-replication, cloning phase}}
 \index{self-replication!cloning phase}
 \index{division phase|see{self-replication, division phase}}
-The SSR replication has two main phases---the cloning phase (illustrated in figure \ref{fig:cloning_phase}) and the division phase (illustrated in figure \ref{fig:division_phase}).
+The SSR replication process has two main phases---the cloning phase (illustrated in figure \ref{fig:cloning_phase}) and the division phase (illustrated in figure \ref{fig:division_phase}).
 
 \migneafigure{MigneaSsrCloningPhase}{The Cloning Phase in SSR Replication}{fig:cloning_phase}
 
 \migneafigure{MigneaSsrDivisionPhase}{The Division Phase in SSR Replication}{fig:division_phase}
 
-The behavior of the SSR, including basic support functions and the two replication phases, can be outlined succinctly as follows:
+The behavior of the SSR, including basic support functions and the two replication phases, can be outlined as follows:
 
 \index{self-replication!inputs}
 \index{self-replication!material extraction}
@@ -134,50 +124,44 @@ gates
 \item Input raw materials are processed through material extraction into
 good materials for fabrication of parts or for energy generation
 \item Energy is generated and made available throughout the SSR
-\item Processed materials are passed to the fabrication function which fabricate parts, components and
-assemblies for: 
-
 \index{self-replication!functions}
-\begin{itemize}
-\item Cloning (creating copies) of all SSR internal elements
-\item Creating scaffolding elements for the growing SSR interior
-\item Creating new elements that are added to the growing enclosure
-\end{itemize}
+\item Processed materials are passed to the fabrication function which fabricate parts, components and
+assemblies for cloning of all SSR internal elements, creating scaffolding elements for the growing SSR interior, and creating new elements that are added to the growing enclosure.
 \item When the cloning of all original SSR internal parts is completed,
 the SSR division starts:
 
 \index{self-replication!replication process}
 \begin{itemize}
-\item The original SSR contents are now at (for example) the “north pole”
+\item The original SSR contents are now at, for example, the “north pole”
 of the SSR enclosure
 \item The cloned SSR contents (the “nascent daughter SSR”) are now at the
 “south pole” of the SSR enclosure
 \item The SSR enclosure and its content now divide at the “equatorial”
 plane and the separate mother SSR (at north) and daughter SSR (at south)
-emerge.
+emerge
 \end{itemize}
 \end{itemize}
 
 \section[Identifying SSR Capabilities]{Identifying SSR Capabilities as Specific Functions}
 
 We will build an
-understanding of what must be the elements and the abilities of the
-SSR by conducting a step-by-step analysis of what must be happening inside and at
-the periphery of the SSR so that its growth and replication will occur.
+understanding of what the elements and the abilities of the
+SSR must be by conducting a step-by-step analysis of what must be happening inside and at
+the periphery of the SSR so that its growth and replication can occur.
 
-\subsection[The SSR enclosure and its input gateways and output
-gateways]{The SSR enclosure and its input gateways and output gateways}
+\subsection[The SSR enclosure and its input and output gateways]{The SSR enclosure and its input and output gateways}
 
 \index{self-replication!inputs}
-We will assume that the SSR is
-made by an enclosure that has the role of separating the SSR from its
-environment. We will assume that on this enclosure there are some
-openings (gateways) that are used to accept some good
-substances into the SSR---raw materials and raw parts from the SSR environment. We
-will call these openings \mterm{input gateways}. There are also
-openings used by the SSR to push out from inside some refuse materials
-and parts that result from certain transformation/fabrication processes
-inside the SSR. We will name these openings \mterm{output gateways}.
+Two reasonable assumptions will be made about the SSR. The first assumption is
+that the SSR is
+comprised of an enclosure that has the role of separating the SSR from its
+environment. Secondly, the surface of this enclosure has
+openings that are used to accept good
+substances into the SSR---raw materials and raw parts from the SSR environment. 
+These openings will be called \mterm{input gateways}. There are also
+openings used by the SSR to expel from inside the SSR refuse materials
+and parts that result from certain transformation/fabrication processes.
+These openings will be called \mterm{output gateways}.
 
 \subsection[The input flow control function]{The input flow control
 function}
@@ -185,23 +169,23 @@ function}
 \index{self-replication!flow control}
 \index{flow control|see{self-replication, flow control}}
 There is one primary question
-for the input gateways: are all the raw materials and raw parts that
+for the input gateways: Are all the raw materials and raw parts that
 exist or touch the outside of the enclosure good for the SSR processes?
-Certainly they are not. The SSR and its input gateways must feature some
-ability to be selective in accepting or rejecting substances, materials,
-and parts that are outside the SSR interior to determine if they should enter. We will
-identify this needed feature of the SSR as its \mterm{input flow control function}.
+Certainly, they are not. The SSR and its input gateways must feature some
+ability to select or reject substances, materials,
+and parts that are outside the SSR interior, and determine whether they should enter. 
+For this paper, this feature of the SSR will be called the \mterm{input flow control function}.
 
 \subsection[The raw materials and parts catalog]{The raw materials and
 parts catalog}
 
 \index{self-replication!material extraction}
 The next question to be answered
-is how the SSR “knows” which are “good” raw materials and “good” parts
-versus “bad” materials and parts? The answer is that the SSR must
-possess a catalog of good raw materials and parts and this will be the
+is, how does the SSR knows which are good raw materials and parts
+and which are bad materials and parts? The SSR must
+possess a catalog of good raw materials and parts that will be the
 informational basis on which the input gateways will open or stay
-closed. Let’s name this catalog the \mterm{raw materials and parts catalog}.
+closed. This catalog will be referred to as the \mterm{raw materials and parts catalog}.
 
 \subsection[The materials and parts identification function]{The
 materials and parts identification function}
@@ -209,74 +193,73 @@ materials and parts identification function}
 \index{self-replication!parts identification|(}
 The next question is how the SSR
 will recognize and accurately identify a material or part at an input
-gateway as a good or bad one? That is not a trivial ability, but the
-SSR must possess it. This ability can be described as a way to
+gateway as good or bad? That is not a trivial ability. 
+It is a way to
 determine the nature of the materials and parts its input gateways are
 exposed to. This ability may be supported by a set of material probing
-procedures and processes. We will name this SSR ability the
-\mterm{materials and parts identification function}. This capability
-is at least on the order of complexity of certain probes with which the
-Martian rover was equipped to analyze the Martian soil in order to
-decide if certain compounds are present or not on the surface of that
-planet.
+procedures and processes. This SSR ability will be called the
+\mterm{materials and parts identification function}. 
+The complexity of this capability can be compared to the probes on the Martian rover that were used to analyze soil samples for particular compounds.
 
-\subsection[The systematic labeling/tagging of all raw materials, raw
-parts and fabricated parts and components]{The systematic
-labeling/tagging of all raw materials, raw parts and fabricated parts
+\subsection[The systematic labeling/tagging of all raw materials, raw parts, and fabricated parts and components]{The systematic labeling/tagging of all raw materials, raw parts, and fabricated parts
 and components}
 
-The next issue that requires
-attention is as follows: Let’s assume that an input gateway
-assisted by the raw materials and parts identification function
-determined that a piece of raw material is one of the good materials
+An input gateway,
+assisted by the raw materials and parts identification function,
+determines that a piece of raw material is one of the good materials
 recorded in the good raw materials and parts catalog. This piece is
-going to be admitted inside the SSR and transported to a certain place
-for processing or possibly for temporary storage followed by
+going to be admitted into the SSR and transported to a particular place
+for processing or possibly to a temporary storage location followed by
 processing.  In order to do this successfully, the SSR needs
-to tag or label this piece somehow so that its nature, once
-determined at the input gateway, is well known and available for
-subsequent processing stations or storage stations in the SSR. Therefore
-any raw material or part which is accepted inside the SSR, once
+to tag, or label, this piece so that its nature, once
+determined at the input gateway, is available for
+subsequent processing stations or storage stations in the SSR. Therefore,
+any raw material or part which is allowed to enter the SSR, once
 its nature is identified, is immediately tagged or labeled using a system
 similar to the bar codes or RFIDs (radio-frequency identification)
 where the code used is one of the codes in the catalog of raw materials
 and parts. This systematic labeling and tagging of all accepted
 materials and parts will be considered another responsibility of the
-\mterm{materials and parts identification function}.  More than that,
-in the process of SSR growth and during the cloning
-phase, the SSR will fabricate new parts, components and assemblies
+\mterm{materials and parts identification function}.  Additionally,
+during the SSR growth and cloning phases, the SSR will fabricate new parts, components, and assemblies
 using either raw materials and raw parts or previously fabricated
 parts, components, and assemblies. The point is that the 
 \mterm{materials and parts identification function}
-will be responsible to tag/label not
-only raw materials and parts accepted inside SSR but also all
-fabricated parts, components, and assemblies. This allows us to affirm
-that all elements present inside the SSR and all SSR parts should bear
-a permanent identification/tag.
+will be responsible for tagging or labeling not
+only raw materials and parts accepted inside SSR, but also all
+fabricated parts, components, and assemblies. Therefore,
+all elements inside the SSR and all SSR parts should bear
+a permanent identification tag.
 \index{self-replication!parts identification|)}
 
-\subsection[The catalog of fabricated parts, components and
-assemblies]{The catalog of fabricated parts, components and assemblies}
+\subsection[The catalog of fabricated parts, components and assemblies]{The catalog of fabricated parts, components and assemblies}
 
 \index{self-replication!fabrication|(}
-This raises also another
-important aspect for the SSR design. The SSR must possess not only an
+This raises another
+important aspect for the SSR design: The SSR must possess not only an
 exhaustive catalog of all raw materials and raw parts, but also a
 \mterm{catalog of all fabricated parts, components and assemblies}
-with a unique identifier for each \memph{type} of such element. 
+with a unique identifier for each \memph{type} of such elements. 
 
-\subsection[The bill of materials function]{The bill of materials
-function}
+\subsection[The bill of materials function]{The bill of materials function}
 
 The automated fabrication
-processes will need additional informational support. We will name this
-capability the \mterm{bill of materials function}. It is supported by
-an exhaustive catalog that has entries that specify for each and every
-fabricated part, component and assembly what is the list of materials
-and parts that is needed to fabricate that part. For each item in this
-list the count or quantity of that part or material must be also
-specified. For instance, below is an example of what an abbreviated
-entry for a “power supply enclosure” part may look like in the catalog:
+processes will need additional informational support. 
+This capability can be called the \mterm{bill of materials function}. It is supported by
+an exhaustive catalog with entries that specify  the list of materials required to fabricate
+each and every 
+fabricated part, component,and assembly.
+For each item in this
+list, the quantity of those materials must be also
+specified. The \mterm{bill of materials} is an \memph{informational function} of
+the SSR. Like all SSR information functions, it has two components: a specific catalog (or database),
+ and a set of information access sub-functions to search, read, write, update, or delete specific entries in 
+the associated catalog that can be accessed by all other SSR functions.  
+
+In this case, the catalog
+is the bill of materials catalog.  
+Below is an example of what an abbreviated
+entry for a “power supply enclosure” part may look like in such a catalog:
 
 %\begin{supertabular}{|m{1.3094599in}m{1.3573599in}m{0.9837598in}m{0.6705598in}m{0.82335985in}m{1.0323598in}|}
 \begin{table}[h]
@@ -301,56 +284,18 @@ $Q + D$
 16x24
 \\
 Screws $\frac{1}{8}*2$ &
-ID-01670
- &
-$C$
- &
-8 &
--
- &
--
-\\
-Washers $\frac{1}{4}*2$ &
-ID-05629
- &
-$C$
- &
-8 &
--
- &
--
-\\\hline
-%\end{supertabular}
-\end{tabular}
-\end{center}
-\caption*{The \textit{flags} field tells what properties are specified for the part.  Q=quantity, C=count, D=dimensions}
-\end{table}
-
-The \mterm{bill of materials} is an \memph{informational function} of
-the SSR. Like all SSR informational functions it has two components:
-
-\begin{itemize}
-\item A specific catalog (or database)---in this case the bill of
-material catalog
-\item A set of information access sub-functions to search, read, write,
-update or delete specific entries in the associated catalog. This set
-of sub-functions can be accessed by all other SSR functions 
-\end{itemize}
-
-\subsection[The fabrication material extraction function]{The
-fabrication material extraction function}
+\subsection[The fabrication material extraction function]{The fabrication material extraction function}
 
 Some of the raw materials
-admitted inside the SSR cannot be directly used by the SSR fabrication
-processes. They need to be transformed into “fabrication materials”
-through one or more specific processes. As an example (not necessarily
-related to our artificial SSR) is the fabrication
-of steel (as a “fabrication material”) from iron ore and coal (both of
-these are in this case “raw materials”). The ability of the SSR to
+admitted inside the SSR cannot be used directly by the SSR fabrication
+processes. They need to be transformed into fabrication materials
+through one or more specific processes. An example, which is not necessarily
+related to our artificial SSR, is the fabrication
+of steel (fabrication material) from iron ore and coal (raw materials). The SSR's ability to
 extract fabrication materials from sets of raw materials and parts is
 the \mterm{fabrication material extraction function}.  Fabrication
 materials are registered in the \mterm{catalog of fabrication materials} 
-while every procedure and technological process that is used
+while every process that is used
 to extract fabrication materials from raw materials and parts is
 documented in a \mterm{fabrication material extraction process catalog}.
 \index{self-replication!fabrication|)}
@@ -358,41 +303,40 @@ documented in a \mterm{fabrication material extraction process catalog}.
 \subsection[The supply chain function]{The supply chain function}
 
 \index{self-replication!supply chain}
-Let’s now assume that during
+One can now consider the case when during the
 cloning phase the SSR must fabricate a component of type A.  The bill
 of materials entry for a component of type A specifies that its
 “fabrication recipe” requires 2 raw parts of type X and 4 raw parts of
 type Y.  The SSR will need a capability to coordinate the input
-gateways to admit ahead of time the required counts of parts X and Y,
-and create some stock in a SSR “stock room” so that the fabrication of
-components A can go smoothly and depend a little less on what raw parts
-are available at any given moment at any one of the enclosure input
-gateways. We are going to name this SSR capability the \mterm{supply chain function}. 
-This function is thus responsible to interact with
-fabrication processes inside SSR to gather information ahead of
-fabrication time on what raw materials, raw parts or even fabricated
-parts are needed, and then to command other functions (i.e. the input flow control function 
-and the material and parts identification function) to admit, supply and stock
-those elements inside the SSR.
+gateways to admit prior to the cloning process required quantities of parts X and Y,
+creating stock in a SSR stock room so that the fabrication of
+component A can go smoothly.  This will allow the fabrication of the component to depend less 
+the available raw parts at any given moment at the enclosure input
+gateways. This SSR ability will be referred to as the \mterm{supply chain function}. 
+This function is responsible for interacting with
+fabrication processes within the SSR to gather information prior to
+fabrication regarding what raw materials, raw parts, or fabricated
+parts are needed. It will then command other functions (i.e., the input flow control function 
+and the material and parts identification function) to admit, supply, and stock
+those elements within the SSR.
 
-\subsection[The energy generation and distribution function]{The energy
-generation and distribution function}
+\subsection[The energy generation and distribution function]{The energy generation and distribution function}
 
 \index{self-replication!energy distribution}
-All the machines inside SSR need
-a source of energy to perform their work. Thus we must have inside the
-SSR a capability to produce energy from raw materials and raw parts
-that are appropriate for energy generation. This SSR capability will be
+All the machines inside the SSR need
+an energy source to perform their work. Thus, the SSR must have the ability
+to produce energy from the appropriate raw materials and raw parts.
+This ability will be
 named the \mterm{energy generation and distribution function} since it
-has the responsibility not only to generate energy but also to manage
-and distribute it to all energy consumers inside the SSR. It is
-important to note that the catalog of raw materials and raw parts as
-well as the catalog of fabricated parts may contain entries that will
-be marked as elements used for energy generation and/or distribution.
-Also the \mterm{catalog of processes} will contain entries identifying
-those material processes (and their detailed description) that are used
+has the responsibility not only to generate energy, but also to manage
+and distribute energy to the energy consumers within the SSR. Importantly,
+the catalog of raw materials and raw parts, as
+well as the catalog of fabricated parts, may contain entries that are
+marked as elements used for energy generation and/or distribution.
+Also the \mterm{catalog of processes} will contain entries detailing the
+material processes that are used
 to generate energy from the energy-marked materials and parts. The
-supply chain function is responsible to manage the timely supply of
+supply chain function is responsible for managing the timely supply of
 materials and parts not only for fabrication but also for energy
 generation and transport.
 
@@ -400,38 +344,38 @@ generation and transport.
 
 \index{self-replication!material transport|(}
 The functioning SSR features
-multiple “sites”, i.e. places where specific actions happen. These
-sites will be distributed spatially inside the SSR on its enclosure
-and will have well established positions relative to the elements that
-maintain the three dimensional (and growing) structure of the SSR –
-named scaffolding elements. For example, there are input gateway sites,
-there are possibly some stock room sites, there are fabrication sites
+multiple sites where specific actions happen. These
+sites will be distributed spatially inside the SSR or on its enclosure,
+and will have well-established positions relative to the elements that
+maintain the three dimensional structure of the SSR as it grows 
+(named \mterm{scaffolding elements}). For example, there are input gateway sites;
+there are possibly some stock room sites; there are fabrication sites;
 and there are assembly sites where the elements of the growing clone
 inside the SSR are being put together by some machinery. The SSR must
-feature a capability to carry various elements between sites. This
-capability is named the \mterm{transport function}. It may employ
-specific means of transport, like using conduits, avenues, conveyors,
-etc. that are adequate for the nature of elements being transported and
-the placement of the sites inside SSR.  We will see later that an
+have the ability to carry various elements between sites. This
+ability is named the \mterm{transport function}. It may employ
+specific means of transport, such as conduits, avenues, conveyors,
+etc., that are adequate for the particular elements that are being transported and
+the particular sites within the SSR.  We will see later that an
 important aspect of SSR activity is the transport of information
-between “producers” and “consumers” inside the SSR. For this reason the
-transport function is responsible to also \memph{transport information} 
-between SSR sites (at least for the provision of the
-physical, lower layers of the transport of information).
+between producers and consumers within the SSR. For this reason, the
+transport function is also responsible for \memph{transporting information} 
+between the SSR sites, at least for the provision of the
+physical, lower layers of the transport of information.
 
 \subsection[The manipulation function]{The manipulation function}
-Another important capability that
-is needed inside the SSR is the \mterm{manipulation function}. This
-function consists of the ability to handle, grab or manipulate raw
+Another important ability that the SSR needs is the
+\mterm{manipulation function}. This
+function consists of the ability to handle, grab, or manipulate raw
 materials, raw parts, fabricated parts, fabricated components and
-fabricated assemblies. For example this manipulation ability is needed
+fabricated assemblies. For example, this ability is needed
 to take a raw material or raw part admitted at an input gateway and
-place it on a conveyor that has as destination a stock room or a
-fabrication site. There another “manipulator” will grab the material or
+place it on a conveyor that goes to a stock room or a
+fabrication site. Once there, another manipulator will grab the material or
 part and place it in a specified position in the stock room or place it
 on a fabrication bench or machinery. Manipulation examples abound,
 since no matter what elements are processed, transported, fabricated,
-assembled or pushed out of an output gateway there is a need to
+assembled or pushed out of an output gateway, there is a need to
 adequately handle those elements.
 \index{self-replication!material transport|)}
 
@@ -439,33 +383,33 @@ adequately handle those elements.
 
 \index{self-replication!fabrication|(}
 Since the SSR must be able to
-clone its core elements, its enclosure and its scaffolding elements,
-there is an absolute need for the SSR to have a \mterm{fabrication function}. 
+clone its core elements, enclosure, and scaffolding elements,
+it is absolutely necessary for the SSR to have a \mterm{fabrication function}. 
 This function is the ability to fabricate exact copies of
-all parts, components and assemblies that exist inside a “mature” SSR
+all parts, components, and assemblies that exist inside a ``mature'' SSR
 or on its enclosure. In other words the fabrication function must be
 able to fabricate all machinery inside the SSR, including fabrication
 machinery. Since all the elements that reside inside the SSR must be
 copied (cloned) and various types of information and software elements
-(as we will see later) also reside inside that “mature” SSR, this implies
-that the fabrication function may also have the ability to
+(as we will see later) also reside inside the “mature” SSR, 
+the fabrication function must also have the ability to
 accurately copy information and software.
 
 \subsection[The assemblage function]{The assemblage function}
 
 Another capability that must
-reside inside the SSR is the \mterm{assemblage function}. This is the
-ability of the SSR to assemble or put together parts into
-increasing-in-complexity components and assemblies. The assemblage
-function is strongly related to the fabrication function. These two
-functions can be seen as the two faces of the same coin. It makes sense
-though to see them as distinct functions where the fabrication function
+reside within the SSR is the \mterm{assemblage function}. This function allows
+the SSR to assemble parts into
+components and assemblies that increase in complexity. The assemblage
+function is strongly related to the fabrication function. While these two
+functions can be seen as two sides of the same coin, it makes sense
+to see them as distinct functions where the fabrication function
 creates new parts from raw materials and raw parts through special
-processes (example metal machining) while the assemblage function puts
-together fabricated parts into more and more complex assemblies of
-parts and components. The assemblage function may be needed for example
-to erect and expand the scaffolding and the enclosure during the SSR
-growth besides being used to create assemblies of smaller components
+processes (e.g., metal machining) while the assemblage function puts
+fabricated parts together into more and more complex assemblies.
+The assemblage function may be needed, for example,
+to erect and expand the scaffolding and the enclosure during SSR
+growth along with creating assemblies of smaller components
 and parts.
 \index{self-replication!fabrication|)}
 
@@ -475,28 +419,28 @@ and parts.
 
 \index{self-replication!recycling}
 The SSR functions discussed so
-far provide specific assistance for the “ingestion” of new raw
-materials and parts into the SSR and the SSR growth during the phase of
-cloning based on continuous production of energy and on planned
-fabrication of the elements of the “daughter” clone growing inside the
+far provide specific assistance for the ``ingestion'' of new raw
+materials and parts into the SSR and SSR growth during the cloning phase
+based on continuous production of energy and planned
+fabrication of the elements of the ``daughter'' clone growing inside the
 expanding SSR enclosure. As in any process that performs fabrication
-and construction of new parts, there will be “residue” raw materials
+and construction of new parts, there will be ``residual'' raw materials
 and raw part fragments.  The SSR must be designed to carefully control
-the growth of the inside and enclosure elements of the SSR. It cannot
+the growth of the internal and enclosure elements. It cannot
 grow without limits or in an uncontrolled manner. In order to achieve
-this objective the SSR must:
+this objective, the SSR must:
 
 \begin{itemize}
 \item Re-introduce in the fabrication and growth cycles certain elements
-of the “residue” raw materials, raw parts or raw part fragments that
+of the residual raw materials, raw parts, or raw part fragments that
 can be reused.
-\item Identify and specifically mark as refuse certain residue elements
-that cannot be recycled and that are then pushed as refuse through the
+\item Identify and specifically mark as refuse certain residual elements
+that cannot be recycled and then expel them as refuse through the
 output gateways.
-\item Provide specific processes to “clean” and “tidy up” the SSR
-interior fabrication and transport spaces, such that fabrication and
-assembly of the cloned parts is not stopped or affected and the SSR
-maintains “proper structure” during the cloning and division phases.
+\item Provide specific processes to clean the SSR
+interior fabrication and transport spaces such that fabrication and
+assembly of the cloned parts is not affected and the SSR
+maintains the proper structure during the cloning and division phases.
 \end{itemize}
 
 Most of the above responsibilities pertain to the \mterm{recycling function}.
@@ -506,9 +450,9 @@ function}
 
 \index{self-replication!flow control}
 The recycling function controls
-the \mterm{output flow control function} which is the ability to
-control the enclosure \memph{output gateways} for forcing out the SSR
-the raw materials, raw parts and raw part fragments \memph{marked as refuse} 
+the \mterm{output flow control function}, which is the ability to
+control the enclosure \memph{output gateways} that force out of the SSR
+the raw materials, raw parts, and raw part fragments \memph{marked as refuse} 
 by the recycling function.
 
 \subsection[The construction plan function]{The construction plan
@@ -516,15 +460,15 @@ function}
 
 \index{self-replication!fabrication|(}
 We already saw that the bill of
-materials function provides for each fabricated part, component or
-assembly of the SSR a list of raw materials, parts and sub-components
-that are needed for fabrication of that element. Thus an entry in the
-bill of materials information catalog is similar in concept with the
-“list of ingredients” for cooking a meal. Besides the list of
-ingredients, the recipe for a meal contains an ordered “list of steps”
+materials function provides for each fabricated part, component, or
+assembly of the SSR a list of raw materials, parts, and sub-components
+that are needed for fabrication of that element. Thus, an entry in the
+bill of materials information catalog is similar, in concept, to the
+list of ingredients for cooking a meal. Besides the list of
+ingredients, the recipe for a meal contains an ordered list of steps
 needed to prepare the meal. In a similar manner, the SSR must store
 descriptive information for all construction steps needed to fabricate
-each SSR element. This capability of the SSR to store and make
+each SSR element. The SSR's ability to store and make
 accessible detailed information about the set of fabrication steps and
 processes needed for the fabrication of each SSR element (part,
 component, assembly of components, up to including the SSR itself) is
@@ -535,92 +479,78 @@ plan information catalog}
 
 The \mterm{construction plan function} has an associated \mterm{construction plan information catalog}. 
 This catalog has an entry for each fabricated element of the
-SSR. A fabricated element can be a simple fabricated part (fabricated
+SSR. A fabricated element can be a simple fabricated part (i.e., fabricated
 from a single good material). A fabricated element can also be a
 component which, in this context, refers to an element fabricated
-through assemblage of two or more fabricated parts. A fabricated
+through the assemblage of two or more fabricated parts. A fabricated
 assembly is even more complex: it is fabricated from multiple simple
 parts and one or more components and possibly one or more (sub)
 assemblies. The mature SSR (before starting the cloning process) is a
-particular case of an assembly. Another example of an assembly (most
-complex in this case) is the SSR grown to contain both the mother core
-elements and the daughter elements just before division starts. 
+particular case of a fabricated assembly. 
+Another example of a fabricated assembly, and the most complex example in this case, is the SSR that contains both the mother core elements and the daughter elements just before division begins.
 
-Each entry in the construction plan catalog contains the following
-information items:
 
-\begin{itemize}
-\item A reference to the entry in the bill of materials catalog for the
-same element (to access the “ingredients” needed for the element
-fabrication)
-\item An ordered sequence of fabrication and assembly steps.
-\end{itemize}
+Each entry in the construction plan catalog contains a reference to the entry in the bill of materials catalog for the same element (to access the parts and components needed for the element fabrication) and an ordered sequence of fabrication and assembly steps.
 
 For each fabrication/assembly step the following information may be
 provided:
 
 \begin{itemize}
-\item The spatial assembly or placement instruction of parts/materials
-involved in the step (how to spatially place a part/component P
-relative to the assembly under construction on the work bench, before a
-fabrication/technology step)
+\item The spatial assembly or placement instruction of parts and/or materials
+involved in the step (i.e., how to spatially place a part/component, P,
+relative to the assembly under construction on the work bench before a
+fabrication step)
 \item The type and detailed description of each fabrication/assembly
-process executed during the current fabrication step.
-\item Technological parameters of fabrication/assembly process (like
+process executed during the current fabrication step
+\item Technological parameters of the fabrication/assembly process (e.g.,
 ambient temperature, length of process, etc.)
-\item List of “residue” parts/materials resulted from the process/step.
-\item Part manipulation steps (with x, y, z starting point, x, y, z
-ending point, any part rotation, with axis specification or translation
-movement).
-\item Any fabrication step verification procedure---to determine if the
-step completed successfully within accepted parameters---or the
+\item List of residual parts/materials resulting from the process or particular step
+\item Part manipulation steps (This includes: x, y, z starting point, x, y, z
+ending point, part rotation, axis specification, or translation movements)
+\item Any fabrication step verification procedure to determine if the
+step completed successfully within accepted parameters or if the
 fabrication step was a failure.
 \item Recovery action list in case a fabrication step fails with a
-specific verification error.
+specific verification error
 \end{itemize}
 
-In short, the rationale for the nature, structure and the extent of
+In short, the rationale for the nature, structure, and extent of
 information items stored for each step of a \mterm{fabrication plan entry} 
 is to provide support for full automation of that element of
 fabrication. And, as suggested above, \mterm{fabrication steps} can be
-of a very large variety. The nature of the fabrication process as well
-as the nature of fabrication steps depends on the material basis to be
+of a very large variety. The nature of the fabrication process, as well
+as the nature of fabrication steps, depends on the material basis that will be
 selected for the design and implementation of the artificial SSR. The
 alternative material bases that can be realistically considered for
-creating an artificial SSR are discussed in the Part 2 of this study.
+creating an artificial SSR are discussed in Part 2 of this study.
 
-To help understand the nature of a fabrication step here are several
-examples:
+Here are several examples of the nature of a fabrication step:
 
 \begin{itemize}
-\item A positioning step (i.e. a part or component being placed in a particular position relative
+\item A positioning step (i.e., a part or component being placed in a particular position relative
 to the semi-assembled element in preparation of another step)
 \item An assemblage step
-\item A metal machining kind of fabrication step
+\item A metal machining step
 \item A chemical process step
 \item A thermal process step
 \item An electrolytic process step
-\item A nano-technology assemblage step
+\item A nanotechnology assemblage step
 \item An information file copy step
 \item A fabricated component (assembly) test step
 \end{itemize}
 
-The next issue that requires a solution is to devise a way to track the
+The next issue to solve requires devising
+a way to track the
 progress of the cloning and division steps. This is provided by the
 \mterm{construction status function}. This function uses an
-information catalog similar to the construction plan catalog named
-\mterm{construction status catalog}. It is similar in the sense that
-it has the same list of element entries as the construction plan
-catalog describing the same hierarchical composition of each element
+information catalog that is similar to the construction plan catalog named the
+\mterm{construction status catalog}. It has 
+the same list of element entries as the construction plan
+catalog and describes the same hierarchical composition of each element
 (part, component, assembly) in sub-elements.  Each entry in this
 catalog has construction status information that reflects the current
-construction status of that entry and can have values like:
-
-\begin{itemize}
-\item Not-started
-\item Started
-\item Completed
-\end{itemize}
+construction status of that entry and can have values like ``not-started,'' 
+``started,'' or ``completed.''
 
 In a similar manner each fabrication step of an entry has a current
 construction status field that is also used to mark and keep track of
@@ -636,50 +566,45 @@ geometry.  The SSR has variable geometry because, first, the mature SSR must
 grow in volume and enclosure surface during the cloning phase to make space 
 in its interior for the growing clone. Second, the geometry changes even more 
 radically when the division phase
-starts and culminates with the complete division of the original SSR in
-two: the “mother” SSR and the “daughter” SSR.
+starts, and culminates with the complete division of the original SSR in
+both the mother SSR and the daughter SSR.
 
 The SSR variable geometry presents many challenges and considerations that must
 be carefully considered by the SSR design and by the hypothetical
-implementation of the artificial SSR.
-
+implementation of the artificial SSR.  
 The first consideration is the structure and composition (texture) of the SSR.  This
 must be designed to allow:
 \begin{itemize}
-\item Growth in surface area as the SSR interior grows in volume during the
+\item Surface area growth as the SSR interior grows in volume during the
 cloning phase. This may require a design that allows selective
 insertion of new enclosure parts/elements in between existing
-parts/elements and some kind of “linkage/connection” of each new
+parts/elements and a way to link or connect each new
 element with its neighboring elements.
-\item Insertion in the enclosure of new input gateways and output
-gateways while the enclosure grows.
+\item Insertion of new input gateways and output gateways while the enclosure grows.
 \item Division of the enclosure into two separate enclosures (one for
 the mother SSR and one for the daughter SSR)  with each enclosure
-carrying its separate sets of input and output gateways, its
-scaffolding and interior elements.
+carrying its separate sets of input and output gateways, 
+scaffolding, and interior elements.
 \end{itemize}
 
 Next, special design provisions must be made for the interior SSR
 scaffolding. The SSR scaffolding is made of structural
-elements (such as pylons, walls, supports, connectors, etc.) that are needed to
+elements (e.g., pylons, walls, supports, connectors, etc.) that are needed to
 maintain the three dimensional structure and integrity of the enclosure
 and of the SSR interior space(s). The scaffolding design and its
-elements need to be conceived such that:
-
-\begin{itemize}
-\item The scaffolding elements my change size (grow or shrink) as the
-interior of the SSR grows (during cloning) or shrinks (during division)
-\item The spacing between scaffolding elements and their connectors may
-also grow or shrink (during cloning respective division phases).
-\end{itemize}
+elements need to be conceived such that, first, the scaffolding elements may
+change size as the
+interior of the SSR grows (during cloning) or shrinks (during division);
+second, the spacing between scaffolding elements and their connectors may
+also grow or shrink (during cloning or division phases).
 
 Finally, the design of the SSR must also make provisions for the growth,
-variable geometry and dynamic restructuring and re-linking of any SSR
+variable geometry, and dynamic restructuring and re-linking of any SSR
 transport, conduits, paths or communication lines during the cloning
-phase and the division phase.
+and division phases.
 
 The variable geometry means that the SSR design must make specific,
-detailed provisions for the entirety of its spatial evolution, of all geometrical
+detailed provisions for the entirety of its spatial evolution. This includes all geometrical
 definition points or trajectories (in the x, y, and z axes) of all variable
 elements of the SSR enclosure, scaffolding and interior. These spatial
 trajectories need to be harmoniously and coherently coordinated with
@@ -687,63 +612,60 @@ all fabrication and assemblage steps of the cloning and division
 phases.
 \index{self-replication!growth and development|)}
 
-\subsection[The Communication and Notification Function]{The
-Communication and Notification Function}
+\subsection[The Communication and Notification Function]{The Communication and Notification Function}
 
 \index{self-replication!signalling and communication}
-This function is responsible to
-provide and manage the information communication and notification
+This function is responsible for
+providing and managing the information communication and notification
 machinery and mechanisms between the command centers and execution
-centers of the SSR. For example the fabrication control 
-function--acting as a command center---may send a command as a specifically
+centers of the SSR. For example, the fabrication control 
+function, acting as a command center, may send a command as a specifically
 encoded information “package”  to the fabrication and assemblage
 functions to build a particular component of the “daughter” clone. In
-this circumstance the fabrication and the assemblage functions operate
+this circumstance, the fabrication and the assemblage functions operate
 as execution centers for the command. When the fabrication of the
-requested component is completed by the fabrication function it will
+requested component is completed by the fabrication function, it will
 send a specifically formatted notification information package back to
-the fabrication control function with the meaning that the specific
+the fabrication control function indicating that the specific
 command for the fabrication of the specific element was successfully
-completed. Within the same example scenario the fabrication function
-will send in its turn---this time playing a command role itself---a
-command to the supply-chain function (the executor entity) to trigger
-the transport of the needed fabrication “ingredients” for the clone
+completed. Within the same example scenario, the fabrication function
+will send, in its turn,---this time playing a command role itself---a
+command to the supply-chain function (i.e., the executor entity) to trigger
+the transport of the needed fabrication ingredients for the clone
 element to the fabrication site. The \mterm{communication and notification function} 
-need to be deployed ubiquitously throughout the
+will need to be deployed ubiquitously throughout the
 SSR to allow communications/notifications between various functions and
 machinery operating all over the SSR.
 
-\subsection[The higher level SSR functions]{The higher level SSR
-functions}
+\section[The higher level SSR functions]{The higher level SSR functions}
 
 The SSR functions that are
 described in subsequent sections are the highest level functions of the
 SSR. They accomplish their goals by coordinating and choreographing the
 lower level functions described in the previous sections.
 
-\subsection[The scaffolding growth function]{The scaffolding growth
-function}
+\subsection[The scaffolding growth function]{The scaffolding growth function}
 
 \index{self-replication!growth and development|(}
 The \mterm{scaffolding growth function} 
-is responsible to manage the construction, growth and
+is responsible for managing the construction, growth, and
 position change of the SSR scaffolding elements during the cloning and
-the division phases of the SSR replication. This function needs to
+the division phases of the SSR replication process. This function needs to
 manage the variable geometry of the scaffolding elements in
 synchronization and coordination with the other spatial changes of the
-SSR on its enclosure and in its interior.
+SSR both on its enclosure and within its interior.
 
 \subsection[The enclosure growth function]{The enclosure growth
 function}
 
-The \mterm{enclosure growth function} is responsible to manage 
-the construction, growth and shape
+The \mterm{enclosure growth function} is responsible for managing
+the construction, growth, and shape
 change of the SSR enclosure as well as the coordinated addition of
 input and output gateways on the enclosure during the cloning and
-division phases of the SSR replication. As already alluded to, this
+division phases of the SSR replication process. As mentioned before, this
 function needs to manage the variable geometry of the enclosure, the
-dynamic shifting of the gateways on the enclosure surface, and the
-radical shape changes of the enclosure around the division of the SSR
+dynamic shifting of the gateways on the enclosure's surface, and the
+enclosure's radical shape changes during the division of the SSR
 into the mother and daughter descendants.
 \index{self-replication!growth and development|)}
 
@@ -752,10 +674,10 @@ function}
 
 \index{self-replication!fabrication}
 The \mterm{fabrication control function} is responsible for the construction, assemblage and variable
-geometry management of all interior elements---in particular those
-related to the cloning part of the SSR during the cloning and the
-division phases of the SSR replication.  Like the two preceding growth
-functions this function coordinates activities of the fabrication
+geometry management of all interior elements, in particular those
+related to the cloning portion of the SSR involved in the cloning and the
+division phases.  Like the two preceding growth
+functions, this function coordinates activities of the fabrication
 function, assemblage function, construction plan function, recycling
 function, and other lower level functions. 
 
@@ -763,83 +685,77 @@ function, and other lower level functions.
 
 \index{self-replication!cloning phase}
 \index{self-replication!process control|(}
-The \mterm{cloning control function} is responsible to coordinate the whole cloning phase of the
-growing SSR. It basically does that by coordinating the cloning and the
-growth of all involved SSR compartments through a tight control,
+The \mterm{cloning control function} is responsible for coordinating the whole cloning phase of the
+growing SSR. It coordinates the cloning and the
+growth of all of the involved SSR compartments through tight control,
 synchronization, and coordination of the scaffolding growth, enclosure
-growth, and fabrication control functions. This function is responsible
-in particular to start the cloning process, to monitor its development,
-and to determine accurately when the cloning process is complete. One
+growth, and fabrication control functions. In particular, this function is responsible
+for starting the cloning process, monitoring its development,
+and accurately determining when the cloning process is complete. One
 particular responsibility of the cloning control function is the
-\memph{cloning of the information} stored into the mother SSR. This
+\memph{cloning of the information} stored in the mother SSR. This
 information cloning is performed at the end of the cloning phase when
 all internal machinery, internal scaffolding and enclosure elements of
-the mature SSR were completely cloned and constructed as part of the
+the mature SSR are completely cloned and constructed as part of the
 “nascent” daughter SSR. The information is cloned by systematically,
 accurately, and completely copying all information catalogs from
 resident machinery of the mature SSR into the corresponding new
 machinery of the clone part.
 
-\subsection[The division control function]{The division control
-function}
+\subsection[The division control function]{The division control function}
 
 \index{self-replication!division phase}
 The \mterm{division control function} has full control of the division phase of the SSR replication
 process. It manages the SSR division through specific commands sent to
 the scaffolding growth, enclosure growth and fabrication control
-functions.  In particular this function is responsible to start the
-division process, to “choreograph” its development on all SSR
-compartments (enclosure, scaffolding and core) and to accurately
-determine when division process is complete. One particular
+functions.  In particular, this function is responsible for starting the
+division process, for choreographing its development on all SSR
+compartments (enclosure, scaffolding and core), and accurately
+determining when the division process is complete. One particular
 responsibility of the division control function is to “start the
 engines” of the nascent “daughter SSR”. Just before the moment the
 division is complete the division control function must send a command
 to the “daughter SSR” to start its own machinery and control functions.
-In this way when the division completes, the separated daughter SSR
+When the division completes, the separated daughter SSR
 becomes a “mature”, fully functioning autonomous SSR ready to start its
-own replication process. The separated “mother SSR” can start in its
-turn a new replication cycle.
+own replication process. The separated “mother SSR” can start, in its
+turn, a new replication cycle.
 
 \subsection[The replication control function]{The replication control
 function}
 
-The \mterm{replication control function} is the highest level SSR function. It is responsible to
-accomplish the SSR full replication cycle by coordinating and
-choreographing its two phases: cloning and division through
+The \mterm{replication control function} is the highest level SSR function. It is responsible 
+for
+accomplishing the full SSR replication cycle by coordinating and
+choreographing its two phases: cloning and division.  It does this through
 corresponding control and coordination of the \mterm{cloning control function} 
 and the \mterm{division control function}.
 
 Metaphorically speaking the replication control function implements the
-two significant \memph{SSR designer commandments}:
-
-\begin{itemize}
-\item \memph{Grow} and
-\item \memph{Multiply}
-\end{itemize}
+two significant \memph{SSR designer commandments}: grow and multiply.
 \index{self-replication!process control|)}
 
 \subsection[The SSR Function Dependencies Diagram]{The SSR Function
 Dependencies Diagram}
 
 \index{self-replication!dependencies|(}
-An overall diagram illustrating
+Figure \ref{fig:functions_and_dependencies}
+provides an overall diagram illustrating
 the identified set of functions present in the SSR and some of the
-dependencies between these functions is presented in figure \ref{fig:functions_and_dependencies}.
+dependencies between these functions.
 
-The main dependencies and interactions between the identified SSR
-functions are depicted in this figure. The dependencies and interactions
-represented in the figure are limited to the primary ones.
+This figure depicts the main dependencies and interactions between the identified SSR
+functions, but is limited to only the primary dependencies and interactions.
 
-The Communication and Notification Function is represented separately
-since it relates to and is used by almost all other SSR functions
-because the need for information communication between functions as
-well as notification (another form of information exchange) is
-ubiquitous throughout SSR functions.
+The communication and notification function is represented separately
+since it relates to and is used by almost all other SSR functions.
+Its ubiquity throughout the SSR functions is due to the need for information communication between functions as
+well as notification (another form of information exchange).
 
 As already mentioned the relationships and dependencies between the
-functions are more complex and richer than depicted in the diagram. For
-example the Transport function depends on Energy Generation and
-Transport function although this dependency is not depicted in the
+functions are more complex than depicted in the diagram. For
+example, the transport function depends on the energy generation and
+transport function although this dependency is not depicted in the
 diagram.
 
 \migneafigurewide{MigneaSsrFunctionsAndDependencies}{SSR Functions and their Dependencies}{fig:functions_and_dependencies}
@@ -851,7 +767,7 @@ diagram.
 At this point it makes sense to break down the previous discussions
 into the general conceptual categories of the artificial SSR's components
 to provide an overview of what needs to be accomplished for its creation.
-Part 2 of this paper will go into more concrete details about actual
+Part 2 of this paper will go into more concrete details about the
 physical components that may make up the artificial SSR.  The categories
 themselves are grouped by functional area.
 
@@ -900,31 +816,26 @@ themselves are grouped by functional area.
 \index{self-replication!design!information catalogs|(}
 We already encountered various types of information catalogs (databases
 or repositories) that together make up the information base of the SSR.
-This section contains a list of all types of information catalogs
-identified so far. It is quite probable that if a more in depth
-analysis is performed on this topic the need of additional types of
-information catalogs will be discovered.
+This section contains a list of all of the types of information catalogs
+identified thus far. It is quite probable that after a more in-depth analysis of the topic, there may be the need for additional types of information catalogs.
 
-All information describing in detail each element of the SSR during its
-full “life-cycle”, all relationships between these elements captured in
-construction plans (body plans) and all fabrication and assemblage
-procedures and processes need to be thoroughly, systematically and
-coherently designed and captured into the SSR information catalogs.
+The SSR information catalogs need to thoroughly, systematically, and coherently capture 
+all information describing in detail each element of the SSR during its
+full life-cycle, all relationships between these elements captured in
+construction plans (body plans), and all fabrication and assemblage
+procedures and processes.
 
-We are making certain simplifying assumptions just to make the
-presentation of ideas easier to understand. We are not dissecting
-every piece of data or information that the SSR design must capture.
+This requires making certain simplifying assumptions in order to make the presentation of ideas easier to understand. This means that every piece of data or information that the SSR design must capture cannot be fully dissected here.
 A real information repository contains
 conceptual lists of tables (catalogs) of items of the same nature but
-also contain lists of the various relationships that exist between the
+also contains lists of the various relationships that exist between the
 items in different tables (catalogs).  For example, there are certain
 relationships between the items in the catalog of raw materials and the
-items (entries) in the catalog of bill of materials. There are
+items in the catalog of the bill of materials. There are
 different sets of relationships between the entries in the catalog of
 the construction plans and the entries in the catalog of the bill of
-materials and the entries in the catalog of processes.  For now, we are
-simply listing out the core catalogs which we have identified so far. 
-These catalogs are:
+materials and the entries in the catalog of processes.  For now, this
+is just a list of the core catalogs that have been identified so far:
 
 \begin{itemize}
 \item The catalog of raw materials
@@ -951,7 +862,7 @@ processes
 
 \section{Conclusion}
 
-This paper identifies, in the abstract, the minimal core components,
+This paper provides an abstract description of the minimal core components,
 processes, information stores, and structural requirements of an artificial 
 self-replicating system.  Part 2 will cover physical considerations for
 implementing such a design, and Part 3 will cover speculative ideas for
