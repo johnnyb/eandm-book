@@ -1,55 +1,53 @@
-\eandmchapter{The Simplest Self-Replicator, Part~2}{Developing Insights into the Design of the Simplest Self-Replicator and its Complexity: Part~2---Evaluating the Complexity of a Concrete Implementation of an Artificial SSR}{Arminius Mignea}{The Lone Pine Software}
+\eandmchapter{The Simplest Self-Replicator, Part~2}{Developing Insights into the Design of the Simplest Self-Replicator and Its Complexity: Part~2---Evaluating the Complexity of a Concrete Implementation of an Artificial SSR}{Arminius Mignea}{The Lone Pine Software}
 
 \begin{abstract}
-This paper is the second in a three-part series investigating the internals 
+This is the second in a three-part series investigating the internals 
 of the simplest possible self replicator (SSR).  
-This paper takes the
-analysis offered by the first paper in the series, and considers various 
-significant aspects that confronts the
+It builds on the construction of a hypothetical self-replicator devised in 
+Part~1, and considers various 
+significant aspects about the
 design and construction of an artificial, concrete SSR: the material
 basis of its construction, the effects of the variable geometry of the
-SSR during its growth through the cloning and then division phases, and the
+SSR during its growth through the cloning and division phases, and the
 three closure rules that must be satisfied by the SSR---energy closure,
-material closure, and the information closure.
+material closure, and information closure.
 
 The highest technical
 challenges that need to be faced by the design and construction of the
-artificial SSR are discussed. The emerging complexity of the artificial
-SSR is depicted using a metaphorical comparison of the replicating SSR
-with a full city populated only by automated machinery and robots that
-systematically and orderly construct the new city quarters identical
-with the old city quarters with no help from outside but only the
-construction materials entering through the city gateways. An
-evaluation is made if the current level of technology is good enough
-for the successful completion of a “design and construct an artificial
-autonomous SSR” project either with a nano biochemical basis or a macro
-material basis. 
+artificial SSR will be considered. The emerging complexity of the artificial
+SSR is depicted using a metaphorical comparison of the SSR
+with a city fully populated by automated machinery that
+systematically construct a new city that is identical
+to the old city without external help but only using the
+construction materials that enter through the city gateways. 
+The current level of technology is evaluated to determine if it is sufficient for the successful completion of the design and construction of an artificial autonomous SSR project using either a nano-biochemical basis or or a macro-material basis.
+
 \end{abstract}
 
-In Part~1, the basic necessary design elements of the simplest self-replicator (SSR) 
+Part~1 of this series analyzed the basic necessary design elements of the simplest self-replicator (SSR) 
 was analyzed, including necessary components, functions, processes, and information.
-Having established the minimum requirements for the design, the physical implementation
-of the SSR will be discussed.
+Having established the minimum requirements for the design, this part will discuss the physical implementation
+of the SSR.
 
 \section{The Three Closure Requirements as the Basis of an Autonomous SSR}
 
 \index{self-replication!closure requirements|(}
-The SSR must be fully autonomous. This means that it can only get raw
+The SSR must be fully autonomous. This means that it can only obtain raw
 materials and raw parts from its environment and benefit from (or
 struggle because of) the environmental conditions specific to its
 location.
 
-Full autonomy means specifically\citep{freitasmerkle2004}:
+Full autonomy specifically requires the SSR to exhibit the following characteristics \citep{freitasmerkle2004}:
 
 \begin{enumerate}
-\item The SSR must fabricate all its energy from input materials and the
+\item The SSR must fabricate all its energy from input materials, and the
 generated energy must be sufficient for the SSR to produce an exact
 replica of itself. This condition is called the \mterm{energy closure}. 
 \item The SSR must use only materials admitted through its input gateways
 and these materials must be sufficient for the SSR to grow and generate
-its replica. This condition is called the \mterm{material closure}. 
-\item SSR must use only information present/stored initially in the
-“mature” SSR and this information must be sufficient to produce an
+its daughter. This condition is called the \mterm{material closure}. 
+\item The SSR must use only information that is initially present or stored in the
+mature SSR and this information must be sufficient to produce an
 exact replica of the SSR. This condition is called the
 \mterm{information closure}.
 \end{enumerate}
@@ -58,21 +56,21 @@ exact replica of the SSR. This condition is called the
 \section{The Core Approach to Cloning}
 
 \index{self-replication!mechanism|(}
-In this section we try to answer the following important question for
-the design of the artificial SSR: \memph{what is the core mechanism to
-be used by the artificial SSR to accurately clone all of its elements?}
+This section will try to answer the following important question for
+the design of the artificial SSR: What is the core mechanism that
+the artificial SSR will use to accurately clone all of its elements?
 
-Below are two possible answers. And we believe that most any other
-imagined answers would be similar or equivalent with one of the
+Below are two possible answers, and it is likely that most any other
+imagined answers would be similar or equivalent to one of the
 two answers below:
 
 \begin{enumerate}
 \item Design and use a \mterm{universal physical copy machine} (similar to a key copy
-machine but much more sophisticated) which analyzes each part or assembly and produces
-a copy based on that analysis, with the goal being to simplify the design and
-avoid having to maintain such detailed catalogs of information.
+machine but much more sophisticated) that analyzes each part or assembly and produces
+a copy, with the goal of simplifying the design and
+avoiding having to maintain such detailed catalogs of information.
 \item Use an exhaustive descriptive, operational and constructional SSR
-information database driving an integrated set of specialized, software
+information database directing an integrated set of specialized, software
 and computer-controlled automatons.  In other words, have sufficient
 data stored about the makeup of the SSR itself to generate a new copy
 from that data.
@@ -81,34 +79,33 @@ from that data.
 \subsection[Why the “universal physical copy machine” approach is not adequate]{Why
 the “universal physical copy machine” approach is not adequate}
 
-Let’s describe in more detail
-what this type of solution would mean. This approach assumes that the
+This approach assumes that the
 SSR contains a sophisticated machine that can examine and accurately
-copy all other pieces and machinery making up the mature SSR. This
+copy all other pieces and machinery comprising the mature SSR. This
 implies that this universal physical copy machine can even copy itself or, more
-realistically, a copy of itself. In other words, the SSR contains two
-universal physical copy machines.  One, Machine A, is going to do the actual copy of
-all SSR machinery and do the copy of the other universal physical copy machine,
-machine B. So the second copy machine, machine B, is just used as a
-model for the first machine A. The emphasis on this solution is
-that these copy machines A and B will alleviate the need to store
-so much information about the SSR itself, to have so much software and so much
-computer-controlled machinery as you will see in the second approach.
+realistically, make a copy of a copy of itself. In other words, the SSR contains two
+universal physical copy machines.  One, Machine A, is performing the actual copying of
+all SSR machinery and the other universal physical copy machine,
+Machine B. So the second copy machine, Machine B, is only used as a
+model for the first Machine A. The goal for this solution is
+to use these copy machines A and B to alleviate the need to store
+as much information about the SSR itself, to have as much software, and to contain as much
+computer-controlled machinery as in the second approach.
 
-Considering this first solution leads to the following conclusions:
+This first solution leads to the following conclusions:
 
 \begin{enumerate}
-\item There will be a need to have another machinery
-M\textsuperscript{disassembler}, to disassemble machine B in all its
+\item It will require another machinery
+M\textsuperscript{disassembler}, to disassemble Machine B in all its
 constituent parts: b\textsubscript{1}, b\textsubscript{2},
-b\textsubscript{3}, …, b\textsubscript{N }so that machine A can copy
+b\textsubscript{3}, …, b\textsubscript{N }so that Machine A can copy
 each constituent part.
-\item The machine A will copy all parts b\textsubscript{1},
+\item Then Machine A will copy all parts b\textsubscript{1},
 b\textsubscript{2}, b\textsubscript{3}, …, b\textsubscript{N} twice (to
-create all pieces needed for a Clone machine A: Copy\textsubscript{A}
-and a clone machine B: Copy\textsubscript{B}) ca\textsubscript{1},
+create all pieces needed for a clone of Machine A: Copy\textsubscript{A}
+and a clone of Machine B: Copy\textsubscript{B}) ca\textsubscript{1},
 ca\textsubscript{2}, ca\textsubscript{3}, …, ca\textsubscript{N }(for
-Copy\textsubscript{A }machine) and cb\textsubscript{1},
+Copy\textsubscript{A} machine) and cb\textsubscript{1},
 cb\textsubscript{2}, cb\textsubscript{3}, …, cb\textsubscript{N} (for
 Copy\textsubscript{B} machine).
 \item There will be a need for another machinery
@@ -117,72 +114,69 @@ ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3}, ….,
 ca\textsubscript{N} and assemble them together into the
 Copy\textsubscript{A} machine and parts cb\textsubscript{1},
 cb\textsubscript{2}, cb\textsubscript{3}, …, cb\textsubscript{N} and
-assemble them together into the Copy\textsubscript{B}. 
+assemble them together into the Copy\textsubscript{B} machine. 
 \end{enumerate}
 
-But now M\textsuperscript{assembler} must be considered.  In order
+In order
 to properly construct M\textsuperscript{assembler}, a vast amount
 of well-structured information of this nature must be first programmed:
 
 \begin{itemize}
 \item A catalog of all parts b\textsubscript{1}, b\textsubscript{2},
-b\textsubscript{3}, …, b\textsubscript{N} and for each such part a
+b\textsubscript{3}, …, b\textsubscript{N} and for each such part, a
 unique identifier and possibly physical and geometrical characteristics
 (dimensions) of the part
 \item A store room location (x, y, z)  from where the
 M\textsuperscript{assembler} machine will pick each one of the parts
 ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3}, …,
-ca\textsubscript{N} during assembly steps to construct the
+ca\textsubscript{N} during the assembly steps to construct the
 Copy\textsubscript{A} machine
-\item A \mterm{catalog of assembly instructions} (some geometrical x,
-y, z instructions, what kind of assemblage step: like screwing,
-inserting, welding, etc. on:
+\item A \mterm{catalog of assembly instructions} that contains some geometrical x,
+y, z instructions and the type of assemblage step (e.g., screwing,
+inserting, welding, etc.).  For example, these assembly instructions may describe processes such as the following:
 
 \begin{itemize}
 \item how to put together part ca\textsubscript{2} to the assembly made
-of parts: (ca\textsubscript{1})
+of parts: (ca\textsubscript{1});
 \item how to add part ca\textsubscript{3} to the assembly made of parts
-(ca\textsubscript{1}, ca\textsubscript{2})
+(ca\textsubscript{1}, ca\textsubscript{2});
 \item how to add part ca\textsubscript{4} to assembly made of parts
-(ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3}),
-\item …….
-\item how to add part ca\textsubscript{N} to the assembly made of parts
-(ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3},
-ca\textsubscript{4}, …., ca\textsubscript{N-1})
+(ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3}).
 \end{itemize}
+
+Such descriptions would continue for all parts that need to be included in the assembly.
+
 \item A manipulator machine (robot that can follow computerized
 instructions) to be controlled by the M\textsuperscript{assembler}
-machine in assembling the CopyA machine
+machine in assembling the Copy\textsubscript{A} machine
 \end{itemize}
 
-So, although the original intent for Solution 1 is to avoid mountains of
-information and armies of automatons and machinery, our analysis
-revealed that this solution cannot do without those ingredients. 
-There is no magic copy machine that can do its work, without structured
-collections of information and many helper automatons (machinery) that
-in turn must be information, software, and computer controlled.  
-The conclusion is that there is no magic “universal physical copy machine” solution
+Although the original impetus for Solution 1 is to avoid mountains of
+information and armies of automatons and machinery, 
+this solution requires those ingredients. 
+There is no magic copy machine that can do its work without structured
+collections of information and many helper automatons (machinery) that,
+in turn, must be information-, software-, and computer-controlled.  
+The conclusion is that there is no ``magic universal physical copy machine'' solution
 that is significantly distinguishable from the Solution 2. 
 
-Another problem for Solution 1 is that certain components of machine B may not
+Another problem with Solution 1 is that certain components of Machine B may not
 be fabricated by plain (mechanical) assemblage of parts but rather by
 using more demanding assemblage processes, such as welding or 
 electro-chemical processes.  These processes have no precise means of disassembly,
 which would prevent the universal physical copy machine from being able to reproduce
 them.
 
-\subsection[Exhaustive information, integrated systems driving
-information{}-controlled automatons]{Exhaustive information, integrated
-systems driving information-controlled automatons}
+\subsection[Exhaustive information, integrated systems driving information{}-controlled automatons]{Exhaustive information, integrated systems driving information-controlled automatons}
 
 Since the universal physical copy machine approach does not work, the only
-other replication methodology available is to thoroughly and carefully design
+other replication method designs
 the SSR as a collection of
 integrated sub-systems, controlling a large variety of automatons using
 a significant collection of integrated information catalogs
 (databases).
 
-We already mentioned a number of information catalogs while identifying
+A number of information catalogs have already been mentioned while identifying
 specific SSR functions. Any informational SSR function has both an
 associated catalog and also a set of access sub-functions that provide
 a set of access operations to the information catalog that can be used
@@ -193,126 +187,93 @@ by other SSR functions to execute specific action sequences.
 
 \index{self-replication!design|(}
 When approaching the task of the design and implementation of an
-artificial SSR a capital question surfaces rather soon. What should be
-the material basis for the artificial SSR? We see here two distinct
-possibilities---either use a biological basis for the SSR on a micro/nano 
+artificial SSR, a capital question surfaces rather quickly: What should be
+the material basis for the artificial SSR? There are two distinct
+possibilities: Either use a biological basis for the SSR on a micro/nano 
 scale or use more common macro scale materials and technology.
 
 \subsection{Using a Biological Basis for the SSR}
 
 \index{self-replication!biological self-replication|(}
-Using a biological basis for the SSR means that the SSR must be constructed using organic materials, the
-same or similar with those used by the cells, tissues and organs of the
-living world.
+Using a biological basis for the SSR means that the SSR must be constructed using organic materials.  These materials would be the
+same or similar to those used by the cells, tissues, and organs of the
+living world.  There are several advantages to this approach.  First, the
+proof in the feasibility of this approach is the presence of the varied organisms
+and microorganisms in nature.  A key question is whether this approach is accessible given
+current engineering technologies. Second, even though energy generation is one of the biggest challenges for SSR replication, there are known levels of energy consumption based on biological systems. Lastly, biological systems tend to be in aqueous medium, which may facilitate solutions for the variable geometry problem.
 
-Here are the \memph{advantages} of this approach:
-
-\begin{itemize}
-\item We know that this approach is possible, proof being the presence
-of so many organisms and microorganisms in nature. The question here is
-if this approach is accessible to our current engineering technologies.
-\item There are low levels of energy consumption associated with this
-approach and a solution for generation of enough energy for SSR
-replication is one of the biggest challenges.
-\item The aqueous medium of this approach may facilitate solutions for
-the variable geometry problem.
-\end{itemize}
-
-Here are the \memph{problems or barriers} for this approach:
-
-\begin{itemize}
-\item The investigative tools and observation means available to us at
-this scale are still quite limited
-\item The most advanced micro-biology manipulation and fabrication
-tools/approaches are still rather primitive and very limited when
-considering the tasks that need to be accomplished: fabrication,
-assemblage, manipulation at nano scales, computing machinery
-fabrication, software execution, information storage, and communication.
-\item We are just at the beginning of the process of understanding how
-cells work. There are many areas and aspects of cell biology that still
-appear to be beyond our comprehension.
-\item Examples of challenges that we cannot solve with current
-technology: 
+The biological approach is not without its setbacks. First, the scale at which this approach involves taxes the limits of current investigative tools and observational methods. The most advanced micro-biology manipulation and fabrication tools/approaches are still rather primitive and very limited when considering the tasks that need to be accomplished: fabrication, assemblage, manipulation at nano scales, computing machinery fabrication, software execution, information storage, and communication. Secondly, there are many aspects of cell biology that are still beyond current understandings of the cell’s function.  Examples of the challenges that we cannot solve with current technology include
 
 \begin{itemize}
 \item building computers on a biological material basis / scale (or
 understanding how the cell proteins and other organic cell elements can
 be used for computation in a general way)
 \item building bio-chemical manufacturing machines at a biological
-scale.
-\item building information storage with a biochemistry material /scale
-\item having software running on biological type computers.
-\item communicating information on a biological material basis /scale.
-\end{itemize}
+scale
+\item building information storage using biochemical materials
+\item having software running on biological type computers
+\item communicating information on a biological material basis and at a biological scale
 \end{itemize}
 
-The conclusion is that it is quite clear that with the current level of
-technology it is impossible to create a design and an implementation
-plan for an artificial SSR using biochemistry and a biological material
-basis and a molecular scale. We are forced to consider other
-alternatives to have better chances of success.
+Clearly, the conclusion is that, with the current level of
+technology, it is impossible to create a design and an implementation
+plan for an artificial SSR using a biochemical and a biological material
+basis at a molecular scale. Other alternatives must be considered for a better
+chance of successfully building an artificial SSR.
 \index{self-replication!biological self-replication|)}
 
 \subsection{Using a Macro Scale Basis for the SSR}
 
 \index{self-replication!macro scale self-replication|(}
-The other alternative to consider is the macro scale approach, using materials
+The other alternative for consideration is the macro scale approach, using materials
 and technology that is in common use for product fabrication.
-This approach means that we will need to consider and use the minimum
+This approach means that we will need to consider the minimum
 dimensional scales for which there are available manufacturing
 technologies for most of the parts, components, and machinery that make
 up the SSR.  
 
 The materials used to construct the SSR enclosure, SSR scaffolding, and
-SSR interior elements should be common engineering materials used by current
+SSR interior should be common engineering materials used by current
 fabrication technologies: metals, alloys, plastics, ceramics, silicon
 or other special materials.  The scale of these artifacts to be fabricated 
 as elements of the artificial SSR must be selected with care as there
 are two opposing considerations which must be balanced and compromised.
 
-The first consideration regarding the scale of the materials is that the 
+The first consideration is that the 
 smallest possible scale should be used in the design and
-implementation of the artificial SSR parts in order to:
+implementation of the artificial SSR parts in order to
+minimize the energy consumed by the SSR during a replication cycle and minimize the size, volume and mass of the artificial SSR in order to minimize the amount of materials ingested into the artificial SSR and used for fabrication of the clone within the SSR.
 
-\begin{itemize}
-\item minimize the energy consumed by the SSR during a replication cycle
-\item minimize the size, volume and mass of the artificial SSR and thus
-the amount of materials “ingested” into the artificial SSR and used for
-fabrication of the clone inside the SSR.
-\end{itemize}
-
-However, this must be balanced with the consideration that the scale 
-selected for the artificial SSR must be such that there
-are known engineering technologies and machinery to fabricate,
-manipulate and assemble all the parts of all the SSR machinery. This
-means---for an illustrative example---that if the minimum size of a
+However, this must be balanced with the limitations of 
+known engineering technologies and machinery to fabricate,
+manipulate and assemble all the parts the SSR machinery. This
+means, for an illustrative example, that if the minimum size of 
 semiconductor fabrication equipment that is being manufactured today is
-0.5 meters then the designed size of the mature artificial SSR cannot
-be smaller than 1 meter. Based solely on this example a more realistic artificial
-SSR designed dimension should be in the range of at least 10-100
+0.5 meters, then the designed size of the mature artificial SSR cannot
+be smaller than 1 meter. Therefore, a more realistic artificial
+SSR design would have dimensions in the range of at least 10--100
 meters.
 \index{self-replication!macro scale self-replication|)}
 
 \section{The Type and Nature of SSR Components}
 
 \index{self-replication!design!components|(}
-We concluded in Part~1 that SSR must be designed and implemented as
-a collection of integrated, computer-controlled and software controlled
-automatons. This helps us to identify the nature of some of the
-elements and components that make up the SSR. The artificial SSR must,
+The conclusion in Part~1 was that the SSR must be designed and implemented as
+a collection of integrated, computer-controlled and software-controlled
+automatons. 
+The artificial SSR must,
 by necessity, contain these types of elements:
 
 \begin{itemize}
-\item Computing machinery which implies that the following type of
+\item Computing machinery, which implies that the following type of
 elements must be present inside the artificial SSR:
 
 \begin{itemize}
-\item Computers
 \item Printed circuit boards (PCB)
 \item Microprocessors
 \item Highly integrated circuits (Application Specific Integrated
 Circuits = ASICs)---specialized, high density integrated circuits for
-specific computing/application tasks: networking, numerical processing,
+specific computing/application tasks, such as networking, numerical processing,
 image processing, etc.
 \item Semiconductor memories (solid state memories)
 \item Magnetic memory (hard drives)
@@ -344,42 +305,41 @@ image processing, etc.
 
 \section{Derived Design Requirements}
 
-In this section we are presenting a list of design and implementation
+This section is a list of design and implementation
 requirements for the artificial SSR that emerged from the previous
 analysis and from the inferences presented so far. These requirements
-were only implied during our discussion so far but now they are made
-explicit and described in some detail.
+were only implied during the discussion so far but are now made
+explicit and are described in some detail.
 
-\subsection[Each SSR Machine is Power{}-Driven]{Each SSR Machine is
-Power-Driven}
+\subsection[Each SSR Machine is Power{}-Driven]{Each SSR Machine is Power-Driven}
 
 \index{self-replication!energy|(}
-This condition has the following significant consequences for the SSR design.
+If each SSR machine is power-driven, then certain significant consequences arise in designing an artificial SSR:
 
 \begin{itemize}
-\item The SSR must have a power distribution network (electrical
-distribution network) that must reach each of the SSR machinery. The
+\item The SSR must have a power distribution network (e.g., an electrical
+distribution network) that must reach each of the SSR's machinery. The
 design of the layout and geometry of the power network must consider
-the variable geometry of the SSR enclosure, scaffolding and its
-interior space and structure – in particular in the zones affected by
+the variable geometry of the SSR enclosure, scaffolding, and 
+interior space and structure. Particular consideration must be made for the zones affected by
 growth and shape changes.
 \item Each SSR machine must be designed to use and consume power
 (electricity) at a level adequate for its nature and the actions it
 performs. 
-\item Most (all) machinery is computer driven, which means that either
-there is a parallel SSR power network for an energy level (voltage)
+\item The machinery is computer driven, which means that either
+there is a parallel SSR power network for an energy level (e.g., voltage)
 adequate for computing devices, or each machine must have some adequate
-power converters (electrical power supplies, batteries).
+power converters (e.g., electrical power supplies or batteries).
 \item The SSR machines that provide mechanical work or movement must be
-provided with motors (rotational, linear) adequate for their nature.
-\item Mobile machinery (transporters, moving robots) must be designed
-such that their mobility is not inhibited or constrained while they
-are/remain plugged into the SSR power network(s).  Designing all mobile
+provided with motors (rotational and/or linear) adequate for their nature.
+\item Mobile machinery (e.g., transporters, moving robots) must be designed
+such that their mobility is not constrained while they
+are connected to the SSR power network(s).  Designing all mobile
 machinery with rechargeable batteries may solve or significantly
 simplify the connectivity constraints but will require additional
 provisions for battery fabrication processes and fabrication and
 provision of battery charging stations.
-\item The design of each machine must provide specification of average
+\item The design of each machine must provide specification for the average
 power consumption on all power networks (normal power level and
 computer power level) to which the machine is connected.
 \end{itemize}
@@ -390,82 +350,79 @@ Software{}-Driven]{Each SSR Machine is Computer-Driven and
 Software-Driven}
 
 \index{self-replication!process control|(}
-These are the consequences for
-the SSR design derived from this condition:
+If each SSR machine is computer-driven and software-driven, then there are several consequences to consider in designing an artificial SSR:
 
 \begin{itemize}
-\item Most SSR machines must host at least one internal computer (with
-the possible exception of some simpler (electro-mechanical) machines
-that can be remotely controlled).
-\item The SSR must have high technology machinery and processes needed
-to fabricate computers and all their building blocks (parts)
-\item Each SSR machine that hosts computers must be networked---connected 
-by wire or wirelessly to other machines and control centers
-in the SSR.
-\item The SSR must have machinery that has the ability to not only
-fabricate computers but also to install them into other SSR machines,
-to plug them to that machine power network, and to connect them to
-the SSR communication network.
+\item Most SSR machines must host at least one internal computer with
+the possible exception of some simpler (e.g., electro-mechanical) machines
+that can be remotely controlled.
+\item The SSR must have highly technical machinery and processes 
+to fabricate computers and their respective parts.
+\item Each SSR machine that hosts computing devices must be networked---by
+wire or wirelessly---to other machines and control centers
+within the SSR.
+\item The SSR must have adequate machinery to not only
+fabricate computers but to install them into other SSR machines,
+plug them into the other machine's power network, and connect them to
+the SSR's communication network.
 \item The SSR must have machinery that is able to download and copy
-software into any computer installed into a SSR machine and to start
-(boot) that software on that machine and to monitor its availability
-and expected behavior.
-\item The SSR must have the capability to test each of its machinery, to
-detect malfunctions (errors) in computer and software installations as
-well as in the machine hardware, to detect malfunction in the computer
+software into any computer installed into an SSR machine, to start
+(boot) that software on the machine, and to monitor its availability
+and behavior.
+\item The SSR must have the capability to test each piece of its machinery, to
+detect malfunctions in computer and software installations as
+well as in the machine hardware, to detect malfunctions in the computer
 and software execution and to have adequate procedures to diagnose and
-repair the identified problems based sometimes on the availability of
+repair the identified problems.  Diagnosis and repair may be based on the availability of
 fabricated spare parts.
-\item The software that drives each particular machinery must be
+\item The software that drives each particular piece of machinery must be
 designed and written with a full understanding of the physical and
-cinematic capabilities and constraints/limitations of that machinery.
-It must take into account all possible use cases of the machine and all
-its components behaviors and interactions with external objects and
-events and handle them correctly.
+cinematic capabilities and constraints of that piece of machinery.
+It must take into account all possible uses of the machine and all
+its components' behaviors and interactions with external objects and
+events as well as be able to handle them correctly.
 \item The software that drives fabrication and assemblage machinery and
 materials and fabrication processes needs to be based on a thorough
-design of the machines to be built, their cinematic capabilities and
+design of the machines that will be built, their cinematic capabilities, and
 their specified power and energy consumption.
 \item The software written for various SSR functions must carefully and
-accurately choreograph, coordinate and synchronize the activities of
-multiple SSR machines (fabrication machines, material process machines,
+accurately coordinate and synchronize the activities of
+multiple SSR machines (e.g., fabrication machines, material process machines,
 manipulation and transport robots/arms, assemblage and construction
-machines) providing a continuous monitoring of the 3D spaces occupied
-by each machine and its mobile parts, to avoid collisions and to ensure
+machines) by providing a continuous monitoring of the 3D spaces occupied
+by each machine and its mobile parts to avoid collisions and to ensure
 cooperative progress with both lower level and higher level tasks of
 the growing SSR.
 \end{itemize}
 
-\subsection[Each SSR Machinery is Information Communication
-Capable]{Each SSR Machinery is Information Communication Capable}
+\subsection[Each Piece of SSR Machinery Is Capable of Information Communication]{Each Piece of SSR Machinery Is Capable of Information Communication}
 
-These are the consequences for
-the SSR design derived from this condition:
+If each piece of the SSR's machinery must have the ability to communicate information, then several features must be included in its design:
 
 \begin{itemize}
 \item The artificial SSR is a collection of automated machines and
 robots. Their cooperation and coordination for achieving tasks from the
-simplest (fabricating a part, or manipulating a part in a sequence of
-steps for an assemblage operation) to the complex ones (like the
-fabrication, the assemblage of computing hardware and software
-installation for a new fabrication machinery) requires extensive,
-continuous, multipoint, and multi-level (hierarchical) communication of
+simplest (e.g., fabricating a part, or manipulating a part in a sequence of
+steps for an assemblage operation) to the most complex ones (e.g., the
+fabrication and assemblage of computing hardware and software
+installation for a new piece of fabrication machinery) requires extensive,
+continuous, multipoint, and multi-level communication of
 information between machines, control functions, and software
 components.
 \item The SSR must have a comprehensive physical layer communication
-network for information transport (either wire-based and/or wireless)
-with access points located on each (or most) SSR machines/robots and
+network for information transport (wire-based and/or wireless)
+with access points located on each, if not most, SSR machines/robots and
 sometimes in between the subsystems of the same SSR machine.
-\item The SSR might need to have adequate networking devices (like
-routers, switches, modems, codecs) to implement needed communication
+\item The SSR might need to have adequate networking devices (e.g.,
+routers, switches, modems, and codecs) to implement needed communication
 patterns and topologies.
-\item The SSR machines and software components engaged in communication
+\item The SSR machine and software components engaged in communication
 will need adequate networking/communication protocols with appropriate
-characteristics for the needed communication bandwidth, handling of
+characteristics for carrying the needed communication bandwidth, handling 
 errors and retransmissions, reliable routing, and end point addressing.
-\item The SSR should have capabilities to deploy software on newly
-constructed machines and network nodes, and be able to bring up the
-network, verify it as part of starting up the “daughter” SSR system
+\item The SSR should have the ability to deploy software on newly
+constructed machines and network nodes, and to bring up the
+network and verify it as part of starting up the daughter SSR system
 (including its underlying communication network) as a preparatory step
 in the SSR division phase.
 \end{itemize}
@@ -474,88 +431,62 @@ in the SSR division phase.
 \section[The Most Significant Challenges]{The Most Significant Challenges for the Design and Implementation of an Artificial SSR}
 
 \index{self-replication!design!challenges|(}
-In this section we are going to enumerate and discuss the most difficult
-challenges and hurdles that the design and implementation of an
-artificial SSR faces.
 
 \subsection[The energy generation and the energy closure challenge]{The
 energy generation and the energy closure challenge}
 
 \index{self-replication!closure requirements|(}
-This challenge presents multiple
-aspects and hurdles which must be resolved.  
-The primary challenge is that the SSR design must select an adequate basis for energy generation.
-Basically this depends on what natural materials that are available in
-the SSR environment can be used for energy generation.  
-We enumerate below some of the candidate material basis for energy
+The energy generation and energy closure challenge presents multiple
+hurdles which must be resolved.  
+Primarily, the SSR design must select an adequate basis for energy generation.
+This depends on what natural materials are available in
+the SSR environment that can be used for energy generation.  
+Some of the candidate material basis for energy
 generation that might be considered for the design and implementation
-of an artificial SSR:
-
-\begin{itemize}
-\item Biochemical or organic (like vegetation used for energy
-generation), biogas, biodiesel
-\item Coal
-\item Oil/petroleum
-\item Natural gas
-\item Methanol
-\item Hydrogen (micropower, fuel cells)
-\item Solar
-\item Wind
-\item Nuclear
-\end{itemize}
+of an artificial SSR might include biochemical or organic (e.g., vegetation used for energy generation), coal, oil/petroleum, natural gas, methanol, hydrogen, solar, wind, and/or nuclear.
 
 The \memph{energy closure challenge} means that the amount of
 energy generated by the SSR from the primary energy producing materials
-accepted/extracted from the SSR environment must be sufficient to power
-all machinery (fabrication, assemblage, construction, transport,
+extracted from the SSR environment must be sufficient to power
+all machinery (e.g., fabrication, assemblage, construction, transport,
 manipulators, robots, computers, and networking gear) that equip the
 SSR.
 
-Other issues and challenges associated with energy closure include:
+Other challenges associated with energy closure include the following:
 
 \begin{itemize}
 \item The SSR must be designed with the ability to slow down or even
 completely shut down during the periods when the input of energy
 producing materials is reduced or null.
-\item The SSR ability to provide means to store energy (with batteries,
-accumulators or stocking energy producing materials) may smooth out or
-eliminate the need for transition to “hibernation” or shutdown states
-of the SSR.
-\item Designing SSR machines with local sources of energy (like
-rechargeable batteries, accumulators, fuel reservoirs or fuel cells)
-may provide all these machines with true, unconstrained mobility and
-will significantly simplify the SSR design and implementation
+\item The SSR's ability to provide the means to store energy (with batteries,
+accumulators or stocking energy-producing materials) may smooth out or
+eliminate the need for transition to “hibernation” or shutdown states.
+\item Designing SSR machines with local sources of energy (e.g., 
+rechargeable batteries, accumulators, fuel reservoirs, or fuel cells)
+may provide true, unconstrained mobility and
+may significantly simplify the SSR design and implementation
 difficulties related to keeping all mobile machines hooked to flexible
 power wiring or network wiring.
-\item Burning of fuels or preparing the materials for energy generation
-(chemicals) increases the concerns that the design and SSR
-implementation need to consider. Examples of such concerns are: 
-
-\begin{itemize}
-\item preserving SSR internal environmental parameters: temperature,
-humidity; 
-\item avoiding hazardous materials or avoiding fires;
-\item providing storage and transportation containers for non-solid
-(liquid or gaseous) materials.
-\end{itemize}
+\item Burning fuels or chemically generating energy leads to additional concerns in designing and implementing an artificial SSR. Particular concerns include preserving the SSR’s internal environmental parameters (e.g., temperature and humidity), avoiding hazardous materials, and providing storage transportation containers for liquid or gaseous materials.
 \end{itemize}
 
 \subsection[The material closure challenge]{The material closure challenge}
 
 The material closure challenge
-for the artificial SSR design and implementation can be formulated this
-way: all fabrication materials that are needed for fabrication of all
-parts of the SSR machinery must be available in the SSR environment or
-must be extractable from raw materials available in the SSR
+for designing and implementing the artificial SSR can be summarized as follows:
+all fabrication materials that are needed for fabricating 
+the parts of the SSR machinery must be available in the SSR environment or
+must be extracted from raw materials available in the SSR
 environment.
 
-This challenge may not appear to be so daunting. However if we just
-think that the artificial SSR will have fabrication machinery for metal
+While this may not appear to be a daunting task, upon closer consideration,
+the artificial SSR will need fabrication machinery for metal
 machining, computers with semiconductor microprocessors and memories,
-plastics, ceramics, we realize that there is potentially an extremely
-large list of materials needed for SSR fabrication. Only a very short
+plastics, and ceramics.  There is potentially an extremely
+long list of materials needed for SSR fabrication. For example, 
+looking at a short
 subset of materials needed for the macro scale artificial
-SSR can give us an idea of how much a challenge this aspect can become:
+SSR provides insight into the size of the challenge:
 
 \begin{itemize}
 \item Iron
@@ -575,12 +506,12 @@ SSR can give us an idea of how much a challenge this aspect can become:
 \item Germanium
 \end{itemize}
 
-Even with the list above being only partial it appears that there is a very
-small probability that the environment where the artificial SSR may be
-placed may feature such a large diversity of immediately available
-materials or materials from which the materials in the list can be
-somehow extracted. This makes the \memph{material closure requirement
-to appear unsolvable} and thus any project to design and implement an
+Even given the partial list above, it appears that there is a very
+small probability that the SSR's local environment 
+will feature such a large diversity of immediately available
+materials or components from which the materials in the list could somehow be
+extracted. This makes the material closure requirement
+appear \memph{unsolvable}, and thus any project to design and implement an
 artificial macro-scale replicator may be condemned to failure. 
 \index{self-replication!closure requirements|)}
 
@@ -588,51 +519,49 @@ artificial macro-scale replicator may be condemned to failure.
 SSR environment]{The match between the SSR design and the design of the
 SSR environment}
 
-Another way to formulate the challenge of the material closure is that a
-successful selection of materials used for energy generation and for
-fabrication of SSR internal parts, components, and machinery must be
+Another way to formulate the material closure challenge is that a
+successful selection of materials used for energy generation and 
+fabrication of internal parts, components, and machinery must be
 based on a thorough knowledge of the environment in which the designed
-SSR is projected to exist, the nature of raw materials and parts in
-such environment, and if there are realistic material extraction paths
-and processes starting with those materials in the environment. For us
-there is no exaggeration to state that the chances of a successful
-design and implementation of an artificial SSR depends on the design of
-its projected environment. In other words the success requires a
+SSR is projected to exist, including the nature of raw materials and parts in
+such environment, and realistic material extraction paths
+and processes. 
+In other words the success requires a
 perfect design of \emph{both} the SSR and its environment.
 
 \subsection[The Fabrication Challenge]{The Fabrication Challenge}
 
 \index{self-replication!fabrication|(}
-The fabrication challenge can be
-stated as the requirement that the artificial SSR must be able to
+The fabrication challenge is
+the requirement that the artificial SSR must be able to
 fabricate and assemble any type of parts, components and machines that
-are part of the “mature” SSR which implies that all fabrication and
+are part of the mature SSR, which implies that all fabrication and
 assemblage machines should be able to fabricate exact copies of
 themselves.
 
 While the material closure challenge focuses on the difficulty of having
-available a very wide spectrum of fabrication materials, the
-fabrication challenge also raises a wide spectrum of concerns:
+a wide spectrum of fabrication materials readily available, the
+fabrication challenge raises several other concerns.
 
 \begin{itemize}
-\item Since the artificial SSR will have a lot of machinery made with
-metals (fabrication machinery, construction and assemblage machines,
+\item Since the artificial SSR will have much machinery made with
+metals (e.g., fabrication machinery, construction and assemblage machines,
 robots, manipulator arms, networking gear,  wires, power supplies,
-conduits, scaffolding), the SSR must have metal machining machinery---probably of a large diversity. 
-\item The SSR must be able to fabricate machinery and enclosures for
-energy generation.
+conduits, and scaffolding), the SSR must have a diversity of metal machining machinery.
+\item The SSR must be able to fabricate the necessary machinery and enclosures for
+energy generation, as specified above.
 \item The SSR must be able to fabricate machinery and enclosures
-(recipients) to control and host a very wide set of processes
-(material extraction, energy generation, possible chemical reaction
-processes, electrolytic processes, PCB etching chemical processes).
+to control and host a very wide set of processes
+(e.g., material extraction, energy generation, possible chemical reaction
+processes, electrolytic processes, and PCB etching chemical processes).
 \item The SSR must be able to fabricate computers and computer parts
 including microprocessors, integrated circuits, application specific
 integrated circuits (ASICs), signal processing integrated circuits,
 controller integrated circuits, printed circuit boards (PCBs), power
 supplies, cabling, semiconductor memories, magnetic memories, and media
 (hard drives, solid state drives). This also implies that the SSR must
-feature highly demanding “clean room” spaces with robotic manipulation
-of materials and parts and semiconductor fabrication equipment.
+feature highly demanding ``clean room'' spaces that robotically manipulate
+materials and parts as well as perform semiconductor fabrication.
 \end{itemize}
 \index{self-replication!fabrication}
 
@@ -640,104 +569,62 @@ of materials and parts and semiconductor fabrication equipment.
 Completeness Challenge]{The Information Closure Challenge and the
 Hardware/Software Completeness Challenge}
 
-The information closure for the
-SSR is the requirement that the information resident on the SSR is
+The SSR's information closure 
+is the requirement that the information contained in the SSR is
 sufficient to drive its successful replication without any additional
-information coming from outside the SSR. The hardware and software
-completeness requirement further extends the information closure
-requirement with the demand that the computing hardware and software
+external information. Completing the hardware and software
+requirements further extends the information closure
+requirement by demanding that the computing hardware and software
 present in the SSR together with the information resident in the SSR
 are sufficient to drive, control, and successfully complete the cloning
-and division phases of the replication of the SSR. The SSR hardware and
+and division phases of SSR replication. The SSR's hardware and
 software must provide full automation of the control, fabrication,
 assemblage, and the handling of special situations like error detection,
 error repair, and recovery after error.
 
 The \memph{design of the information} resident in the SSR must be
-appropriate for its self-replication. It must be:
+appropriate for its self-replication. Its characteristics must be complete and adequate for the task. It must cover all relevant aspects that intervene during replication (e.g., materials, parts, processes, procedures, plans, spatial structures, error and recovery handling, etc.). Completeness means also that the information designed and stored in the SSR is correctly correlated with the SSR environment. That means, for example, that the SSR design should be based on an accurate and exhaustive list of raw materials and raw parts that exist in the SSR environment together with the material identification procedures and material processing/extraction procedures for those materials. Additionally, it must be adequate for the task in that it must cover all descriptive details of all entries in the information catalogs, with all relevant properties for these entries, including the correct representation of various relationships between the entries in the information catalogs.
 
-\begin{itemize}
-\item \textbf{Complete (exhaustive):} it must cover all relevant aspects
-(materials, parts, processes, procedures, plans, spatial structures,
-error and recovery handling, etc.) that intervene during replication.
-Completeness means also that the information designed and stored in the
-SSR is correctly correlated with the design of the SSR environment.
-That means, for example, that the SSR design should be based on an
-accurate and exhaustive list of raw materials and raw parts that exist
-in the SSR environment together with the material identification
-procedures and material processing/extraction procedures for those
-materials.
-\item \textbf{Adequate:} it must cover all descriptive details of all
-entries in the information catalogs, with all relevant properties for
-these entries, with correct representation of various relationships
-between the entries in the information catalogs.
-\end{itemize}
+The \mterm{computing hardware and software completeness requirement} has several implications. The designed computing hardware and software for each machine must be complete, sufficient, and adequate to control, drive, and monitor that particular machine. It must answer commands from the SSR control centers and properly communicate information, status, and control commands with other machines as needed to accomplish the higher level functions of the SSR. Additionally, the hardware and software that are used by various SSR functions and control centers are also complete, sufficient, and adequate in that they cover all possible use cases including errors and incidents.
 
-The \mterm{computing hardware and software completeness requirement}
-means the following:
-
-\begin{itemize}
-\item The designed computing hardware and software for each machine is
-complete, sufficient and adequate to control, drive and monitor that
-machine and to answer commands from the SSR control centers and to
-properly communicate and exchange information, status and control
-commands with other machines as needed to accomplish the higher level
-functions of the SSR.
-\item The hardware and software that are used by various SSR functions
-and control centers are also complete, sufficient, and adequate: they
-cover all possible use cases including all possible errors and
-incidents.
-\end{itemize}
-
-\subsection[The Highest Challenge: the SSR Design Challenge]{The Highest
-Challenge: the SSR Design Challenge}
+\subsection[The Highest Challenge: The SSR Design Challenge]{The Highest
+Challenge: The SSR Design Challenge}
 
 The SSR design challenge simply
-means that the design of the SSR and the design of all its subsystems
-(reviewed in the previous sections) are adequate for accomplishing a
+means that the SSR's design, including the design of all its subsystems
+(reviewed in the previous sections), are adequate for accomplishing 
 successful self-replication of the fully autonomous SSR with
-preservation and no degradation of the self-replication capability
-passed to all generations of daughter SSRs.
+preservation and without degradation of the self-replication capability
+that is passed to all generations of daughter SSRs.
 
 There are several specific aspects of the design challenge enumerated
 below:
 
 \begin{itemize}
 \item The design of the SSR must be fully coordinated with the design
-(and thus the knowledge) of the environment in which the SSR will be
-placed. This means in particular that the SSR design need to be fully
+of the environment in which the SSR will be
+placed. This means in particular that the SSR's design needs to be fully
 informed about the nature, characteristics, and environmental conditions
-(temperature, pressure, humidity, aggregation status) of the medium
+(e.g., temperature, pressure, humidity, and aggregation status) of the medium
 where it will exist, including the nature of raw materials and raw
 parts that are present in this medium.
-\item The analysis and investigation conducted so far revealed that the
+\item The analysis conducted so far reveals that the
 design and construction of a fully autonomous self-replicating SSR are
 \memph{extremely demanding}. The success of such a design and
-construction appear to be heavily determined by appropriate choices
-listed below and how these choices harmonize or not with the SSR
-environment and its nature:
+construction appear to be heavily determined by the appropriate choices,
+listed below, and how these choices harmonize with the SSR
+environment:
 
 \begin{itemize}
 \item the material basis of the SSR (nano scale chemical basis or macro material basis)
 \item the overall aggregation status of the SSR components: liquid,
 solid (compact or with embedded spaces), aqueous, colloidal
 \item the scale of the mature SSR 
-\item the availability of energy generation materials and processes in
+\item the availability of energy-generation materials and processes in
 the material basis of choice and at the scale of choice
 \item the availability of well mastered techniques for the SSR material
 basis of choice, scale of choice of fundamental engineering techniques
-like:
-
-\begin{itemize}
-\item Energy generation and transport
-\item Fabrication
-\item Assemblage and construction
-\item Transport and mobility
-\item Manipulation
-\item Computation
-\item Information communication
-\item Sensing
-\end{itemize}
+including energy-generation and transport, fabrication, assemblage and construction, transport and mobility, manipulation, computation, information communication, and sensing.
 \end{itemize}
 \end{itemize}
 \index{self-replication!design!challenges|)}
@@ -748,19 +635,16 @@ An artificial SSR is very similar to a modern city enclosed in a
 dome-like structure that communicates with the outside world by
 well-guarded gates used by robots to bring in construction materials
 from outside the city. This modern city has two quarters: the “old
-city” with its infrastructure in place and fully functional with
+city” with its fully functional infrastructure in place including
 buildings, plants, and avenues. The “new city” quarters are initially a
-small, empty terrain. As the new city is being constructed, its area
-extends together with gradual extension of the dome covering both the
-old and the growing new city. Both the old city and new city quarters
+small, empty terrain. As the new city is being constructed and its area
+extends, the dome covering gradually extends to cover both the
+old, established city and the new, growing city. Both the old city and new city quarters
 are pulsating with construction activity: automated machines (robots)
-carry new materials, parts and components that are used to construct
-the infrastructure of the new city quarters, to continuously extend the
-dome on top of it and to construct in the new quarters an exact replica
-of the old city.
+carry new materials, parts, and components that are used to construct
+the infrastructure of the new city quarters into an exact replica of the old city and to continuously extend the dome on top of it.
 
-Before the construction of the new city quarters even began, here is
-what can be seen in the old city:
+The old city contains the following structures that must be replicated in the new city:
 
 \begin{itemize}
 \item material mining sub-units 
@@ -770,36 +654,36 @@ what can be seen in the old city:
 \item an electricity distribution network
 \item a library with information for all city construction plans in
 electronic form that is made available on the city web and used by the
-city control centers, its machinery, and robots to achieve their tasks.
-\item a network of avenues, alleys and conduits for robotized
+city control centers, its machinery, and robots
+\item a network of avenues, alleys, and conduits for robotized
 transportation
 \item fully automated and robotized manufacturing plants specialized in
-fabrication of all parts, components assemblies, and machines that are
+fabrication of all parts, component assemblies, and machines that are
 present in the old city
 \item a fully automated semiconductor manufacturing plant with clean
 rooms for fabrication of microprocessors, ASICs, memories, and other
 highly integrated semiconductor circuits and controllers
 \item a computer manufacturing plant
 \item a network equipment manufacturing plant
-\item an extended communication network connecting by wire or rather
-wirelessly all plants and robots
+\item an extended communication network connecting 
+all plants and robots
 \item a software manufacturing plant and software distribution and
-installation robotized agents
+installation of robotized agents
 \item warehouses and stockrooms to store raw and fabricated materials,
 parts, components, assemblies, and software on some storage media
 \item a materials and parts recycling and refuse management plant
 \item an army of intelligent robots for transportation, manipulation,
-fabrication and assemblage.
+fabrication, and assemblage
 \item an army of recycling robots that maintain clean avenues and
 terrains in the city, collect debris from various plants and
-reintroduce the recyclable materials and parts in the fabrication and
-construction while the bad parts are taken out of the city gates
-\item control, command, and monitor centers that coordinate the supply of
-materials and the fabrication and the construction of an identical copy of
+reintroduce the recyclable materials and parts into the fabrication process
+while the unusable parts are taken out of the city gates
+\item control, command, and monitoring centers that coordinate the supply of
+materials and the fabrication of an identical copy of
 the original plants, avenues, factories, and stockrooms
 \item a highly sophisticated, distributed, multi-layered software system
 that controls all plants, robots, and communications in a cohesive
-manner.
+manner
 \end{itemize}
 
 Each one of the transport carriers, robots, manipulators, and
@@ -808,27 +692,21 @@ movement of any other machine. Everything appears to be moving
 seamlessly and orderly, and the construction of the new city is making
 visible progress under the growing pylons of the bolting dome.
 
-When the new city quarters are completed and they are looking exactly
-like the old city, you can see some activity and the machinery and
-robots of the new city coming out “to life”. Something starts happening
+When the new city quarters are completed and they look
+like the old city, the machinery and
+robots of the new city become active, bringing the city to life. Something starts happening
 as well: machinery and robots from both the old and the new city start
-a remodeling of the supporting pylons and of the arching dome. Little
-by little their plans start making sense and it can be seen now that
-what used to be a single, super-arching dome is changing shape into two
+remodeling the supporting pylons and the arching dome.  
+What used to be a single, super-arching dome is changing shape into two
 separate domes one for each of the city quarters.
 
-The last robot activity is as coordinated as it ever was: you see the
-two teams of the robots, finishing the re-shaping of the domes and the
-complete separation of the old city and the new city with their own
-round shaped roof. The separating wall is completed and what was 
-once two quarters of the same city is now two totally separate “old cities” 
-starting their own, separate destinies.
+The final steps require the two teams of robots to coordinate as they complete the separation process of the old city and the new city. The new city has its own dome that has been shaped and separated from the original city. What were once two quarters of the same city is now two completely separate cities starting their own, separate destinies.
 \index{self-replication!design|)}
 
 \section[Attempts to Build Artificial Self-Replicators]{A Brief Survey of Attempts to Build Artificial Self-Replicators}
 
 \index{self-replication!engineering attempts|(}
-No successful attempt has been made so far for building a real
+No successful attempt has been made so far to build a real
 autonomous artificial SSR from scratch. W. M. Stevens summarizes the
 situation in the abstract of his PhD thesis:
 
@@ -839,93 +717,93 @@ cellular automata, or on physical systems that are deliberately simplified so as
 the problem more tractable\citep{stevens2009}
 \end{quote}
 
-Stevens then reviews some of the attempts made at building physical or
+Stevens reviews some of the attempts made at building physical or
 abstract self-replicating machines:
 
 \index{Von Neumann!kinematic model}
 \begin{itemize}
-\item \textbf{Von Neumann’s kinematic model.} The system is made up of a
+\item \textbf{Von Neumann’s kinematic model.} The system is comprised of a
 control unit governing the actions of a constructing unit, capable of
 producing any automaton according to a description provided to it on a
 linear tape-like memory structure. The constructing unit picks up the
 parts it needs from an unlimited pool of parts and assembles them into
 the desired automaton. The project was far from being finished and
-remained an abstract model when von Neumann died.
+remained an abstract model when von Neumann died.\citep{stevens2009}
 \index{Moses' programmable constructor}
 \item \textbf{Moses' programmable constructor.} Matt Moses developed a physical constructor designed to be
 capable of constructing a replica of itself under the control of a
-human operator. The system is made of only 11 different types of
+human operator. The system is made of only eleven different types of
 tailor-made plastic blocks \citep{moses2001}.
 \index{self-replicating modular robots}
 \item \textbf{Self-replicating modular robots.} Zykov, Mytilinaios,
-Adams and Lipson built a modular robotic system in which a
+Adams, and Lipson built a modular robotic system in which a
 configuration of four modules can construct a replica configuration
 when provided with a supply of additional modules in a location known
-to the robot \citep{zykovetal2005}.
+to the robot \citecustom{zykovetal2005}{Zykov, Mytilinaios, Adams, and Lipson}.
 \index{RepRap project}
-\item \textbf{The RepRap project and 3D printing}. Bowyer et al.  have
+\item \textbf{The RepRap project and 3D printing}. Bowyer et al. have
 developed a rapid prototyping system based around a 3D printer that is
 capable of being programmed to manufacture arbitrary 3D objects. Many
-of the parts of the printer that is assumed to be self-reproducing
-cannot be manufactured by the system and those parts happen to be the
-most complex ones (the computer controller for example) \citep{bowyer2007}.
+of the parts of the printer that are assumed to be self-reproducing
+cannot be manufactured by the system itself.  Those parts happen to be the
+most complex ones (e.g., the computer controller) \citep{bowyer2007}.
 \index{Drexler's assembler}
-\item \textbf{Drexler’s assembler.} In \textit{Engines of Creation}, K. Eric
+\item \textbf{Drexler's assembler.} In \textit{Engines of Creation}, K. Eric
 Drexler describes a molecular assembler that is capable of operating at
 the atomic scale. The molecular machine has a programmable computer, a
 mobile constructing head and a set of interchangeable reaction tips
-that will trigger chemical reactions controlled to construct any object
+that will trigger chemical reactions designed to construct any object
 at molecular scale \citep{drexler1986}.
 This proposal stirred quite a controversy with some
-scientists being skeptical of the feasibility of such a project \citep{smalley2001}.
+scientists who were skeptical of the feasibility of such a project \citep{smalley2001}.
 \index{Venter, Craig!synthetic bacterial cell}
 \index{synthetic bacterial cell}
-\item \textbf{Craig Venter’s synthetic bacterial cell and synthetic
+\item \textbf{Craig Venter's synthetic bacterial cell and synthetic
 biology}. Craig Venter and the scientists at
 J. Craig Venter Institute in Rockville, MD
-reported in the May 20, 2010 issue of journal
+reported in the May 20, 2010 issue of the journal
 \textit{Science}
-that they created a “new species---dubbed Mycoplasma mycoides
+that they created a ``new species---dubbed Mycoplasma mycoides
 JCVI-syn1.0---that is similar to one found in nature, except that the
-chromosome that controls each cell was created from scratch” \citep{smith2010, gibsonetal2010}. In the same ABC news report,
+chromosome that controls each cell was created from scratch'' \citep{smith2010, gibsonetal2010}. In the same ABC news report,
 Mark Bedau, professor of Philosophy and
-Humanities at Reed College in Portland, Ore., also writing in the
-Nature commentary, called the new species ``a normal
-bacterium with a prosthetic genome.''\citep{smith2010}
+Humanities at Reed College in Portland, Oregon, 
+called the new species ``a normal
+bacterium with a prosthetic genome'' \citep{smith2010}.
 \index{synthetic biology}
 \item \textbf{Synthetic biology} is a new area of biological
 research and technology that combines science and engineering. It
 encompasses a variety of different approaches, methodologies, and
 disciplines with a variety of definitions. The common goal is the
 design and construction of new biological functions and systems not
-found in nature \citep{heinemann2006}. There are interesting advances in this field with
+found in nature \citep{heinemann2006}. There are interesting advances in this field with the
 development of various techniques in domains like synthetic chemistry,
-biotechnology, nanotechnology and gene synthesis. However these are far
-from constituting a complete, coherent and effective set of techniques
+biotechnology, nanotechnology and gene synthesis. However, these are far
+from constituting a complete, coherent, and effective set of techniques
 that will allow the construction and synthesis of the large diversity
-of machinery and functions that we identified in the preceding text as
-the “portrait” of the artificial SSR.
+of machinery and functions that were identified in the preceding text as
+the ``portrait'' of the artificial SSR.
 \index{MEMS|see{micro-electro-mechanical systems}}
 \index{micro-electro-mechanical systems}
 \item \textbf{Micro-electro-mechanical systems (MEMS)} is the technology
 of very small devices; MEMS are also referred to as
-\textit{micromachines} in Japan or \textit{micro systems technology} (\textit{MST}) in Europe. 
-MEMS are made up of components between 1 to
-100 micrometers in size, with devices generally ranging between 20 micrometers (20 millionths of a meter)
+\textit{micromachines} in Japan or \textit{microsystems technology} (\textit{MST}) in Europe. 
+MEMS are comprised of components between 1 to
+100 micrometers in size with devices generally ranging between 20 micrometers (20 millionths of a meter)
 to a millimeter (i.e. 0.02 to 1.0~mm)\citep{lyshevski2000}. The technology made significant
-advances with several types of MEMS being currently used in modern
-equipment:  accelerometers, MEMS gyroscopes, MEMS microphones, pressure
+advances with several types of MEMS currently being used in modern
+equipment.  Some examples include accelerometers, MEMS gyroscopes, MEMS microphones, pressure
 sensors (used in car tire pressure sensors), disposable blood pressure
 sensors, and micropower devices. This is probably one of the most
-promising types of technology for implementing small scale artificial
-SSRs. However, there are still significant hurdles: implementation of
+promising types of technology for implementing small-scale, artificial
+SSRs. However, there are still significant hurdles some of which include implementation of
 mobile elements (mini robots) and the common difficulty of fabricating
 the machinery that fabricates MEMS and microprocessors.
 \index{NASA REPRO study}
 \index{NASA Advanced Automation for Space Missions 1980 Project|see{NASA REPRO study}}
 \item \textbf{NASA Advanced Automation for Space Missions 1980 Project.}
 This study, titled ``A Self-Reproducing Interstellar Probe'' (REPRO), 
-is one of the most realistic exploration of the design of
+is one of the most realistic explorations of the design of
 an artificial ``macro'' self-replicator and is briefly analyzed in its
 own section below \citep{freitas1980}.
 \end{itemize}
@@ -935,21 +813,21 @@ own section below \citep{freitas1980}.
 Advanced Automation for Space Missions Project}
 
 \index{NASA REPRO study|(}
-One of the missions of this
-project is described in its chapter 1:
+One of the missions of the NASA Advanced Automation for Space Missions Project
+is described in chapter 1 of its final report:
 
 \begin{quote}
 Mission IV---Self-Replicating Lunar Factory---an
 automated unmanned (or nearly so) manufacturing facility consisting of
 perhaps 100 tons of the proper set of machines, tools, and teleoperated
 mechanisms to permit both production of useful output and reproduction
-to make more factories.
+to make more factories. \citep{freitasgilbreath1982}
 \end{quote}
 
-Then, later, it is described in more details:
+Later, in the same chapter, the project of making a self-replicating lunar factory is described in detail:
 
 \begin{quote}
-(d) Replicating Systems Concepts Team. The
+The
 Replicating Systems Concepts Team proposed the design and construction
 of an automated, multiproduct, remotely controlled or autonomous, and
 reprogrammable lunar manufacturing facility able to construct
@@ -962,29 +840,21 @@ replication model and a growth model---with representative numerical
 values for critical subsystem parameters. Possible development and
 demonstration programs are suggested, the complex issue of closure
 discussed, and the many applications and implications of replicating
-systems are considered at length.
+systems are considered at length. \citep{freitasgilbreath1982}
 \end{quote}
 
-Figure \ref{fig:nasa_spirit} below is reproduced from the NASA study and, among other things it
-depicts ``{\ldots}In the lower left corner, \textit{a lunar
+Figure \ref{fig:nasa_spirit} below is a piece of artwork that was reproduced from the
+NASA study.  The description below the picture describes one of the features as a
+self-replicating factory: ``{\ldots} In the lower left corner, a lunar
 manufacturing facility rises from the surface of the Moon. Someday,
 such a factory might replicate itself, or at least produce most of its
 own components, so that the number of facilities could grow very
-rapidly from a single seed'' }
+rapidly from a single seed'' \citep{freitasgilbreath1982}.
 
 \migneafigure{MigneaNasaSpiritSpace.jpg}{NASA---The Spirit of Space Missions---created by Rick Guidice}{fig:nasa_spirit}
 
-Among other things the project specifies:
 
-\begin{itemize}
-\item The seed of the lunar factory – transported from Earth – would
-weigh 100 tons
-\item Not all machinery could be built on the Moon; computer boards will
-be brought up from earth as “vitamins”, since parts closure will not be
-achieved
-\item It was estimated that the project will be feasible in the
-21\textsuperscript{st} century
-\end{itemize}
+The project discusses certain details for a self-replicating lunar factory to be feasible. For one, the seed of the lunar factory that would need to be transported from Earth would likely weigh one hundred tons. Additionally, not all of the machinery could be built on the Moon. Certain items, such as computer boards, would need to be brought from Earth since parts could not be enclosed on the Earth’s surface. These additional, externally-synthesized items are similar to vitamins, which are compounds organisms need to survive but cannot usually synthesize themselves.  Scientists estimated that this project would be feasible in the 21st century.
 
 Figure \ref{fig:lmf_parts_fabrication} below illustrates the depth the project reached in considering
 fabrication facilities on the Moon.
@@ -992,10 +862,7 @@ fabrication facilities on the Moon.
 %% FIXME - cite NASA study
 \migneafigurewide{MigneaPartsFabrication}{LMF Parts Fabrication Sector: Operations (Fig 5.17 in the NASA Study)}{fig:lmf_parts_fabrication}
 
-Being quite thorough, the NASA study represents a realistic evaluation of
-the extent, the problems, and the difficulties that need to be addressed
-by the design of a macro (kilometers scale in this case) self
-replicator.
+The NASA study represents a thorough, realistic evaluation of the extent that designing a macro-scale (kilometers) self-replicator would entail. It addresses various problems that need to be solved and difficulties that would need to be overcome in order to successfully make a large self-replicator.
 
 \subsection[The Self{}-Reproducing Interstellar Probe (REPRO) Study]{The
 Self-Reproducing Interstellar Probe (REPRO) Study}
@@ -1003,13 +870,13 @@ Self-Reproducing Interstellar Probe (REPRO) Study}
 \index{Self-Reproducing Interstellar Probe Study|see{NASA REPRO study}}
 \index{NASA REPRO study|(}
 In 1980 Robert A. Freitas
-published  “A Self-Reproducing Interstellar Probe” (REPRO) study  in
+published a study entitled ``A Self-Reproducing Interstellar Probe'' (referred to as the REPRO study) in
 the \textit{Journal of the British Interplanetary Society}. Some of the
 main goals of the project are summarized below.
 
 \begin{itemize}
-\item REPRO was a mammoth self-reproducing spacecraft to be built in
-orbit around Jupiter.
+\item REPRO was designed to be a mammoth self-reproducing spacecraft to be built in
+orbit around a gas giant such as Jupiter.
 \item REPRO was a vast and ambitious project, equipped with numerous
 smaller probes for planetary exploration, but its key purpose was to
 reproduce. Each REPRO probe would create an automated factory that
@@ -1017,8 +884,8 @@ would build a new probe every 500 years. Probe by probe, star by star,
 the galaxy would be explored 
 \item The total fueled mass of REPRO was projected to be 10**10 Kg = 10
 **7 tons = 10 million tons for a probe mass of 100,000 tons.
-\item It takes 500 years for REPRO to create a replica of itself in the
-relatively hospitable environment of a far-away planet
+\item It would take 500 years for REPRO to create a replica of itself in the
+environment of a far-away planet
 \item The estimated exploration time of the galaxy was 1--10 million
 years
 \end{itemize}
@@ -1048,9 +915,9 @@ satisfied all three closure requirements.  The NASA REPRO study was the most
 exhaustive attempt to design a self-replicator, which estimated the replicator
 to weigh 100,000 tons (unfueled) and reproduce every 500 years.
 
-While parts 1 and 2 of this paper contained an overview of the minimal technological
+While Part~1 and Part~2 of this paper contained an overview of the minimal technological
 requirements of self-replication and foundational technological implementation considerations,
-the existence of self-replication in nature comes as quite a surprise.  Therefore, part 3
+the existence of self-replication in nature comes as quite a surprise.  Therefore, Part~3
 will cover speculative ideas for what the existence of the self-replication process in
 nature indicates about the nature of reality.
 
