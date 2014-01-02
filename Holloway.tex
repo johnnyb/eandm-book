@@ -61,12 +61,12 @@ CSIC is demonstrated as a proof of concept by using it to find public and privat
 \index{asymmetric cryptography systems}asymmetric cryptography system 
 \citep{cormen01:_introd_to_algor}.  The algorithm used in CSIC is a multi-objective genetic algorithm \citecustom{coello07:_evolut_algor_for_solvin_multi_objec_probl}{Coello, Lamont, and Veldhuizen}.  The human users will use CSIC through Amazon's \index{Mechanical Turk}Mechanical Turk service.  
 
-\index{success metric} \index{FI} \index{Fitness/Informatio} Success in the experiment is measured by the rate of solution improvement (fitness increase) compared with problem information discovered, which is Fitness/Information or FI for short.  Solution improvement is measured by an objective function in the genetic algorithm.  The amount of problem information discovered is measured by the number of solutions evaluated.  The improvement due to human interaction is compare to the improvement due to the genetic algorithm as measured by FI.  
+\index{success metric} \index{FI} \index{Fitness/Information} Success in the experiment is measured by the rate of solution improvement (fitness increase) compared with problem information discovered, which is Fitness/Information or FI for short.  Solution improvement is measured by an objective function in the genetic algorithm.  The amount of problem information discovered is measured by the number of solutions evaluated.  The improvement due to human interaction is compare to the improvement due to the genetic algorithm as measured by FI.  
 
 Since the project is currently in the exploratory stage, the comparison is informal.  It is assumed the algorithm discovers problem domain information at an exponentially greater rate compared to human agents.  Consequently, any greater or equivalent improvement of fitness by the human agents compared to the algorithm produces a very high FI value in favor of the human agents.  Thus, the comparison between human agents and the genetic algorithm is based purely on fitness increase.
 
 \section{Implementation}
-The general technique used is as follows.  A standard \index{genetic algorithm} \index{multi-objective genetic algorithm}multi-objective genetic algorithm is used, a type of \index{stochastic global search}stochastic global search algorithm (Algorithm \ref{alg:stochastic_global_solution_search}).  A genetic algorithm takes a set of solutions, measures how good each solution is according to some fitness valuation function, varies the solutions to generate a new set using variation operators such as mutation and crossover, and then from both sets of solutions selects an output set according to some criteria.  The algorithm then reiterates this process on each subsequent ouput set until a stopping criteria is reached.  The \index{solution representation}solutions themselves are represented to the algorithm as fixed length bit strings.  
+The general technique used is as follows.  A standard \index{genetic algorithm} \index{multi-objective genetic algorithm}multi-objective genetic algorithm is used, a type of \index{stochastic global search}stochastic global search algorithm (Algorithm \ref{alg:stochastic_global_solution_search}).  A genetic algorithm takes a set of solutions, measures how good each solution is according to some fitness valuation function, varies the solutions to generate a new set using variation operators such as mutation and crossover, and then from both sets of solutions selects an output set according to some criteria.  The algorithm then reiterates this process on each subsequent output set until a stopping criteria is reached.  The \index{solution representation}solutions themselves are represented to the algorithm as fixed length bit strings.  
 
 \begin{algorithm}
   \caption{Stochastic global solution search}
@@ -122,7 +122,7 @@ The types of operators have different credit costs, since some operators discove
 \begin{figure}[!t]
   \centering
   \includegraphics[width=4.5in]{HollowayCSICUI2}
-  \caption{User inteface concept for CSIC.}
+  \caption{User interface concept for CSIC.}
   \label{fig:CSIC_UI}
 \end{figure}
 
@@ -133,7 +133,7 @@ Otherwise, the basic idea is the same between the \index{actual and conceptual i
 \begin{figure}[!t]
   \centering
   \includegraphics[width=4.5in]{HollowayWebsiteUI}
-  \caption{Actual user inteface website.}
+  \caption{Actual user interface website.}
   \label{fig:website_UI}
 \end{figure}
 
@@ -171,7 +171,7 @@ One objection to this methodology is that human intelligence is an algorithm tha
 
 Such an objection is valid.  The CSIC experiment cannot categorically rule out the possibility that human intelligence is a kind of algorithm.  However, CSIC can provide an \index{inference to the best explanation}inference to the best explanation between two competing hypotheses.  The first hypothesis asserts that the proximate cause, human intelligence, created the information.  The second hypothesis states that a more remote intelligent agent created the information.
 
-To determine which hypothesis is better supported by a positive result in the CSIC experiment, I propose the \index{principle of minimal CSI creation}principle of minimal CSI creation.  The principle is analogous to Ockham's Razor.  This principle states in the case where the creation of CSI is presupposed, the explanation relying on the least amount of CSI creation is prefered.
+To determine which hypothesis is better supported by a positive result in the CSIC experiment, I propose the \index{principle of minimal CSI creation}principle of minimal CSI creation.  The principle is analogous to Ockham's Razor.  This principle states in the case where the creation of CSI is presupposed, the explanation relying on the least amount of CSI creation is preferred.
 
 The first hypothesis relies on less CSI creation, since the human only creates CSI for a particular problem instance.  Hypothesis two requires the creation of enormous amounts of CSI covering all possible problem instances the human might encounter.
 
