@@ -1,12 +1,12 @@
 \eandmchapter{Algorithmic Specified Complexity}{Algorithmic Specified Complexity}{Winston Ewert, William A. Dembski, and Robert J. Marks II}{Baylor University\\Discovery Institute}
 
-\index{information!see{complexity}}
+\index{information|see{complexity}}
 
 \begin{abstract}
 \index{complexity!metrics!Kolmogorov complexity}
 \index{complexity!metrics!conditional Kolmogorov complexity}
 Engineers like to think that they produce something different from that of a chaotic system. The Eiffel tower is  fundamentally different from the same components lying in a heap on the ground. Mt. Rushmore is fundamentally  different from a random mountainside. But engineers lack a good method for quantifying this idea. This has led some to reject the idea that engineered or designed systems can be detected. Various methods have been proposed, each of which has
-various faults. Some have trouble distinguishing noise from data, some are subjective, etc. For this study, conditional Kolmogorov complexity is used to measure the degree of specification of an object. The Kolmogorov complexity of an object is the length of the shortest computer program required to describe that object. Conditional Kolmogorov complexity is Kolmogorov complexity with access to a  context. The program can extract information from the context in a variety of ways allowing more compression. The more compressible an object is, the greater the evidence that the object specified. Random noise is  incompressible, and so compression indicates that the object is not simply random noise. 
+various faults. Some have trouble distinguishing noise from data, some are subjective, etc. For this study, conditional Kolmogorov complexity is used to measure the degree of specification of an object. The Kolmogorov complexity of an object is the length of the shortest computer program required to describe that object. Conditional Kolmogorov complexity is Kolmogorov complexity with access to a  context. The program can extract information from the context in a variety of ways allowing more compression. The more compressible an object is, the greater the evidence that the object is specified. Random noise is  incompressible, and so compression indicates that the object is not simply random noise. 
 This model is intended to launch further dialog on use of conditional Kolmogorov complexity in the measurement of specified complexity.
 \end{abstract}
 
@@ -31,9 +31,9 @@ Information is what distinguishes an empty hard disk from a full one.
 Information is the difference between random scribbling and carefully printed prose.
 Information is the difference between car parts strewn over a lawn, and a working truck.
 
-While humans operate using an intuitive concept of information, attempts to develop a theory of information have thus far fallen short of the intuitive concept.
 \index{Shannon information|see{complexity, metrics, Shannon information}}
 \index{complexity!metrics!Shannon information}
+While humans operate using an intuitive concept of information, attempts to develop a theory of information have thus far fallen short of the intuitive concept.
 Claude Shannon developed what its today known as Shannon information theory \citep{Shannon1948}.
 Shannon's concern was studying the problem of communication, that of sending information from one point to another.
 However, Shannon explicitly avoided the question of the meaningfulness of the information being transmitted, thus not quite capturing the concept of information as defined in this paper.
@@ -57,7 +57,7 @@ Levin complexity adds the log of the execution time to the complexity of the pro
 \textit{Logical depth}, on the other hand, is concerned with the execution time of the shortest program \citep{Bennett1988}.
 There is a class of objects which are easy to describe but expensive to actually produce.
 It is argued \citep{Bennett1988} that objects in this class must have been produced over a long history.
-Such objects are interesting, but do not seem to capture all of the intuitive concept of information.
+Such objects are interesting, but do not seem to capture the intuitive concept of information in its entirety.
 English text or Mount Rushmore correspond to what is usually considered as information, but it is not clear that they can be most efficiently described as long running programs.
 
 \index{complexity!metrics!specified complexity}
@@ -69,7 +69,7 @@ English text or Mount Rushmore correspond to what is usually considered as infor
 One approach to information is \textit{specified complexity} as expressed by Dembski \citep{Dembski1998}.
 Dembski's concern is that of detecting design, the separation of that which can be explained by chance or necessity from that which is the product of intelligence. 
 In order to infer design, an object must be both complex and specified.
-Complexity refers essentially to improbability.
+Complexity refers, essentially, to improbability.
 The probability of any given object depends on the chance hypothesis proposed to explain it.
 Improbability is a necessary but not sufficient condition for rejecting a chance hypothesis.
 Events which have a high probability under a given chance hypothesis do not give a reason to reject that hypothesis.
@@ -77,12 +77,12 @@ Events which have a high probability under a given chance hypothesis do not give
 \index{specification}
 Specification is defined as conforming to an independently given pattern.
 The requirement for the pattern to be independent of the object being investigated is fundamental.
-Given absolute freedom of pattern selection, any object can be made specified by selecting that object as the pattern.
+Given absolute freedom of pattern selection, any object can be made to seem specified by selecting that object as the pattern.
 It is not impressive to hit a bullseye if the bullseye is painted on after the arrow has hit the wall.
 It is impressive to hit the bullseye if the bullseye was painted before the arrow was fired.
 
 \index{self-replication}
-Investigators are often not in the position of being able to choose the target prior to investigating the object;
+Investigators are often not able to choose the target prior to investigating the object.
 For example, life is a self-replicating process, and it would seem that an appropriate specification would be self-replication.
 Self-replication is what makes life such a fascinating area of investigation as compared to rocks.
 Human beings know about self-replication \emph{because of} their knowledge of life, not as an independent fact.
@@ -98,16 +98,16 @@ As with life in general, specific features in biology cannot be specified indepe
 \index{complexity!metrics!algorithmic specified complexity}
 \index{algorithmic specified complexity|see{complexity, metrics, algorithmic specified complexity}}
 The concept of specification has been criticized for being imprecisely defined and unquantifiable.
-It is also charged that maintaining the independence of the patterns is difficult.
+It has also been charged that maintaining the independence of the patterns is difficult.
 But specification has been defined in a mathematically rigorous manner in several different ways \citep{Dembski1998, Dembski2002, Dembski2005a}.
-Kolmogorov complexity, or a similar concept, is a persistent method used in this definitions.
+Kolmogorov complexity, or a similar concept, is a persistent method used in these definitions.
 Our goal is to present and defend a simple measure of specification that clearly alleviates these concerns.
 Towards this end, this paper proposes to use \textit{conditional Kolmogorov complexity} to quantify the degree of specification in an object.
 Conditional Kolmogorov complexity can then be combined with complexity as a measurement of specified complexity. This approach to measuring specified complexity is called \textit{algorithmic specified complexity}.
 
 As noted, Kolmogorov complexity has been suggested as a method for measuring specification.
-The novelty in method presented in this paper is the use of conditional Kolmogorov complexity.
-However, this paper also elucidates a number of examples of algorithmic compressibility demonstrating wider applicability then is often realized.
+The novelty in the method presented in this paper is the use of conditional Kolmogorov complexity.
+However, this paper also elucidates a number of examples of algorithmic compressibility demonstrating wider applicability than is often realized.
 
 \section{Method}
 
@@ -177,9 +177,9 @@ With conditional Kolmogorov complexity, the program now has access to additional
 \end{equation} where $U(p,Y)$ is the output of running program $p$ with input $Y$.
 
 In this calculation, the input provides additional data to the program.
-As a result, the program is no longer restricted to exploiting pattern in the desired output but can take advantage of the information provided by the input.
+As a result, the program is no longer restricted to exploiting patterns in the desired output but can take advantage of the information provided by the input.
 \index{context}
-Henceforth, this input is referenced as the {\it context}.
+Henceforth, this input is referred to as the {\it context}.
 
 The use of context allows the measure to capture a broader range of specifications.
 It is possible to describe many bitstrings by combining a short program along with the contextual information.
@@ -203,12 +203,12 @@ The following formula for algorithmic specified complexity (ASC) combines the me
 Since high compressibility corresponds to specification, the compressed length of the string is subtracted.
 Thus, high improbability counts for specified complexity, but incompressible strings count against it.
 
-For this number to become large requires $X$ to be both complex, (i.e., improbable), and specified, (i.e., compressible).
+For this number to become large requires $X$ to be both complex (i.e., improbable) and specified (i.e., compressible).
 Failing on either of these counts will produce a low or negative value.
 Since Kolmogorov complexity can, at best, be upper bounded, the ASC can, at best, be lower bounded.
 
 At best this measure can reject a given probability distribution.
-It makes no attempt to rule out chance-based hypothesis in general.
+It makes no attempt to rule out chance-based hypotheses in general.
 However, it can conclude that a given probability distribution does a poor job in explaining a particular item.
 The value of ASC gives a measure of the confidence available for rejecting a chance hypothesis.
 
@@ -216,8 +216,8 @@ The value of ASC gives a measure of the confidence available for rejecting a cha
 
 \index{functionality}
 Perhaps the most interesting form of specification is that of functionality.
-It is clear that machines, biological structures, and buildings all have functionality.
-But quantifying that in an objective manner has proven difficult.
+It is clear that machines, biological structures, and buildings all have functionality,
+but quantifying that functionality in an objective manner has proven difficult.
 However, ASC provides the ability to do this.
 
 Any machine can be described in part by tests that it will pass.
