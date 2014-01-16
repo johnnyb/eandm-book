@@ -71,25 +71,25 @@ Such finitary systems which have this maximal computational power are known as u
 \index{Principle of Computational Equivalence}
 Wolfram and van Rooij both use universal computation to set a maximal level of sophistication available in nature.  Wolfram explains his Principle of Computational Equivalence:
 
-\begin{quote}
+\begin{quoting}
 One might have assumed that among different processes there would be a vast range of different levels of computational sophistication.  But the remarkable assertion that the Principle of Computational Equivalence makes is that in practice this is not the case, and that instead there is essentially just one highest level of computational sophistication, and this is achieved by almost all processes that do not seem obviously simple...For the essence of this phenomenon is that it is possible to construct universal systems that can perform essentially any computation---and which must therefore all in a sense be capable of exhibiting the highest level of computational sophistication \citep[][p.~717]{wolfram2002}.
-\end{quote}
+\end{quoting}
 
 \index{Tractable Cognition Thesis}
 Wolfram is thus stating that within nature, computability is the limiting factor of what is possible.  Van Rooij, while restricting his comments to the nature of the mind, makes basically the same point:
 
-\begin{quote}
+\begin{quoting}
 Human cognitive capacities are constrained by computational tractability.  This thesis, if true, serves cognitive psychology by constraining the space of computational-level theories of cognition \citep[][p.~939]{vanrooij2008}
-\end{quote}
+\end{quoting}
 
 \index{Church-Turing thesis}
 In other words, if the brain is constrained by computational tractability, then it limits the possible set of models which could be used when modeling cognition.  Van Rooij specifically traces this back to the idea that the Church-Turing thesis is not merely a limitation of finitary computation, but is a limitation of reality as a whole, or, as van Rooij puts it, ``the Church-Turing Thesis is a hypothesis about the state of the world'' \citep[][p.~943]{vanrooij2008}.
 
 Wolfram similarly applies his ideas specifically to the brain, saying:
 
-\begin{quote}
+\begin{quoting}
 So what about computations that we perform abstractly with computers or in our brains?  Can these perhaps be more sophisticated?  Presumably they cannot, at least if we want  actual results, and not just generalities.  For if a computation is to be carried out explicitly, then it must ultimately be implemented as a physical process, and must therefore be subject to the same limitations as any such process \citep[][p.~721]{wolfram2002}.
-\end{quote}
+\end{quoting}
 
 \index{physicalism}
 Thus, physicalism, when defined sufficiently to distinguish it from anything else, has been defined by its supporters as being equivalent to computationalism.  This allows a more methodical examination of physicalism and dualism to determine which is likely to be true.
@@ -215,9 +215,9 @@ A Turing Oracle (hereafter oracle) is a black-box function (i.e. no implementati
 
 Alan Turing describes the oracle machine as follows:
 
-\begin{quote}
+\begin{quoting}
 Let us suppose that we are supplied with some unspecified means of solving number theoretic problems; a kind of oracle as it were.  We will not go any further into the nature of this oracle than to say that it cannot be a machine.  With the help of the oracle we could form a new kind of machine (call them o-machines), having as one of its fundamental processes that of solving a given number theoretic problem. \citep[][\S{}4]{turing1939}
-\end{quote}
+\end{quoting}
 
 \index{busy beaver problem}
 Even though the values of functions based on oracle machines cannot be computed (since they are by definition incomputable), it is still possible to reason about which problems are reducible to oracles and which oracles they are reducible to.  Posed another way, if a programmer had an oracle for a given problem, what other problems could be solved?  For instance, there is an incomputable function called Rado's Sigma Function (affectionately known as the ``busy beaver'' function).  This function says, given $n$, what is the longest non-infinite output of any program of size $n$?  This is an incomputable function, but it can be shown to be computable given an oracle for $H(p, i)$.
@@ -309,7 +309,7 @@ Another option, however, is that humans are able to incrementally arrive at solu
 
 \section{An Oracle for Insight Problems}
 \index{hyper-computation}
-Selmer Bringsjord has argued for the mind being hyper-computational on the basis of his research into human ability to solve the halting problem.  His group claims that they could always determine the halting problem for Turing machines of size $n$ if they took into account the determination of the halting problem for Turing machines of size $n - 1$ \citecustom{bringsjord2006}{Bringsjord, Kellet, Shilliday, and Taylor}.
+Selmer Bringsjord has argued for the mind being hyper-computational on the basis of his research into human ability to solve the halting problem.  His group claims that they could always determine the halting problem for Turing machines of size $n$ if they took into account the determination of the halting problem for Turing machines of size $n - 1$ \citecustom{bringsjord2006}{Bringsjord, Kellet, Shilliday, \& Taylor}.
 
 Bringsjord's group has quite a bit of experience with the halting problem, but it is impossible to tell if his formulation is completely true based on the size of the problem space when $n$ goes beyond 4---there are then too many programs for humans to analyze (when $n$ is 5 there are 63,403,380,965,376 programs).  What he found, though, is that his group could formulate halting proofs for programs of size $n$ based on previous patterns which were identified for size $n - 1$.  They used the proofs that they made for size $n - 1$ as a basis for the proofs in programs of size $n$.  This is itself an interesting result, though it is hard to say that these are necessarily based on program size, since there is nothing in the halting problem that is program-size dependent.  A better interpretation is that the proofs were built by introducing constrained axioms.  The larger programs utilized the axioms introduced in smaller programs, but potentially required more axioms to solve.  Therefore, the proofs utilized the smaller programs because they utilized the axioms demonstrated there.  As the programs became larger, the number of axioms required to determine a solution also grew.
 
@@ -398,7 +398,7 @@ The hard part then comes in testing the theory.  Because the results are incompu
 
 \index{traveling salesman problem}
 This method of using oracles for modeling human cognition has many applications to both psychology and engineering, as well as to the history of technology.  For psychology, it introduces a new way of evaluating mental causes, and a new formalism for modeling and testing them.  In several known cases, human problem solving outperforms what is expected from computationalism.  For example, one group of researchers
-reported that human performance on the Traveling Salesman Problem scales linearly with the number of nodes, which far surpasses any computational estimator for the problem \citecustom{dryetal2006}{Dry, Lee, Vickers, and Hughes}.  Therefore, modeling human performance in terms of an oracle machine may allow more accurate predictions of performance.
+reported that human performance on the Traveling Salesman Problem scales linearly with the number of nodes, which far surpasses any computational estimator for the problem \citecustom{dryetal2006}{Dry, Lee, Vickers, \& Hughes}.  Therefore, modeling human performance in terms of an oracle machine may allow more accurate predictions of performance.
 
 \index{complexity!metrics}
 For engineering, oracles can be used to better identify and measure complexity.  If axioms become quantifiable, and the number of axioms required to solve problems becomes quantifiable, then this can transform the practice of complexity estimation.  One such method to use these ideas to calculate software complexity is given in \citet{bartlett2012}.  
@@ -409,7 +409,7 @@ This idea can also be applied to software computer games.  Many computer games a
 
 \index{technological history}
 \index{independent discovery}
-A final way of using this idea is in understanding the history of technology, including science and mathematics.  It has been a curious feature that many ``leaps'' in scientific or mathematical thought have been made simultaneously by multiple people.  Isaac Newton and Gottfried Leibniz both independently invented calculus, Gregory Chaitin and Andrey Kolmogorov both independently invented algorithmic information theory, Elisha Gray and Alexander Graham Bell both filed a patent for the telephone on the same day, and the list goes on and on \citecustom{aboitesetal2012}{Aboites, Boltyanskii, and Wilson}.\footnote{Appendix A of \citet{aboitesetal2012} contains quite an impressive list of codiscoveries.}  This model, if correct, would validate the view of T. D. Stokes that ``even though there is no algorithm of discovery, there are logical elements present in the process whereby a novel hypothesis is devised\ldots{}'' \citep[][p.~111]{stokes1986}.  This model presents a non-algorithmic process and shows the logical elements which are within its prerequisites.  Therefore, when ideas are widespread, multiple people will each be a single axiom away from discovery.  Consequently, faced with the same problem, many different people will be able to realize the same missing axiom.
+A final way of using this idea is in understanding the history of technology, including science and mathematics.  It has been a curious feature that many ``leaps'' in scientific or mathematical thought have been made simultaneously by multiple people.  Isaac Newton and Gottfried Leibniz both independently invented calculus, Gregory Chaitin and Andrey Kolmogorov both independently invented algorithmic information theory, Elisha Gray and Alexander Graham Bell both filed a patent for the telephone on the same day, and the list goes on and on \citecustom{aboitesetal2012}{Aboites, Boltyanskii, \& Wilson}.\footnote{Appendix A of \citet{aboitesetal2012} contains quite an impressive list of codiscoveries.}  This model, if correct, would validate the view of T. D. Stokes that ``even though there is no algorithm of discovery, there are logical elements present in the process whereby a novel hypothesis is devised\ldots{}'' \citep[][p.~111]{stokes1986}.  This model presents a non-algorithmic process and shows the logical elements which are within its prerequisites.  Therefore, when ideas are widespread, multiple people will each be a single axiom away from discovery.  Consequently, faced with the same problem, many different people will be able to realize the same missing axiom.
 
 \section{Final Considerations}
 \label{sec:final_considerations}
@@ -426,9 +426,9 @@ Roger Penrose and Jack Copeland have both made a similar suggestion \citep{copel
 \index{idealism}
 Another possible objection, then, is to say that the universe as a whole isn't physical.  It could be possible, for instance, that even the fundamental laws of matter are only fully describable using oracles, and none of them at all are computable with finitary methods, and therefore finitary methods can only be used to solve certain macro-systems which are the exception rather than the rule.  However, even if true, that would not lead to the conclusion that physicalism is true and incomputable functions should be classified as physical along with computable ones.  Instead it would reveal that the idealists such as Richard Conn Henry \citeyearpar{henry2005}, who believe that the physical is a mere epiphenomenon and the non-physical is what is really real, were the ones who were right all along.  Douglas Robertson \citeyearpar{robertson1999} comments:
 
-\begin{quote}
+\begin{quoting}
 The possibility that phenomena exist that cannot be modeled with mathematics may throw an interesting light on Weinberg's famous comment: ``The more the universe seems comprehensible, the more it seems pointless.'' It might turn out that only that portion of the universe that happens to be comprehensible is also pointless.
-\end{quote}
+\end{quoting}
 
 In any case, while it is certainly an improbable proposition, it is a logical possibility that physicalism is not true even for physics!  
 

@@ -40,6 +40,8 @@
 \usepackage[margin=1in,font=small]{caption}
 \usepackage{wrapfig}
 \usepackage{mdframed}
+\usepackage{emptypage}
+\usepackage[leftmargin=0.5in,rightmargin=0.5in,indentfirst=false]{quoting}
 
 
 \definecolor{gray75}{gray}{0.75}
@@ -157,6 +159,7 @@
 
 \def\eandmpart#1{%
   \par\newpage\cleardoublepage % Page break
+  \thispagestyle{empty}
   \chaptermark{~}
   \sectionmark{~}
   \vspace*{1in} % Vertical shift
@@ -219,11 +222,13 @@
 
 \raggedbottom
 
+\pagenumbering{roman}
 \include{TitlePages}
+
+\include{Acknowledgements}
 
 \tableofcontents
 
-\include{Acknowledgements}
 
 \include{Introduction}
 
@@ -231,7 +236,7 @@
 \begin{eandmpartintro}
 This volume begins with two papers discussing the relationship between engineering and knowledge.  In the first paper, Dominic Halsmer et al. argue that engineering is foundational to the search for truth as truth.  It looks specifically at reverse-engineering and design recovery as a model for seeking truths about the natural world.  These methodologies have been developed and used within engineering to recover a design when the specifications are not readily available, and Halsmer argues that they can be applied to the scientific endeavor to uncover the original design within nature.  
 
-In the second paper, Alexander Sich argues that engineering cannot be foundational in the search for truth because the engineering disciplines depend fundamentally on highly-focused natural scientific knowledge applied to the production of artifacts while the particular natural sciences depend foundationally upon metaphysics for their first principles. Moreover, Sich contends that a failure to draw proper ontological distinctions between the objects studied by the natural sciences and philosophy leads to confusion over the character of inferences to the existence of the objects studied.
+In the second paper, Alexander Sich argues that engineering cannot be foundational in the search for truth because the engineering disciplines depend fundamentally on highly-focused natural scientific knowledge applied to the production of artifacts, while the particular natural sciences depend foundationally upon metaphysics for their first principles. Moreover, Sich contends that a failure to draw proper ontological distinctions between the objects studied by the natural sciences and philosophy leads to confusion over the character of inferences to the existence of the objects studied.
 \end{eandmpartintro}
 
 \include{Halsmer}
@@ -251,6 +256,8 @@ Architecture is one of the few engineering disciplines which has had a deep and 
 \begin{eandmpartintro}
 Software engineering is rarely considered in connection to philosophy.  However, the entire enterprise was conceived by G\"{o}del, Turing, Church, and others in order to answer deep questions about the limitations of computation.  This part begins with two papers by Jonathan Bartlett. The first paper discusses how computation can be used as a guidepost to separate out material from non-material causation. The second paper utilizes this concept to outline an improved software complexity metric.  The next paper by Winston Ewert et al. refines previous attempts to quantify information by showing how contextual data can affect information measurements, and defines a new information metric to take this into account.  Finally, a paper by Eric Holloway describes an attempt to directly observe and measure the informational contribution of intelligent beings to search algorithms.  While Holloway's attempt was unsuccessful, the experimental setup is unique and promising and will hopefully inspire future researchers to build on his approach.
 \end{eandmpartintro}
+
+% \addtocontents{toc}{\protect\pagebreak}
 
 \include{Bartlett1}
 \include{Bartlett2}
