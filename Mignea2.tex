@@ -98,22 +98,22 @@ This first solution leads to the following conclusions:
 \item It will require another machinery
 M\textsuperscript{disassembler}, to disassemble Machine B in all its
 constituent parts: b\textsubscript{1}, b\textsubscript{2},
-b\textsubscript{3}, …, b\textsubscript{N }so that Machine A can copy
+b\textsubscript{3},{\jdots}, b\textsubscript{N }so that Machine A can copy
 each constituent part.
 \item Then Machine A will copy all parts b\textsubscript{1},
-b\textsubscript{2}, b\textsubscript{3}, …, b\textsubscript{N} twice (to
+b\textsubscript{2}, b\textsubscript{3},{\jdots}, b\textsubscript{N} twice (to
 create all pieces needed for a clone of Machine A: Copy\textsubscript{A}
 and a clone of Machine B: Copy\textsubscript{B}) ca\textsubscript{1},
-ca\textsubscript{2}, ca\textsubscript{3}, …, ca\textsubscript{N }(for
+ca\textsubscript{2}, ca\textsubscript{3},{\jdots}, ca\textsubscript{N }(for
 Copy\textsubscript{A} machine) and cb\textsubscript{1},
-cb\textsubscript{2}, cb\textsubscript{3}, …, cb\textsubscript{N} (for
+cb\textsubscript{2}, cb\textsubscript{3},{\jdots}, cb\textsubscript{N} (for
 Copy\textsubscript{B} machine).
 \item There will be a need for another machinery
 M\textsuperscript{assembler} that will know how to take all the parts
-ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3}, ….,
+ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3},{\jdots},
 ca\textsubscript{N} and assemble them together into the
 Copy\textsubscript{A} machine and parts cb\textsubscript{1},
-cb\textsubscript{2}, cb\textsubscript{3}, …, cb\textsubscript{N} and
+cb\textsubscript{2}, cb\textsubscript{3},{\jdots}, cb\textsubscript{N} and
 assemble them together into the Copy\textsubscript{B} machine. 
 \end{enumerate}
 
@@ -123,12 +123,12 @@ of well-structured information of this nature must be first programmed:
 
 \begin{itemize}
 \item A catalog of all parts b\textsubscript{1}, b\textsubscript{2},
-b\textsubscript{3}, …, b\textsubscript{N} and for each such part, a
+b\textsubscript{3},{\jdots}, b\textsubscript{N} and for each such part, a
 unique identifier and possibly physical and geometrical characteristics
 (dimensions) of the part
 \item A store room location (x, y, z)  from where the
 M\textsuperscript{assembler} machine will pick each one of the parts
-ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3}, …,
+ca\textsubscript{1}, ca\textsubscript{2}, ca\textsubscript{3},{\jdots},
 ca\textsubscript{N} during the assembly steps to construct the
 Copy\textsubscript{A} machine
 \item A \mterm{catalog of assembly instructions} that contains some geometrical x,
@@ -847,7 +847,7 @@ systems are considered at length. \citep{freitasgilbreath1982}
 
 Figure \ref{fig:nasa_spirit} below is a piece of artwork that was reproduced from the
 NASA study.  The description below the picture describes one of the features as a
-self-replicating factory: ``{\ldots} In the lower left corner, a lunar
+self-replicating factory: ``{\jdots}In the lower left corner, a lunar
 manufacturing facility rises from the surface of the Moon. Someday,
 such a factory might replicate itself, or at least produce most of its
 own components, so that the number of facilities could grow very

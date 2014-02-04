@@ -15,7 +15,7 @@ This model is intended to launch further dialog on use of conditional Kolmogorov
 Intuitively, humans identify objects such as the carved faces at Mount Rushmore as qualitatively different from that of a random mountainside.
 However, quantifying this concept in an objective manner has proved difficult.
 Both mountainsides are made up of the same material components.
-They are both subject to the same physical forces, and will react the same to almost all physical tests.
+They are both subject to the same physical forces and will react the same to almost all physical tests.
 Yet, there does appear to be something quite different about Mount Rushmore.
 There is a special something about carved faces that separates it from the rock it is carved in.
 
@@ -29,7 +29,7 @@ There is a special something about carved faces that separates it from the rock 
 This ``special something'' is information.
 Information is what distinguishes an empty hard disk from a full one.
 Information is the difference between random scribbling and carefully printed prose.
-Information is the difference between car parts strewn over a lawn, and a working truck.
+Information is the difference between car parts strewn over a lawn and a working truck.
 
 \index{Shannon information|see{complexity, metrics, Shannon information}}
 \index{complexity!metrics!Shannon information}
@@ -101,12 +101,12 @@ The concept of specification has been criticized for being imprecisely defined a
 It has also been charged that maintaining the independence of the patterns is difficult.
 But specification has been defined in a mathematically rigorous manner in several different ways \citep{Dembski1998, Dembski2002, Dembski2005a}.
 Kolmogorov complexity, or a similar concept, is a persistent method used in these definitions.
-Our goal is to present and defend a simple measure of specification that clearly alleviates these concerns.
-Towards this end, this paper proposes to use \textit{conditional Kolmogorov complexity} to quantify the degree of specification in an object.
+The goal of this paper is to present and defend a simple measure of specification that clearly alleviates these concerns.
+Towards this end, the authors propose to use \textit{conditional Kolmogorov complexity} to quantify the degree of specification in an object.
 Conditional Kolmogorov complexity can then be combined with complexity as a measurement of specified complexity. This approach to measuring specified complexity is called \textit{algorithmic specified complexity}.
 
 As noted, Kolmogorov complexity has been suggested as a method for measuring specification.
-The novelty in the method presented in this paper is the use of conditional Kolmogorov complexity.
+The novelty in the method presented here is the use of conditional Kolmogorov complexity.
 However, this paper also elucidates a number of examples of algorithmic compressibility demonstrating wider applicability than is often realized.
 
 \section{Method}
@@ -140,7 +140,7 @@ It can be produced by the following Python program:
     print '100100000010100000001010'
 \end{verbatim}
 \end{mdframed}
-\caption{A Python program to produce an unpatterned bit string}
+\caption{A Python program to produce an unpatterned bitstring}
 \end{figure}
 
 In contrast, the string {\tt 000000000000000000000000} can be produced by
@@ -151,11 +151,11 @@ In contrast, the string {\tt 000000000000000000000000} can be produced by
     print '0' * 24
 \end{verbatim}
 \end{mdframed}
-\caption{A Python program to produce a patterned bit string}
+\caption{A Python program to produce a patterned bitstring}
 \end{figure}
 
-Both strings are of the same length, but the string following a pattern requires a shorter program to produce,
-thus a technique exists for measuring the degree to which a binary string follows a pattern.
+Both strings are of the same length, but the string following a pattern requires a shorter program to produce;
+thus, a technique exists for measuring the degree to which a binary string follows a pattern.
 
 Specification is defined as following an independently given pattern.
 Kolmogorov complexity provides the ability to precisely define and quantify the degree to which a binary string follows a pattern.
@@ -245,7 +245,7 @@ Different values of $X$ will produce different buildings.
 But any building that will not fall over can be expressed by this program.
 It may take a considerable amount of space to encode this number.
 However, if few designs are stable, the number will take much less space than what would be required to actually specify the building plans.
-Thus the stability of the building plan enables compression, which in turn indicates specification.
+Thus, the stability of the building plan enables compression, which in turn indicates specification.
 
 Kolmogorov complexity is not limited to exploiting what humans perceive as simple patterns.
 It can also capture other aspects such as functionality.
@@ -257,14 +257,13 @@ As a result, functional objects are compressible.
 \index{English text}
 Consider the sentence: ``The quick brown fox jumps over the lazy dog.''
 This sentence can be encoded as UTF-32, a system for encoding that allows the encoding of symbols from almost any alphabet.
-Since each character takes 32 bits, the message will be encoded as a total of 1376 bits.
+Since each character takes 32 bits, the message will be encoded as a total of 1,376 bits.
 In this example, the context will be taken to be the English alphabet along with a space.
 This is a minimal level of information about the English language.
 
 To specify one of the 27 characters requires $\log_2 27$ bits. 
-To specify the 43 character in the sentence will thus take $43 \log_2 27$ bits.
-The number of characters are recorded at $2 \log_2 43 \approx 10.85$ bits. 
-\footnote{A more compact representation for numbers is available. See the $log^*$ method in \citet{Cover2006}.}
+To specify the 43 characters in the sentence will thus take $43 \log_2 27$ bits.
+The number of characters are recorded at $2 \log_2 43 \approx 10.85$ bits.\footnote{A more compact representation for numbers is available. See the $log^*$ method in \citet{Cover2006}.}
 Altogether, the specification of the message requires $43 \log_2 27 + 2 \log_2 43 \approx 215.32$ bits. 
 
 
@@ -282,25 +281,25 @@ Here is an example computer program in Python which could interpret the message
 This assumes that the alphabet and encoded message are readily available and in a form amenable to processing within the language.
 It may be that the input has to be preprocessed, which would make the program longer.
 Additionally, the length of the program will vary heavily depending on which programming language is used.
-However, the distances between different computers and languages only differs by a constant \citep{Cover2006}.
-As a result, it is common practice in algorithmic information theory, to discount any actual program length and merely include that length 
+However, the distances between different computers and languages only differ by a constant \citep{Cover2006}.
+As a result, it is common practice in algorithmic information theory to discount any actual program length and merely include that length 
 as a constant, $c$. 
 Consequently, the conditional Kolmogorov complexity can be expressed as 
 \begin{equation}
     \label{kc.alpha}
     K(X|C) \leq 215.32 \mbox{ bits} + c \mbox{.}
 \end{equation}
-The expression is less than rather than equal because it is possible that an even more efficient way of expressing the sentence exists.
+The expression is less than rather than equal to because it is possible that an even more efficient way of expressing the sentence exists.
 However, at least this efficiency is possible.
 
-The encoded version of the sentence requires 32 bits for each character, giving a total of 1376 bits.
+The encoded version of the sentence requires 32 bits for each character, giving a total of 1,376 bits.
 Using a simplistic probability model, supposing that each bit is generated by the equivalent of a coin flip,
 the complexity, $-\log P(X)$, would be 1376 bits.
 Using equation~\ref{ASC},
 \begin{equation}
     A(X,C,p) = -\log(p) - K(X|C) \geq 1376 \mbox{ bits} - 215.32 \mbox{ bits} - c  = 1160.68 \mbox{ bits} - c \mbox{.}
 \end{equation}
-This shows 1166 bits of algorithmic specified complexity by equation~\ref{ASC}.
+This shows 1,166 bits of algorithmic specified complexity by equation~\ref{ASC}.
 Those 1166 bits are a measure of the confidence in rejecting the hypothesis that the sentence was generated by random coin flips.
 The large number of bits gives a good indication that it is highly unlikely that this sentence was generated by randomly choosing bits.
 
@@ -327,7 +326,7 @@ No pattern beyond that explained by the probability model is identified.
 
 The context can also be expanded.
 \index{dictionary}
-Instead of providing the English alphabet as the context, the word list of the Oxford English Dictionary can be used \citep{Oxford2012}.
+Instead of providing the English alphabet as the context, the word list of the \textit{Oxford English Dictionary} can be used \citep{Oxford2012}.
 In the second edition of that dictionary there were 615,100 word forms defined or illustrated.
 For the purpose of the alphabet context, each letter is encoded as a number corresponding to that character.
 In this case, a number corresponding to words in the dictionary is chosen.
@@ -359,7 +358,7 @@ The ASC formula would give a much smaller compressed bound:
     K(X|C) \leq 9 \log_2 10 + 2 \log_2 9 \approx 36.24 \mbox{ bits.}
 \end{equation}
 This is a reduction of over 100 bits from equation~\ref{kc.dict}.
-Because the sentence is much more closely related to the context
+Because the sentence is much more closely related to the context,
 it takes about 16 bits less to encode each word when the dictionary is this small.
 In other words, it requires much less additional information to use the context when it is closely related to the message.
 
@@ -371,7 +370,7 @@ It is always possible a better compression exists, i.e.,\ the object could be mo
 \subsection{Random Noise}
 \index{randomness}
 While natural language is an example of something that should be specified, random noise is an example of something which should not.
-Consider a random bitstring containing 1000 bits, where each bit is assigned with equal probability 1 or 0.
+Consider a random bitstring containing 1,000 bits, where each bit is assigned with equal probability 1 or 0.
 Since randomness is incompressible, calculating the Kolmogorov complexity is easy.
 The only way of reproducing a random bitstring is to describe the whole bitstring.
 \begin{equation}
@@ -405,7 +404,7 @@ It is important to remember that the ASC bound only serves to measure the plausi
 It does not exclude the existence of another more accurate model that explains the data.
 In this case, using the actual probability model used to generate the message yields
 \begin{equation}
-    -\log_2(p) = H(X_i) * 1000 \approx 636.5 \mbox{ bits.}
+    -\log_2(p) = H(X_i) * 1000 \approx 636.5 \mbox{ bits}
 \end{equation}
 and the resulting ASC:
 \begin{equation}
@@ -417,7 +416,7 @@ The bound of ASC provides reason to reject a uniform noise explanation for this 
 Dembski \citep{Dembski1998} has considered the example of ballot rigging where a political party is almost always given the top billing on the ballot listing candidates.
 Since the selection is supposed to be chosen on the basis of a fair coin toss, this is suspicious.
 ASC can quantify this situation.
-The outcome can be described by giving the numbers of heads and tails, follow by the same representation as for the biased coin distribution.
+The outcome can be described by giving the numbers of heads and tails, followed by the same representation as for the biased coin distribution.
 \begin{equation}
     K(X) \leq 2 \log X_h + 2 \log X_t + \log {X_t + X_h \choose X_h} + c
 \end{equation} where $X_h$ is the number of heads, $X_t$ is the number of tails
@@ -437,7 +436,8 @@ This results in the following:
     \caption{ASC for varyingly biased coin sequences and 20 coin tosses}
     \label{fig_coins}
 \end{figure}
-Figure~\ref{fig_coins} shows the result of plotting this equation for varying numbers of head and tails given 20 coin tosses.
+
+\noindent Figure~\ref{fig_coins} shows the result of plotting this equation for varying numbers of head and tails given 20 coin tosses.
 As expected, for either high numbers of tails or high number of heads, the bound of ASC is high.
 However, for an instance which looks like a random sequence, the ASC is minimized.
 
@@ -445,7 +445,7 @@ However, for an instance which looks like a random sequence, the ASC is minimize
 \subsection{Playing Cards}
 
 \index{poker}\index{cards}
-Another interesting case is that of playing cards in poker.
+Another pertinent case is that of playing cards in poker.
 In playing cards, if the distribution is not uniform, somebody is likely cheating.
 For the purpose of investigating card hands, a uniform random distribution over all five-card poker hands is assumed.
 
@@ -474,7 +474,7 @@ a poker hand is made up of 5 cards.
 Some categories of hands are rarer then others.
 Table~\ref{poker} shows the frequency of the different hands.
 
-Given a uniform distribution, every poker hand has the same probability, and thus the same complexity.
+Given a uniform distribution, every poker hand has the same probability and thus the same complexity.
 There are 2,598,960 possible poker hands. 
 For a single hand, this yields a complexity of
 \begin{equation}
@@ -482,9 +482,9 @@ For a single hand, this yields a complexity of
 \end{equation}
 While the probability of every poker hand is the same, the Kolmogorov complexity is not.
 \index{royal flush}
-To describe a royal flush requires specifying that it is a royal flush, and which suit it is in.
+To describe a royal flush requires specifying that it is a royal flush and which suit it is in.
 However, describing a pair requires specifying the paired value as well as both suits in addition to the three cards not involved in the pair.
-In general, describing a hand requires specifying the type of hand, and which particular hand of all the possible hands of that type.
+In general, describing a hand requires specifying the type of hand and which particular hand of all the possible hands of that type.
 This can be used to calculate the conditional Kolmogorov complexity for the hand.
 \begin{equation}
     \label{kc.card}
@@ -510,6 +510,7 @@ Accordingly, the best approach is to take the minimum of the two methods
     \begin{center}
     \begin{tabular}{lllll}
         Name & Frequency & Complexity & Compressed Length & ASC \\
+        \hline
         \input{EwertCards.tex}
     \end{tabular}
     \end{center}
@@ -517,7 +518,7 @@ Accordingly, the best approach is to take the minimum of the two methods
     \label{asc.hands}
 \end{table}
 Table~\ref{asc.hands} shows the ASC for the various poker hands.
-Rare hands have large ASC, but common hands have low ASC.
+Rare hands have high ASC, but common hands have low ASC.
 This parallels expectations, because with a rare hand one might suspect cheating, but with a common hand one will not.
 
 \index{trump}
@@ -528,7 +529,7 @@ This question can be difficult to answer because every possible sequence of trum
 Yet, it is deemed unusual that the same suit is a trump repeatedly.
 Algorithmic specified complexity allows this to be modeled.
 
-The suits are represented as a bit sequence, using two bits for each suit.
+The suits are represented as a bit sequence using two bits for each suit,
 \begin{equation}
     K(X) = \log_2 4 + \log_2 H + c = 2 + \log_2 H + c
 \end{equation} where 4 is the number of suits, and H is the number of hands played.
@@ -541,8 +542,8 @@ The ASC is then
     ASC(X,p) = 2H - 2 - \log_2 H - c \mbox{.}
 \end{equation}
 Note that this equation becomes $-c$ when $H=1$.
-A pattern repeating once is no pattern at all, and does not provide specification.
-\begin{figure}
+A pattern repeating once is no pattern at all and does not provide specification.
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{EwertRepeat}
     \caption{A plot of ASC for getting the same suit repeatedly}
     \label{suit.plot}
@@ -579,14 +580,14 @@ This means that the protein can be described by providing those two numbers.  Th
     K(X|C) = 2 \log_2 L + \log_2 F_L + c
 \end{equation} where $C$ is the context, in this case the law of physics,
 and $F_L$ is the number of folding proteins of length $L$.
-Taking Axe's estimate \citep{axe2004}, and assuming simplistically that it applies for all lengths of proteins:
+Taking Axe's estimate \citep{axe2004}, and assuming simplistically that it applies for all lengths of proteins,
 \begin{equation}
     F_L = 10^{-77} 4^L 
 \end{equation}
 \begin{equation}
     \log F_L = -77 \log 10 + L \log 4
 \end{equation}
-so
+therefore
 \begin{equation}
     K(X|C) = 2 \log_2 L + \log_2 F_L + c = 2 \log_2 L + -77 \log 10  + L \log 4 \mbox{.}
 \end{equation}
@@ -600,7 +601,7 @@ The probability can be calculated as
     -\log_2 \Pr(X) =  -\log_2 4^{-L} = L \log_2 4 \mbox{.}
 \end{equation}
 Caution should be used in applying this formula.
-It assumes that the proportion of functional proteins is applicable for all lengths, and implies that a fractional number of proteins fold.
+It assumes that the proportion of functional proteins is applicable for all lengths and implies that a fractional number of proteins fold.
 
 \index{complexity!metrics!algorithmic specified complexity}
 Finally calculating the ASC,
@@ -658,7 +659,7 @@ If the distribution $p$ is uniform, $p(x) = \frac{1}{|\Omega|}$,
     \sum_{x \in F} f(x) A(x,C,p) 
     \geq \log_2 |\Omega| \sum_{x \in F} f(x) - H(f) - c \sum_{x \in F} f(x)  \mbox{.}
 \end{equation}
-The two summations over F, are summations over a probability distribution and therefore 1.
+The two summations over F are summations over a probability distribution and therefore 1.
 \begin{equation}
     \sum_{x \in F} f(x) A(x,C,p) 
     \geq \log_2 |\Omega| - H(f) - c 
@@ -685,7 +686,7 @@ This is the same constant as elsewhere: the length of the program required to de
 \index{natural law}
 \index{compressibility}
 \index{information}
-We have argued that compressibility in the presence of context is a necessary condition for information.
+It has been argued in this paper that compressibility in the presence of context is a necessary condition for information.
 This is in contrast to others who have argued that lack of compressibility is a necessary condition for information \citep{Abel2005}.
 But compressible objects lack complexity.
 Because a compressible object is describable as some simple pattern, it is amenable to being produced by a simple process.
