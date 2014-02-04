@@ -42,7 +42,7 @@
 \usepackage{mdframed}
 \usepackage{emptypage}
 \usepackage[leftmargin=0.5in,rightmargin=0.5in,indentfirst=false]{quoting}
-
+\usepackage{enumitem}
 
 \definecolor{gray75}{gray}{0.75}
 \definecolor{gray95}{gray}{0.95}
@@ -51,6 +51,8 @@
 \titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray50}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
 
 \setlength{\bibhang}{0.5in}
+
+\setlist{leftmargin=\parindent}
 
 %%% If using showidx, turn off hyperref! and redefine its commands
 %% also add an inch to page margins, and modify width/height by 2 inches
@@ -122,10 +124,11 @@
 
 \renewcommand*\thesection{\arabic{section}}
 
-\newcommand\jdots{\ .\ .\ .\ }
+\newcommand\jdots{\mbox{\ .\ .\ .\ }}
 
 
 % \newcommand\eandmbibliography[1]{\bibliographystyle{apacite}\bibliography{#1}}
+
 
 \renewcommand{\bibsection}{}
 \newcommand\eandmbibliography[1]{\newpage\unnumberednotocsection{References}{References} \bibliographystyle{eandm_url}\bibliography{#1}}
