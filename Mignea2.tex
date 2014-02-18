@@ -2,9 +2,9 @@
 
 \begin{abstract}
 This is the second in a three-part series investigating the internals 
-of the simplest possible self replicator (SSR).  
+of the simplest possible self-replicator (SSR).  
 It builds on the construction of a hypothetical self-replicator devised in 
-Part~1, and considers various 
+Part~1 and considers various 
 significant aspects about the
 design and construction of an artificial, concrete SSR: the material
 basis of its construction, the effects of the variable geometry of the
@@ -14,7 +14,7 @@ material closure, and information closure.
 
 The highest technical
 challenges that need to be faced by the design and construction of the
-artificial SSR will be considered. The emerging complexity of the artificial
+artificial SSR are considered. The emerging complexity of the artificial
 SSR is depicted using a metaphorical comparison of the SSR
 with a city fully populated by automated machinery that
 systematically constructs a new city that is identical
@@ -43,11 +43,11 @@ Full autonomy specifically requires the SSR to exhibit the following characteris
 \item The SSR must fabricate all its energy from input materials, and the
 generated energy must be sufficient for the SSR to produce an exact
 replica of itself. This condition is called the \mterm{energy closure}. 
-\item The SSR must use only materials admitted through its input gateways
+\item The SSR must use only materials admitted through its input gateways,
 and these materials must be sufficient for the SSR to grow and generate
 its daughter. This condition is called the \mterm{material closure}. 
 \item The SSR must use only information that is initially present or stored in the
-mature SSR and this information must be sufficient to produce an
+mature SSR, and this information must be sufficient to produce an
 exact replica of the SSR. This condition is called the
 \mterm{information closure}.
 \end{enumerate}
@@ -70,8 +70,8 @@ machine but much more sophisticated) that analyzes each part or assembly and pro
 a copy, with the goal of simplifying the design and
 avoiding having to maintain such detailed catalogs of information.
 \item Use an exhaustive descriptive, operational and constructional SSR
-information database directing an integrated set of specialized, software
-and computer-controlled automatons.  In other words, have sufficient
+information database directing an integrated set of specialized software
+and computer-controlled automatons, in other words, have sufficient
 data stored about the makeup of the SSR itself to generate a new copy
 from that data.
 \end{enumerate}
@@ -516,10 +516,6 @@ appear \memph{unsolvable}, and thus any project to design and implement an
 artificial macro-scale replicator may be condemned to failure. 
 \index{self-replication!closure requirements|)}
 
-\subsubsection[The match between the SSR design and the design of the
-SSR environment]{The match between the SSR design and the design of the
-SSR environment}
-
 Another way to formulate the material closure challenge is that a
 successful selection of materials used for energy generation and 
 fabrication of internal parts, components, and machinery must be
@@ -527,7 +523,7 @@ based on a thorough knowledge of the environment in which the designed
 SSR is projected to exist, including the nature of raw materials and parts in
 such environment, and realistic material extraction paths
 and processes. 
-In other words the success requires a
+In other words, the success requires a
 perfect design of \emph{both} the SSR and its environment.
 
 \subsection[The Fabrication Challenge]{The Fabrication Challenge}
@@ -566,9 +562,7 @@ materials and parts as well as perform semiconductor fabrication.
 \end{itemize}
 \index{self-replication!fabrication}
 
-\subsection[The Information Closure Challenge and the Hardware/Software
-Completeness Challenge]{The Information Closure Challenge and the
-\mbox{Hardware/Software} Completeness Challenge}
+\subsection[The Information Closure Challenge and the Hardware/Software Completeness Challenge]{The Information Closure Challenge and the \mbox{Hardware/Software} Completeness Challenge}
 
 The SSR's information closure 
 is the requirement that the information contained in the SSR is
@@ -792,13 +786,13 @@ of very small devices; MEMS are also referred to as
 \textit{micromachines} in Japan or \textit{microsystems technology} (\textit{MST}) in Europe. 
 MEMS are comprised of components between 1 to
 100 micrometers in size with devices generally ranging between 20 micrometers (20 millionths of a meter)
-to a millimeter (i.e. 0.02 to 1.0~mm)\citep{lyshevski2000}. The technology made significant
+to a millimeter (i.e., 0.02 to 1.0~mm)\citep{lyshevski2000}. The technology made significant
 advances with several types of MEMS currently being used in modern
 equipment.  Some examples include accelerometers, MEMS gyroscopes, MEMS microphones, pressure
 sensors (used in car tire pressure sensors), disposable blood pressure
 sensors, and micropower devices. This is probably one of the most
 promising types of technology for implementing small-scale, artificial
-SSRs. However, there are still significant hurdles some of which include implementation of
+SSRs. However, there are still significant hurdles, some of which include implementation of
 mobile elements (mini robots) and the common difficulty of fabricating
 the machinery that fabricates MEMS and microprocessors.
 \index{NASA REPRO study}
@@ -847,7 +841,7 @@ systems are considered at length. \citep{freitasgilbreath1982}
 
 Figure \ref{fig:nasa_spirit} below is a piece of artwork that was reproduced from the
 NASA study.  The description below the picture describes one of the features as a
-self-replicating factory: ``{\jdots}In the lower left corner, a lunar
+self-replicating factory: ``In the lower left corner, a lunar
 manufacturing facility rises from the surface of the Moon. Someday,
 such a factory might replicate itself, or at least produce most of its
 own components, so that the number of facilities could grow very
@@ -858,7 +852,7 @@ rapidly from a single seed'' \citep{freitasgilbreath1982}.
 
 The project discusses certain details for a self-replicating lunar factory to be feasible. For one, the seed of the lunar factory that would need to be transported from Earth would likely weigh one hundred tons. Additionally, not all of the machinery could be built on the Moon. Certain items, such as computer boards, would need to be brought from Earth since 
 those parts are much too complex to manufacture on the lunar factory.
-These additional, externally-synthesized items are similar to vitamins, which are compounds organisms need to survive but cannot usually synthesize themselves.  Scientists estimated that this project would be feasible in the 21st century.
+These additional, externally synthesized items are similar to vitamins, which are compounds organisms need to survive but cannot usually synthesize themselves.  Scientists estimated that this project would be feasible in the 21st century.
 
 Figure \ref{fig:lmf_parts_fabrication} illustrates the depth the project reached in considering
 fabrication facilities on the Moon.
@@ -885,13 +879,13 @@ orbit around a gas giant such as Jupiter.
 smaller probes for planetary exploration, but its key purpose was to
 reproduce. Each REPRO probe would create an automated factory that
 would build a new probe every 500 years. Probe by probe, star by star,
-the galaxy would be explored 
+the galaxy would be explored.
 \item The total fueled mass of REPRO was projected to be 10**10 Kg = 10
 **7 tons = 10 million tons for a probe mass of 100,000 tons.
 \item It would take 500 years for REPRO to create a replica of itself in the
-environment of a far-away planet
+environment of a far-away planet.
 \item The estimated exploration time of the galaxy was 1--10 million
-years
+years.
 \end{itemize}
 \index{NASA REPRO study|)}
 
@@ -899,10 +893,10 @@ years
 %[Simplifying Assumptions]
 
 \index{self-replication!design!simplified|(}
-While the discussion so far has focused on building a fully-autonomous SSR, and
+While the discussion so far has focused on building a fully-autonomous SSR and
 the difficulties encountered therein,
 it is possible to reduce the complexity of its design and construction by making
-some simplifying assumptions.  These might include:
+some simplifying assumptions.  These might include the following:
 
 \begin{enumerate}
 \item Eliminate the requirement that the SSR produces its own energy.
