@@ -33,3 +33,4 @@ makeindex Book
 pdflatex Book.tex
 pdflatex Book.tex
 pdflatex Book.tex
+gs-noX11 -sDEVICE=pdfwrite -o Book_adjusted.pdf -dPDFSETTINGS=/prepress -c "<</PageOffset [0 9]>> setpagedevice"  -f Book.pdf
