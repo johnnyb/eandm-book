@@ -67,6 +67,7 @@ Since the project is currently in the exploratory stage, the comparison is infor
 
 \section{Implementation}
 The general technique used is as follows.  A standard \index{genetic algorithm} \index{multi-objective genetic algorithm}multi-objective genetic algorithm is used, a type of \index{stochastic global search}stochastic global search algorithm (Figure \ref{fig:stochastic_global_solution_search}).  A genetic algorithm takes a set of solutions, measures how good each solution is according to some fitness valuation function, varies the solutions to generate a new set using variation operators such as mutation and crossover, and then from both sets of solutions selects an output set according to some criteria.  The algorithm then reiterates this process on each subsequent output set until a stopping criteria is reached.  The \index{solution representation}solutions themselves are represented to the algorithm as fixed length bit strings.  
+The functions \emph{generate} and \emph{select} in Figure \ref{fig:stochastic_global_solution_search} can each incorporate an intelligent agent.  In the implemented version of CSIC, only the \emph{select} function incorporates human interaction, even though the more idealized version can incorporate human interaction in the \emph{generate} phase of the algorithmic process.  
 
 \begin{figure}
   \begin{algorithmic}
@@ -99,7 +100,6 @@ The general technique used is as follows.  A standard \index{genetic algorithm} 
 \label{fig:stochastic_global_solution_search}
 \end{figure}
 
-The functions \emph{generate} and \emph{select} in Figure \ref{fig:stochastic_global_solution_search} can each incorporate an intelligent agent.  In the implemented version of CSIC, only the \emph{select} function incorporates human interaction (Figure \ref{fig:website_UI}), even though the more idealized version can incorporate human interaction in the \emph{generate} phase of the algorithmic process (Figure \ref{fig:CSIC_UI}).  
 
 \subsection{Data Flow}
 The data flow between the human and the algorithm is demonstrated in Figure \ref{fig:data_flow}.  Both the unguided and guided algorithms are run in tandem on the same solution set for greater effectiveness in discovering new solutions.  For experimental purposes, this does muddy the data to an extent, but not irrevocably.  Human-provided solutions are uniquely identified, and the \index{solution phylogeny}phylogeny of each solution is tracked, making it possible to derive the impact of human interaction.  
