@@ -132,9 +132,11 @@
 
 \renewcommand{\bibsection}{}
 \newcommand\eandmbibliography[1]{
+\ifnum\theendnote=0
+\else
 \clearpage
-% \unnumberednotocsection{Notes}{Notes}
 \theendnotes
+\fi
 \clearpage
 \unnumberednotocsection{References}{References} 
 \bibliographystyle{eandm_url}\bibliography{#1}

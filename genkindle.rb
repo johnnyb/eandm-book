@@ -18,13 +18,10 @@ chapters = [
 ]
 
 chapters.each do |chap|
+	puts "Chapter #{chap}"
 	cwrap = "#{chap}Wrapper"
 	cwrapt = "#{cwrap}.tex"
 	`cp Wrapper.tmpl #{cwrapt}`
 	`perl -pi -e s!FILE!#{chap}!gsi #{cwrapt}`
-	`pdflatex #{cwrap}`
-	`bibtex #{cwrap}`
-	`pdflatex #{cwrap}`
-	`pdflatex #{cwrap}`
-	`pdflatex #{cwrap}`
+	`htlatex #{cwrapt}`
 end
