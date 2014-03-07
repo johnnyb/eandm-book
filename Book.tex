@@ -4,8 +4,8 @@
 \usepackage{color}
 \usepackage[titles]{tocloft}
 %\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
-% \usepackage[top=1in,bottom=0.5in,left=0.5in,right=0.5in, paperwidth=7in, paperheight=10in]{geometry}
-% \usepackage{etoolbox}
+\usepackage[top=1in,bottom=0.5in,left=0.5in,right=0.5in, paperwidth=7in, paperheight=10in]{geometry}
+\usepackage{etoolbox}
 %\renewcommand\baselinestretch{3}
 
 %% bibliographies for each chapter, as a section in the chapter
@@ -16,11 +16,12 @@
 \usepackage{floatflt}
 
 %% From Ewert
-% \usepackage{graphicx} 
-\usepackage[dvipdfm]{graphicx} 
+\usepackage{graphicx} 
+%\usepackage[dvipdfm]{graphicx} 
 %\usepackage{bmpsize}
 % \usepackage[natbibapa,sectionbib]{apacite}
 \usepackage[sectionbib,round,colon,authoryear,longnamesfirst]{natbib} 
+\usepackage[stable,bottom]{footmisc}
 
 %% From Holloway
 \usepackage{algorithmic}
@@ -33,25 +34,25 @@
 \usepackage{amsthm}
 % \usepackage{cite}
 \usepackage{makeidx}
-% \usepackage{titlesec}
+\usepackage{titlesec}
 \usepackage{color}
 \usepackage{anyfontsize}
-% \usepackage[margin=1in,font=small]{caption}
+\usepackage[margin=1in,font=small]{caption}
 \usepackage{wrapfig}
 \usepackage{mdframed}
-% \usepackage{emptypage}
-% \usepackage[leftmargin=0.5in,rightmargin=0.5in,indentfirst=false]{quoting}
-% \usepackage{enumitem}
+\usepackage{emptypage}
+\usepackage[leftmargin=0.5in,rightmargin=0.5in,indentfirst=false]{quoting}
+\usepackage{enumitem}
 
 \definecolor{gray75}{gray}{0.75}
 \definecolor{gray95}{gray}{0.95}
 \definecolor{gray25}{gray}{0.25}
 \definecolor{gray50}{gray}{0.50}
-% \titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray50}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
+\titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray50}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
 
 \setlength{\bibhang}{0.5in}
 
-% \setlist{leftmargin=\parindent}
+\setlist{leftmargin=\parindent}
 
 %%% If using showidx, turn off hyperref! and redefine its commands
 %% also add an inch to page margins, and modify width/height by 2 inches
@@ -212,10 +213,10 @@
 
 \makeindex
 
-%\newpagestyle{main}{
-%	\sethead[\thepage][][\textit{\chaptertitle}]{\sectiontitle}{}{\thepage}
-%}
-%\pagestyle{main}
+\newpagestyle{main}{
+	\sethead[\thepage][][\textit{\chaptertitle}]{\sectiontitle}{}{\thepage}
+}
+\pagestyle{main}
 
 \urlstyle{same}
 
