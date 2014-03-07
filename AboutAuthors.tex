@@ -1,7 +1,5 @@
-\chapter*{About the Authors}
-\addcontentsline{toc}{chapter}{About the Authors}
-\chaptermark{About the Authors}
-\sectionmark{}
+\title{About the Authors}
+\maketitle
 
 \setlength{\intextsep}{0pt}%
 % environment to standardize the bios
@@ -10,14 +8,10 @@
 
 	\ifstrequal{#2}{}{}  % skip the image if one wasn't provided
 	{
-		\begin{wrapfigure}{l}{1.5in}
-		 	%\begin{minipage}{1in}
 			\includegraphics[width=1.5in]{#2} %
 			\ifstrequal{#3}{}{%
 			}{\vspace{#3}%
 			}%
-			%\end{minipage}
-		\end{wrapfigure}
 	}
 
 	}{ 

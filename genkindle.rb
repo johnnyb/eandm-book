@@ -4,6 +4,7 @@
 # TitlePages.tex
 
 chapters = [
+'AboutAuthors',
 'Bartlett1',
 'Bartlett2',
 'Ewert',
@@ -16,7 +17,7 @@ chapters = [
 'Mignea3',
 'Sich'
 ]
-chapters = ["Bartlett2"]
+# chapters = ["Bartlett1"]
 
 chapters.each do |chap|
 	puts "Chapter #{chap}"

@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage{xcolor}
+\usepackage{ifpdf}
 \usepackage{color}
 \usepackage[titles]{tocloft}
 %\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
@@ -254,7 +255,11 @@
 
 
 \begin{document}
-\Css{ img { width : 75\% ; } }
+
+\ifpdf
+\else
+\Css{ img[alt="PIC"] { width : 75\% ; max-height : 4in ; margin-left : auto ; margin-right : auto ; display : block ; } .figure .verbatim { padding: 1em ; border : 1px solid black ; } }
+\fi
 
 %% \title{Engineering and the Ultimate}
 
