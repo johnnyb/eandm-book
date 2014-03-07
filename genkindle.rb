@@ -16,7 +16,7 @@ chapters = [
 'Mignea3',
 'Sich'
 ]
-chapters = ["Halsmer"]
+chapters = ["Bartlett2"]
 
 chapters.each do |chap|
 	puts "Chapter #{chap}"
