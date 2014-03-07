@@ -20,7 +20,7 @@ chapters = [
 # chapters = ["Bartlett1"]
 
 chapters.each do |chap|
-	puts "Chapter #{chap}"
+	puts "\n\n\n\n\nChapter #{chap}\n\n\n\n\n\n\n"
 	cwrap = "#{chap}Wrapper"
 	cwrapt = "#{cwrap}.tex"
 	system("cp Wrapper.tmpl #{cwrapt}")
