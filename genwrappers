@@ -1,0 +1,23 @@
+#!/bin/sh
+cp Wrapper.tmpl Bartlett1Wrapper.tex
+cp Wrapper.tmpl Bartlett2Wrapper.tex
+cp Wrapper.tmpl EwertWrapper.tex
+cp Wrapper.tmpl HallWrapper.tex
+cp Wrapper.tmpl HalsmerWrapper.tex
+cp Wrapper.tmpl HollowayWrapper.tex
+cp Wrapper.tmpl IntroductionWrapper.tex
+cp Wrapper.tmpl Mignea1Wrapper.tex
+cp Wrapper.tmpl Mignea2Wrapper.tex
+cp Wrapper.tmpl Mignea3Wrapper.tex
+cp Wrapper.tmpl SichWrapper.tex
+perl -pi -e 's!FILE!Bartlett1!gsi' Bartlett1Wrapper.tex
+perl -pi -e 's!FILE!Bartlett2!gsi' Bartlett2.tex
+perl -pi -e 's!FILE!Ewert!gsi' Ewert.tex
+perl -pi -e 's!FILE!Hall!gsi' Hall.tex
+perl -pi -e 's!FILE!Halsmer!gsi' Halsmer.tex
+perl -pi -e 's!FILE!Holloway!gsi' Holloway.tex
+perl -pi -e 's!FILE!Introduction!gsi' Introduction.tex
+perl -pi -e 's!FILE!Mignea1!gsi' Mignea1.tex
+perl -pi -e 's!FILE!Mignea2!gsi' Mignea2.tex
+perl -pi -e 's!FILE!Mignea3!gsi' Mignea3.tex
+perl -pi -e 's!FILE!Sich!gsi' Sich.tex

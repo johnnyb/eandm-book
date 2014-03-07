@@ -1,0 +1,238 @@
+\documentclass[12pt]{article}
+
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage[titles]{tocloft}
+%\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
+\usepackage[top=1in,bottom=0.5in,left=0.5in,right=0.5in, paperwidth=7in, paperheight=10in]{geometry}
+\usepackage{etoolbox}
+%\renewcommand\baselinestretch{3}
+
+\usepackage{endnotes}
+\let\footnote=\endnote
+
+%% bibliographies for each chapter, as a section in the chapter
+
+%% For Bio photos
+\usepackage{floatflt}
+
+%% From Ewert
+\usepackage{graphicx} 
+%\usepackage[dvipdfm]{graphicx} 
+%\usepackage{bmpsize}
+% \usepackage[natbibapa,sectionbib]{apacite}
+\usepackage[sectionbib,round,colon,authoryear,longnamesfirst]{natbib} 
+% \usepackage[stable,bottom]{footmisc}
+
+%% From Holloway
+\usepackage{algorithmic}
+\usepackage{algorithmextra}
+\usepackage{lscape}
+%% \usepackage{graphicx}
+%% \usepackage{psfrag}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+% \usepackage{cite}
+\usepackage{makeidx}
+% \usepackage{titlesec}
+\usepackage{color}
+\usepackage{anyfontsize}
+% \usepackage[margin=1in,font=small]{caption}
+\usepackage{wrapfig}
+\usepackage{mdframed}
+% \usepackage{emptypage}
+\usepackage[leftmargin=0.5in,rightmargin=0.5in,indentfirst=false]{quoting}
+% \usepackage{enumitem}
+
+\definecolor{gray75}{gray}{0.75}
+\definecolor{gray95}{gray}{0.95}
+\definecolor{gray25}{gray}{0.25}
+\definecolor{gray50}{gray}{0.50}
+% \titleformat{\chapter}[block]{}{\begin{minipage}[t]{0.2\textwidth}\textcolor{gray50}{{\Large\bfseries \thechapter}{\Huge \hspace{20pt}$\Vert$}}\end{minipage}}{0pt}{\begin{minipage}[t]{0.8\textwidth}\raggedleft\Huge\bfseries}[\end{minipage}]
+
+% \setlength{\bibhang}{0.5in}
+
+% \setlist{leftmargin=\parindent}
+
+%%% If using showidx, turn off hyperref! and redefine its commands
+%% also add an inch to page margins, and modify width/height by 2 inches
+%\usepackage{showidx}
+%\newcommand\hypertarget[2]{}
+%\newcommand\url[1]{}
+%\newcommand\href[1]{}
+
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+
+
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{balance}
+%% \usepackage[lastname]{authorindex}
+%% \usepackage{subfigure}
+\usepackage{listings}
+%% \usepackage{color}
+%% \usepackage{rotating}
+% declare the path(s) where your graphic Bartlett1s are
+%% \graphicspath{{./}}
+
+%% From Bartlett2
+\usepackage{float}
+
+%% For OpenOffice exports
+\usepackage{textcomp}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{fixltx2e}
+
+\newcommand\citecustom[2]{(#2, \citeyear{#1})}
+\newcommand\citecustompg[3]{(#2, \citeyear{#1}, #3)}
+\newcommand\citecustomtwo[4]{(#2, \citeyear{#1}; #4, \citeyear{#3})}
+\newcommand\textstyleBookTitle[1]{\textbf{\textsc{#1}}}
+\newcommand\textstyleTitleChar[1]{\textbf{#1}}
+\newcommand\textstyleauthori[1]{#1}
+\newcommand\textstylecitation[1]{#1}
+\newcommand\textstylepagenumber[1]{#1}
+
+\newcommand\unnumberedsection[2]{\setcounter{secnumdepth}{0} \section[#1]{#2}\setcounter{secnumdepth}{2}}
+\newcommand\unnumberednotocsection[2]{
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}\ignorespaces}
+\unnumberedsection{#1}{#2}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}\ignorespaces}
+}
+
+%% For Sich
+\usepackage[T2A,LGR,T1,OT1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,greek,english]{babel}
+
+\DeclareGraphicsExtensions{.eps,.png,.pdf}
+\newenvironment{introquote}{\hfill}{\vspace{2pc}}
+\newenvironment{introquoteref}{\hfill}{\vspace{2pc}}
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}}
+
+\renewcommand*\thesection{\arabic{section}}
+
+\newcommand\jdots{\mbox{\ .\ .\ .\ }}
+
+
+% \newcommand\eandmbibliography[1]{ \bibliographystyle{apacite}\bibliography{#1} }
+
+
+\renewcommand{\bibsection}{}
+\newcommand\eandmbibliography[1]{
+\clearpage
+% \unnumberednotocsection{Notes}{Notes}
+\theendnotes
+\clearpage
+\unnumberednotocsection{References}{References} 
+\bibliographystyle{eandm_url}\bibliography{#1}
+}
+\setlength{\parindent}{0.5in}
+
+%%% add part/chapter labels to toc -- http://tex.stackexchange.com/questions/38625/part-and-tocloft
+%\renewcommand\cftpartpresnum{\partname~}
+%\renewcommand\cftchappresnum{\chaptername~}
+%\renewcommand\cftchapaftersnum{.~~}
+%\newlength\mylenprt
+%\newlength\mylenchp
+%\newlength\mylenapp
+%\settowidth\mylenprt{\cftpartfont\cftpartpresnum\cftpartaftersnum}
+%\settowidth\mylenchp{\cftchapfont\cftchappresnum\cftchapaftersnum}
+%\settowidth\mylenapp{\cftchapfont\appendixname~\cftchapaftersnum}
+%\addtolength\mylenprt{\cftpartnumwidth}
+%\addtolength\mylenchp{\cftchapnumwidth}
+%\addtolength\mylenapp{\cftchapnumwidth}
+%\setlength\cftpartnumwidth{\mylenprt}
+%\setlength\cftchapnumwidth{\mylenchp}
+
+%% These are for Sich's article, in case we want to standardize these
+\newcommand\sbf[1]{\textbf{#1}}
+\newcommand\semph[1]{\textit{#1}}
+\newcommand\sunder[1]{\underline{#1}}
+\newcommand\btitle[1]{\emph{#1}}
+\newcommand\fword[1]{\emph{#1}}
+\newcommand\sundertitle[1]{\underline{#1}}
+\newcommand\foreign[1]{\emph{#1}}
+
+\newcommand\biophoto[1]{\begin{floatingfigure}[p]{1in}\includegraphics[width=2in]{#1}\end{floatingfigure}}
+\newcommand\biosection[2]{\newpage \section*{#1} \biophoto{#2}}
+
+\def\eandmpart#1{%
+  \par\newpage\cleardoublepage % Page break
+  \thispagestyle{empty}
+  \chaptermark{~}
+  \sectionmark{~}
+  \vspace*{1in} % Vertical shift
+  \refstepcounter{part}% Next part
+  {\centering\textbf{\Huge Part \thepart}\par}% 
+  \addcontentsline{toc}{part}{{\thepart}~~~~~#1}
+  \vspace{1cm}% Vertical shift
+  {\centering \textbf{\Huge #1}\par}%
+  \vspace{2cm}% Vertical shift
+  % Some text
+}
+\newenvironment{eandmpartintro}{\begin{mdframed}[backgroundcolor=gray!10,skipabove=\baselineskip,skipbelow=\baselineskip]%
+~\\ 
+}{%
+~\\
+\end{mdframed}
+}
+
+\newcommand\eandmchapter[4]{
+	\title{#2}
+	%\addcontentsline{toc}{chapter}{{#1}\\{#2}}
+
+	\chapterauthor{#3}
+	\chapteraffiliation{#4}
+}
+
+
+\newcommand\chapterauthor[1]{
+	\begin{center}
+		{\Large \textsc{#1}} 
+	\end{center}
+}
+\newcommand\chapteraffiliation[1]{
+	\begin{center}
+		#1
+	\end{center}
+}
+
+%% \newcommand{\myvec}[1]{\vec{#1}} %% how to define a new command
+
+\setcounter{tocdepth}{1}
+
+%% This keeps us from having overlong lines
+\sloppy
+
+\makeindex
+
+% \newpagestyle{main}{
+%	\sethead[\thepage][][\textit{\chaptertitle}]{\sectiontitle}{}{\thepage}
+%}
+%\pagestyle{main}
+
+\urlstyle{same}
+
+% \renewcommand{\includegraphics}[2][]{}
+
+\begin{document}
+%% \title{Engineering and the Ultimate}
+
+\raggedbottom
+
+\include{FILE}
+
+\end{document}
