@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #echo "Extract BB"
-#extractbb -m *.jpg *.png *.pdf
+extractbb -m *.jpg *.png *.pdf
 
 echo "BUILD 1"
-pdflatex Book.tex
+latex Book.tex
 makeindex Book
 echo "Intro Bib"
 bibtex Introduction
@@ -25,12 +25,11 @@ bibtex Bartlett2
 echo "Mignea Bib"
 bibtex Mignea2
 echo "BUILD 2"
-pdflatex Book.tex
+latex Book.tex
 makeindex Book
 echo "BUILD 3"
-pdflatex Book.tex
+latex Book.tex
 makeindex Book
-pdflatex Book.tex
-pdflatex Book.tex
-pdflatex Book.tex
-gs-noX11 -sDEVICE=pdfwrite -o Book_adjusted.pdf -dPDFSETTINGS=/prepress -c "<</PageOffset [0 9]>> setpagedevice"  -f Book.pdf
+latex Book.tex
+latex Book.tex
+latex Book.tex
