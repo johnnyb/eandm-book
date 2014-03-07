@@ -23,12 +23,15 @@ chapters.each do |chap|
 	puts "Chapter #{chap}"
 	cwrap = "#{chap}Wrapper"
 	cwrapt = "#{cwrap}.tex"
-	`cp Wrapper.tmpl #{cwrapt}`
-	`perl -pi -e s!FILE!#{chap}!gsi #{cwrapt}`
-	`pdflatex #{cwrap}`
-	`bibtex #{cwrap}`
+	system("cp Wrapper.tmpl #{cwrapt}")
+	system("perl -pi -e s!FILE!#{chap}!gsi #{cwrapt}")
+	puts "PDFing"
+	system("pdflatex #{cwrap}")
+	puts "Bibtexing"
+	system("bibtex #{cwrap}")
 	#`pdflatex #{cwrap}`
 	#`pdflatex #{cwrap}`
 	#`pdflatex #{cwrap}`
-	`htlatex #{cwrapt} xhtml`
+	puts "htlatexing"
+	system("htlatex #{cwrapt} xhtml")
 end
