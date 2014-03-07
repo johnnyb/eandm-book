@@ -16,6 +16,7 @@ chapters = [
 'Mignea3',
 'Sich'
 ]
+chapters = ["Halsmer"]
 
 chapters.each do |chap|
 	puts "Chapter #{chap}"
@@ -23,5 +24,10 @@ chapters.each do |chap|
 	cwrapt = "#{cwrap}.tex"
 	`cp Wrapper.tmpl #{cwrapt}`
 	`perl -pi -e s!FILE!#{chap}!gsi #{cwrapt}`
-	`htlatex #{cwrapt}`
+	`pdflatex #{cwrap}`
+	`bibtex #{cwrap}`
+	#`pdflatex #{cwrap}`
+	#`pdflatex #{cwrap}`
+	#`pdflatex #{cwrap}`
+	`htlatex #{cwrapt} xhtml`
 end
