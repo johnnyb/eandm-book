@@ -3,4 +3,11 @@ Need to change encoding and meta charset to reflect
 
 
 
+# Get rid of spurious <a> tags in the wrong places
 perl -pi -e 'BEGIN{undef $/;} s!<a[^>]*>\s*</a\s*>!!gsi' *Wrapper.html
+
+# Get rid of spurious <br />s that are around the figure
+perl -pi -e 'BEGIN{undef $/;} s!<br />\s*</p>!</p>!gsi' *.html
+
+# Get rid of spurious <br />s in between-div space
+perl -pi -e 'BEGIN{undef $/;} s!</div>\s*<br />!</div>!gsi' *.html
