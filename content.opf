@@ -7,13 +7,13 @@
 <dc:creator opf:file-as="Hall, Mark R." opf:role="edt">Mark R. Hall</dc:creator>
 <dc:creator opf:file-as="Halsmer, Dominic" opf:role="edt">Dominic Halsmer</dc:creator>
 <meta name="cover" content="cover-image"/>
-<dc:date>2014-03-01-01T00:00:00+00:00</dc:date>
+<dc:date>2014-03-01T00:00:00+00:00</dc:date>
 <dc:contributor opf:role="bkp">Blyth Institute Press</dc:contributor>
 <dc:identifier id="book-id" opf:scheme="ISBN">978-0-9752838-6-8</dc:identifier>
 </metadata>
 <manifest>
-<item href="toc.ncx" media-type="application/x-dtbncx+xml" id="ncx"/>
-<item href="cover.jpeg" id="cover-image" media-type="image/jpeg"/>
+<item href="toc.ncx" media-type="application/x-dtbncx+xml" id="toc"/>
+<item href="cover.jpg" id="cover-image" media-type="image/jpeg"/>
 
 <item href="TitlePagesWrapper.html" id="titlepages" media-type="application/xhtml+xml"/>
 <item href="IntroductionWrapper.html" id="introduction-chapter" media-type="application/xhtml+xml"/>
@@ -29,18 +29,18 @@
 <item href="Mignea3Wrapper.html" id="mignea3-chapter" media-type="application/xhtml+xml"/>
 <item href="AboutAuthorsWrapper.html" id="about-authors" media-type="application/xhtml+xml"/>
 
-<item href="IntroductionWrapper.css" id="introduction-chapter" media-type="text/css"/>
-<item href="HalsmerWrapper.css" id="halsmer-chapter" media-type="text/css"/>
-<item href="SichWrapper.css" id="sich-chapter" media-type="text/css"/>
-<item href="HallWrapper.css" id="hall-chapter" media-type="text/css"/>
-<item href="Bartlett1Wrapper.css" id="bartlett1-chapter" media-type="text/css"/>
-<item href="Bartlett2Wrapper.css" id="bartlett2-chapter" media-type="text/css"/>
-<item href="EwertWrapper.css" id="ewert-chapter" media-type="text/css"/>
-<item href="HollowayWrapper.css" id="holloway-chapter" media-type="text/css"/>
-<item href="Mignea1Wrapper.css" id="mignea1-chapter" media-type="text/css"/>
-<item href="Mignea2Wrapper.css" id="mignea2-chapter" media-type="text/css"/>
-<item href="Mignea3Wrapper.css" id="mignea3-chapter" media-type="text/css"/>
-<item href="AboutAuthorsWrapper.html" id="about-authors" media-type="text/css"/>
+<item href="IntroductionWrapper.css" id="introduction-chapter-css" media-type="text/css"/>
+<item href="HalsmerWrapper.css" id="halsmer-chapter-css" media-type="text/css"/>
+<item href="SichWrapper.css" id="sich-chapter-css" media-type="text/css"/>
+<item href="HallWrapper.css" id="hall-chapter-css" media-type="text/css"/>
+<item href="Bartlett1Wrapper.css" id="bartlett1-chapter-css" media-type="text/css"/>
+<item href="Bartlett2Wrapper.css" id="bartlett2-chapter-css" media-type="text/css"/>
+<item href="EwertWrapper.css" id="ewert-chapter-css" media-type="text/css"/>
+<item href="HollowayWrapper.css" id="holloway-chapter-css" media-type="text/css"/>
+<item href="Mignea1Wrapper.css" id="mignea1-chapter-css" media-type="text/css"/>
+<item href="Mignea2Wrapper.css" id="mignea2-chapter-css" media-type="text/css"/>
+<item href="Mignea3Wrapper.css" id="mignea3-chapter-css" media-type="text/css"/>
+<item href="AboutAuthorsWrapper.css" id="about-authors-css" media-type="text/css"/>
 
 <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
 </manifest>

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -f 9780978283868.epub  9780978283868.zip
+zip -0Xq 9780978283868.zip mimetype
+zip -Xr9Dq 9780978283868.zip *.html *.xhtml *.css *Wrapper*x.png *.jpg *Image*.png toc.ncx content.opf META-INF  -x mimetype
+mv 9780978283868.zip 9780978283868.epub
