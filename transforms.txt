@@ -1,0 +1,6 @@
+Need to change ISO to UTF-8 
+Need to change encoding and meta charset to reflect
+
+
+
+perl -pi -e 'BEGIN{undef $/;} s!<a[^>]*>\s*</a\s*>!!gsi' *Wrapper.html

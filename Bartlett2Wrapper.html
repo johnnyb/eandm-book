@@ -59,10 +59,8 @@ class="abstract"
 </p><!--l. 3--><p class="noindent" ><span 
 class="cmbx-10x-x-109">Abstract</span></p></div>
 
-<a 
- id="dx1-2"></a>
-<a 
- id="dx1-3"></a>
+
+
       <!--l. 6--><p class="indent" >    <span 
 class="cmr-10x-x-109">Calculating the complexity of software projects is important to software</span>
       <span 
@@ -97,10 +95,8 @@ class="cmr-10x-x-109">is orthogonal to cyclomatic complexity (which remains usef
 class="cmr-10x-x-109">substitute for it.</span>
 </p>
 </div>
-       <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
- id="x1-10001"></a>Complexity Metrics in Software</h3>
-<a 
- id="dx1-1001"></a>
+       <h3 class="sectionHead"><span class="titlemark">1   </span> Complexity Metrics in Software</h3>
+
 <!--l. 12--><p class="noindent" >Managing software development is often about managing risks - knowing which tasks are
 likely to take more time than others, which features are more likely to impact others, how
 much testing will be required to make sure that a feature is solid, and whether a bug fix or
@@ -112,10 +108,8 @@ software development managers to know which parts of code are most complex and
 therefore more likely to incur failures if modified.
 </p><!--l. 16--><p class="noindent" >
 </p>
-       <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
- id="x1-20002"></a>A Brief History of Software Complexity Metrics</h3>
-<a 
- id="dx1-2001"></a>
+       <h3 class="sectionHead"><span class="titlemark">2   </span> A Brief History of Software Complexity Metrics</h3>
+
 <!--l. 19--><p class="noindent" >Early complexity metrics were based almost entirely on the amount of code produced.
 Therefore, a function which contained 10 lines of code was considered more complex than
 one which contained only 5. However, since &#8220;lines&#8221; of code often varies due to stylistic
@@ -123,10 +117,8 @@ differences, Halstead developed a set of measures based on the number of operato
 operands present within the code (<a 
 href="#Xkearney">Kearney et&#x00A0;al.</a>,&#x00A0;<a 
 href="#Xkearney">1986</a>).
-<a 
- id="dx1-2002"></a>
-<a 
- id="dx1-2003"></a>
+
+
 </p><!--l. 23--><p class="indent" >       Lines of code and related metrics are still often used for software effort estimation,
 but its use in analyzing code complexity has fallen away. It quickly became clear that
                                                                                    
@@ -142,8 +134,7 @@ how control can move between them. The formula for calculating the complexity
 is:
 </p>
        <table 
-class="equation"><tr><td><a 
- id="x1-2004r1"></a>
+class="equation"><tr><td>
        <center class="math-display" >
 <img 
 src="Bartlett2Wrapper0x.png" alt="E - N  + T
@@ -161,8 +152,7 @@ is 5, then at least 5 tests must be devised to test every branch of code. Such
 tests do not guarantee total coverage of all possible test conditions, but they
 will verify that every statement in the program will contribute to at least one
 test.
-<a 
- id="dx1-2005"></a>
+
 </p><!--l. 34--><p class="indent" >       The ABC metric is a simplified metric combining aspects of both lines of code and
 cyclomatic complexity. It works by simply counting the number of assignment statements,
 the number of branches (direct flow control shifts - i.e., function calls), and the number of
@@ -175,16 +165,11 @@ program.
                                                                                    
                                                                                    
 </p>
-       <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
- id="x1-30003"></a>Deeper Difficulties in Software</h3>
-<a 
- id="dx1-3001"></a>
-<a 
- id="dx1-3002"></a>
-<a 
- id="dx1-3003"></a>
-<a 
- id="dx1-3004"></a>
+       <h3 class="sectionHead"><span class="titlemark">3   </span> Deeper Difficulties in Software</h3>
+
+
+
+
 <!--l. 42--><p class="noindent" >While each of the previously-mentioned metrics have their usefulness, none of
 them get at the deeper difficulties that make software projects complex. Many
 programming languages attempt to remove the inherent difficulties within software.
@@ -195,8 +180,7 @@ turn all software into visual representations, allowing the user to drag and dro
 flowchart-like components to accomplish programming tasks. The idea is that it is the
 text-based nature of the software which causes complexity and confusion within
 software.
-<a 
- id="dx1-3005"></a>
+
 </p><!--l. 45--><p class="indent" >       While each of these actually do relieve certain specific problems in software
 development, none of them are able to remove the complexity of software development
 because the complexity is inherent in the nature of software development itself. What
@@ -204,13 +188,11 @@ makes software development difficult is its open-ended nature. Most general-purp
 programming languages today are universal in nature - that is, they can perform any
 computable function that any other programming language can perform. Thus,
 they are open-ended - the types of operations that they perform are entirely
-specifiable by the programmer and are not restricted.<a 
- id="dx1-3006"></a> Universal programming
+specifiable by the programmer and are not restricted. Universal programming
 languages are chaotic - that is, there is no easy mapping between programs, data, and
 results. Therefore, predicting the output over a wide swath of code and data can be
 difficult.
-<a 
- id="dx1-3007"></a>
+
 </p><!--l. 49--><p class="indent" >       Languages are chaotic because of arbitrary looping structures. Interestingly, this is
 precisely the same part that causes it to be open-ended. Arbitrary looping structures allow
 a programmer to generate any possible computable function. As such, they also allow a
@@ -220,10 +202,8 @@ class="cmtt-12">while</span></span></span> statements, <span class="obeylines-h"
 class="cmtt-12">jump</span></span></span>/<span class="obeylines-h"><span class="verb"><span 
 class="cmtt-12">goto</span></span></span> statements, recursive functions, and
 continuations, though others may be possible.
-<a 
- id="dx1-3008"></a>
-<a 
- id="dx1-3009"></a>
+
+
 </p><!--l. 53--><p class="indent" >       Occasionally, the solution to this problem has been to reduce the scope of the
 language. SuperGlue is one language which is specifically designed to be as expressive as
 possible while avoiding constructs that lead to complexity (<a 
@@ -236,10 +216,8 @@ programming language, universality, as well as the complexity that goes with it,
 required.
 </p><!--l. 55--><p class="noindent" >
 </p>
-       <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
- id="x1-40004"></a>The Halting Problem as an Insight Problem</h3>
-<a 
- id="dx1-4001"></a>
+       <h3 class="sectionHead"><span class="titlemark">4   </span> The Halting Problem as an Insight Problem</h3>
+
 <!--l. 58--><p class="noindent" >As discussed elsewhere in this volume, some problems are not amenable to analytical
 analysis and require insight in order to solve them (<a 
 href="#Xbartlett1">Bartlett</a>,&#x00A0;<a 
@@ -248,8 +226,7 @@ href="#Xholloway">Holloway</a>,&#x00A0;<a
 href="#Xholloway">2014</a>).
 Neither are such problems computable - no computer is capable of calculating these
 problems. One such problem that is relevant is the halting problem.
-<a 
- id="dx1-4002"></a>
+
 </p><!--l. 61--><p class="indent" >       The halting problem states that, given a universal language, there is no program
 that can be written which will tell if any arbitrary program written in that language will
 ever complete (i.e., halt). This is not based on the size of the program code, but rather
@@ -269,8 +246,7 @@ class="cmti-12">create </span>the chaos are precisely the ones <span
 class="cmti-12">required </span>for programs of
 arbitrary complexity), it can be said that human programmers are generally reliable halting
 problem solvers.
-<a 
- id="dx1-4003"></a>
+
 </p><!--l. 66--><p class="indent" >       There are cases (usually coming from number theory) where it is not known whether
 or not programs (even very simple ones!) halt. These seem to indicate that there are
 different levels of difficulty and different levels of insight required to make determinations.
@@ -283,16 +259,13 @@ stop looking for answers in number theory? Or is it better to assume that the
 proper insight will come one day? The ability of programmers to reliably solve
 halting problems in their daily work should lend hope to the mathematicians that
 someone will eventually be able to have the insight to solve their problems as well.
-<a 
- id="dx1-4004"></a>
+
                                                                                    
                                                                                    
 </p><!--l. 69--><p class="noindent" >
 </p>
-       <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
- id="x1-50005"></a>Using the Halting Problem to Measure Software Complexity</h3>
-<a 
- id="dx1-5001"></a>
+       <h3 class="sectionHead"><span class="titlemark">5   </span> Using the Halting Problem to Measure Software Complexity</h3>
+
 <!--l. 73--><p class="noindent" >The trouble with insight problems is that they are not reliably solved by individuals. They
 are unreliably solvable - in other words, a solution is possible, but there is no
 analytic procedure to do so. Even worse, if programmers do not realize that they are
@@ -303,10 +276,8 @@ structures which make a program universal have already been determined (i.e., ar
 looping structures), those structures in code can therefore be detected.
 </p><!--l. 77--><p class="indent" >       For most programming languages, the main structures which must be detected are
 the following:
-<a 
- id="dx1-5002"></a>
-<a 
- id="dx1-5003"></a>
+
+
 </p><!--l. 81--><p class="indent" >
       </p><ol  class="enumerate1" >
       <li 
@@ -324,8 +295,7 @@ square of every number in an array:
 >
                                                                                    
                                                                                    
-<a 
- id="x1-5008r1"></a>
+
                                                                                    
                                                                                    
 <div class="verbatim" id="verbatim-1">
@@ -344,8 +314,7 @@ class="content">A program with an implicitly-terminating loop</span></div><!--te
 >
                                                                                    
                                                                                    
-<a 
- id="x1-5009r2"></a>
+
                                                                                    
                                                                                    
 <div class="verbatim" id="verbatim-2">
@@ -362,8 +331,7 @@ class="content">A program with an arbitrary looping structure</span></div><!--te
                                                                                    
                                                                                    
        </div><hr class="endfigure" />
-<a 
- id="dx1-5010"></a>
+
 <!--l. 115--><p class="indent" >       The implementation in Figure <a 
 href="#x1-5009r2">2<!--tex4ht:ref: fig:expterm --></a> is more complex than the one in Figure <a 
 href="#x1-5008r1">1<!--tex4ht:ref: fig:impterm --></a>, but not
@@ -382,10 +350,8 @@ itself.
 simply count the number of open-ended looping structures (either as loops or recursive
 functions) which occur in the program.
 </p>
-       <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
- id="x1-60006"></a>Adding Axioms to Minimize Insight</h3>
-<a 
- id="dx1-6001"></a>
+       <h3 class="sectionHead"><span class="titlemark">6   </span> Adding Axioms to Minimize Insight</h3>
+
 <!--l. 122--><p class="noindent" >However, as is obvious from Figure <a 
 href="#x1-5009r2">2<!--tex4ht:ref: fig:expterm --></a>, there are many well-understood conventions which
 mitigate the complexity of certain kinds of open-ended looping structures. In that figure,
@@ -395,8 +361,7 @@ predetermined stopping point, which will result in the loop&#8217;s termination.
 where this sequence of steps is not codified within the language using a special statement or
 procedure, it is a well-understood looping convention. If the convention is followed
 correctly, the loop will terminate.
-<a 
- id="dx1-6002"></a>
+
 </p><!--l. 125--><p class="indent" >       Gregory Chaitin formalized this idea in his algorithmic information theory. He
 pointed out that while certain problems were unsolvable given a base set of axioms, by
 incorporating additional axioms into the problem, solutions can be found. For instance,
@@ -425,31 +390,25 @@ non-terminating constructs which do not conform to a pattern in the &#8220;book 
 conventions.&#8221;<sup><a 
 href="#ennote-2" id="enmark-2"><span 
 class="cmr-8">2</span></a></sup>
-<a 
- id="dx1-6003"></a>
+
 </p><!--l. 132--><p class="indent" >       In addition to the constructs which can be statically analyzed, some conventions
 (often termed as &#8220;patterns&#8221;) will not be easily amenable to inference by software.
 They should, however, at least be documented, and they can be manually marked
 or removed after the fact. However, if the construct is not amenable to static
 analysis, extra effort should be taken to review all implementations of the construct
 manually.
-<a 
- id="dx1-6004"></a>
+
 </p><!--l. 135--><p class="indent" >       It should also be recognized that these axioms should be treated as first-class
 insights&#8212;that is, the &#8220;book of conventions&#8221; should be considered a set of valuable
 intellectual assets. As solutions to insight problems, the &#8220;book of conventions&#8221; is by
 definition a set of solutions which are not immediately obvious, and, therefore, if a
 convention is not recorded, and is therefore &#8220;lost,&#8221; it could well be a permanent loss of
-insight for an organization. <a 
- id="dx1-6005"></a>
-<a 
- id="dx1-6006"></a>
+insight for an organization. 
+
 </p><!--l. 140--><p class="noindent" >
 </p>
-       <h3 class="sectionHead"><span class="titlemark">7   </span> <a 
- id="x1-70007"></a>Using the Metric</h3>
-<a 
- id="dx1-7001"></a>
+       <h3 class="sectionHead"><span class="titlemark">7   </span> Using the Metric</h3>
+
 <!--l. 143--><p class="noindent" >The ultimate goal of the metric is to reduce the complexity of the software to zero. When a
 pattern which solves a restricted subset of the halting problem is discovered, it can be
 incorporated as a new axiom into the &#8220;book of conventions.&#8221; Therefore, if there are any
@@ -464,22 +423,19 @@ suspicious.
 &#8220;book of conventions&#8221; should be flagged for a second-pass review to make sure the
 conventions were followed appropriately. Such sections should also be flagged for
 programmers making modifications to be sure that their modifications do not upset the
-assumptions of the conventions. <a 
- id="dx1-7002"></a>
+assumptions of the conventions. 
                                                                                    
                                                                                    
 </p><!--l. 148--><p class="noindent" >
 </p>
-       <h3 class="sectionHead"><span class="titlemark">8   </span> <a 
- id="x1-80008"></a>Further Considerations</h3>
+       <h3 class="sectionHead"><span class="titlemark">8   </span> Further Considerations</h3>
 <!--l. 150--><p class="noindent" >While this metric is very useful, it is obviously not the last word on complexity metrics. It
 does not technically supersede the other complexity metrics mentioned. Counting and
 estimating lines of code are still useful planning tools. Cyclomatic complexity is still a
 useful test coverage tool. However, this metric can be useful in identifying programming
 patterns which are intrinsically problematic and help mitigate possible problems with
 documentation, code review, and testing.
-<a 
- id="dx1-8001"></a>
+
 </p><!--l. 153--><p class="indent" >       For future development, similar ideas could be applied not just to the halting
 complexity, but also to the complexity that variables are derived from. When the value of a
 variable is determined by multiple loops, or conditions within loops, or other sorts of
@@ -490,8 +446,7 @@ lies.
                                                                                    
                                                                                    
 </p>
-       <h3 class="likesectionHead"><a 
- id="x1-90008"></a>Notes</h3>
+       <h3 class="likesectionHead">Notes</h3>
 <!--l. 155--><p class="noindent" ></p><!--l. 4--><p class="indent" >       <a 
 href="#enmark-1" id="ennote-1"><sup><span 
 class="cmr-7">1</span></sup></a><span 
@@ -562,19 +517,16 @@ class="cmr-10">science theory (specifically, the busy beaver problem) rather tha
                                                                                    
                                                                                    
 </p>
-       <h3 class="sectionHead"><a 
- id="x1-100008"></a>References</h3>
+       <h3 class="sectionHead">References</h3>
   <div class="thebibliography">
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xbartlett1"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Bartlett, J. (2014). Using Turing oracles in cognitive models of problem-solving.
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Bartlett, J. (2014). Using Turing oracles in cognitive models of problem-solving.
   In J. Bartlett, D. Halsmer, &amp; M.&#x00A0;R. Hall (Eds.), <span 
 class="cmti-12">Engineering and the ultimate</span>
   (pp.&#x00A0;99&#8211;122). Broken Arrow, OK: Blyth Institute Press.
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xbringsjord"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Bringsjord,  S.,  Kellett,  O.,  Shilliday,  A.,  Taylor,  J.,  van  Heuveln,  B.,
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Bringsjord,  S.,  Kellett,  O.,  Shilliday,  A.,  Taylor,  J.,  van  Heuveln,  B.,
   Yang,  Y.,  Baumes,  J.,  &amp;  Ross,  K.  (2006).     A  new  Gödelian  argument
   for  hypercomputing  minds  based  on  the  busy  beaver  problem.     <span 
 class="cmti-12">Applied</span>
@@ -586,8 +538,7 @@ class="cmsy-10x-x-120">\</span>&amp;rep=rep1<span
 class="cmsy-10x-x-120">\</span>&amp;type=pdf</a>
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xchaitin"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>       Chaitin,       G.       (1982).                    Gödel&#8217;s       theorem       and
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>       Chaitin,       G.       (1982).                    Gödel&#8217;s       theorem       and
   information.  <span 
 class="cmti-12">International Journal of Theoretical Physics</span>, 21, 941&#8211;954.  Available
   from <a 
@@ -595,24 +546,21 @@ href="http://www.cs.auckland.ac.nz/~chaitin/georgia.html" class="url" >http://ww
 class="cmsy-8">~</span>chaitin/georgia.html</a>
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xfitzpatrick"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Fitzpatrick, J. (1997).  Applying the ABC metric to C, C++, and Java.  <span 
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Fitzpatrick, J. (1997).  Applying the ABC metric to C, C++, and Java.  <span 
 class="cmti-12">C++</span>
   <span 
 class="cmti-12">Report</span>. Available from <a 
 href="http://www.softwarerenovation.com/ABCMetric.pdf" class="url" >http://www.softwarerenovation.com/ABCMetric.pdf</a>
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xharland"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Harland, J. (2007).  Analysis of busy beaver machines with inductive proofs.  In
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Harland, J. (2007).  Analysis of busy beaver machines with inductive proofs.  In
   J. Gudmundsson &amp; B. Jay (Eds.), <span 
 class="cmti-12">Cats&#8217;07: Proceedings of the 13th Australasian</span>
   <span 
 class="cmti-12">symposium on theory of computing </span>(pp.&#x00A0;71&#8211;78).
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xhertel"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>      Hertel,      J.      (2009).                 Computing      the      uncomputable
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>      Hertel,      J.      (2009).                 Computing      the      uncomputable
   rado  sigma  function:  An  automated,  symbolic  induction  prover  for  nonhalting
   Turing  machines.   <span 
 class="cmti-12">The  Mathematica  Journal</span>,  11(2),  270&#8211;283.   Available  from
@@ -622,23 +570,20 @@ href="http://www.mathematica-journal.com/issue/v11i2/contents/Hertel/Hertel.pdf"
                                                                                    
                                                                                    
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xholloway"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Holloway,  E.  (2014).    Complex  specified  information  (CSI)  collecting.    In
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Holloway,  E.  (2014).    Complex  specified  information  (CSI)  collecting.    In
   J.  Bartlett,  D.  Halsmer,  &amp;  M.&#x00A0;R.  Hall  (Eds.),  <span 
 class="cmti-12">Engineering  and  the  ultimate</span>
   (pp.&#x00A0;153&#8211;166). Broken Arrow, OK: Blyth Institute Press.
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xkearney"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Kearney, J.&#x00A0;K., Sedlmeyer, R.&#x00A0;L., Thompson, W.&#x00A0;B., Gray, M.&#x00A0;A., &amp; Adler,
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Kearney, J.&#x00A0;K., Sedlmeyer, R.&#x00A0;L., Thompson, W.&#x00A0;B., Gray, M.&#x00A0;A., &amp; Adler,
   M.&#x00A0;A. (1986).  Software complexity measurement.  <span 
 class="cmti-12">Communications of the ACM</span>,
   29(11), 1044&#8211;1050. Available from <a 
 href="http://sunnyday.mit.edu/16.355/kearney.pdf" class="url" >http://sunnyday.mit.edu/16.355/kearney.pdf</a>
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xmccabe"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>   McCabe,   T.&#x00A0;J.   (1976).      A   complexity   measure.      In   <span 
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>   McCabe,   T.&#x00A0;J.   (1976).      A   complexity   measure.      In   <span 
 class="cmti-12">Proceedings  of</span>
   <span 
 class="cmti-12">the  2nd  international  conference  on  software  engineering</span>.     Available  from
@@ -646,8 +591,7 @@ class="cmti-12">the  2nd  international  conference  on  software  engineering</
 href="http://www.literateprogramming.com/mccabe.pdf" class="url" >http://www.literateprogramming.com/mccabe.pdf</a>
   </p>
   <p class="bibitem" ><span class="biblabel">
-<a 
- id="Xmcdirmid"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  McDirmid,  S.  (2006).   Turing  completeness  considered  harmful:  Component
+<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  McDirmid,  S.  (2006).   Turing  completeness  considered  harmful:  Component
   programming with a simple language.  Submitted for publication.  Available from
   <a 
 href="http://lampwww.epfl.ch/~mcdirmid/papers/mcdirmid06turing.pdf" class="url" >http://lampwww.epfl.ch/<span 
