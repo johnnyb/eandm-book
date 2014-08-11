@@ -73,19 +73,19 @@
 	<navPoint id="np11" playOrder="11">
 		<navLabel>
 			<text>Developing Insights into the Design of the Simplest Self-Replicator and Its Complexity: Part 1 - Developing a Functional Model for the Simplest Self-Replicator</text>
-		<navLabel>
+		</navLabel>
 		<content src="Mignea1Wrapper.html"/>
 	</navPoint>
 	<navPoint id="np12" playOrder="12">
 		<navLabel>
 			<text>Developing Insights into the Design of the Simplest Self-Replicator and Its Complexity: Part 2 - Evaluating the Complexity of a Concrete Implementation of an Artificial SSR</text>
-		<navLabel>
+		</navLabel>
 		<content src="Mignea2Wrapper.html"/>
 	</navPoint>
 	<navPoint id="np13" playOrder="13">
 		<navLabel>
 			<text>Developing Insights into the Design of the Simplest Self-Replicator and Its Complexity: Part 3 - The Metaphysics of an Artificial SSR and the Origin of Life Problem</text>
-		<navLabel>
+		</navLabel>
 		<content src="Mignea3Wrapper.html"/>
 	</navPoint>
 	<navPoint id="np14" playOrder="14">

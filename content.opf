@@ -44,7 +44,7 @@
 
 <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
 </manifest>
-<spine toc="ncx">
+<spine toc="toc">
 <itemref idref="titlepage"/>
 <itemref idref="titlepages"/>
 <itemref idref="toc"/>
