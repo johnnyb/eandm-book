@@ -64,6 +64,5 @@
 <guide>
 <reference href="titlepage.xhtml" type="cover" title="Cover"/>
 <reference href="TitlePagesWrapper.html" type="title-page" title="Title Page"/>
-<reference href="toc.ncx" type="toc" title="Table of Contents"/>
 </guide>
 </package>
