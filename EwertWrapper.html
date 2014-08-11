@@ -1,0 +1,1964 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//RU" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Algorithmic Specified Complexity</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- xhtml,html --> 
+<meta name="src" content="EwertWrapper.tex" /> 
+<meta name="date" content="2014-03-07 22:13:00" /> 
+<link rel="stylesheet" type="text/css" href="EwertWrapper.css" /> 
+</head><body 
+>
+                                                                                   
+                                                                                   
+       <div class="maketitle">
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+
+<h2 class="titleHead">Algorithmic Specified Complexity</h2>
+ <div class="author" ></div><br />
+<div class="date" ></div>
+       </div>
+<div class="center" 
+>
+<!--l. 1--><p class="noindent" >
+</p><!--l. 1--><p class="noindent" ><span 
+class="cmcsc-10x-x-172">W<span 
+class="small-caps">i</span><span 
+class="small-caps">n</span><span 
+class="small-caps">s</span><span 
+class="small-caps">t</span><span 
+class="small-caps">o</span><span 
+class="small-caps">n</span> E<span 
+class="small-caps">w</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">t</span>, W<span 
+class="small-caps">i</span><span 
+class="small-caps">l</span><span 
+class="small-caps">l</span><span 
+class="small-caps">i</span><span 
+class="small-caps">a</span><span 
+class="small-caps">m</span> A. D<span 
+class="small-caps">e</span><span 
+class="small-caps">m</span><span 
+class="small-caps">b</span><span 
+class="small-caps">s</span><span 
+class="small-caps">k</span><span 
+class="small-caps">i</span>, <span 
+class="small-caps">a</span><span 
+class="small-caps">n</span><span 
+class="small-caps">d</span></span>
+<span 
+class="cmcsc-10x-x-172">R<span 
+class="small-caps">o</span><span 
+class="small-caps">b</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">t</span> J. M<span 
+class="small-caps">a</span><span 
+class="small-caps">r</span><span 
+class="small-caps">k</span><span 
+class="small-caps">s</span> II</span></p></div>
+<div class="center" 
+>
+<!--l. 1--><p class="noindent" >
+</p><!--l. 1--><p class="noindent" >Baylor University<br />
+Discovery Institute</p></div>
+
+<a 
+ id="dx1-2"></a>
+       <div 
+class="abstract" 
+>
+<div class="center" 
+>
+<!--l. 5--><p class="noindent" >
+</p><!--l. 5--><p class="noindent" ><span 
+class="cmbx-10x-x-109">Abstract</span></p></div>
+<a 
+ id="dx1-3"></a>
+<a 
+ id="dx1-4"></a>
+                                                                                   
+                                                                                   
+      <!--l. 8--><p class="indent" >    <span 
+class="cmr-10x-x-109">Engineers like to think that they produce something different from that of</span>
+      <span 
+class="cmr-10x-x-109">a chaotic system. The Eiffel tower is fundamentally different from the same</span>
+      <span 
+class="cmr-10x-x-109">components lying in a heap on the ground. Mt. Rushmore is fundamentally</span>
+      <span 
+class="cmr-10x-x-109">different from a random mountainside. But engineers lack a good method for</span>
+      <span 
+class="cmr-10x-x-109">quantifying this idea. This has led some to reject the idea that engineered or</span>
+      <span 
+class="cmr-10x-x-109">designed systems can be detected. Various methods have been proposed, each</span>
+      <span 
+class="cmr-10x-x-109">of which has various faults. Some have trouble distinguishing noise from data,</span>
+      <span 
+class="cmr-10x-x-109">some are subjective, etc. For this study, conditional Kolmogorov complexity</span>
+      <span 
+class="cmr-10x-x-109">is used to measure the degree of specification of an object. The Kolmogorov</span>
+      <span 
+class="cmr-10x-x-109">complexity of an object is the length of the shortest computer program required</span>
+      <span 
+class="cmr-10x-x-109">to describe that object. Conditional Kolmogorov complexity is Kolmogorov</span>
+      <span 
+class="cmr-10x-x-109">complexity with access to a context. The program can extract information</span>
+      <span 
+class="cmr-10x-x-109">from the context in a variety of ways allowing more compression. The more</span>
+      <span 
+class="cmr-10x-x-109">compressible an object is, the greater the evidence that the object is specified.</span>
+      <span 
+class="cmr-10x-x-109">Random noise is incompressible, and so compression indicates that the object</span>
+      <span 
+class="cmr-10x-x-109">is not simply random noise. This model is intended to launch further dialog</span>
+      <span 
+class="cmr-10x-x-109">on use of conditional Kolmogorov complexity in the measurement of specified</span>
+      <span 
+class="cmr-10x-x-109">complexity.</span>
+</p>
+</div>
+       <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<a 
+ id="dx1-1001"></a>
+<!--l. 15--><p class="noindent" >Intuitively, humans identify objects such as the carved faces at Mount Rushmore as
+qualitatively different from that of a random mountainside. However, quantifying
+this concept in an objective manner has proved difficult. Both mountainsides are
+made up of the same material components. They are both subject to the same
+physical forces and will react the same to almost all physical tests. Yet, there
+does appear to be something quite different about Mount Rushmore. There is a
+special something about carved faces that separates it from the rock it is carved
+in.
+</p>
+       <hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-1002r1"></a>
+                                                                                   
+                                                                                   
+
+<!--l. 24--><p class="noindent" ><img 
+src="MountRushmore.jpg" alt="PIC"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;1: </span><span  
+class="content">The faces of Mount Rushmore&#8212;Public Domain</span></div><!--tex4ht:label?: x1-1002r1 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<a 
+ id="dx1-1003"></a>
+<!--l. 29--><p class="indent" >       This &#8220;special something&#8221; is information. Information is what distinguishes an empty
+hard disk from a full one. Information is the difference between random scribbling and
+carefully printed prose. Information is the difference between car parts strewn over a lawn
+and a working truck.
+<a 
+ id="dx1-1004"></a>
+<a 
+ id="dx1-1005"></a>
+</p><!--l. 36--><p class="indent" >       While humans operate using an intuitive concept of information, attempts to
+develop a theory of information have thus far fallen short of the intuitive concept. Claude
+Shannon developed what its today known as Shannon information theory (<a 
+href="#XShannon1948">Shannon
+et&#x00A0;al.</a>,&#x00A0;<a 
+href="#XShannon1948">1950</a>). Shannon&#8217;s concern was studying the problem of communication, that of
+sending information from one point to another. However, Shannon explicitly avoided the
+question of the meaningfulness of the information being transmitted, thus not quite
+capturing the concept of information as defined in this paper. In fact, under Shannon&#8217;s
+model a random signal has the highest amount of information, the precise opposite of the
+intuitive concept.
+<a 
+ id="dx1-1006"></a>
+</p><!--l. 43--><p class="indent" >       Another model of information is that of algorithmic information theory
+(<a 
+href="#XChaitin1966">Chaitin</a>,&#x00A0;<a 
+href="#XChaitin1966">1966</a>;&#x00A0;<a 
+href="#XSolomonoff1960">Solomonoff</a>,&#x00A0;<a 
+href="#XSolomonoff1960">1960</a>;&#x00A0;<a 
+href="#XKolmogorov1968a">Kolmogorov</a>,&#x00A0;<a 
+href="#XKolmogorov1968a">1968b</a>). <a 
+ id="dx1-1007"></a><a 
+ id="dx1-1008"></a> Techniques such as Kolmogorov
+complexity measure the complexity of an object as the minimum length computer program
+required to recreate the object; Chaitin refers to such minimum length programs as <span 
+class="cmti-12">elegant</span>
+(<a 
+href="#XChaitin2002">Chaitin</a>,&#x00A0;<a 
+href="#XChaitin2002">2002</a>). As with Shannon information, random noise is the most complex because
+it requires a long computer program to describe. In contrast, simple patterns are not
+complex because a short computer program can describe the pattern. But neither simple
+patterns nor random noise are considered conceptual information. As with Shannon
+information, there is a disconnect between Kolmogorov complexity and conceptual
+information.
+</p><!--l. 52--><p class="indent" >       Other models are based on algorithmic information theory, but also take into
+account the computational resources required for the programs being run. <a 
+ id="dx1-1009"></a>Levin complexity
+adds the log of the execution time to the complexity of the problem (<a 
+href="#XLevin1976">Levin</a>,&#x00A0;<a 
+href="#XLevin1976">1976</a>). <a 
+ id="dx1-1010"></a><a 
+ id="dx1-1011"></a> <span 
+class="cmti-12">Logical</span>
+<span 
+class="cmti-12">depth</span>, on the other hand, is concerned with the execution time of the shortest program
+(<a 
+href="#XBennett1988">Bennett</a>,&#x00A0;<a 
+href="#XBennett1988">1988</a>). There is a class of objects which are easy to describe but expensive to
+actually produce. It is argued (<a 
+href="#XBennett1988">Bennett</a>,&#x00A0;<a 
+href="#XBennett1988">1988</a>) that objects in this class must
+have been produced over a long history. Such objects are interesting, but do not
+seem to capture the intuitive concept of information in its entirety. English text
+or Mount Rushmore correspond to what is usually considered as information,
+but it is not clear that they can be most efficiently described as long running
+programs.
+<a 
+ id="dx1-1012"></a>
+<a 
+ id="dx1-1013"></a>
+<a 
+ id="dx1-1014"></a>
+                                                                                   
+                                                                                   
+<a 
+ id="dx1-1015"></a>
+<a 
+ id="dx1-1016"></a>
+<a 
+ id="dx1-1017"></a>
+</p><!--l. 69--><p class="indent" >       One approach to information is <span 
+class="cmti-12">specified complexity </span>as expressed by Dembski
+(<a 
+href="#XDembski1998">Dembski</a>,&#x00A0;<a 
+href="#XDembski1998">1998</a>). Dembski&#8217;s concern is that of detecting design, the separation of that
+which can be explained by chance or necessity from that which is the product of
+intelligence. In order to infer design, an object must be both complex and specified.
+Complexity refers, essentially, to improbability. The probability of any given object
+depends on the chance hypothesis proposed to explain it. Improbability is a necessary but
+not sufficient condition for rejecting a chance hypothesis. Events which have a high
+probability under a given chance hypothesis do not give a reason to reject that
+hypothesis.
+<a 
+ id="dx1-1018"></a>
+</p><!--l. 78--><p class="indent" >       Specification is defined as conforming to an independently given pattern. The
+requirement for the pattern to be independent of the object being investigated is
+fundamental. Given absolute freedom of pattern selection, any object can be made to
+seem specified by selecting that object as the pattern. It is not impressive to
+hit a bullseye if the bullseye is painted on after the arrow has hit the wall. It is
+impressive to hit the bullseye if the bullseye was painted before the arrow was
+fired.
+<a 
+ id="dx1-1019"></a>
+</p><!--l. 85--><p class="indent" >       Investigators are often not able to choose the target prior to investigating the
+object. For example, life is a self-replicating process, and it would seem that an appropriate
+specification would be self-replication. Self-replication is what makes life such a fascinating
+area of investigation as compared to rocks. Human beings know about self-replication
+<span 
+class="cmti-12">because of </span>their knowledge of life, not as an independent fact. Therefore, it does not qualify
+as an independent specification.
+</p><!--l. 92--><p class="indent" >       The same is true of almost any specification in biology. It is tempting to consider
+flight a specification, but the pattern of flight would only be defined because flying animals
+have been observed. As with life in general, specific features in biology cannot be specified
+independently of the objects themselves.
+<a 
+ id="dx1-1020"></a>
+<a 
+ id="dx1-1021"></a>
+<a 
+ id="dx1-1022"></a>
+<a 
+ id="dx1-1023"></a>
+</p><!--l. 100--><p class="indent" >       The concept of specification has been criticized for being imprecisely defined and
+unquantifiable. It has also been charged that maintaining the independence of the patterns
+is difficult. But specification has been defined in a mathematically rigorous manner in
+several different ways (<a 
+href="#XDembski1998">Dembski</a>,&#x00A0;<a 
+href="#XDembski1998">1998</a>,&#x00A0;<a 
+href="#XDembski2002">2002</a>,&#x00A0;<a 
+href="#XDembski2005a">2005</a>). Kolmogorov complexity, or a similar
+concept, is a persistent method used in these definitions. The goal of this paper is to
+present and defend a simple measure of specification that clearly alleviates these concerns.
+Towards this end, the authors propose to use <span 
+class="cmti-12">conditional Kolmogorov complexity </span>to
+                                                                                   
+                                                                                   
+quantify the degree of specification in an object. Conditional Kolmogorov complexity can
+then be combined with complexity as a measurement of specified complexity.
+This approach to measuring specified complexity is called <span 
+class="cmti-12">algorithmic specified</span>
+<span 
+class="cmti-12">complexity</span>.
+</p><!--l. 108--><p class="indent" >       As noted, Kolmogorov complexity has been suggested as a method for measuring
+specification. The novelty in the method presented here is the use of conditional
+Kolmogorov complexity. However, this paper also elucidates a number of examples
+of algorithmic compressibility demonstrating wider applicability than is often
+realized.
+</p>
+       <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Method</h3>
+<!--l. 114--><p class="noindent" >
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">2.1   </span> <a 
+ id="x1-30002.1"></a>Kolmogorov</h4>
+<a 
+ id="dx1-3001"></a>
+<!--l. 117--><p class="noindent" >Kolmogorov complexity is a method of measuring information. It is defined as
+the minimum length computer program, in bits, required to produce a binary
+string.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-3002r1"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper0x.png" alt="K (X ) =    min     |p|
+         U(p,)=X |p&#x2208;P
+" class="math-display"  /></center></td><td class="equation-label">(1)</td></tr></table>
+<!--l. 121--><p class="nopar" >
+where </p>
+      <ul class="itemize1">
+      <li class="itemize"><span 
+class="cmmi-12">K</span>(<span 
+class="cmmi-12">X</span>) is the Kolmogorov complexity of X
+                                                                                   
+                                                                                   
+      </li>
+      <li class="itemize"><span 
+class="cmmi-12">P </span>is the set of all possible computer programs
+      </li>
+      <li class="itemize"><span 
+class="cmmi-12">U</span>(<span 
+class="cmmi-12">p, </span>) is the output of program <span 
+class="cmmi-12">p </span>run without input</li></ul>
+<!--l. 127--><p class="noindent" >The definition is given for producing binary strings.
+</p><!--l. 129--><p class="indent" >       Kolmogorov complexity measures the degree to which a given bitstring follows a
+pattern. The more a bitstring follows a pattern, the shorter the program required to
+reproduce it. In contrast, if a bitstring exhibits no patterns, it is simply random, and a
+much longer program will be required to produce it.
+<a 
+ id="dx1-3003"></a>
+</p><!--l. 134--><p class="indent" >       Consider the example of a random binary string, <span 
+class="cmtt-12">100100000010100000001010</span>. It
+can be produced by the following Python program:
+</p>
+       <hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-3004r2"></a>
+                                                                                   
+                                                                                   
+<div class="verbatim" id="verbatim-1">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;print&#x00A0;&#8217;100100000010100000001010&#8217;
+</div>
+<!--l. 141--><p class="nopar" >
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">A Python program to produce an unpatterned bitstring</span></div><!--tex4ht:label?: x1-3004r2 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<!--l. 146--><p class="indent" >       In contrast, the string <span 
+class="cmtt-12">000000000000000000000000 </span>can be produced by
+</p>
+       <hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-3005r3"></a>
+                                                                                   
+                                                                                   
+<div class="verbatim" id="verbatim-2">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;print&#x00A0;&#8217;0&#8217;&#x00A0;*&#x00A0;24
+</div>
+<!--l. 152--><p class="nopar" >
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;3: </span><span  
+class="content">A Python program to produce a patterned bitstring</span></div><!--tex4ht:label?: x1-3005r3 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<!--l. 157--><p class="indent" >       Both strings are of the same length, but the string following a pattern requires a
+shorter program to produce; thus, a technique exists for measuring the degree to which a
+binary string follows a pattern.
+</p><!--l. 160--><p class="indent" >       Specification is defined as following an independently given pattern. Kolmogorov
+complexity provides the ability to precisely define and quantify the degree to which a
+binary string follows a pattern. Therefore, it seems plausible that a specification can be
+measured using Kolmogorov complexity. The more compressible a bitstring, the more
+specified it is.
+</p><!--l. 165--><p class="indent" >       However, Kolmogorov complexity seems unable to capture the entirety of what is
+intended by specification. Natural language text is not reducible to a simple pattern;
+however, it is an example of specification. The design of an electronic circuit should also be
+specified, but it is not reducible to a simple pattern. In fact, the cases of specification that
+Kolmogorov complexity seems able to capture are limited to objects which exhibit some
+very simple pattern. But these are not the objects of most interest in terms of specification.
+<a 
+ id="dx1-3006"></a>
+<a 
+ id="dx1-3007"></a>
+</p><!--l. 173--><p class="indent" >       There is also an extension of Kolmogorov complexity known as <span 
+class="cmti-12">conditional</span>
+<span 
+class="cmti-12">Kolmogorov complexity </span>which can be used (<a 
+href="#XKolmogorov1968">Kolmogorov</a>,&#x00A0;<a 
+href="#XKolmogorov1968">1968a</a>). With conditional
+Kolmogorov complexity, the program now has access to additional data as its
+input.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-3008r2"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper1x.png" alt="K  (X |Y ) = U(p,Ym)i=nX |p&#x2208;P |p|
+" class="math-display"  /></center></td><td class="equation-label">(2)</td></tr></table>
+<!--l. 177--><p class="nopar" >
+where <span 
+class="cmmi-12">U</span>(<span 
+class="cmmi-12">p,Y </span>) is the output of running program <span 
+class="cmmi-12">p </span>with input <span 
+class="cmmi-12">Y </span>.
+</p><!--l. 179--><p class="indent" >       In this calculation, the input provides additional data to the program. As a result,
+the program is no longer restricted to exploiting patterns in the desired output but can
+take advantage of the information provided by the input. <a 
+ id="dx1-3009"></a>Henceforth, this input is referred
+to as the <span 
+class="cmti-12">context</span>.
+</p><!--l. 184--><p class="indent" >       The use of context allows the measure to capture a broader range of specifications.
+It is possible to describe many bitstrings by combining a short program along with the
+                                                                                   
+                                                                                   
+contextual information. A useful range of specifications can be captured using this
+technique. <a 
+ id="dx1-3010"></a>
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">2.2   </span> <a 
+ id="x1-40002.2"></a>Algorithmic Specified Complexity</h4>
+<a 
+ id="dx1-4001"></a>
+<!--l. 192--><p class="noindent" >The following formula for algorithmic specified complexity (ASC) combines the
+measurement of specification and complexity.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-4002r3"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper2x.png" alt="A (X, C, p) = - logp (X  ) - K (X |C )
+" class="math-display"  /></center></td><td class="equation-label">(3)</td></tr></table>
+<!--l. 196--><p class="nopar" >
+where </p>
+      <ul class="itemize1">
+      <li class="itemize"><span 
+class="cmmi-12">X </span>is the bitstring being investigated
+      </li>
+      <li class="itemize"><span 
+class="cmmi-12">C </span>is the context as a bitstring
+      </li>
+      <li class="itemize"><span 
+class="cmmi-12">p </span>is the probability distribution which it is supposed that <span 
+class="cmmi-12">X </span>has been selected
+      from
+      </li>
+      <li class="itemize"><span 
+class="cmmi-12">p</span>(<span 
+class="cmmi-12">X</span>) is the probability of <span 
+class="cmmi-12">X </span>occurring according to the chance hypothesis under
+      consideration</li></ul>
+<!--l. 203--><p class="noindent" >Since high compressibility corresponds to specification, the compressed length of the string is
+subtracted. Thus, high improbability counts for specified complexity, but incompressible
+strings count against it.
+                                                                                   
+                                                                                   
+</p><!--l. 206--><p class="indent" >       For this number to become large requires <span 
+class="cmmi-12">X </span>to be both complex (i.e., improbable)
+and specified (i.e., compressible). Failing on either of these counts will produce a low or
+negative value. Since Kolmogorov complexity can, at best, be upper bounded, the ASC can,
+at best, be lower bounded.
+</p><!--l. 210--><p class="indent" >       At best this measure can reject a given probability distribution. It makes no
+attempt to rule out chance-based hypotheses in general. However, it can conclude that a
+given probability distribution does a poor job in explaining a particular item. The
+value of ASC gives a measure of the confidence available for rejecting a chance
+hypothesis.
+</p><!--l. 215--><p class="noindent" >
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">2.3   </span> <a 
+ id="x1-50002.3"></a>Functionality</h4>
+<a 
+ id="dx1-5001"></a>
+<!--l. 218--><p class="noindent" >Perhaps the most interesting form of specification is that of functionality. It is clear that
+machines, biological structures, and buildings all have functionality, but quantifying that
+functionality in an objective manner has proven difficult. However, ASC provides the
+ability to do this.
+</p><!--l. 223--><p class="indent" >       Any machine can be described in part by tests that it will pass: The functionality of
+a car can be tested by seeing whether it accelerates when the gas or brake pedals are
+pushed; the functionality of a cell by seeing whether it self-replicates. A test, or a number
+of tests, can be defined to identify the functionality of an object. The existence of a test
+supplies the ability to compress the object. Consider the following pseudocode
+program.
+</p>
+       <hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-5002r4"></a>
+                                                                                   
+                                                                                   
+<div class="verbatim" id="verbatim-3">
+counter&#x00A0;=&#x00A0;0
+&#x00A0;<br />for&#x00A0;each&#x00A0;possible&#x00A0;building&#x00A0;design
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;if&#x00A0;building&#x00A0;won&#8217;t&#x00A0;fall&#x00A0;over
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;counter&#x00A0;+=&#x00A0;1
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;if&#x00A0;counter&#x00A0;==&#x00A0;X
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;return&#x00A0;building&#x00A0;design
+</div>
+<!--l. 239--><p class="nopar" >
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;4:  </span><span  
+class="content">A  pseudocode  program  which  uses  a  functional  test  to  compress  the
+specification of an object by its functionality</span></div><!--tex4ht:label?: x1-5002r4 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<!--l. 243--><p class="indent" >       This program will output the design for a specific building based on a given value
+for <span 
+class="cmmi-12">X</span>. Different values of <span 
+class="cmmi-12">X </span>will produce different buildings. But any building that will not
+fall over can be expressed by this program. It may take a considerable amount of space to
+encode this number. However, if few designs are stable, the number will take much less
+space than what would be required to actually specify the building plans. Thus,
+the stability of the building plan enables compression, which in turn indicates
+specification.
+</p><!--l. 250--><p class="indent" >       Kolmogorov complexity is not limited to exploiting what humans perceive as simple
+patterns. It can also capture other aspects such as functionality. Functionality can be
+described as passing a test. As a result, functional objects are compressible.
+</p>
+       <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-60003"></a>Examples</h3>
+<!--l. 256--><p class="noindent" >
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
+ id="x1-70003.1"></a>Natural Language</h4>
+<a 
+ id="dx1-7001"></a>
+<!--l. 258--><p class="noindent" >Consider the sentence: &#8220;The quick brown fox jumps over the lazy dog.&#8221; This sentence can
+be encoded as UTF-32, a system for encoding that allows the encoding of symbols from
+almost any alphabet. Since each character takes 32 bits, the message will be encoded as a
+total of 1,376 bits. In this example, the context will be taken to be the English alphabet
+along with a space. This is a minimal level of information about the English
+language.
+</p><!--l. 264--><p class="indent" >       To specify one of the 27 characters requires log <sub><span 
+class="cmr-8">2</span></sub>27 bits. To specify the 43 characters
+in the sentence will thus take 43 log <sub><span 
+class="cmr-8">2</span></sub>27 bits. The number of characters are recorded
+at 2 log <sub><span 
+class="cmr-8">2</span></sub>43 <span 
+class="cmsy-10x-x-120">&#x2248; </span>10<span 
+class="cmmi-12">.</span>85 bits.<sup><a 
+href="#ennote-1" id="enmark-1"><span 
+class="cmr-8">1</span></a></sup> Altogether, the specification of the message requires
+43 log <sub><span 
+class="cmr-8">2</span></sub>27 + 2 log <sub><span 
+class="cmr-8">2</span></sub>43 <span 
+class="cmsy-10x-x-120">&#x2248; </span>215<span 
+class="cmmi-12">.</span>32 bits.
+</p><!--l. 270--><p class="indent" >       However, in order to actually give a bound for Kolmogorov complexity, the length
+of the computer program which interprets the bits must also be included. Here
+is an example computer program in Python which could interpret the message
+</p><hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-7002r5"></a>
+                                                                                   
+                                                                                   
+<div class="verbatim" id="verbatim-4">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;print&#x00A0;&#8217;&#8217;.join(alphabet[index]&#x00A0;for&#x00A0;index&#x00A0;in&#x00A0;encoded_message)
+</div>
+<!--l. 276--><p class="nopar" >
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;5: </span><span  
+class="content">An example Python program to interpret the encoded message</span></div><!--tex4ht:label?: x1-7002r5 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<!--l. 281--><p class="indent" >       This assumes that the alphabet and encoded message are readily available and in a
+form amenable to processing within the language. It may be that the input has to be
+preprocessed, which would make the program longer. Additionally, the length of the
+program will vary heavily depending on which programming language is used. However, the
+distances between different computers and languages only differ by a constant (<a 
+href="#XCover2006">Cover &amp;
+Thomas</a>,&#x00A0;<a 
+href="#XCover2006">2006</a>). As a result, it is common practice in algorithmic information
+theory to discount any actual program length and merely include that length as a
+constant, <span 
+class="cmmi-12">c</span>. Consequently, the conditional Kolmogorov complexity can be expressed
+as
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7003r4"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper3x.png" alt="K (X |C) &#x2264; 215.32 bits + c.
+" class="math-display"  /></center></td><td class="equation-label">(4)</td></tr></table>
+<!--l. 291--><p class="nopar" >
+The expression is less than rather than equal to because it is possible that an even more
+efficient way of expressing the sentence exists. However, at least this efficiency is
+possible.
+</p><!--l. 295--><p class="indent" >       The encoded version of the sentence requires 32 bits for each character, giving a
+total of 1,376 bits. Using a simplistic probability model, supposing that each bit is
+generated by the equivalent of a coin flip, the complexity, <span 
+class="cmsy-10x-x-120">-</span> log <span 
+class="cmmi-12">P</span>(<span 
+class="cmmi-12">X</span>), would be 1376 bits.
+Using equation&#x00A0;<a 
+href="#x1-4002r3">3<!--tex4ht:ref: ASC --></a>,
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7004r5"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper4x.png" alt="A (X, C,p) = - log(p) - K (X |C) &#x2265; 1376 bits - 215.32 bits - c = 1160.68 bits - c.
+" class="math-display"  /></center></td><td class="equation-label">(5)</td></tr></table>
+<!--l. 301--><p class="nopar" >
+This shows 1,166 bits of algorithmic specified complexity by equation&#x00A0;<a 
+href="#x1-4002r3">3<!--tex4ht:ref: ASC --></a>. Those 1166 bits
+are a measure of the confidence in rejecting the hypothesis that the sentence was
+generated by random coin flips. The large number of bits gives a good indication
+that it is highly unlikely that this sentence was generated by randomly choosing
+bits.
+</p><!--l. 306--><p class="indent" >       The hypothesis that the sentence was generated by choosing random English letters
+can also be analyzed. In this case the probability of this sentence can be calculated
+as
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7005r6"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper5x.png" alt="        (  1)43
+P(X ) =   ---   .
+          27
+" class="math-display"  /></center></td><td class="equation-label">(6)</td></tr></table>
+<!--l. 310--><p class="nopar" >
+The complexity is then
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7006r7"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper6x.png" alt="                   (    )43
+- logP (X ) = - log  -1-    = 43 log 27 &#x2248; 204.46 bits,
+                     27
+" class="math-display"  /></center></td><td class="equation-label">(7)</td></tr></table>
+                                                                                   
+                                                                                   
+<!--l. 314--><p class="nopar" >
+in which case the algorithmic specified complexity becomes
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7007r8"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper7x.png" alt="A (X, C, p) = - logp (X ) - K (X |C ) &#x2265; 204.46 bits- 215.32 bits- c = - 10.85 bits- c.
+" class="math-display"  /></center></td><td class="equation-label">(8)</td></tr></table>
+<!--l. 318--><p class="nopar" >
+The negative bound suggests no reason to suppose that this sentence could not have been
+generated by a random choice of English letters. The bound is negative as a result of two
+factors. In the specification, 10<span 
+class="cmmi-12">.</span>85 bits were required to encode the length. On the
+other hand, the probability model assumes a length. Hence, the negative bits
+indicate information which the probability model had, but was not provided in the
+context. Since the only provided context is that of English letters, this is not a
+surprising result. No pattern beyond that explained by the probability model is
+identified.
+</p><!--l. 327--><p class="indent" >       The context can also be expanded. <a 
+ id="dx1-7008"></a>Instead of providing the English alphabet as the
+context, the word list of the <span 
+class="cmti-12">Oxford English Dictionary </span>can be used (<a 
+href="#XOxford2012">OED Online</a>,&#x00A0;<a 
+href="#XOxford2012">2012</a>).
+In the second edition of that dictionary there were 615,100 word forms defined or
+illustrated. For the purpose of the alphabet context, each letter is encoded as a number
+corresponding to that character. In this case, a number corresponding to words in the
+dictionary is chosen. Thus the number of bits required to encode the message using this
+context can be calculated:
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7009r9"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper8x.png" alt="K (X |C ) &#x2264; 9log2615, 100 + 2log2 9 + c &#x2248; 179.41 + c.
+" class="math-display"  /></center></td><td class="equation-label">(9)</td></tr></table>
+<!--l. 337--><p class="nopar" >
+Access to the context of the English dictionary allows much better compression than
+simply the English alphabet as comparing equations&#x00A0;<a 
+href="#x1-7003r4">4<!--tex4ht:ref: kc.alpha --></a> and &#x00A0;<a 
+href="#x1-7009r9">9<!--tex4ht:ref: kc.dict --></a> shows.
+</p><!--l. 340--><p class="indent" >       Using equation&#x00A0;<a 
+href="#x1-4002r3">3<!--tex4ht:ref: ASC --></a> yields
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7010r10"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper9x.png" alt="A (X, C,p) = - log p(X ) - K (X |C ) &#x2265; 204.46 bits - 179.41 bits - c = 25.05 bits - c.
+" class="math-display"  /></center></td><td class="equation-label">(10)</td></tr></table>
+<!--l. 343--><p class="nopar" >
+This provides confidence to say this sentence was not generated by randomly choosing
+letters from the English alphabet.
+</p><!--l. 346--><p class="indent" >       It is possible to adopt a probability model that selected random words from the
+English language. Such a probability model would explain all of the specification in the
+sentence. It is also possible to include more information about the English language such
+that the specification would increase.
+</p><!--l. 350--><p class="indent" >       This technique depends on the fact that the numbers of words in the English
+language is much smaller then the number of possible combinations of letters. If the
+dictionary contained every possible combination of letters up to some finite length, it would
+not allow compression, and thus be of no help to finding evidence of specification.
+A language where all possible combinations of letters were valid words could
+still show specification, but another technique would have to be used to allow
+compression.
+</p><!--l. 354--><p class="indent" >       But one could also use a much smaller dictionary. A dictionary of 10 words would be
+sufficient to include all the words in this sentence. The ASC formula would give a much
+smaller compressed bound:
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-7011r11"></a>
+                                                                                   
+                                                                                   
+       <center class="math-display" >
+<img 
+src="EwertWrapper10x.png" alt="K (X |C ) &#x2264; 9log 10 + 2 log  9 &#x2248; 36.24 bits.
+                2          2
+" class="math-display"  /></center></td><td class="equation-label">(11)</td></tr></table>
+<!--l. 359--><p class="nopar" >
+This is a reduction of over 100 bits from equation&#x00A0;<a 
+href="#x1-7009r9">9<!--tex4ht:ref: kc.dict --></a>. Because the sentence is
+much more closely related to the context, it takes about 16 bits less to encode
+each word when the dictionary is this small. In other words, it requires much
+less additional information to use the context when it is closely related to the
+message.
+</p><!--l. 365--><p class="indent" >       But it is possible to include words not included in the dictionary. The program
+would have to fall back on spelling the word one letter at a time. Only the bounds of the
+ASC can be computed. It is always possible a better compression exists, i.e.,&#x00A0;the object
+could be more specified than first realized.
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">3.2   </span> <a 
+ id="x1-80003.2"></a>Random Noise</h4>
+<a 
+ id="dx1-8001"></a>
+<!--l. 372--><p class="noindent" >While natural language is an example of something that should be specified, random
+noise is an example of something which should not. Consider a random bitstring
+containing 1,000 bits, where each bit is assigned with equal probability 1 or 0.
+Since randomness is incompressible, calculating the Kolmogorov complexity is
+easy. The only way of reproducing a random bitstring is to describe the whole
+bitstring.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8002r12"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper11x.png" alt="K (X ) &#x2264; 2 log2 1000 + 1000 + c &#x2248; 1020  bits + c
+                                                                                   
+                                                                                   
+" class="math-display"  /></center></td><td class="equation-label">(12)</td></tr></table>
+<!--l. 378--><p class="nopar" >
+The probability of each bitstring is 2<sup><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1000</span></sup>, and thus the complexity will be 1000 bits.
+Calculating the ASC:
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8003r13"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper12x.png" alt="A (X, C, p) = - log p(X ) - K (X |C ) &#x2265; 1000 bits - 1020 bits - c = - 20 bits - c.
+" class="math-display"  /></center></td><td class="equation-label">(13)</td></tr></table>
+<!--l. 383--><p class="nopar" >
+As expected, the ASC is negative, and there is therefore no evidence of patterns in the
+string that are not explained by the probability model.
+</p><!--l. 386--><p class="indent" >       However, consider also the case of a biased distribution. That is, 1 and
+0 are not equally likely. Instead, a given bit will be 1 two thirds of the time,
+while 0 only one third of the time. The entropy of each bit can be expressed
+as
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8004r14"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper13x.png" alt="H (Xi) = - 1-log2 1--  2log2 2-&#x2248; 0.6365 bits
+           3     3    3     3
+" class="math-display"  /></center></td><td class="equation-label">(14)</td></tr></table>
+<!--l. 392--><p class="nopar" >
+for any <span 
+class="cmmi-12">i</span>. The entropy of a bit is the number of bits required in an optimal encoding to
+encode each bit. This means the whole sequence can be described as
+</p>
+                                                                                   
+                                                                                   
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8005r15"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper14x.png" alt="K (X  ) &#x2264; 2 log21000 + 1000 * H (Xi) + c &#x2248; 656.5 bits + c.
+" class="math-display"  /></center></td><td class="equation-label">(15)</td></tr></table>
+<!--l. 397--><p class="nopar" >
+Using the uniform probability model, the complexity is still 1,000 bits and
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8006r16"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper15x.png" alt="A(X, C, p) = - log p(X ) - K (X |C ) &#x2265; 1000 bits - 656.5 bits - c = 343.3 bits - c.
+" class="math-display"  /></center></td><td class="equation-label">(16)</td></tr></table>
+<!--l. 401--><p class="nopar" >
+This random sequence has a high bound of algorithmic specified complexity. It is important
+to remember that the ASC bound only serves to measure the plausibility of the random
+model. It does not exclude the existence of another more accurate model that explains the
+data. In this case, using the actual probability model used to generate the message
+yields
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8007r17"></a>
+       <center class="math-display" >
+                                                                                   
+                                                                                   
+<img 
+src="EwertWrapper16x.png" alt="- log (p) = H (X  ) * 1000 &#x2248; 636.5 bits
+     2          i
+" class="math-display"  /></center></td><td class="equation-label">(17)</td></tr></table>
+<!--l. 408--><p class="nopar" >
+and the resulting ASC:
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8008r18"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper17x.png" alt="A(X, C, p) = - logp(X ) - K (X |C) &#x2265; 636.5 bits - 656.5 bits - c = - 20 bits - c.
+" class="math-display"  /></center></td><td class="equation-label">(18)</td></tr></table>
+<!--l. 412--><p class="nopar" >
+The bound of ASC provides reason to reject a uniform noise explanation for this data, but
+not the biased coin distribution.
+<a 
+ id="dx1-8009"></a>
+</p><!--l. 416--><p class="indent" >       Dembski (<a 
+href="#XDembski1998">Dembski</a>,&#x00A0;<a 
+href="#XDembski1998">1998</a>) has considered the example of ballot rigging where a
+political party is almost always given the top billing on the ballot listing candidates. Since
+the selection is supposed to be chosen on the basis of a fair coin toss, this is suspicious.
+ASC can quantify this situation. The outcome can be described by giving the numbers
+of heads and tails, followed by the same representation as for the biased coin
+distribution.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8010r19"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper18x.png" alt="                                 (         )
+K (X ) &#x2264; 2 log Xh +  2logXt +  log   Xt + Xh   + c
+                                     Xh
+                                                                                   
+                                                                                   
+" class="math-display"  /></center></td><td class="equation-label">(19)</td></tr></table>
+<!--l. 422--><p class="nopar" >
+where <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">h</span></sub> is the number of heads, <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">t</span></sub> is the number of tails Assuming a probability model
+of a fair coin yields
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-8011r20"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper19x.png" alt="- log2(p) = Xh +  Xtbits.
+" class="math-display"  /></center></td><td class="equation-label">(20)</td></tr></table>
+<!--l. 426--><p class="nopar" >
+This results in the following:
+</p><table 
+class="align">
+          <tr><td 
+class="align-odd"><span 
+class="cmmi-12">A</span>(<span 
+class="cmmi-12">X,C,p</span>)</td>          <td 
+class="align-even"> = <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">h</span></sub> + <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">t</span></sub> <span 
+class="cmsy-10x-x-120">- </span>2 log <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">h</span></sub> <span 
+class="cmsy-10x-x-120">- </span>2 log <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">t</span></sub> <span 
+class="cmsy-10x-x-120">-</span> log <span 
+class="cmex-10x-x-120">(</span>
+   <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">t</span></sub> + <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">h</span></sub>
+             <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">h</span></sub>    <span 
+class="cmex-10x-x-120">)</span>
+          <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">c</span></td>          <td 
+class="align-label"></td>          <td 
+class="align-label">
+          </td></tr><tr><td 
+class="align-odd"></td>                    <td 
+class="align-even"> = <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">h</span></sub> + <span 
+class="cmmi-12">X</span><sub><span 
+class="cmmi-8">t</span></sub> <span 
+class="cmsy-10x-x-120">-</span> log <img 
+src="EwertWrapper20x.png" alt="(      (         ) )
+ X2 X2   Xt + Xh
+   h  t     Xh"  class="left" align="middle" /><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">c</span>.</td>                               <td 
+class="align-label"><a 
+ id="x1-8012r21"></a>(21)          </td></tr></table>
+<hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-8013r6"></a>
+                                                                                   
+                                                                                   
+<div class="center" 
+>
+<!--l. 433--><p class="noindent" >
+
+</p><!--l. 434--><p class="noindent" ><img 
+src="EwertCoinPng.png" alt="PIC"  
+ /></p></div>
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;6: </span><span  
+class="content">ASC for varyingly biased coin sequences and 20 coin tosses</span></div><!--tex4ht:label?: x1-8013r6 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<!--l. 440--><p class="noindent" >Figure&#x00A0;<a 
+href="#x1-8013r6">6<!--tex4ht:ref: fig_coins --></a> shows the result of plotting this equation for varying numbers of head and tails
+given 20 coin tosses. As expected, for either high numbers of tails or high number of heads,
+the bound of ASC is high. However, for an instance which looks like a random sequence,
+the ASC is minimized.
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
+ id="x1-90003.3"></a>Playing Cards</h4>
+<a 
+ id="dx1-9001"></a>
+<a 
+ id="dx1-9002"></a>
+<!--l. 448--><p class="noindent" >Another pertinent case is that of playing cards in poker. In playing cards, if the
+distribution is not uniform, somebody is likely cheating. For the purpose of investigating
+card hands, a uniform random distribution over all five-card poker hands is assumed.
+</p>
+       <div class="table">
+                                                                                   
+                                                                                   
+<!--l. 453--><p class="indent" >       <a 
+ id="x1-9003r1"></a></p><hr class="float" /><div class="float" 
+>
+                                                                                   
+                                                                                   
+<div class="center" 
+>
+<!--l. 453--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1" /><col 
+id="TBL-2-2" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-1"  
+class="td11"> Name              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-2"  
+class="td11"> Frequency  </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-1"  
+class="td11"> Royal Flush       </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-2"  
+class="td11"> 4             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-1"  
+class="td11"> Straight Flush    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-2"  
+class="td11"> 36            </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-1"  
+class="td11"> Four of a Kind   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-2"  
+class="td11"> 624          </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-1"  
+class="td11"> Full House </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-2"  
+class="td11"> 3,744</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-1"  
+class="td11"> Flush               </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-2"  
+class="td11"> 5,108        </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-1"  
+class="td11"> Straight            </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-2"  
+class="td11"> 10,200       </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-1"  
+class="td11"> Three of a Kind  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-2"  
+class="td11"> 54,912       </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-1"  
+class="td11"> Two Pair          </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-2"  
+class="td11"> 123,552     </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-10-1"  
+class="td11"> One Pair           </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-10-2"  
+class="td11"> 1,098,240   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-11-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-11-1"  
+class="td11"> None                </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-11-2"  
+class="td11"> 1,302,540   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-12-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-12-1"  
+class="td11">               </td></tr></table></div></div>
+<br /> <div class="caption" 
+><span class="id">Table&#x00A0;1: </span><span  
+class="content">Poker hand frequency</span></div><!--tex4ht:label?: x1-9003r1 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfloat" />
+       </div>
+<!--l. 472--><p class="indent" >       In the game of poker, a poker hand is made up of 5 cards. Some categories of hands
+are rarer then others. Table&#x00A0;<a 
+href="#x1-9003r1">1<!--tex4ht:ref: poker --></a> shows the frequency of the different hands.
+</p><!--l. 477--><p class="indent" >       Given a uniform distribution, every poker hand has the same probability and thus
+the same complexity. There are 2,598,960 possible poker hands. For a single hand, this
+yields a complexity of
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9004r22"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper21x.png" alt="                          1
+- log2p (X ) = - log2(----------) &#x2248; 21.3 bits.
+                     2,598, 960
+" class="math-display"  /></center></td><td class="equation-label">(22)</td></tr></table>
+<!--l. 482--><p class="nopar" >
+While the probability of every poker hand is the same, the Kolmogorov complexity is not.
+<a 
+ id="dx1-9005"></a>To describe a royal flush requires specifying that it is a royal flush and which suit it is in.
+However, describing a pair requires specifying the paired value as well as both suits in
+addition to the three cards not involved in the pair. In general, describing a hand requires
+specifying the type of hand and which particular hand of all the possible hands of that
+type. This can be used to calculate the conditional Kolmogorov complexity for the
+hand.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9006r23"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper22x.png" alt="K (Hi|C ) &#x2264; log2 10 + log2 |H | + c.
+" class="math-display"  /></center></td><td class="equation-label">(23)</td></tr></table>
+                                                                                   
+                                                                                   
+<!--l. 492--><p class="nopar" >
+where 10 is the number of types of hands. <span 
+class="cmmi-12">H </span>is the set of all hands of a particular type, and
+<span 
+class="cmmi-12">H</span><sub><span 
+class="cmmi-8">i</span></sub> is a particular hand in that set.
+</p><!--l. 494--><p class="indent" >       There are 1,098,240 possible pairs. Putting this in Equation&#x00A0;<a 
+href="#x1-9006r23">23<!--tex4ht:ref: kc.card --></a> gives:
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9007r24"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper23x.png" alt="K (Hi|C ) &#x2264; log2 10 + log2 |H | + c &#x2248; 23.39 bits + c.
+" class="math-display"  /></center></td><td class="equation-label">(24)</td></tr></table>
+<!--l. 498--><p class="nopar" >
+On the other hand, describing a pair without using the context gives
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9008r25"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper24x.png" alt="K (Hi |C) &#x2264; log22, 598,960 + c &#x2248; 21.3 bits + c.
+" class="math-display"  /></center></td><td class="equation-label">(25)</td></tr></table>
+<!--l. 502--><p class="nopar" >
+Single pairs are so common that the space required to record that it was a pair is more
+than the space required to record the duplicate card straightforwardly. Accordingly, the
+best approach is to take the minimum of the two methods
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9009r26"></a>
+                                                                                   
+                                                                                   
+       <center class="math-display" >
+<img 
+src="EwertWrapper25x.png" alt="K (Hi |C) &#x2264; min (log 10 + log |H |,log  2,598,960 ) + c.
+                   2        2       2
+" class="math-display"  /></center></td><td class="equation-label">(26)</td></tr></table>
+<!--l. 507--><p class="nopar" >
+</p>
+       <div class="table">
+                                                                                   
+                                                                                   
+<!--l. 510--><p class="indent" >       <a 
+ id="x1-9010r2"></a></p><hr class="float" /><div class="float" 
+>
+                                                                                   
+                                                                                   
+<div class="center" 
+>
+<!--l. 510--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-3" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1" /><col 
+id="TBL-3-2" /><col 
+id="TBL-3-3" /><col 
+id="TBL-3-4" /><col 
+id="TBL-3-5" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-3-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-1-1"  
+class="td11"> Name              </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-1-2"  
+class="td11"> Frequency  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-1-3"  
+class="td11"> Complexity  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-1-4"  
+class="td11"> Compressed Length  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-1-5"  
+class="td11"> ASC    </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-2-1"  
+class="td11"> Royal Flush       </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-2-2"  
+class="td11"> 4             </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-2-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-2-4"  
+class="td11"> 5.322                     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-2-5"  
+class="td11"> 15.988  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-1"  
+class="td11"> Straight Flush    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-2"  
+class="td11"> 36            </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-4"  
+class="td11"> 8.492                     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-3-5"  
+class="td11"> 12.818  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-1"  
+class="td11"> Four of a Kind   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-2"  
+class="td11"> 624          </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-4"  
+class="td11"> 12.607                   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-4-5"  
+class="td11"> 8.702   </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-1"  
+class="td11"> Full House </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-2"  
+class="td11"> 3,744 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-3"  
+class="td11"> 21.310 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-4"  
+class="td11"> 15.192 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-5-5"  
+class="td11"> 6.117</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-6-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-1"  
+class="td11"> Flush               </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-2"  
+class="td11"> 5,108        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-4"  
+class="td11"> 15.640                   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-6-5"  
+class="td11"> 5.669   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-7-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-1"  
+class="td11"> Straight            </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-2"  
+class="td11"> 10,200       </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-4"  
+class="td11"> 16.638                   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-7-5"  
+class="td11"> 4.671   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-8-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-1"  
+class="td11"> Three of a Kind  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-2"  
+class="td11"> 54,912       </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-4"  
+class="td11"> 19.067                   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-8-5"  
+class="td11"> 2.243   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-9-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-1"  
+class="td11"> Two pair           </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-2"  
+class="td11"> 123,552     </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-4"  
+class="td11"> 20.237                   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-9-5"  
+class="td11"> 1.073   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-10-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-10-1"  
+class="td11"> One pair           </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-10-2"  
+class="td11"> 1,098,240   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-10-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-10-4"  
+class="td11"> 21.310                   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-10-5"  
+class="td11"> 0.000   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-11-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-11-1"  
+class="td11"> None                </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-11-2"  
+class="td11"> 1,302,540   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-11-3"  
+class="td11"> 21.310        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-11-4"  
+class="td11"> 21.310                   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-3-11-5"  
+class="td11"> 0.000   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-12-"><td  style="white-space:nowrap; text-align:left;" id="TBL-3-12-1"  
+class="td11">               </td></tr></table></div></div>
+<br /> <div class="caption" 
+><span class="id">Table&#x00A0;2: </span><span  
+class="content">The ASC of the various poker card hands</span></div><!--tex4ht:label?: x1-9010r2 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfloat" />
+       </div>
+<!--l. 520--><p class="indent" >       Table&#x00A0;<a 
+href="#x1-9010r2">2<!--tex4ht:ref: asc.hands --></a> shows the ASC for the various poker hands. Rare hands have high
+ASC, but common hands have low ASC. This parallels expectations, because
+with a rare hand one might suspect cheating, but with a common hand one will
+not.
+<a 
+ id="dx1-9011"></a>
+</p><!--l. 525--><p class="indent" >       In other card games, a card is turned over after hands have been dealt to determine
+trump. The suit of the card is taken to trump for that round of the game. If the
+same suit is repeatedly chosen as trump, someone may ask what the odds are for
+that to occur. This question can be difficult to answer because every possible
+sequence of trump suits is equally likely. Yet, it is deemed unusual that the same
+suit is a trump repeatedly. Algorithmic specified complexity allows this to be
+modeled.
+</p><!--l. 532--><p class="indent" >       The suits are represented as a bit sequence using two bits for each suit,
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9012r27"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper26x.png" alt="K (X ) = log 4 + log H  + c = 2 + log H  + c
+            2       2                2
+" class="math-display"  /></center></td><td class="equation-label">(27)</td></tr></table>
+<!--l. 535--><p class="nopar" >
+where 4 is the number of suits, and H is the number of hands played. The complexity of the
+sequence is
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9013r28"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper27x.png" alt="                -|X|
+-  log P (X ) = 4 -2--= 2H.
+" class="math-display"  /></center></td><td class="equation-label">(28)</td></tr></table>
+<!--l. 539--><p class="nopar" >
+The ASC is then
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-9014r29"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper28x.png" alt="ASC  (X, p) = 2H -  2 - log2 H -  c.
+" class="math-display"  /></center></td><td class="equation-label">(29)</td></tr></table>
+<!--l. 543--><p class="nopar" >
+Note that this equation becomes <span 
+class="cmsy-10x-x-120">-</span><span 
+class="cmmi-12">c </span>when <span 
+class="cmmi-12">H </span>= 1. A pattern repeating once is no pattern at
+all and does not provide specification. </p><hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-9015r7"></a>
+                                                                                   
+                                                                                   
+
+<!--l. 547--><p class="noindent" ><img 
+src="EwertRepeatPng.png" alt="PIC"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;7: </span><span  
+class="content">A plot of ASC for getting the same suit repeatedly</span></div><!--tex4ht:label?: x1-9015r7 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<!--l. 551--><p class="indent" >       Figure&#x00A0;<a 
+href="#x1-9015r7">7<!--tex4ht:ref: suit.plot --></a> shows the ASC for increasing numbers of hands. The more times the same
+suit is chosen as trump, the larger the number of bits of ASC. The same trump for many
+rounds becomes less and less probable. <a 
+ id="dx1-9016"></a>
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">3.4   </span> <a 
+ id="x1-100003.4"></a>Folding Proteins</h4>
+<a 
+ id="dx1-10001"></a>
+<!--l. 560--><p class="noindent" >In biology, an important prerequisite to a protein being functional is that it folds. The
+fraction of all possible protein sequences that fold has been estimated: &#8220;the overall
+prevalence of sequences performing a specific function by any domain-sized fold may be as
+low as 1 in 10<sup><span 
+class="cmr-8">77</span></sup>&#8221; (<a 
+href="#Xaxe2004">Axe</a>,&#x00A0;<a 
+href="#Xaxe2004">2004</a>).
+</p><!--l. 563--><p class="indent" >       A program can be created which uses the laws of physics to output a particular
+foldable protein. </p><hr class="figure" /><div class="figure" 
+>
+                                                                                   
+                                                                                   
+<a 
+ id="x1-10002r8"></a>
+                                                                                   
+                                                                                   
+<div class="verbatim" id="verbatim-5">
+for&#x00A0;all&#x00A0;proteins&#x00A0;of&#x00A0;length&#x00A0;L
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;run&#x00A0;protein&#x00A0;in&#x00A0;a&#x00A0;physics&#x00A0;simulator
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;if&#x00A0;protein&#x00A0;folds
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;add&#x00A0;to&#x00A0;list&#x00A0;of&#x00A0;folding&#x00A0;proteins
+&#x00A0;<br />output&#x00A0;the&#x00A0;Xth&#x00A0;protein&#x00A0;from&#x00A0;the&#x00A0;list
+</div>
+<!--l. 572--><p class="nopar" >
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;8: </span><span  
+class="content">A pseudocode program which uses a functional specification to compress
+the specification of a protein</span></div><!--tex4ht:label?: x1-10002r8 -->
+                                                                                   
+                                                                                   
+       </div><hr class="endfigure" />
+<!--l. 577--><p class="indent" >       Given different choices of <span 
+class="cmmi-12">L </span>and <span 
+class="cmmi-12">N</span>, this program will output any particular folding
+protein. This means that the protein can be described by providing those two numbers.
+Thus, the conditional Kolmogorov complexity can be calculated using these two
+numbers.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-10003r30"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper29x.png" alt="K (X |C ) = 2log L +  log  FL + c
+                2       2
+" class="math-display"  /></center></td><td class="equation-label">(30)</td></tr></table>
+<!--l. 581--><p class="nopar" >
+where <span 
+class="cmmi-12">C </span>is the context, in this case the law of physics, and <span 
+class="cmmi-12">F</span><sub><span 
+class="cmmi-8">L</span></sub> is the number of folding
+proteins of length <span 
+class="cmmi-12">L</span>. Taking Axe&#8217;s estimate (<a 
+href="#Xaxe2004">Axe</a>,&#x00A0;<a 
+href="#Xaxe2004">2004</a>), and assuming simplistically that
+it applies for all lengths of proteins,
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-10004r31"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper30x.png" alt="       - 77 L
+FL = 10   4
+" class="math-display"  /></center></td><td class="equation-label">(31)</td></tr></table>
+<!--l. 586--><p class="nopar" >
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-10005r32"></a>
+                                                                                   
+                                                                                   
+       <center class="math-display" >
+<img 
+src="EwertWrapper31x.png" alt="logFL  = - 77 log 10 + L log 4
+" class="math-display"  /></center></td><td class="equation-label">(32)</td></tr></table>
+<!--l. 589--><p class="nopar" >
+therefore
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-10006r33"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper32x.png" alt="K (X |C) = 2 log2 L + log2FL  + c = 2log2L +  - 77log10 + L log 4.
+" class="math-display"  /></center></td><td class="equation-label">(33)</td></tr></table>
+<!--l. 593--><p class="nopar" >
+<a 
+ id="dx1-10007"></a>
+<a 
+ id="dx1-10008"></a>
+</p><!--l. 596--><p class="indent" >       The probability model will be chosen by supposing that each base along the DNA
+chain for the gene encoding the protein is uniformly chosen. It should be emphasized that
+according to the Darwinian model of evolution, the bases are not uniformly chosen. This
+supposition only serves to test a simplistic chance model of protein origin. The probability
+can be calculated as
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-10009r34"></a>
+       <center class="math-display" >
+                                                                                   
+                                                                                   
+<img 
+src="EwertWrapper33x.png" alt="- log Pr (X ) = - log  4-L = L log  4.
+     2               2           2
+" class="math-display"  /></center></td><td class="equation-label">(34)</td></tr></table>
+<!--l. 602--><p class="nopar" >
+Caution should be used in applying this formula. It assumes that the proportion of
+functional proteins is applicable for all lengths and implies that a fractional number of
+proteins fold.
+<a 
+ id="dx1-10010"></a>
+</p><!--l. 607--><p class="indent" >       Finally calculating the ASC,
+</p><table 
+class="align">
+              <tr><td 
+class="align-odd"><span 
+class="cmmi-12">ASC</span>(<span 
+class="cmmi-12">X,p</span>)</td>              <td 
+class="align-even"> = <span 
+class="cmmi-12">L</span> log 4 <span 
+class="cmsy-10x-x-120">- </span>2 log <sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">L </span>+ 77 log <sub><span 
+class="cmr-8">2</span></sub>10 <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">L</span> log <sub><span 
+class="cmr-8">2</span></sub>4 <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">c</span></td>              <td 
+class="align-label"></td>              <td 
+class="align-label">
+              </td></tr><tr><td 
+class="align-odd"></td>                        <td 
+class="align-even"> = <span 
+class="cmsy-10x-x-120">-</span>2 log <sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-12">L </span>+ 77 log <sub><span 
+class="cmr-8">2</span></sub>10 <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">c</span>.</td>                                            <td 
+class="align-label"><a 
+ id="x1-10011r35"></a>(35)              </td></tr></table>
+The final bound for ASC depends little on the length of the protein sequence which only
+comes to play in the logarithmic term. The significant term is the 77 log <sub><span 
+class="cmr-8">2</span></sub>10 <span 
+class="cmsy-10x-x-120">&#x2248; </span>255<span 
+class="cmmi-12">.</span>79 bits.
+Thus, there is good reason to believe that folding sequences were not generated randomly
+from a uniform distribution.
+       <h4 class="subsectionHead"><span class="titlemark">3.5   </span> <a 
+ id="x1-110003.5"></a>Functional Sequence Complexity</h4>
+<a 
+ id="dx1-11001"></a>
+<a 
+ id="dx1-11002"></a>
+<a 
+ id="dx1-11003"></a>
+<!--l. 620--><p class="noindent" >Kirk Durston et al. have defined the idea of <span 
+class="cmti-12">functional sequence complexity </span>(Durston, Chiu,
+Abel, &amp; Trevors, <a 
+href="#XDurston2007">2007</a>). Functional sequence complexity is related to a special case of
+algorithmic specified complexity.
+                                                                                   
+                                                                                   
+</p><!--l. 623--><p class="indent" >       A protein is made from a sequence of amino acids. Some sequences have
+functionality, and some do not. The case considered in section <a 
+href="#x1-100003.4">3.4<!--tex4ht:ref: sec_folding --></a> above of folding is one
+particular case. Perhaps more interesting is considering the case of various proteins which
+perform useful biological functions.
+</p><!--l. 628--><p class="indent" >       Let &#x03A9; be the set of all proteins. Let <span 
+class="cmmi-12">F </span>be the set of all proteins which pass a
+functionality test. Let <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) be a probability distribution over <span 
+class="cmmi-12">F</span>. Both <span 
+class="cmmi-12">F </span>and
+<span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) can be produced by a simple algorithm using a functionality test on each
+element of &#x03A9;. Consequently, <span 
+class="cmmi-12">F </span>and <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) can be described using a constant program
+length.
+</p><!--l. 634--><p class="indent" >       Consider the average for ASC over all elements in <span 
+class="cmmi-12">F</span>.
+</p><table 
+class="align">
+             <tr><td 
+class="align-odd"> <span 
+class="cmex-10x-x-120">&#x2211;</span>
+   <sub><span 
+class="cmmi-8">x</span><span 
+class="cmsy-8">&#x2208;</span><span 
+class="cmmi-8">F</span> </sub><span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>)<span 
+class="cmmi-12">A</span>(<span 
+class="cmmi-12">x,C,p</span>)</td>             <td 
+class="align-even"> = <span 
+class="cmex-10x-x-120">&#x2211;</span>
+   <sub><span 
+class="cmmi-8">x</span><span 
+class="cmsy-8">&#x2208;</span><span 
+class="cmmi-8">F</span> </sub><span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>)(<span 
+class="cmsy-10x-x-120">-</span> log <span 
+class="cmmi-12">p</span>(<span 
+class="cmmi-12">x</span>) <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">K</span>(<span 
+class="cmmi-12">x</span><span 
+class="cmsy-10x-x-120">|</span><span 
+class="cmmi-12">C</span>))</td>                        <td 
+class="align-label"></td>             <td 
+class="align-label">
+             </td></tr><tr><td 
+class="align-odd"></td>                                  <td 
+class="align-even"> = <span 
+class="cmex-10x-x-120">&#x2211;</span>
+   <sub><span 
+class="cmmi-8">x</span><span 
+class="cmsy-8">&#x2208;</span><span 
+class="cmmi-8">F</span> </sub> <span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) log <span 
+class="cmmi-12">p</span>(<span 
+class="cmmi-12">x</span>) <span 
+class="cmsy-10x-x-120">-</span><span 
+class="cmex-10x-x-120">&#x2211;</span>
+   <sub><span 
+class="cmmi-8">x</span><span 
+class="cmsy-8">&#x2208;</span><span 
+class="cmmi-8">F</span> </sub><span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>)<span 
+class="cmmi-12">K</span>(<span 
+class="cmmi-12">x</span><span 
+class="cmsy-10x-x-120">|</span><span 
+class="cmmi-12">C</span>))</td>                          <td 
+class="align-label"><a 
+ id="x1-11004r36"></a>(36)             </td></tr></table>
+<!--l. 642--><p class="indent" >       Any element <span 
+class="cmmi-12">x </span>can be described given the probability distribution and log <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) bits.
+Given that <span 
+class="cmmi-12">f</span>(<span 
+class="cmmi-12">x</span>) and <span 
+class="cmmi-12">F </span>can be calculated with a constant program, the conditional
+Kolmogorov complexity can be calculated as
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-11005r37"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper34x.png" alt="K (x|C ) &#x2264; log - f(x) + c.
+" class="math-display"  /></center></td><td class="equation-label">(37)</td></tr></table>
+<!--l. 646--><p class="nopar" >
+Place this into equation&#x00A0;<a 
+href="#x1-11004r36">36<!--tex4ht:ref: ASC.FSC.1 --></a>.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-11006r38"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper35x.png" alt="&#x2211;                    &#x2211;                   &#x2211;                    &#x2211;
+    f(x)A (x,C, p) &#x2265;    - f(x )log p(x) -     - f (x)logf (x) -   c
+x&#x2208;F                  x&#x2208;F                 x&#x2208;F                  x&#x2208;F
+" class="math-display"  /></center></td><td class="equation-label">(38)</td></tr></table>
+<!--l. 651--><p class="nopar" >
+The middle term is recognized as the Shannon entropy.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-11007r39"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper36x.png" alt="&#x2211;                    &#x2211;                            &#x2211;
+    f(x)A (x,C, p) &#x2265;    - f(x )log p(x) - H (f) - c    f(x)
+x&#x2208;F                  x&#x2208;F                          x&#x2208;F
+" class="math-display"  /></center></td><td class="equation-label">(39)</td></tr></table>
+<!--l. 656--><p class="nopar" >
+If the distribution <span 
+class="cmmi-12">p </span>is uniform, <span 
+class="cmmi-12">p</span>(<span 
+class="cmmi-12">x</span>) = <img 
+src="EwertWrapper37x.png" alt=" 1
+|&#x03A9;-|"  class="frac" align="middle" />,
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-11008r40"></a>
+                                                                                   
+                                                                                   
+       <center class="math-display" >
+<img 
+src="EwertWrapper38x.png" alt="&#x2211;                           &#x2211;                   &#x2211;
+   f (x)A (x, C,p) &#x2265; log  |&#x03A9; |   f (x) - H (f) - c    f(x).
+                       2
+x&#x2208;F                         x&#x2208;F                 x&#x2208;F
+" class="math-display"  /></center></td><td class="equation-label">(40)</td></tr></table>
+<!--l. 661--><p class="nopar" >
+The two summations over F are summations over a probability distribution and therefore
+1.
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-11009r41"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper39x.png" alt="&#x2211;
+   f (x )A(x,C, p) &#x2265; log2|&#x03A9; | - H (f) - c
+x&#x2208;F
+" class="math-display"  /></center></td><td class="equation-label">(41)</td></tr></table>
+<!--l. 666--><p class="nopar" >
+Equation 5 in Durston&#8217;s work, adjusting for notation is
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-11010r42"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper40x.png" alt="log |&#x03A9;| - H (f).
+" class="math-display"  /></center></td><td class="equation-label">(42)</td></tr></table>
+                                                                                   
+                                                                                   
+<!--l. 670--><p class="nopar" >
+This equation derives from making the same uniformity assumption made above. Thus, for
+the uniform probability distribution case,
+</p>
+       <table 
+class="equation"><tr><td><a 
+ id="x1-11011r43"></a>
+       <center class="math-display" >
+<img 
+src="EwertWrapper41x.png" alt="&#x2211;
+   (f (x )A(x,C, p)) + c &#x2265; log |&#x03A9;| - H (f ).
+x&#x2208;F
+" class="math-display"  /></center></td><td class="equation-label">(43)</td></tr></table>
+<!--l. 676--><p class="nopar" >
+This establishes the relationship between ASC and FSC. The difference is that
+the ASC is a lower bound and includes a constant. This is the same constant
+as elsewhere: the length of the program required to describe the specification.
+<a 
+ id="dx1-11012"></a><a 
+ id="dx1-11013"></a>
+</p><!--l. 683--><p class="noindent" >
+</p>
+       <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-120004"></a>Objections</h3>
+<!--l. 685--><p class="noindent" >
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
+ id="x1-130004.1"></a>Natural Law</h4>
+<a 
+ id="dx1-13001"></a>
+<a 
+ id="dx1-13002"></a>
+<a 
+ id="dx1-13003"></a>
+<!--l. 689--><p class="noindent" >It has been argued in this paper that compressibility in the presence of context is a
+necessary condition for information. This is in contrast to others who have argued that lack
+of compressibility is a necessary condition for information (<a 
+href="#XAbel2005">Abel &amp; Trevors</a>,&#x00A0;<a 
+href="#XAbel2005">2005</a>). But
+compressible objects lack complexity. Because a compressible object is describable as some
+simple pattern, it is amenable to being produced by a simple process. Many objects in the
+real world follow simple patterns. Water tends to collect at lower elevations. Beaches follow
+a sloping pattern. Sparks fly upwards. But these patterns are the result of the operation
+                                                                                   
+                                                                                   
+of simple law-like processes. Even if the explanations for these patterns were
+unknown, the simplicity of the pattern suggests that some simple explanation
+existed.
+<a 
+ id="dx1-13004"></a>
+<a 
+ id="dx1-13005"></a>
+<a 
+ id="dx1-13006"></a>
+<a 
+ id="dx1-13007"></a>
+</p><!--l. 704--><p class="indent" >       The premise behind this use of compressibility is that it identifies what human
+would see as simple patterns. Abel writes: &#8220;A sequence is compressible because it contains
+redundant order and patterns&#8221; (<a 
+href="#XAbel2005">Abel &amp; Trevors</a>,&#x00A0;<a 
+href="#XAbel2005">2005</a>).
+</p><!--l. 707--><p class="indent" >       The problem is that algorithms are very versatile and allow the description of many
+patterns beyond that which humans would see as patterns. As has been shown
+by the various examples in this paper, many objects which do not exhibit what
+humans typically identify as redundant order and patterns are in fact compressible.
+Significantly, functionality actually allows compressibility. Contrary to what Abel states,
+functional sequences are compressible by virtue of the functionality they exhibit.
+All of the sequences that Abel holds to be mostly incompressible are actually
+compressible.
+</p><!--l. 713--><p class="indent" >       But are compressible objects amenable to explanation by simple processes? Do all
+compressible objects lack complexity? If this were true, it would be problematic for
+algorithmic specified complexity because all specified objects would also not be complex,
+and no object would ever be both specified and complex. But many compressible objects do
+not appear amenable to explanation by a simple process.
+</p><!--l. 718--><p class="indent" >       As discussed, English text is compressible given a knowledge of the English
+language. This does not somehow make it probable that English text will appear on a
+beach carved out by waves. Ninety degree angles are very compressible; yet, they are not
+typically found in nature. The existence of an explanation from the laws of nature does not
+appear to follow from compressibility.
+<a 
+ id="dx1-13008"></a>
+</p><!--l. 724--><p class="indent" >       Kolmogorov complexity deliberately ignores how long a program takes to run. It is
+only concerned with the length of the program&#8217;s description. A program may be short but
+take an astronomical amount of time to run. Many of the specifications considered in this
+paper fall into that category. These objects are compressible, but that compression does
+not give a practical way to reproduce the object. But if there is no practical way to
+reproduce the object, there is no reason to suggest law-like processes as a plausible
+explanation.
+</p><!--l. 731--><p class="noindent" >
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">4.2   </span> <a 
+ id="x1-140004.2"></a>Context is Subjective</h4>
+<a 
+ id="dx1-14001"></a>
+                                                                                   
+                                                                                   
+<a 
+ id="dx1-14002"></a>
+<!--l. 733--><p class="noindent" >The ASC of any object will depend on the context chosen. Any object can be made to have
+high ASC by using a specifically chosen context. But this appears to be the way that
+information works. If the authors, who do not understand Arabic, look at Arabic text, it
+appears to be no better then scribbling. The problem is not that Arabic lacks information
+content, but that the reader is unable to identify it without the necessary context. As a
+result, this subjectivity appears to capture something about the way information works in
+the human experience.
+<a 
+ id="dx1-14003"></a>
+</p><!--l. 741--><p class="indent" >       As with specification, it is important that the context be chosen that is independent
+of the object under investigation. While a specification will rarely be independent of the
+object under investigation, it is much easier to maintain this independence in the case of a
+context.
+</p><!--l. 744--><p class="noindent" >
+</p>
+       <h4 class="subsectionHead"><span class="titlemark">4.3   </span> <a 
+ id="x1-150004.3"></a>Incalculability</h4>
+<a 
+ id="dx1-15001"></a>
+<!--l. 746--><p class="noindent" >It is not possible to calculate the Kolmogorov complexity of an object. However, it is
+possible to upper-bound the Kolmogorov complexity and thus lower-bound the algorithmic
+specified complexity. This means that something can be determined to be at least this
+specified, although the possibility that it is even more specified cannot be ruled out.
+Therefore, even though detecting a specification cannot be achieved mechanically, it can be
+objectively identified when found.
+</p><!--l. 763--><p class="noindent" >
+</p>
+       <h3 class="sectionHead"><a 
+ id="x1-160004.3"></a>Acknowledgements</h3>
+<!--l. 765--><p class="noindent" >The approach of using compressibility as a measurement of specification was suggested to
+the authors by Eric Holloway. The authors have attempted to extend the approach to apply
+to many more types of specifications. The authors are grateful for his initial suggestion and
+answer to our initial objections to the idea.
+                                                                                   
+                                                                                   
+</p>
+       <h3 class="likesectionHead"><a 
+ id="x1-170004.3"></a>Notes</h3>
+<!--l. 769--><p class="noindent" ></p><!--l. 4--><p class="indent" >       <a 
+href="#enmark-1" id="ennote-1"><sup><span 
+class="cmr-7">1</span></sup></a><span 
+class="cmr-10">A more compact representation for numbers is available. See the </span><span 
+class="cmmi-10">log</span><sup><span 
+class="cmsy-7">*</span></sup> <span 
+class="cmr-10">method in </span><a 
+href="#XCover2006"><span 
+class="cmr-10">Cover &amp;</span>
+<span 
+class="cmr-10">Thomas</span></a><span 
+class="cmr-10">&#x00A0;(</span><a 
+href="#XCover2006"><span 
+class="cmr-10">2006</span></a><span 
+class="cmr-10">).</span>
+                                                                                   
+                                                                                   
+</p>
+       <h3 class="sectionHead"><a 
+ id="x1-180004.3"></a>References</h3>
+  <div class="thebibliography">
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XAbel2005"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>    Abel,    D.&#x00A0;L.    &amp;    Trevors,    J.&#x00A0;T.    (2005).          Three    subsets    of
+  sequence   complexity   and   their   relevance   to   biopolymeric   information.
+  <span 
+class="cmti-12">Theoretical   Biology   &amp;   Medical   Modelling</span>,    2,    29.         Available    from
+  <a 
+href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1208958&tool=pmcentrez&rendertype=abstract" class="url" >http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1208958&amp;tool=pmcentrez&amp;rendertype=abstract</a>,
+  doi:10.1186/1742-4682-2-29
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xaxe2004"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>   Axe,   D.&#x00A0;D.   (2004).      Estimating   the   prevalence   of   protein   sequences
+  adopting  functional  enzyme  folds.     <span 
+class="cmti-12">Journal  of  Molecular  Biology</span>,  341(5),
+  1295&#8211;315.      Available   from   <a 
+href="http://www.ncbi.nlm.nih.gov/pubmed/15321723" class="url" >http://www.ncbi.nlm.nih.gov/pubmed/15321723</a>,
+  doi:10.1016/j.jmb.2004.06.058
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XBennett1988"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Bennett,  C.&#x00A0;H.  (1988).    Logical  depth  and  physical  complexity.    In  <span 
+class="cmti-12">The</span>
+  <span 
+class="cmti-12">universal turing machine: A half-century survey </span>(pp.&#x00A0;227&#8211;257).   Available from
+  <a 
+href="http://www.springerlink.com/index/HRG11848P291274Q.pdf" class="url" >http://www.springerlink.com/index/HRG11848P291274Q.pdf</a>
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XChaitin1966"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Chaitin,  G.&#x00A0;J.  (1966).    On  the  length  of  programs  for  computing  finite
+  binary  sequences.      <span 
+class="cmti-12">Journal  of  the  ACM  (JACM)</span>,  13.      Available  from
+  <a 
+href="http://dl.acm.org/citation.cfm?id=321363" class="url" >http://dl.acm.org/citation.cfm?id=321363</a>
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XChaitin2002"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Chaitin, G.&#x00A0;J. (2002). <span 
+class="cmti-12">Conversations with a mathematician: Math, art, science,</span>
+  <span 
+class="cmti-12">and the limits of reason: A collection of his most wide-ranging and non-technical</span>
+  <span 
+class="cmti-12">lectures and interviews</span>. New York: Springer.
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XCover2006"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Cover, T.&#x00A0;M. &amp; Thomas, J.&#x00A0;A. (2006). <span 
+class="cmti-12">Elements of information theory</span>. Hoboken,
+  NJ: Wiley-Interscience, second edition.
+  </p>
+                                                                                   
+                                                                                   
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XDembski1998"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>   Dembski,   W.&#x00A0;A.   (1998).       <span 
+class="cmti-12">The   design   inference:   Eliminating   chance</span>
+  <span 
+class="cmti-12">through  small  probabilities</span>.     Cambridge  University  Press.     Available  from
+  <a 
+href="http://mind.oxfordjournals.org" class="url" >http://mind.oxfordjournals.org</a>, doi:10.1093/mind/112.447.521
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XDembski2002"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Dembski,  W.&#x00A0;A.  (2002).   <span 
+class="cmti-12">No free lunch: Why specified complexity cannot be</span>
+  <span 
+class="cmti-12">purchased without intelligence</span>. Lanham MD: Rowman &amp; Littlefield. Available from
+  <a 
+href="http://www.worldcat.org/title/no-free-lunch-why-specified-complexity-cannot-be-purchased-without-intelligence/oclc/46858256&referer=brief_results" class="url" >http://www.worldcat.org/title/no-free-lunch-why-specified-complexity-cannot-be-purchased-without-intelligence/oclc/46858256&amp;referer=brief_results</a>
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XDembski2005a"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>   Dembski,   W.&#x00A0;A.   (2005).       Specification:   The   pattern   that   signifies
+  intelligence.         <span 
+class="cmti-12">Philosophia   Christi</span>,    7(2),    299&#8211;343.         Available    from
+  <a 
+href="http://www.lastseminary.com/specified-complexity/Specification - The  Pattern That Signifies Intelligence.pdf" class="url" >http://www.lastseminary.com/specified-complexity/Specification-ThePatternThatSignifiesIntelligence.pdf</a>
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XDurston2007"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Durston, K.&#x00A0;K., Chiu, D. K.&#x00A0;Y., Abel, D.&#x00A0;L., &amp; Trevors, J.&#x00A0;T. (2007). Measuring
+  the  functional  sequence  complexity  of  proteins.   <span 
+class="cmti-12">Theoretical Biology &amp; Medical</span>
+  <span 
+class="cmti-12">Modelling</span>, 4, 47. doi:10.1186/1742-4682-4-47
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XKolmogorov1968"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Kolmogorov, A.&#x00A0;N. (1968a). Logical basis for information theory and probability
+  theory.   <span 
+class="cmti-12">IEEE Transactions on Information Theory</span>, 14(5), 662&#8211;664.   Available
+  from   <a 
+href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=1054210" class="url" >http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=1054210</a>,
+  doi:10.1109/TIT.1968.1054210
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XKolmogorov1968a"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Kolmogorov, A.&#x00A0;N. (1968b).  Three approaches to the quantitative definition
+  of information.  <span 
+class="cmti-12">International Journal of Computer Mathematics</span>.  Available from
+  <a 
+href="http://www.tandfonline.com/doi/abs/10.1080/00207166808803030" class="url" >http://www.tandfonline.com/doi/abs/10.1080/00207166808803030</a>
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XLevin1976"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span> Levin, L.&#x00A0;A. (1976). Various measures of complexity for finite objects. (axiomatic
+  description). <span 
+class="cmti-12">Soviet Math</span>, 17(522).
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XOxford2012"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  OED  Online  (2012).    Oxford  English  dictionary  online.    Available  from
+  <a 
+href="http://dictionary.oed.com" class="url" >http://dictionary.oed.com</a>
+                                                                                   
+                                                                                   
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XShannon1948"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>  Shannon,  C.&#x00A0;E.,  Weaver,  W.,  &amp;  Wiener,  N.  (1950).    The  mathematical
+  theory   of   communication.       <span 
+class="cmti-12">Physics  Today</span>,   3(9),   31.       Available   from
+  <a 
+href="http://www.ncbi.nlm.nih.gov/pubmed/9230594" class="url" >http://www.ncbi.nlm.nih.gov/pubmed/9230594</a>, doi:10.1063/1.3067010
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XSolomonoff1960"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>   Solomonoff,   R.&#x00A0;J.   (1960).         <span 
+class="cmti-12">A   preliminary   report   on   a   general</span>
+  <span 
+class="cmti-12">theory   of   inductive   inference</span>.       Technical   report,   Zator   Co.   and   Air
+  Force   Office   of   Scientific   Research,   Cambridge,   Mass.       Available   from
+  <a 
+href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.66.3038&rep=rep1&type=pdf" class="url" >http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.66.3038&amp;rep=rep1&amp;type=pdf</a>,
+  doi:10.1.1.66.3038
+</p>
+  </div>
+                                                                                   
+                                                                                   
+        
+</body></html> 
+
+                                                                                   
+
+

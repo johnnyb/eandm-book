@@ -1,22 +1,98 @@
 <?xml version='1.0' encoding='utf-8'?>
 <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
 <head>
+	<meta name="dtb:uid" content="urn:ISBN:978-0-9752838-6-8"/>
+	<meta name="dtb:depth" content="1"/>
+	<meta name="dtb:totalPageCount" content="0"/>
+	<meta name="dtb:maxPageNumber" content="0"/>
 </head>
 <docTitle>
-<text>How to Build a Website</text>
+	<text>Engineering and the Ultimate: An Interdisciplinary Investigation of Order and Design in Nature and Craft</text>
 </docTitle>
 <navMap>
-<navPoint id="a1" playOrder="0">
-<navLabel>
-<text>Hosting</text>
-</navLabel>
-<content src="build_website.html#step1"/>
-</navPoint>
-<navPoint id="a2" playOrder="1">
-<navLabel>
-<text>Do You Need a Domain Name?</text>
-</navLabel>
-<content src="build_website.html#step2"/>
-</navPoint>
+	<navPoint id="np1" playOrder="1">
+		<navLabel>
+			<text>Book Cover</text>
+		</navLabel>
+		<content src="titlepages.xhtml"/>
+	</navPoint>
+	<navPoint id="np2" playOrder="2">
+		<navLabel>
+			<text>Title Pages</text>
+		</navLabel>
+		<content src="TitlePagesWrapper.html"/>
+	</navPoint>
+	<navPoint id="np3" playOrder="3">
+		<navLabel>
+			<text>Introduction</text>
+		</navLabel>
+		<content src="IntroductionWrapper.html"/>
+	</navPoint>
+	<navPoint id="np4" playOrder="4">
+		<navLabel>
+			<text>Reversible Universe: Implications of Affordance-based Reverse Engineering of Complex Natural Systems</text>
+		</navLabel>
+		<content src="HalsmerWrapper.html"/>
+	</navPoint>
+	<navPoint id="np5" playOrder="5">
+		<navLabel>
+			<text>The Independence and Proper Roles of Engineering and Metaphysics in Support of an Integrated Understanding of God's Creation</text>
+		</navLabel>
+		<content src="SichWrapper.html"/>
+	</navPoint>
+	<navPoint id="np6" playOrder="6">
+		<navLabel>
+			<text>Truth, Beauty, and the Reflection of God: John Ruskin's Seven Lamps of Architecture and The Stones of Venice as Palimpsests for Contemporary Architecture</text>
+		</navLabel>
+		<content src="HallWrapper.html"/>
+	</navPoint>
+	<navPoint id="np7" playOrder="7">
+		<navLabel>
+			<text>Using Turning Oracles in Cognitive Models of Problem-Solving</text>
+		</navLabel>
+		<content src="Bartlett1Wrapper.html"/>
+	</navPoint>
+	<navPoint id="np8" playOrder="8">
+		<navLabel>
+			<text>Calculating Software Complexity Using the Halting Problem</text>
+		</navLabel>
+		<content src="Bartlett2Wrapper.html"/>
+	</navPoint>
+	<navPoint id="np9" playOrder="9">
+		<navLabel>
+			<text>Algorithmic Specified Complexity</text>
+		</navLabel>
+		<content src="EwertWrapper.html"/>
+	</navPoint>
+	<navPoint id="np10" playOrder="10">
+		<navLabel>
+			<text>Complex Specified Information (CSI) Collecting</text>
+		</navLabel>
+		<content src="HollowayWrapper.html"/>
+	</navPoint>
+	<navPoint id="np11" playOrder="11">
+		<navLabel>
+			<text>Developing Insights into the Design of the Simplest Self-Replicator and Its Complexity: Part 1 - Developing a Functional Model for the Simplest Self-Replicator</text>
+		<navLabel>
+		<content src="Mignea1Wrapper.html"/>
+	</navPoint>
+	<navPoint id="np12" playOrder="12">
+		<navLabel>
+			<text>Developing Insights into the Design of the Simplest Self-Replicator and Its Complexity: Part 2 - Evaluating the Complexity of a Concrete Implementation of an Artificial SSR</text>
+		<navLabel>
+		<content src="Mignea2Wrapper.html"/>
+	</navPoint>
+	<navPoint id="np13" playOrder="13">
+		<navLabel>
+			<text>Developing Insights into the Design of the Simplest Self-Replicator and Its Complexity: Part 3 - The Metaphysics of an Artificial SSR and the Origin of Life Problem</text>
+		<navLabel>
+		<content src="Mignea3Wrapper.html"/>
+	</navPoint>
+	<navPoint id="np14" playOrder="14">
+		<navLabel>
+			<text>About the Authors</text>
+		</navLabel>
+		<content src="AboutAuthorsWrapper.html"/>
+	</navPoint>
 </navMap>
 </ncx>
